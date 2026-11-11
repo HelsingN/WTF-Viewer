@@ -10,6 +10,10 @@ This repository contains the source of the existing Sites prototype, imported on
 
 The source includes the original **dated research snapshot** from the existing Site. It is a historical import, not a live GitHub synchronization. Missing calculations and coverage remain UNKNOWN. Research remains canonical in [HelsingN/AI_CapEx_Reversal](https://github.com/HelsingN/AI_CapEx_Reversal); access may require authorization. User notes and the hosted database are not stored in this repository.
 
+## Update plan
+
+[План обновления приложения по ТЗ v1.1](docs/UPDATE_PLAN_RU.md): baseline audit, implementation stages, dependencies and A01–A18 acceptance coverage. The plan is saved in `develop`; implementation has not started.
+
 ## Run locally
 
 Requires Node.js >=22.13.0 (Node 24 recommended) and npm.
