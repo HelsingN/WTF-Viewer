@@ -44,8 +44,7 @@ yarn-error.log*
 # OS metadata
 .DS_Store
 
-# Private research and user exports
-/private/
+# Local database files and build archives
 *.sqlite
 *.sqlite3
 *.db
