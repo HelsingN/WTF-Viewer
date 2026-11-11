@@ -1,0 +1,30 @@
+{
+  "schema": "capex-desk.seed.v1",
+  "repository": "HelsingN/AI_CapEx_Reversal",
+  "sha": "",
+  "captured_at": null,
+  "events": [],
+  "history": [],
+  "reports": [],
+  "unresolved": {},
+  "weekly": {
+    "captured_at": null
+  },
+  "daily": [],
+  "coverage": {
+    "blocks": {}
+  },
+  "strength": {
+    "rows": []
+  },
+  "prs": [],
+  "macro": {
+    "rows": [],
+    "aggregate": {
+      "potential_direction": "UNKNOWN",
+      "channels": [],
+      "causal_overlaps": [],
+      "scenarios": []
+    }
+  }
+}
