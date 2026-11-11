@@ -1,12 +1,12 @@
 # WTF Viewer — план обновления приложения
 
-Дата: 11 ноября 2026, Asia/Jerusalem. Статус: PLAN_READY; реализация этапов ещё не начата.
+Дата: 11 ноября 2026, Asia/Jerusalem. Статус: STAGE_0_COMPLETE; этапы 1–7 ещё не начаты. Этап 0 завершён документальным согласованием и фиксацией исходной точки; приёмка приложения остаётся открытой.
 
-Основание: [ТЗ RU/EN v1.1](SPEC_RU_EN.md), проверенное в ветке `develop`. Базовый коммит приложения: `b9e838839485105da5b09da1774ec4df9e14ce51`; blob ТЗ: `f4e3edbc43adb949aac74d3d2e41c900dc0d9a05`.
+Исходное основание: ТЗ RU/EN v1.1, проверенное в ветке `develop`; текущая согласованная редакция — [v1.2](SPEC_RU_EN.md). Базовый коммит приложения: `b9e838839485105da5b09da1774ec4df9e14ce51`; blob ТЗ: `f4e3edbc43adb949aac74d3d2e41c900dc0d9a05`.
 
 Цель — довести перенесённый прототип до критериев A01–A18. Сохранить существующие данные и проверки; заменить зависимость экранов от встроенного снимка на общий слой данных. Сначала исправить достоверность состояний и сохранение, затем закончить рабочие сценарии и интерфейс. Сам калькулятор Challenger и методология остаются в исследовательском проекте.
 
-Этот документ планирует изменения. Его сохранение не запускает реализацию, PR, merge, перерасчёт или публикацию сайта.
+Этот документ планирует изменения. Само сохранение плана не запускает все этапы, PR, merge, перерасчёт или публикацию сайта. Этап 0 выполнен по последующему поручению владельца; этапы 1–7 остаются запланированными.
 
 ## 1. Что установлено при сверке
 
@@ -36,13 +36,15 @@
 5. **Разные измерения статуса.** Каноническая квалификация, ручное предложение, полнота, freshness, необходимость пересчёта, CI, человеческий review и merge хранятся раздельно.
 6. **Без нового исследования по умолчанию.** Обновление интерфейса использует уже зарегистрированные события, артефакты и журналы. Новый ресерч возникает только по новому существенному факту или конкретной доказанной ошибке.
 
-В ТЗ ещё есть формулировки SPECIFICATION_ONLY / «репозиторий содержит только документацию» и запрет публикации исследовательских снимков. Они расходятся с последующими указаниями владельца и состоянием репозитория. Этап 0 должен согласовать эти места в RU и EN, не меняя научную методологию. До этого план применяется с указанными выше уточнениями.
+В этапе 0 эти противоречия устранены в ТЗ v1.2 RU/EN: код уже перенесён, исследования открыты, целевая приёмка ещё не завершена. Методология и расчётные правила не менялись. Доказательства исходной точки — [IMPLEMENTATION_BASELINE.md](IMPLEMENTATION_BASELINE.md), статусы A01–A18 — [ACCEPTANCE_TRACKER.md](ACCEPTANCE_TRACKER.md).
 
 ## 3. Этапы реализации
 
 ### Этап 0 — согласовать документы и зафиксировать исходное состояние
 
-Приоритет P0. Зависимости: нет. Предлагаемый отдельный PR: `docs: align implementation scope and acceptance baseline`.
+Статус этапа: COMPLETE — документы согласованы, исходное состояние и контракты проверены; см. [baseline](IMPLEMENTATION_BASELINE.md). Изменения сохранены в `develop`, без создания PR, merge или deploy.
+
+Приоритет P0. Зависимости: нет. Исходно предложенный отдельный PR: `docs: align implementation scope and acceptance baseline`.
 
 - Привести RU/EN ТЗ и README к факту переноса кода и открытому статусу исследований; отличить целевой продукт от реализованного прототипа.
 - Зафиксировать исходные schema versions, исходный Site project ID, текущие проверки, структуру снимка и таблиц D1. Не обновлять исследования задним числом.
@@ -55,7 +57,7 @@
 
 Приоритет P0. После этапа 0. Предлагаемый PR: `feat: add workspace contracts and migrate persisted state`.
 
-- Ввести `workspace_id=ai-capex-signals`, `model_id=challenger`, `model_version=2.1`, `policy_version` по контракту исследования и `schema_version` для приложения.
+- Ввести `workspace_id=ai-capex-signals`, `model_id=challenger`, display version `2.1`, исходный `model_version` без переписывания и `policy_version` по контракту исследования (см. baseline) и `schema_version` для приложения.
 - Добавить workspace в ключи D1/API: `(owner, workspace_id)` и `(owner, workspace_id, revision)`. Полные канонические ID событий сохраняются.
 - Мигрировать существующие payload/версии/заметки/чек-листы в первое workspace без обнуления revision и истории. Импорт legacy export поддержать явным адаптером версии; неизвестные схемы не угадывать.
 - Сохранить immutable history и atomic save. Ключи browser drafts и prefs разделить по workspace; draft также по authenticated owner. Старый draft предлагать восстановить явно.
@@ -195,12 +197,19 @@
 
 **Подтверждено:** исходники и исторический снимок находятся в GitHub; `develop` создана от текущего состояния. Изучены ТЗ v1.1, API, схема D1, workspace contract, импорт, UI и контрактные проверки. Ранее при переносе проходили сборка, TypeScript и контрактный скрипт; это не полная приёмка приложения.
 
-**Не завершено:** реализация этапов, workspace isolation, единый импорт всех блоков, серверные инварианты решений, полноценный SHA-aware tracking, приёмка A01–A18 и hosted migration/persistence. Новый экономический аудит и новый расчёт Challenger этим планом не выполнялись.
+**Не завершено:** реализация этапов 1–7, workspace isolation, единый импорт всех блоков, серверные инварианты решений, полноценный SHA-aware tracking, приёмка A01–A18 и hosted migration/persistence. Новый экономический аудит и новый расчёт Challenger этим планом не выполнялись.
 
-**Следующие действия:** начать с этапа 0 — согласовать формулировки RU/EN с выполненным переносом и открытыми исследованиями, создать реестр приёмки; затем перейти к контрактам и миграции workspace. Публиковать приложение только после реализации и проверки соответствующего релизного изменения по отдельному указанию.
+**Следующие действия:** этап 0 закрыт; следующий — этап 1, контракты workspace и проектирование миграции с сохранением записей. Исходные форматы model/policy уже проверены; их точное соответствие зафиксировано в baseline. Публиковать приложение только после реализации и проверки соответствующего релизного изменения по отдельному указанию.
 
 ## English summary
 
-This plan upgrades the imported WTF Viewer prototype against specification v1.1 and acceptance criteria A01–A18. The owner's later instructions take precedence: research data is intentionally public, and application source is already in GitHub. Runtime secrets remain configuration; publishing research does not automatically change Site access or export personal workspace records.
+This plan upgrades the imported WTF Viewer prototype against the original specification v1.1, aligned in v1.2 during completed stage 0, and acceptance criteria A01–A18. The owner's later instructions take precedence: research data is intentionally public, and application source is already in GitHub. Runtime secrets remain configuration; publishing research does not automatically change Site access or export personal workspace records.
 
 Delivery order: align documents and baseline → workspace contracts and lossless migration → immutable, provenance-aware snapshot import → event/recalculation/artifact workflows → reports/completeness/resumable checks → SHA-aware GitHub tracking and macro provenance → bilingual accessible UI → acceptance and a separately authorized Sites release. Each stage includes concrete checks and an exit condition. Existing research IDs, reviews, artifacts and unresolved context must survive. No duplicate research, copied historical scores, changed model coefficients or repository mutations from the app are introduced. Live read-only GitHub Refresh remains a separate extension after the manual MVP.
+
+## Журнал выполнения
+
+| Этап | Статус | Результат | Следующее действие |
+| --- | --- | --- | --- |
+| 0 | COMPLETE | ТЗ v1.2 RU/EN, исходное состояние, прочитанные контракты и реестр A01–A18; baseline-коммит `a1a43736d44110179ef73ea2009c74ea19534074` | Этап 1: owner/workspace и проект миграции |
+| 1–7 | NOT_STARTED | План и зависимости сохранены; реализация не выполнялась | Выполнять по отдельному поручению владельца |

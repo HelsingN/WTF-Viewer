@@ -1,11 +1,11 @@
 # WTF Viewer — Research & Monitoring Workspace
 
 **Техническое задание / Product and technical specification**  
-Version 1.1 · 11 November 2026 · RU / EN  
+Version 1.2 · 11 November 2026 · RU / EN  
 Product repository: [HelsingN/WTF-Viewer](https://github.com/HelsingN/WTF-Viewer)  
 Initial research workspace: AI CapEx Signals · Initial model: Challenger 2.1  
-Status: SPECIFICATION_ONLY · Planned implementation · Research only  
-Scope of this repository: specification and project documentation; application implementation requires a separate user instruction.
+Status: PROTOTYPE_IMPORTED · UPGRADE_PLANNED · Acceptance pending · Research only  
+Scope of this repository: application source, open research snapshots, specification and project documentation. Source transfer is complete; functional upgrade follows the separately tracked implementation plan.
 
 ---
 
@@ -19,21 +19,23 @@ Scope of this repository: specification and project documentation; application i
 
 Challenger остаётся `RESEARCH_ONLY`, `UNCALIBRATED`, `trading_signal=false`, `category=null`. Панель не создаёт торговые сигналы, не меняет Champion и не выполняет операции брокера. Улучшение интерфейса не считается изменением методологии.
 
-**Репозиторий исследования — канонический источник.** Ручная запись панели — рабочая заметка/решение, а не незаметное изменение канонической квалификации. Нельзя автоматически создавать ветки, issue, PR, коммиты, запуски CI, reviews или merge. Для этих действий требуется отдельное явное указание пользователя. Репозиторий `HelsingN/WTF-Viewer` содержит ТЗ и документацию продукта; исходный `HelsingN/AI_CapEx_Reversal` остаётся отдельным каноническим исследовательским репозиторием.
+**Репозиторий исследования — канонический источник.** Ручная запись панели — рабочая заметка/решение, а не незаметное изменение канонической квалификации. Нельзя автоматически создавать ветки, issue, PR, коммиты, запуски CI, reviews или merge. Для этих действий требуется отдельное явное указание пользователя. Репозиторий `HelsingN/WTF-Viewer` содержит исходники существующего прототипа, открытый датированный снимок исследований, ТЗ и документацию продукта; исходный `HelsingN/AI_CapEx_Reversal` остаётся отдельным каноническим исследовательским репозиторием. Ограничение на автоматические операции выше относится к поведению приложения; поручения владельца по разработке WTF Viewer выполняются отдельно.
 
 ### 1.1 Название и возможность расширения
 
 | Уровень | Название / идентификатор | Назначение |
 |---|---|---|
-| Продукт | WTF Viewer | Общее имя интерфейса, документации и будущего приложения |
-| Репозиторий продукта | `HelsingN/WTF-Viewer` | ТЗ и документация; в будущем — реализация по отдельному указанию |
+| Продукт | WTF Viewer | Общее имя приложения, интерфейса и документации |
+| Репозиторий продукта | `HelsingN/WTF-Viewer` | Исходники прототипа, открытые снимки, ТЗ и план обновления |
 | Первое рабочее пространство | AI CapEx Signals / `ai-capex-signals` | Первый набор событий, источников, отчётов и проверок |
 | Канонический источник исследований | `HelsingN/AI_CapEx_Reversal` | Исследования и зарегистрированные события; не переименовывается |
 | Первая модель | Challenger 2.1 | Единственный активный Challenger для AI CapEx Signals |
 
 Название продукта не привязывается к AI, одному сектору или одной модели. Общие сущности — Workspace, Event, Source, Review, Report, Check и ModelRun; специфика Challenger вынесена в контракт первого рабочего пространства. В MVP достаточно одного рабочего пространства, но его `workspace_id` должен сопровождать записи. У каждой модели/расчёта есть `model_id`, `model_version` и `policy_version`. Это подготовка к расширению, а не создание второй экспериментальной модели или разрешение на изменение коэффициентов.
 
-В шапке интерфейса — **WTF Viewer**, рядом — выбранное рабочее пространство **AI CapEx Signals**; Challenger 2.1 показывается как раздел/модель. Статус этого документа — ТЗ. Он не подтверждает готовность, тестирование или публикацию будущего WTF Viewer.
+Метка Challenger 2.1 в интерфейсе и ID политики не заменяют исходные `model_version`, `cohort_version` и `schema` в артефакте. Их сохранять дословно; соответствие версий и adapters фиксируются в [исходном состоянии](IMPLEMENTATION_BASELINE.md).
+
+В шапке интерфейса — **WTF Viewer**, рядом — выбранное рабочее пространство **AI CapEx Signals**; Challenger 2.1 показывается как раздел/модель. Этот документ описывает целевую версию. Перенос существующего прототипа завершён, но соответствие всем критериям A01–A18 ещё не подтверждено. Исходное состояние и проверки фиксируются отдельно от требований.
 
 ## 2. Подключение исходных исследований
 
@@ -51,7 +53,7 @@ Challenger остаётся `RESEARCH_ONLY`, `UNCALIBRATED`, `trading_signal=fal
 
 Количество событий, распределение QUALIFIED, значения модели и открытые PR не являются константами продукта. Они определяются импортированным срезом. Нельзя подменять последний известный результат новым расчётом, а дату импорта — датой публикации.
 
-До разрешённого импорта рабочее пространство показывает пустое состояние/UNKNOWN. Фикстуры допустимы только в явно помеченном DEMO-режиме. Закрытые исследования, снимки и источники не копируются автоматически в публичный репозиторий WTF-Viewer. Публичность ТЗ не меняет доступ к будущему приложению: пользовательские рабочие записи остаются частными.
+Если источник ещё не импортирован, рабочее пространство показывает пустое состояние/UNKNOWN. Существующий датированный исследовательский снимок уже включён по указанию владельца и не является DEMO. Синтетические фикстуры допустимы только в явно помеченном DEMO-режиме или тестах. Владелец подтвердил открытость данных исследований: их не удаляют и не скрывают только из-за происхождения из отдельного репозитория. Учетные секреты остаются конфигурацией окружения. Открытость исследований не меняет автоматически аудиторию действующего Site и не выполняет экспорт пользовательских записей/базы; для этого нужно отдельное действие.
 
 Происхождение фактов должно быть проверяемым. Импорт не является независимой повторной проверкой каждой первичной публикации. Истёкший review_by помечает числовой вклад как требующий проверки актуальности; исторический QUALIFIED при этом сохраняется.
 
@@ -187,7 +189,7 @@ Challenger остаётся `RESEARCH_ONLY`, `UNCALIBRATED`, `trading_signal=fal
 
 Заимствуются общие решения: тёмная/нейтральная тема, отчётливо видимый итоговый статус, компактные красивые карточки, простые формы, минимум визуального шума, короткие выводы и раскрываемые подробности. Для аналитической панели используются плотные таблицы, прозрачное происхождение и отдельные состояния неизвестности.
 
-Планируемый визуальный стиль WTF Viewer: угольный фон, мягкие зелёные акценты, янтарный для неполноты, красный для проблем; цвет всегда дополняется текстовой меткой. Моноширинные ID/SHA, явные даты, аккуратная иерархия, боковая навигация, адаптация к телефону. RU/EN переключает интерфейс; оригинальные доказательства, названия документов и цитаты не переводятся с потерей смысла. Канонические коды одинаковы в обоих языках.
+Целевой визуальный стиль WTF Viewer: угольный фон, мягкие зелёные акценты, янтарный для неполноты, красный для проблем; цвет всегда дополняется текстовой меткой. Моноширинные ID/SHA, явные даты, аккуратная иерархия, боковая навигация, адаптация к телефону. RU/EN переключает интерфейс; оригинальные доказательства, названия документов и цитаты не переводятся с потерей смысла. Канонические коды одинаковы в обоих языках.
 
 Клавиатурный доступ, видимый focus, подписи полей, семантические таблицы с caption и th scope, modal dialog, error/empty/loading/success states, reduced motion. Горизонтальная прокрутка больших таблиц допустима; общая страница на мобильном не должна разъезжаться. Изображения для доказательств и точных графиков не генерируются. График истории показывает отдельные интервалы без фиктивной непрерывности.
 
@@ -205,13 +207,13 @@ Sites/Vinext/React/TypeScript; серверная база D1 для рабоч�
 
 ## 12. Этапы и ограничения реализации
 
-**Этап 1 — планируемая рабочая панель WTF Viewer:** датированный исходный снимок main + явно выделенный PR; серверное сохранение ручной работы; весь интерфейс RU/EN; реестр и детали; календарь планов; отчёты/чек-листы; полнота; проверки; история артефактов; макро; GitHub snapshot; экспорт/импорт.
+**Фаза 1 — обновление прототипа до рабочей панели WTF Viewer:** датированный исходный снимок main + явно выделенный PR; серверное сохранение ручной работы; весь интерфейс RU/EN; реестр и детали; календарь планов; отчёты/чек-листы; полнота; проверки; история артефактов; макро; GitHub snapshot; экспорт/импорт.
 
-**Этап 2 — отдельное расширение после доступности интеграции:** поддерживаемое live read-only подключение GitHub с явным Refresh, собственными состояниями stale/error и SHA provenance. Каждый источник обновляется независимо. Нельзя выдавать snapshot за live или стирать прошлые данные при ошибке. Автозапись в репозиторий не входит и в этот этап.
+**Фаза 2 — отдельное расширение после доступности интеграции:** поддерживаемое live read-only подключение GitHub с явным Refresh, собственными состояниями stale/error и SHA provenance. Каждый источник обновляется независимо. Нельзя выдавать snapshot за live или стирать прошлые данные при ошибке. Автозапись в репозиторий не входит и в этот этап.
 
 Для первого этапа обязателен ручной режим: импорт/экспорт и ручные статусы. Наличие поддерживаемого runtime GitHub connector следует проверить перед отдельным этапом интеграции; live Refresh не считается реализованным по этому ТЗ. Исполнение Python-калькулятора внутри Sites не входит в MVP: вычисления выполняются существующим процессом исследовательского проекта, готовые артефакты импортируются вручную. Чтение main не подтверждает истинность всех первичных источников. Автоматизации AI CapEx Watch/Daily Close/Event Alerts не меняются.
 
-Сохранение ТЗ в WTF-Viewer не запускает реализацию, не переносит ранее созданное приложение и не разрешает его изменение/повторную публикацию. Разработка начинается только по отдельному указанию пользователя. Другие рабочие пространства и модели — возможность будущего расширения; они не входят в обязательную реализацию первого этапа.
+Исходники ранее созданного приложения и его встроенный снимок уже перенесены в WTF-Viewer по указанию владельца. Этот перенос не изменил публикацию в Sites и не завершил функциональное обновление. [План обновления](UPDATE_PLAN_RU.md) разбивает фазу 1 на этапы 0–7; [исходное состояние](IMPLEMENTATION_BASELINE.md) и [реестр приёмки](ACCEPTANCE_TRACKER.md) отделяют подтверждённое от незавершённого. Запрос на план не запускает все этапы автоматически; разработка, merge и публикация выполняются в пределах отдельных указаний владельца. Другие workspace/модели остаются будущим расширением.
 
 ## 13. Приёмка
 
@@ -232,11 +234,11 @@ Sites/Vinext/React/TypeScript; серверная база D1 для рабоч�
 | A13 | Фильтры и CSV соответствуют видимому набору; empty state и сброс доступны |
 | A14 | Save/restore, ревизии и конфликты проверены; ошибки не показываются как успех |
 | A15 | Нет доступного пути GitHub write/merge из приложения |
-| A16 | Для будущей реализации TypeScript/build проходят; desktop/mobile и формы проверены; непроверенные hosted сценарии раскрыты |
+| A16 | Для целевой версии TypeScript/build проходят; desktop/mobile и формы проверены; непроверенные hosted сценарии раскрыты |
 | A17 | Бренд WTF Viewer, рабочее пространство AI CapEx Signals и модель Challenger 2.1 явно разделены в интерфейсе и документации |
 | A18 | workspace_id изолирует записи; канонические ID сохраняются; добавление будущего пространства не создаёт новую модель Challenger автоматически |
 
-Это критерии будущей приёмки, а не утверждение, что они уже выполнены.
+Это критерии целевой версии, а не утверждение, что они уже выполнены. Актуальные статусы и доказательства находятся в [реестре приёмки](ACCEPTANCE_TRACKER.md).
 
 ## 14. Репозитории и канонические контракты
 
@@ -249,7 +251,7 @@ Sites/Vinext/React/TypeScript; серверная база D1 для рабоч�
 - Дневной индекс: `data/research/events/daily_high_critical_index.json`.
 - Расчётные артефакты: `data/research/events/recalculations/` и `data/research/weekly/`.
 
-Пути выше относятся к исходному исследовательскому репозиторию. При подключении фиксируется реальный SHA и версия контракта; этот документ не воспроизводит закрытые данные или текущие результаты исследований.
+Пути выше относятся к исходному исследовательскому репозиторию. При подключении фиксируется реальный SHA и версия контракта; сам текст ТЗ не заменяет датированный снимок и не утверждает актуальность исторических результатов.
 
 ---
 
@@ -263,21 +265,23 @@ Connect event → primary evidence → assessment → recalculation decision →
 
 Keep `RESEARCH_ONLY`, `UNCALIBRATED`, `trading_signal=false`, `category=null`. Do not alter Champion, create trading signals or operate a broker. UI changes do not change research methodology.
 
-The research repository remains canonical. Desk records are manual work records and proposed decisions. Never automatically create branches, issues, PRs, commits, CI runs, reviews or merges. Research-repository changes require a separate explicit instruction. The product specification and documentation live in `HelsingN/WTF-Viewer`; `HelsingN/AI_CapEx_Reversal` remains the separate canonical research repository.
+The research repository remains canonical. Desk records are manual work records and proposed decisions. Never automatically create branches, issues, PRs, commits, CI runs, reviews or merges. Research-repository changes require a separate explicit instruction. `HelsingN/WTF-Viewer` contains the imported prototype source, open dated research snapshot, specification and documentation; `HelsingN/AI_CapEx_Reversal` remains the separate canonical research repository. The automatic-operation restriction above governs application behavior; owner-directed product development is handled separately.
 
 ### 1.1 Naming and extensibility
 
 | Layer | Name / identifier | Purpose |
 |---|---|---|
-| Product | WTF Viewer | Shared brand for the interface, documentation and future application |
-| Product repository | `HelsingN/WTF-Viewer` | Specification/documentation; implementation only after a separate instruction |
+| Product | WTF Viewer | Shared brand for the application, interface and documentation |
+| Product repository | `HelsingN/WTF-Viewer` | Imported prototype source, open snapshots, specification and upgrade plan |
 | Initial workspace | AI CapEx Signals / `ai-capex-signals` | First set of events, sources, reports and checks |
 | Canonical research source | `HelsingN/AI_CapEx_Reversal` | Existing research and registered events; not renamed |
 | Initial model | Challenger 2.1 | Sole active Challenger in AI CapEx Signals |
 
 Keep the product name independent of AI, one industry or one model. Shared entities are Workspace, Event, Source, Review, Report, Check and ModelRun; Challenger-specific rules belong to the initial workspace contract. One workspace is sufficient for the MVP, but records must carry `workspace_id`; model assessments/runs also retain `model_id`, `model_version` and `policy_version`. This prepares for extension without creating a second experimental Challenger or changing its coefficients.
 
-The interface header reads **WTF Viewer**, with the selected **AI CapEx Signals** workspace alongside it. Challenger 2.1 is a model/view. This document is a specification, not evidence that the future WTF Viewer has been implemented, tested or published.
+The Challenger 2.1 UI label and policy ID do not replace the artifact's original `model_version`, `cohort_version` or `schema`. Preserve those values verbatim; record version mapping and adapters in the [baseline](IMPLEMENTATION_BASELINE.md).
+
+The interface header reads **WTF Viewer**, with the selected **AI CapEx Signals** workspace alongside it. Challenger 2.1 is a model/view. This document defines the target version. The prototype source transfer is complete; acceptance criteria A01–A18 have not all been verified. Implementation evidence is tracked separately from requirements.
 
 ## 2. Research onboarding contract
 
@@ -295,7 +299,7 @@ The interface header reads **WTF Viewer**, with the selected **AI CapEx Signals*
 
 Event counts, QUALIFIED distributions, model values and open PR numbers are not product constants. They come from the imported cutoff. A last-known result is not a new calculation; import time is not publication time.
 
-Before an authorized import, show empty/UNKNOWN states. Fixtures are allowed only in an explicitly labelled DEMO mode. Do not automatically copy private research, snapshots or sources into the public WTF-Viewer repository. Public documentation does not make the future application public: user workspace records remain private.
+Before a source is imported, show empty/UNKNOWN states. The existing dated research snapshot is already included by owner instruction and is not DEMO data. Synthetic fixtures belong only in explicitly labelled DEMO mode or tests. The owner confirmed that research data is open: do not remove or conceal it solely because it originated in another repository. Credentials remain runtime configuration. Open research does not automatically change the current Site audience or export user records/database; those require separate actions.
 
 Every fact needs inspectable provenance. Importing does not independently reverify all primary sources. Expired review_by marks current numeric eligibility as requiring a freshness check while preserving historical QUALIFIED.
 
@@ -420,7 +424,7 @@ Use the read written reference `build_or_kill_project_brief_gsd_gstack_refined.m
 
 Adopt a dark/neutral theme, prominent final states, polished compact cards, simple forms, concise conclusions and progressive detail. Adapt to analytical work with dense accessible tables, transparent provenance and explicit unknown states.
 
-The planned WTF Viewer visual system uses charcoal backgrounds, soft green accents, amber incompleteness and muted red issues, always with text labels. Monospaced IDs/SHAs, explicit dates, clear hierarchy, sidebar and responsive mobile layouts. RU/EN switches interface labels; preserve original evidence wording and canonical codes.
+The target WTF Viewer visual system uses charcoal backgrounds, soft green accents, amber incompleteness and muted red issues, always with text labels. Monospaced IDs/SHAs, explicit dates, clear hierarchy, sidebar and responsive mobile layouts. RU/EN switches interface labels; preserve original evidence wording and canonical codes.
 
 Require keyboard access, visible focus, field labels, semantic tables/captions/scoped headers, modal dialogs, loading/empty/error/success states and reduced motion. Large tables may scroll horizontally without overflowing the whole mobile page. Do not generate evidence imagery or imprecise data charts. Artifact intervals are separate marks without invented continuity.
 
@@ -438,13 +442,13 @@ Support draft recovery, export before conflict resolution and manual continuatio
 
 ## 12. Phases and implementation limits
 
-**Phase 1 — planned WTF Viewer implementation:** pinned main snapshot plus explicitly proposed PR material; server-persisted manual work; RU/EN interface; registry/details; planned-event calendar; daily/weekly report cards and checkpoints; completeness; resumable checks; artifact history; macro view; GitHub snapshot; import/export.
+**Phase 1 — upgrade the imported prototype to the working WTF Viewer:** pinned main snapshot plus explicitly proposed PR material; server-persisted manual work; RU/EN interface; registry/details; planned-event calendar; daily/weekly report cards and checkpoints; completeness; resumable checks; artifact history; macro view; GitHub snapshot; import/export.
 
 **Phase 2, a separate extension:** supported runtime read-only GitHub integration when available, with explicit Refresh, independent source errors/staleness and SHA provenance. Do not represent snapshots as live or clear retained evidence after refresh failure. Repository auto-writes remain excluded.
 
 Phase 1 must support manual import/export and manual status tracking. Verify supported Sites runtime GitHub connector eligibility before a separate integration phase; this specification does not establish live Refresh as implemented. Running the Python calculator in Sites is outside the MVP: use the existing research pipeline and import resulting artifacts. Reading main does not independently certify all imported economic facts. Existing scheduled AI CapEx Watch, Daily Close and Event Alerts remain unchanged.
 
-Saving this specification into WTF-Viewer does not start implementation, transfer the previously created application or authorize its modification/republication. Implementation requires a separate user instruction. Additional workspaces/models are future extension options, outside the mandatory first-phase scope.
+The existing application source and embedded snapshot have already been transferred to WTF-Viewer by owner instruction. The transfer did not change the Sites publication or complete the functional upgrade. The [upgrade plan](UPDATE_PLAN_RU.md) breaks phase 1 into stages 0–7; the [baseline](IMPLEMENTATION_BASELINE.md) and [acceptance tracker](ACCEPTANCE_TRACKER.md) separate evidence from pending work. Requesting a plan does not automatically start every stage; implementation, merge and publication follow the scope of separate owner instructions. Additional workspaces/models remain future extensions.
 
 ## 13. Acceptance criteria
 
@@ -465,10 +469,10 @@ Saving this specification into WTF-Viewer does not start implementation, transfe
 | A13 | Filters/CSV match visible data; reset and empty state work |
 | A14 | Save/recovery/revisions/conflicts verified; errors never shown as success |
 | A15 | No application path writes or merges into the research repository |
-| A16 | Future implementation passes TypeScript/build; desktop/mobile/forms inspected; untested hosted flows explicitly disclosed |
+| A16 | Target implementation passes TypeScript/build; desktop/mobile/forms inspected; untested hosted flows explicitly disclosed |
 | A17 | WTF Viewer brand, AI CapEx Signals workspace and Challenger 2.1 model are distinguished in UI/documentation |
 | A18 | workspace_id isolates records; canonical IDs survive; future workspaces do not automatically create another Challenger |
 
-These are future acceptance criteria, not assertions of completed validation.
+These are target acceptance criteria, not assertions of completed validation. Current states and evidence are recorded in the [acceptance tracker](ACCEPTANCE_TRACKER.md).
 
-Product/research repositories and canonical source-contract paths are listed in Russian section 14 and apply equally to this English specification. Resolve and record actual source SHA/version when onboarding; do not embed private snapshots in the public product repository.
+Product/research repositories and canonical source-contract paths are listed in Russian section 14 and apply equally to this English specification. Resolve and record actual source SHA/version when onboarding. The existing research snapshot is intentionally public by owner instruction; its original cutoff and provenance must remain intact.

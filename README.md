@@ -12,7 +12,7 @@ The source includes the original **dated research snapshot** from the existing S
 
 ## Update plan
 
-[План обновления приложения по ТЗ v1.1](docs/UPDATE_PLAN_RU.md): baseline audit, implementation stages, dependencies and A01–A18 acceptance coverage. The plan is saved in `develop`; implementation has not started.
+[План обновления приложения](docs/UPDATE_PLAN_RU.md) follows the aligned [specification v1.2](docs/SPEC_RU_EN.md). Stage 0 is complete: [implementation baseline](docs/IMPLEMENTATION_BASELINE.md) and [A01–A18 acceptance tracker](docs/ACCEPTANCE_TRACKER.md). Functional stages 1–7 have not started.
 
 ## Run locally
 
