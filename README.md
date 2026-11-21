@@ -6,11 +6,11 @@ Research and monitoring workspace for events, evidence, analytical models, repor
 
 ## Status and phase-one scope
 
-The existing Sites prototype is imported; this is not a completed migration or implementation of the revised release.
+The working `develop` branch contains the verified migration of Challenger research and complete report files. The Sites prototype still serves its original snapshot.
 
 Phase one v1.2 is a **reader for complete Challenger research, daily/weekly reports and imported workflow statuses**, with **deterministic on-demand/reload Challenger calculation from accepted structured inputs**. Site notes, report drafting, research decisions, persistent manual editing and GitHub write actions follow later editorial authorization.
 
-**Canonical target after verified migration/cutover: HelsingN/WTF-Viewer.** AI_CapEx_Reversal retains origin history for the transferred domain. The current embedded seed is historical and includes report metadata, not proof that all report texts/attachments have been transferred. Until cutover, display the actual source.
+**Working source: HelsingN/WTF-Viewer, branch `develop`.** AI_CapEx_Reversal retains source history. [Research files and reports](research/README.md) · [Migration record](docs/RESEARCH_MIGRATION.md).
 
 First synchronization is manual: pinned GitHub WTF-Viewer commit → validated full-content package → user import. Local calculation/download is not publication. Automated package delivery and supported read-only Refresh come later. Existing private Site access, identity and D1 records are preserved.
 
@@ -18,7 +18,7 @@ First synchronization is manual: pinned GitHub WTF-Viewer commit → validated f
 
 [Решения 1.1–1.4](docs/PHASE1_SCOPE_DECISIONS_RU.md), [RU/EN specification v1.2](docs/SPEC_RU_EN.md) and [единый план выпуска](docs/UPDATE_PLAN_RU.md) define the revised delivery sequence: migration/cutover → packages/manual sync → Python-compatible browser calculation → complete research/report reader → coverage/context → bilingual adaptive UI → release checks.
 
-The integrated [design appendix/mockup](docs/design/README.md) remains part of v1.2; preserve WTF Viewer → AI CapEx Signals → Challenger 2.1. [Acceptance](docs/ACCEPTANCE_TRACKER.md) requires B01–B10 and D01–D06 for this phase; original A01–A18 retain their full-workspace backlog meanings. The original [baseline](docs/IMPLEMENTATION_BASELINE.md) remains historical; documentation rescoping 0R is complete, migration and implementation are not.
+The integrated [design appendix/mockup](docs/design/README.md) remains part of v1.2; preserve WTF Viewer → AI CapEx Signals → Challenger 2.1. [Acceptance](docs/ACCEPTANCE_TRACKER.md) requires B01–B10 and D01–D06 for this phase; original A01–A18 retain their full-workspace backlog meanings. The original [baseline](docs/IMPLEMENTATION_BASELINE.md) remains historical; documentation rescoping 0R and the stage 1 migration to `develop` are complete. Package import and application implementation remain pending.
 
 ## Run locally
 
@@ -80,4 +80,4 @@ Source code does not include a backup of D1 data, credentials or sharing setting
 Двуязычное [ТЗ](docs/SPEC_RU_EN.md) остаётся описанием целевого продукта. Работы по его полной реализации продолжаются только по отдельному поручению владельца.
 
 
-Актуальное назначение первой версии: просмотр полных исследований/ежедневных/еженедельных отчётов и импортированных статусов; ручное обновление из GitHub WTF-Viewer; пересчёт Challenger по проверенным входам по кнопке/reload. После проверенного переноса WTF-Viewer станет основным источником, AI_CapEx_Reversal сохранит исходную историю. Заметки, подготовка отчётов и редакторские решения — последующие версии с правами. Пока согласованы документы; данные, код и публикация не перенесены.
+Актуальное назначение первой версии: просмотр полных исследований/ежедневных/еженедельных отчётов и импортированных статусов; ручное обновление из GitHub WTF-Viewer; пересчёт Challenger по проверенным входам по кнопке/reload. Текущий рабочий источник перенесённых материалов — WTF-Viewer `develop`. AI_CapEx_Reversal хранит исходную историю. Заметки, подготовка отчётов и редакторские решения — последующие версии с правами. Материалы доступны в [разделе исследований](research/README.md). Сайт пока использует встроенный исторический снимок.

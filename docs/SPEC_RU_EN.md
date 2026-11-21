@@ -1,7 +1,7 @@
 # WTF Viewer — Research & Monitoring Workspace
 **Техническое задание / Product and technical specification**  
 Version 1.2 · Scope revision: 21 November 2026 · RU / EN  
-Status: PROTOTYPE_IMPORTED · PHASE_1_RESCOPED · Migration and acceptance pending  
+Status: RESEARCH_MIGRATED_TO_DEVELOP · Package import and application acceptance pending  
 Product: HelsingN/WTF-Viewer · Workspace: AI CapEx Signals · Model: Challenger 2.1
 
 # Русская версия
@@ -24,7 +24,7 @@ Product: HelsingN/WTF-Viewer · Workspace: AI CapEx Signals · Model: Challenger
 
 ## 2. Основной источник и граница переноса
 
-После проверенной миграции **GitHub HelsingN/WTF-Viewer становится основным источником исследований Challenger и daily/weekly отчётов**. AI_CapEx_Reversal сохраняет архив исходной истории этой области. До миграционной сверки источник остаётся исходным; не маркировать неполную копию Viewer как завершённый перенос.
+После проверенной миграции **GitHub HelsingN/WTF-Viewer становится основным источником исследований Challenger и daily/weekly отчётов**. AI_CapEx_Reversal сохраняет архив исходной истории этой области. Первый сверенный перенос доступен в `develop`. Сайт подключается к новому источнику при реализации импорта. [Протокол](RESEARCH_MIGRATION.md).
 
 Перенос охватывает модель и политику, контракты, наблюдения/eligibility/источники, реестр/reviews, расчётные артефакты, полные тексты отчётов, приложения/индексы/манифесты и связанные материалы, необходимые для их понимания и воспроизведения. Proposed/unmerged материалы отделяются от принятого main. Прочие области исходного проекта автоматически не переносятся.
 
@@ -154,7 +154,7 @@ Body от 16px; важные таблицы/статусы/даты от 14px, �
 
 Эталон: src/scoring/challenger_v2.py и его policy/dependencies/tests; scripts/research/evaluate_challenger_v2.py — read-only CLI. Фиксированный one-off не заменяет универсальную функцию. Точные source SHA и наблюдения — в [решениях](PHASE1_SCOPE_DECISIONS_RU.md); исходный baseline сохраняется как исторический.
 
-[Единый план](UPDATE_PLAN_RU.md), [baseline](IMPLEMENTATION_BASELINE.md), [приёмка](ACCEPTANCE_TRACKER.md). Эта редакция согласует требования; перенос, реализация, публикация и изменение аудитории не выполнены.
+[Единый план](UPDATE_PLAN_RU.md), [baseline](IMPLEMENTATION_BASELINE.md), [приёмка](ACCEPTANCE_TRACKER.md). Перенос файлов и сверка выполнены в `develop`. Приёмка приложения продолжится на этапах 2–7.
 
 # English version
 
@@ -168,7 +168,7 @@ Keep **WTF Viewer → AI CapEx Signals → Challenger 2.1**, RESEARCH_ONLY, UNCA
 
 ## 2. Canonical migration and manual synchronization
 
-After verified migration, GitHub **HelsingN/WTF-Viewer** is canonical for the transferred Challenger research and daily/weekly domain; AI_CapEx_Reversal retains source history. Until reconciliation/cutover the source remains the original repository. Current seed metadata is not a complete report archive.
+After verified migration, GitHub **HelsingN/WTF-Viewer** is canonical for the transferred Challenger research and daily/weekly domain; AI_CapEx_Reversal retains source history. The verified working dataset is in `develop`. The Site continues to display its bundled historical snapshot until package import is implemented. [Migration record](RESEARCH_MIGRATION.md).
 
 Transfer full report/research text, attachments, model/policy/contracts, observations/eligibility/sources, event/review history, calculation artifacts and completeness indexes. Pin source refs/commits, preserve file bytes and IDs, record target mappings/hashes and distinguish main/proposed/manual. Resolve moved internal links via manifest rather than silently rewriting historical content. Finalize cutover only after manifest, links, IDs, hashes and completeness checks; record target commit and date. Do not delete or automatically archive the source repository, touch unrelated research or change schedules.
 
@@ -231,6 +231,6 @@ A01–A18 below retain their original meanings as full-workspace backlog. Applic
 
 ## 7. Provenance and delivery
 
-The source contracts/paths listed in Russian §11 apply equally here. The scope decisions record pinned inspection refs; migration target paths are not implemented yet. The existing Python read-only evaluator is a reference, while the dated one-off script is not a universal service.
+The source contracts/paths listed in Russian §11 apply equally here. The migration manifest records pinned source revisions and the verified target paths. The existing Python read-only evaluator is a reference, while the dated one-off script is not a universal service.
 
-See [scope decisions](PHASE1_SCOPE_DECISIONS_RU.md), [unified release plan](UPDATE_PLAN_RU.md), [historical baseline](IMPLEMENTATION_BASELINE.md) and [acceptance tracker](ACCEPTANCE_TRACKER.md). This is a documentation revision; no data migration, recalculation, application implementation, deployment, audience change or schedule change has been performed.
+See [scope decisions](PHASE1_SCOPE_DECISIONS_RU.md), [unified release plan](UPDATE_PLAN_RU.md), [historical baseline](IMPLEMENTATION_BASELINE.md) and [acceptance tracker](ACCEPTANCE_TRACKER.md). Stage 1 transferred and verified the research files in `develop`. Application delivery and acceptance follow in stages 2–7.

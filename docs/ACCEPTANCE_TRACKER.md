@@ -6,7 +6,7 @@
 
 Первый reader/calculator выпуск требует **B01–B10 и D01–D06**. Исходные A01–A18 сохраняют свои значения и прежние статусы evidence; их применимость уточнена, deferred не означает VERIFIED. Готовность будущего редактора/новой D1-миграции не является условием выпуска viewer.
 
-Исторические проверки baseline относятся к конкретному коду/дате, не новому порту расчёта или переносу. Документальное согласование 0R завершено; данные/код ещё не изменены.
+Исторические проверки baseline относятся к конкретному коду/дате, не новому порту расчёта или переносу. Документальное согласование 0R завершено. Этап 1 проверен на коммите данных в `develop`. [Протокол переноса](RESEARCH_MIGRATION.md).
 
 Статусы: NOT_STARTED — новый полный прогон не начат; IN_PROGRESS — частичные evidence; VERIFIED — все условия проверены на exact SHA с environment/evidence; BLOCKED — конкретная причина и условие продолжения. При смене затронутого кода/данных/version сохранять старые evidence и перепроверять релевантные критерии. Зелёная сборка сама не доказывает user flow, source truth или human approval.
 
@@ -14,7 +14,7 @@
 
 | ID | Критерий | Статус | Этап | Что проверить |
 | --- | --- | --- | --- | --- |
-| B01 | Полный перенос и переключение основного источника | NOT_STARTED | 1 | Manifest по зафиксированным source/target SHA; полные файлы/приложения, hashes, ID/reviews и ссылки сверены; записан cutover в WTF-Viewer |
+| B01 | Полный перенос и переключение основного источника | VERIFIED (`develop`) | 1 | 192 исходных файла сверены по Git blob SHA, 47 ID проверены, статусы и происхождение сохранены. [Ревизии и проверки](RESEARCH_MIGRATION.md) |
 | B02 | Просмотр исследований и полных daily/weekly | NOT_STARTED | 2, 4 | Список строится из manifest; Markdown/вложения/источники открываются, GitHub target file/version и даты доступны; отсутствующие части явно обозначены |
 | B03 | Ручная синхронизация с GitHub WTF-Viewer | NOT_STARTED | 2 | Пакеты из двух target commits обновляют данные без дублей; source SHA/даты различимы; локальный preview не выдаётся за опубликованное или live |
 | B04 | Надёжный версионированный импорт | NOT_STARTED | 2 | Проверки schema/hash/ID/key/history/versions; no-op повтор; ошибочный пакет сохраняет предыдущий; seed не подмешивается без метки |
@@ -63,7 +63,7 @@
 | A17 | WTF Viewer / AI CapEx Signals / Challenger | IN_PROGRESS | Первая версия (D01) | D0, 6–7 | Документы и постоянная шапка разделяют три уровня без потери навигации; ТЗ v1.2 согласовано; hosted title остаётся прежним, целевой UI ещё не принят |
 | A18 | Изоляция owner/workspace | NOT_STARTED | Позже: persistent owner/workspace migration; package IDs — сейчас | 2 / редакторский этап | Миграция сохраняет IDs/revisions; нет доступа к другому owner/workspace; В исходной схеме workspace_id отсутствует |
 
-Ни один A-критерий не имеет VERIFIED. A16/A17 сохраняют IN_PROGRESS как прежнее частичное evidence, не утверждение о новом reader/calculator. B и D ещё не проверялись.
+Ни один A-критерий не имеет VERIFIED. A16/A17 сохраняют IN_PROGRESS как прежнее частичное evidence, не утверждение о новом reader/calculator. B01 подтверждён для ветки `develop`. B02–B10 и D01–D06 ждут проверки приложения.
 
 ## Формат evidence
 
@@ -83,8 +83,8 @@ Criterion ID; дата/проверяющий; environment (reference Python/loc
 
 | Проверка | Что установлено | Следующее действие |
 | --- | --- | --- |
-| CHECK-MIGRATION-CUTOVER | Источник ещё AI_CapEx_Reversal; target canonical после сверки согласован | Этап 1: полный manifest, перенос, hashes/ссылки/ID, запись cutover |
-| CHECK-REPORT-CONTENT | Seed содержит metadata; это не полный архив | Этапы 1–2, 4: текст/вложения/index и reader |
+| CHECK-MIGRATION-CUTOVER | VERIFIED в develop. [Протокол](RESEARCH_MIGRATION.md) | Использовать проверенный target commit для сборки пакета на этапе 2 |
+| CHECK-REPORT-CONTENT | Полные тексты сохранены, [указатель отчётов](../research/reports/README.md) | Этапы 2, 4: импорт и проверка просмотра в приложении |
 | CHECK-CALCULATOR-PARITY | Python имеет чистый reviewed-input evaluator; dated one-off не универсален | Этап 3: pin reference/dependencies, browser port/golden vectors |
 | CHECK-MANUAL-GITHUB-SYNC | Ручной GitHub commit→package→import процесс определён | Этап 2: два revisions, no-op/invalid/partial/reload |
 | CHECK-READER-ACCESS | Site custom access/identity/D1 существуют | Этап 7: прежний доступ/записи не потеряны; reader/calculator hosted scenario |
