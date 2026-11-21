@@ -12,7 +12,9 @@ The source includes the original **dated research snapshot** from the existing S
 
 ## Update plan
 
-[План обновления приложения](docs/UPDATE_PLAN_RU.md) follows the aligned [specification v1.2](docs/SPEC_RU_EN.md). Stage 0 is complete: [implementation baseline](docs/IMPLEMENTATION_BASELINE.md) and [A01–A18 acceptance tracker](docs/ACCEPTANCE_TRACKER.md). Functional stages 1–7 have not started.
+[Единый план выпуска v1.2](docs/UPDATE_PLAN_RU.md) combines functional stages 0–7 and the D0–D3 redesign track under the aligned [RU/EN specification v1.2](docs/SPEC_RU_EN.md). The [design appendix and overview mockup](docs/design/README.md) define the high-contrast violet direction; preserve WTF Viewer → AI CapEx Signals → Challenger 2.1 branding.
+
+Stage 0 is complete: [implementation baseline](docs/IMPLEMENTATION_BASELINE.md). Functional stages 1–7 and redesign implementation have not started. The [acceptance tracker](docs/ACCEPTANCE_TRACKER.md) records A01–A18 and D01–D06; saving plans does not verify implementation or deploy the Site. Design foundations precede stage 3 UI changes, patterns accompany stages 3–5, rollout completes in stage 6 and final verification runs in stage 7.
 
 ## Run locally
 

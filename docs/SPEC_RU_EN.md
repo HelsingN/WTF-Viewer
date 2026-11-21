@@ -1,7 +1,7 @@
 # WTF Viewer — Research & Monitoring Workspace
 
 **Техническое задание / Product and technical specification**  
-Version 1.2 · 11 November 2026 · RU / EN  
+Version 1.2 · 11 November 2026 · Design integration revision: 21 November 2026 · RU / EN  
 Product repository: [HelsingN/WTF-Viewer](https://github.com/HelsingN/WTF-Viewer)  
 Initial research workspace: AI CapEx Signals · Initial model: Challenger 2.1  
 Status: PROTOTYPE_IMPORTED · UPGRADE_PLANNED · Acceptance pending · Research only  
@@ -185,15 +185,21 @@ Challenger остаётся `RESEARCH_ONLY`, `UNCALIBRATED`, `trading_signal=fal
 
 ## 10. Дизайн RU/EN и доступность
 
-Референс — прочитанный текстовый бриф `build_or_kill_project_brief_gsd_gstack_refined.md`. Опубликованный Build or Kill или точные визуальные токены не найдены; нельзя выдавать результат за пиксельную копию.
+Редизайн входит в единый выпуск v1.2. [Общий план](UPDATE_PLAN_RU.md) задаёт зависимости D0–D3 и приёмку D01–D06; [дизайн-приложение](design/WTF_viewer_design_plan_RU.md) — токены и компоненты; [PNG обзора](design/research-desk-overview-2026-11-21.png) — визуальный ориентир, не реализованный экран и не источник исследовательских данных. Макеты реестра и карточки ещё предстоит подготовить.
 
-Заимствуются общие решения: тёмная/нейтральная тема, отчётливо видимый итоговый статус, компактные красивые карточки, простые формы, минимум визуального шума, короткие выводы и раскрываемые подробности. Для аналитической панели используются плотные таблицы, прозрачное происхождение и отдельные состояния неизвестности.
+Визуальный референс — [ID Agent Process](https://www.idagent.pro/#process): тёмные поверхности, белые жирные заголовки и выделение главной карточки. Из прочитанного текстового брифа `build_or_kill_project_brief_gsd_gstack_refined.md` сохраняются совместимые принципы: компактность, видимый статус, простые формы и раскрываемые подробности. Точное визуальное копирование не требуется.
 
-Целевой визуальный стиль WTF Viewer: угольный фон, мягкие зелёные акценты, янтарный для неполноты, красный для проблем; цвет всегда дополняется текстовой меткой. Моноширинные ID/SHA, явные даты, аккуратная иерархия, боковая навигация, адаптация к телефону. RU/EN переключает интерфейс; оригинальные доказательства, названия документов и цитаты не переводятся с потерей смысла. Канонические коды одинаковы в обоих языках.
+Целевой стиль: почти чёрный нейтральный фон, различимые поверхности, белый основной и читаемый вторичный текст. Фиолетовый — действия/выбор; зелёный — QUALIFIED или завершённая проверка, янтарный — HIGH/неполнота, красный — CRITICAL/ошибка, нейтральный — UNKNOWN. Цвет дополняется подписью/значком; QUALIFIED не означает положительного направления влияния. Приоритет, квалификация, direction, coverage/freshness, решение о пересчёте и CI/review/merge имеют самостоятельные обозначения. Это заменяет прежнее требование мягких зелёных общих акцентов.
 
-Клавиатурный доступ, видимый focus, подписи полей, семантические таблицы с caption и th scope, modal dialog, error/empty/loading/success states, reduced motion. Горизонтальная прокрутка больших таблиц допустима; общая страница на мобильном не должна разъезжаться. Изображения для доказательств и точных графиков не генерируются. График истории показывает отдельные интервалы без фиктивной непрерывности.
+Постоянная иерархия: **WTF Viewer → AI CapEx Signals → Challenger 2.1**. AI CAPEX в сохранённом PNG не заменяет бренд продукта. Название существующей публикации Research Desk не меняет эту иерархию. При обновлении оформления сохраняются данные, идентичности, ссылки, сценарии и контекст, а не прежняя палитра или пиксельное расположение элементов.
 
-Основания: [W3C Tables Tutorial](https://www.w3.org/WAI/tutorials/tables/) и [GitHub Check Runs](https://docs.github.com/en/rest/checks/runs). Последний документ описывает связь проверки с commit/head SHA; принятое проектное правило требует CI и human PASS на текущей ревизии.
+Обычный текст от 16px, важные таблицы/статусы/даты от 14px; 12–13px только для дополнительных метаданных. Использовать rem, моноширинные ID/SHA, tabular-nums, явные даты, боковую навигацию. Контраст обычного текста ≥4.5:1, крупного ≥3:1; необходимых визуальных признаков контролов и графиков ≥3:1 к соседним цветам в применимых случаях. Крупный текст: от 24 CSS px обычного либо 18.67 CSS px жирного. Цель 7:1 для основного текста желательна, не дополнительный блокер. Проверять фактические итоговые CSS-цвета всех состояний.
+
+RU/EN переключает интерфейс без потери раздела, фильтров, карточки или несохранённой формы; оригинальные доказательства и канонические коды сохраняются. Клавиатурный доступ, видимый focus, подписи полей, семантические таблицы с caption и th scope, modal dialog, error/empty/loading/success, reduced motion обязательны. Проверить 1440/1280/768/390px, масштаб 200%, длинные тексты и отсутствие перекрытия закреплёнными панелями. Большие таблицы могут прокручиваться внутри контейнера без общего горизонтального overflow страницы.
+
+Генерация иллюстративных UI-макетов разрешена; они не являются доказательствами. Изображения первичных доказательств и точные графики данных не генерируются. График истории показывает отдельные интервалы без фиктивной непрерывности. Значения, даты и DEMO-строки PNG не переносятся в рабочие записи.
+
+Основания: [W3C Tables Tutorial](https://www.w3.org/WAI/tutorials/tables/), [WCAG contrast](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html), [WCAG non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html) и [GitHub Check Runs](https://docs.github.com/en/rest/checks/runs). Правило проекта требует CI и human PASS на текущей ревизии.
 
 ## 11. Архитектура и сохранение
 
@@ -213,7 +219,7 @@ Sites/Vinext/React/TypeScript; серверная база D1 для рабоч�
 
 Для первого этапа обязателен ручной режим: импорт/экспорт и ручные статусы. Наличие поддерживаемого runtime GitHub connector следует проверить перед отдельным этапом интеграции; live Refresh не считается реализованным по этому ТЗ. Исполнение Python-калькулятора внутри Sites не входит в MVP: вычисления выполняются существующим процессом исследовательского проекта, готовые артефакты импортируются вручную. Чтение main не подтверждает истинность всех первичных источников. Автоматизации AI CapEx Watch/Daily Close/Event Alerts не меняются.
 
-Исходники ранее созданного приложения и его встроенный снимок уже перенесены в WTF-Viewer по указанию владельца. Этот перенос не изменил публикацию в Sites и не завершил функциональное обновление. [План обновления](UPDATE_PLAN_RU.md) разбивает фазу 1 на этапы 0–7; [исходное состояние](IMPLEMENTATION_BASELINE.md) и [реестр приёмки](ACCEPTANCE_TRACKER.md) отделяют подтверждённое от незавершённого. Запрос на план не запускает все этапы автоматически; разработка, merge и публикация выполняются в пределах отдельных указаний владельца. Другие workspace/модели остаются будущим расширением.
+Исходники ранее созданного приложения и его встроенный снимок уже перенесены в WTF-Viewer по указанию владельца. Этот перенос не изменил публикацию в Sites и не завершил функциональное обновление. [Единый план выпуска v1.2](UPDATE_PLAN_RU.md) разбивает фазу 1 на этапы 0–7, включая редизайн D0–D3: основа после 0 и до визуальных изменений 3; оформление в 3–5; завершение в 6; итоговая проверка в 7; [исходное состояние](IMPLEMENTATION_BASELINE.md) и [реестр приёмки](ACCEPTANCE_TRACKER.md) отделяют подтверждённое от незавершённого. Запрос на план не запускает все этапы автоматически; разработка, merge и публикация выполняются в пределах отдельных указаний владельца. Другие workspace/модели остаются будущим расширением.
 
 ## 13. Приёмка
 
@@ -237,6 +243,8 @@ Sites/Vinext/React/TypeScript; серверная база D1 для рабоч�
 | A16 | Для целевой версии TypeScript/build проходят; desktop/mobile и формы проверены; непроверенные hosted сценарии раскрыты |
 | A17 | Бренд WTF Viewer, рабочее пространство AI CapEx Signals и модель Challenger 2.1 явно разделены в интерфейсе и документации |
 | A18 | workspace_id изолирует записи; канонические ID сохраняются; добавление будущего пространства не создаёт новую модель Challenger автоматически |
+
+Для v1.2 также обязательны D01–D06 из §2.1 общего плана: тема/бренд, контраст/типографика, семантика статусов, клавиатура/RU/EN, responsive и отсутствие регрессий данных. Они уточняют существующие A-критерии; исходные A01–A18 сохраняются.
 
 Это критерии целевой версии, а не утверждение, что они уже выполнены. Актуальные статусы и доказательства находятся в [реестре приёмки](ACCEPTANCE_TRACKER.md).
 
@@ -420,15 +428,21 @@ Combine qualitatively by rates/credit, real demand, inflation/productivity and p
 
 ## 10. Design, language and accessibility
 
-Use the read written reference `build_or_kill_project_brief_gsd_gstack_refined.md`. No published Build or Kill visual reference or exact tokens were available; do not claim pixel fidelity.
+The redesign is part of release v1.2. The [unified release plan](UPDATE_PLAN_RU.md) owns D0–D3 dependencies and D01–D06 acceptance; the [design appendix](design/WTF_viewer_design_plan_RU.md) defines tokens/components; the [overview PNG](design/research-desk-overview-2026-11-21.png) is a visual concept, not implemented UI or research evidence. Registry and event-detail mockups remain to be prepared.
 
-Adopt a dark/neutral theme, prominent final states, polished compact cards, simple forms, concise conclusions and progressive detail. Adapt to analytical work with dense accessible tables, transparent provenance and explicit unknown states.
+Use [ID Agent Process](https://www.idagent.pro/#process) for dark surfaces, bold white headings and emphasis on the primary card. Retain compatible compactness, visible states, simple forms and progressive detail from the previously read `build_or_kill_project_brief_gsd_gstack_refined.md`. Pixel fidelity is not required.
 
-The target WTF Viewer visual system uses charcoal backgrounds, soft green accents, amber incompleteness and muted red issues, always with text labels. Monospaced IDs/SHAs, explicit dates, clear hierarchy, sidebar and responsive mobile layouts. RU/EN switches interface labels; preserve original evidence wording and canonical codes.
+Use near-black neutral backgrounds, distinguishable surfaces, white primary and readable secondary text. Violet means action/selection; green means QUALIFIED or a completed check; amber means HIGH/incomplete; red means CRITICAL/error; neutral means UNKNOWN. Pair color with labels/icons. QUALIFIED does not imply favorable impact. Keep severity, qualification, direction, completeness/freshness, recalculation and CI/review/merge visually separate. This replaces the former general soft-green accent requirement.
 
-Require keyboard access, visible focus, field labels, semantic tables/captions/scoped headers, modal dialogs, loading/empty/error/success states and reduced motion. Large tables may scroll horizontally without overflowing the whole mobile page. Do not generate evidence imagery or imprecise data charts. Artifact intervals are separate marks without invented continuity.
+Keep **WTF Viewer → AI CapEx Signals → Challenger 2.1** as the persistent hierarchy. The PNG's AI CAPEX heading is not the product brand; the existing Research Desk publication title does not override this hierarchy. Preserve records, identities, links, workflows and context while changing appearance.
 
-References: [W3C accessible tables](https://www.w3.org/WAI/tutorials/tables/) and [GitHub commit-specific checks](https://docs.github.com/en/rest/checks/runs). The project's governance additionally requires current-SHA CI and human PASS.
+Body text starts at 16px; important table text/statuses/dates at 14px; reserve 12–13px for optional metadata. Use rem, monospaced IDs/SHAs, tabular numerals, explicit dates and sidebar navigation. Normal text contrast ≥4.5:1, large text ≥3:1; required visual cues of controls/graphics ≥3:1 against adjacent colors where applicable. Large text means at least 24 CSS px regular or 18.67 CSS px bold. A 7:1 primary-text target is desirable, not another release blocker. Measure actual composited CSS colors in all states.
+
+RU/EN preserves view, filters, detail context and unsaved forms; preserve original evidence wording and canonical codes. Require keyboard access, visible focus, labels, semantic tables/captions/scoped headers, modal dialogs, loading/empty/error/success and reduced motion. Check 1440/1280/768/390px, 200% zoom, long text and fixed-panel overlap. Large tables may scroll within their container without overflowing the whole mobile page.
+
+Generated illustrative UI concepts are allowed; generated primary evidence imagery and precise data charts are not. Artifact intervals remain separate marks without invented continuity. Do not import PNG values, dates or DEMO rows into workspace records.
+
+References: [W3C accessible tables](https://www.w3.org/WAI/tutorials/tables/), [WCAG text contrast](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html), [WCAG non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html), and [GitHub commit-specific checks](https://docs.github.com/en/rest/checks/runs). Project governance requires current-SHA CI and human PASS.
 
 ## 11. Architecture and persistence
 
@@ -448,7 +462,7 @@ Support draft recovery, export before conflict resolution and manual continuatio
 
 Phase 1 must support manual import/export and manual status tracking. Verify supported Sites runtime GitHub connector eligibility before a separate integration phase; this specification does not establish live Refresh as implemented. Running the Python calculator in Sites is outside the MVP: use the existing research pipeline and import resulting artifacts. Reading main does not independently certify all imported economic facts. Existing scheduled AI CapEx Watch, Daily Close and Event Alerts remain unchanged.
 
-The existing application source and embedded snapshot have already been transferred to WTF-Viewer by owner instruction. The transfer did not change the Sites publication or complete the functional upgrade. The [upgrade plan](UPDATE_PLAN_RU.md) breaks phase 1 into stages 0–7; the [baseline](IMPLEMENTATION_BASELINE.md) and [acceptance tracker](ACCEPTANCE_TRACKER.md) separate evidence from pending work. Requesting a plan does not automatically start every stage; implementation, merge and publication follow the scope of separate owner instructions. Additional workspaces/models remain future extensions.
+The existing application source and embedded snapshot have already been transferred to WTF-Viewer by owner instruction. The transfer did not change the Sites publication or complete the functional upgrade. The [unified v1.2 release plan](UPDATE_PLAN_RU.md) breaks phase 1 into stages 0–7, including D0–D3: design foundation after 0 and before stage 3 UI changes, patterns in 3–5, full rollout in 6 and final verification in 7; the [baseline](IMPLEMENTATION_BASELINE.md) and [acceptance tracker](ACCEPTANCE_TRACKER.md) separate evidence from pending work. Requesting a plan does not automatically start every stage; implementation, merge and publication follow the scope of separate owner instructions. Additional workspaces/models remain future extensions.
 
 ## 13. Acceptance criteria
 
@@ -472,6 +486,8 @@ The existing application source and embedded snapshot have already been transfer
 | A16 | Target implementation passes TypeScript/build; desktop/mobile/forms inspected; untested hosted flows explicitly disclosed |
 | A17 | WTF Viewer brand, AI CapEx Signals workspace and Challenger 2.1 model are distinguished in UI/documentation |
 | A18 | workspace_id isolates records; canonical IDs survive; future workspaces do not automatically create another Challenger |
+
+Release v1.2 also requires D01–D06 in release-plan §2.1: theme/branding, contrast/typography, state semantics, keyboard/RU/EN, responsive layouts and data/workflow preservation. These refine the existing A-criteria; A01–A18 remain intact.
 
 These are target acceptance criteria, not assertions of completed validation. Current states and evidence are recorded in the [acceptance tracker](ACCEPTANCE_TRACKER.md).
 
