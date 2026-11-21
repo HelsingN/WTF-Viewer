@@ -6,7 +6,7 @@
 
 Первый reader/calculator выпуск требует **B01–B10 и D01–D06**. Исходные A01–A18 сохраняют свои значения и прежние статусы evidence; их применимость уточнена, deferred не означает VERIFIED. Готовность будущего редактора/новой D1-миграции не является условием выпуска viewer.
 
-Исторические проверки baseline относятся к конкретному коду/дате, не новому порту расчёта или переносу. Документальное согласование 0R завершено. Этап 1 проверен на коммите данных, этап 2 на коммите приложения в `develop`. [Протокол переноса](RESEARCH_MIGRATION.md) · [Пакеты и проверка](RESEARCH_PACKAGES.md).
+Исторические проверки baseline относятся к конкретному коду/дате, не новому порту расчёта или переносу. Документальное согласование 0R завершено. Этап 1 проверен на коммите данных, этапы 2–3 на коммитах приложения в `develop`. [Перенос](RESEARCH_MIGRATION.md) · [Пакеты](RESEARCH_PACKAGES.md) · [Калькулятор](CHALLENGER_CALCULATION.md).
 
 Статусы: NOT_STARTED — новый полный прогон не начат; IN_PROGRESS — частичные evidence; VERIFIED — все условия проверены на exact SHA с environment/evidence; BLOCKED — конкретная причина и условие продолжения. При смене затронутого кода/данных/version сохранять старые evidence и перепроверять релевантные критерии. Зелёная сборка сама не доказывает user flow, source truth или human approval.
 
@@ -18,9 +18,9 @@
 | B02 | Просмотр исследований и полных daily/weekly | IN_PROGRESS | 2, 4 | Списки из индекса, полный исходный Markdown, связанные файлы и ссылки на точную версию доступны. Форматированный reader и полная приёмка — этап 4. [Проверка](RESEARCH_PACKAGES.md#проверка) |
 | B03 | Ручная синхронизация с GitHub WTF-Viewer | VERIFIED (local) | 2 | Два target SHA различимы, реестр сохраняет 47 событий. Предпросмотр отделён от встроенного пакета и восстанавливается после reload. [Evidence](RESEARCH_PACKAGES.md#проверка) |
 | B04 | Надёжный версионированный импорт | VERIFIED (local) | 2 | Контракты schema/hash/ID/key/history/versions, no-op, stale, PARTIAL, сохранение версии при ошибке и отдельный исторический снимок. [Evidence](RESEARCH_PACKAGES.md#проверка) |
-| B05 | Пересчёт по кнопке | NOT_STARTED | 3 | Reviewed structured input → чистое вычисление; LOCAL/UNPUBLISHED отдельно от published; as_of/hash/versions/exclusions/UNKNOWN и export JSON |
-| B06 | Пересчёт/reload без побочных записей | NOT_STARTED | 3, 7 | Input+versions+as_of ключ; reload/cache воспроизводимы; нет дубликатов/commits/новых отчётов; новая дата явная, freshness не подменяется |
-| B07 | Численная совместимость с Python | NOT_STARTED | 3, 7 | Golden vectors и отрицательные случаи: decimal/rounding, weights/caps/decay, qualification, PIT/expiry и неполнота; расхождение блокирует выпуск |
+| B05 | Пересчёт по кнопке | VERIFIED (local) | 3 | Датированный вход, отдельный локальный результат, причины исключений и JSON. [Проверка](CHALLENGER_CALCULATION.md#проверка-этапа-3) |
+| B06 | Пересчёт/reload без побочных записей | VERIFIED (local) | 3, 7 | Повтор/reload сохраняют ключ, другой срез задаётся явно, видны причины expiry. Повторить на релизном SHA. [Проверка](CHALLENGER_CALCULATION.md#проверка-этапа-3) |
+| B07 | Численная совместимость с Python | VERIFIED (local) | 3, 7 | 39 полных результатов/ошибок совпали с Python, включая пять исторических артефактов. Повторить на релизном SHA. [Проверка](CHALLENGER_CALCULATION.md#проверка-этапа-3) |
 | B08 | Честная полнота, статусы и происхождение | NOT_STARTED | 4, 5 | Четыре даты, core/event factors каждого артефакта, main/proposed/local, metadata и macro отдельно; чисел из прошлого/PNG вместо пробела нет |
 | B09 | Сохранность доступа и старых данных | NOT_STARTED | 0R, 7 | Audience/identity/D1/история не удалены; никаких write credentials в клиенте; reviewer функции первой версии не выполняют серверную запись |
 | B10 | Рабочий двуязычный reader | NOT_STARTED | 6, 7 | RU/EN, фильтры/поиск/CSV, GitHub links, полные тексты, loading/empty/error, desktop/mobile, отсутствие ошибок рендера и безопасное отображение Markdown |
@@ -85,7 +85,7 @@ Criterion ID; дата/проверяющий; environment (reference Python/loc
 | --- | --- | --- |
 | CHECK-MIGRATION-CUTOVER | VERIFIED в develop. [Протокол](RESEARCH_MIGRATION.md) | Использовать проверенный target commit для сборки пакета на этапе 2 |
 | CHECK-REPORT-CONTENT | Полные тексты сохранены, [указатель отчётов](../research/reports/README.md) | Этапы 2, 4: импорт и проверка просмотра в приложении |
-| CHECK-CALCULATOR-PARITY | Python имеет чистый reviewed-input evaluator; dated one-off не универсален | Этап 3: pin reference/dependencies, browser port/golden vectors |
+| CHECK-CALCULATOR-PARITY | Порт и зафиксированный Python совпали в 39 сценариях. [Проверка](CHALLENGER_CALCULATION.md#проверка-этапа-3) | Повторить parity и браузерную приёмку на релизном SHA на этапе 7 |
 | CHECK-MANUAL-GITHUB-SYNC | Ручной GitHub commit→package→import процесс определён | Этап 2: два revisions, no-op/invalid/partial/reload |
 | CHECK-READER-ACCESS | Site custom access/identity/D1 существуют | Этап 7: прежний доступ/записи не потеряны; reader/calculator hosted scenario |
 | CHECK-UI-ACCESSIBILITY | Концепция обзора есть, другие макеты и внедрение pending | D0/D1/D2/D3 и D01–D06 |
