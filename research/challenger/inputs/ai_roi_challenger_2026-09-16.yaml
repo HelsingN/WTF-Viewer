@@ -1,0 +1,137 @@
+schema: ai-capex.roi-challenger-shadow.v1
+as_of: 2026-09-16
+status: RESEARCH_SHADOW
+trading_authority: NONE
+model_contract: Docs/AI_ROI_CHALLENGER_MODEL_v1.md
+context_contract: Docs/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md
+champion_strategy: Docs/AI_CapEx_Reversal_Strategy_v1.2.md
+source_research:
+  - Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-16.md
+
+champion_reference:
+  decision_state: WATCH
+  reversal_state: NOT_CONFIRMED
+  trade_candidate: NO_CANDIDATE
+  numeric_combined_score: UNKNOWN_NOT_RECOMPUTED_HERE
+
+challenger:
+  score: 45.0
+  state: ELEVATED
+  causal_stage: STAGE_3_FUNDING_DEPENDENCE_RISING
+  divergence_class: CHALLENGER_EARLY_WARNING
+
+components:
+  R1_monetization_vs_capex:
+    level: 1
+    weight: 20
+    contribution: 10.0
+    rationale: >-
+      Demand and monetization remain strong, highlighted by Oracle OCI growth of
+      121% and more than $30B of new AI cloud contracts, but capital deployment
+      remains extreme and cash conversion is uneven across hyperscalers.
+
+  R2_cash_conversion_fcf:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: >-
+      Oracle Q1 operating cash flow reached $23B but free cash flow remained
+      negative $5B while the prior Alphabet/Amazon/Meta cash-pressure evidence
+      remains. Microsoft remains materially healthier, preventing a level-2 call.
+
+  R3_payback_duration_project_economics:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: >-
+      Direct public evidence of lengthening expected AI payback periods remains
+      limited. Older-GPU rental-price normalization and high capital intensity are
+      early warnings but do not establish material project-economics deterioration.
+
+  R4_financing_refinancing_dependence:
+    level: 1
+    weight: 20
+    contribution: 10.0
+    rationale: >-
+      Oracle completed a $20B ATM equity issuance after $43B debt plus $5B equity
+      financing in FY26; SoftBank used an upsized bank loan to fund OpenAI exposure,
+      and CoreWeave remains highly financing-dependent. Capital access nevertheless
+      remains open, so dependence is high but broad financing stress is unconfirmed.
+
+  R5_backlog_contract_quality:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Large RPO/backlog remains concentrated in long-duration AI commitments, but
+      Oracle's customer prepayments/customer-supplied GPUs improve funding quality.
+      Broad renegotiations or cancellations are not confirmed.
+
+  R6_capacity_funnel_ghost_demand:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Announced and leased GW capacity continues to expand faster than independently
+      observable utilized/profitable capacity. Microsoft 38-GW planning and
+      Anthropic's 2.16-GW Australian lease are expansion evidence, not proof of
+      monetized end demand at every announced site.
+
+  R7_project_attrition:
+    level: 0
+    weight: 10
+    contribution: 0.0
+    rationale: >-
+      No broad independently confirmed wave of economically driven AI datacenter
+      cancellations, restructurings or capacity releases appeared this week.
+
+physical_confirmation:
+  P1_gpu_compute:
+    state: WATCH
+    rationale: >-
+      Older-generation rental pricing continues to normalize and availability is
+      broad, but utilization, renewal and contract-duration deterioration is not
+      independently confirmed across the market.
+  P2_memory:
+    state: ANTI_REVERSAL
+    rationale: >-
+      DRAM supplier inventories remain historically low and contract prices are
+      still rising. The rate of price increase is moderating, but a downcycle is
+      not confirmed.
+  P3_semiconductor_networking:
+    state: ANTI_REVERSAL
+    rationale: >-
+      Oracle GPU deployments, Microsoft capacity plans and ongoing AI networking
+      investment remain consistent with physical expansion rather than an order
+      collapse.
+  P4_market_technical:
+    state: UNKNOWN
+    rationale: >-
+      No new canonical technical-v1 / leadership snapshot was recomputed in this
+      research-only weekly observation.
+
+weekly_delta:
+  prior_as_of: 2026-09-09
+  prior_score: 45.0
+  score_change: 0.0
+  prior_stage: STAGE_3_FUNDING_DEPENDENCE_RISING
+  stage_change: NONE
+  evidence_change: >-
+    Oracle FY27 Q1 materially improves evidence quality for the financial-first
+    thesis: triple-digit OCI monetization coexists with negative FCF and very large
+    equity/debt/prepayment funding structures. Physical confirmation remains
+    anti-reversal, so the warning does not advance to project attrition or physical
+    weakness.
+
+interpretation: >-
+  Challenger remains ELEVATED and research-only. AI demand is still growing and
+  physical supply remains tight, but the build-out is increasingly dependent on
+  large external-capital and customer-funding structures. No trade authority and no
+  change to F1..F5 or Combined Score follows from this observation.
+
+forward_outcomes:
+  two_weeks: PENDING
+  four_weeks: PENDING
+  eight_weeks: PENDING
+  twelve_weeks: PENDING
+  next_hyperscaler_earnings_cycle: PENDING

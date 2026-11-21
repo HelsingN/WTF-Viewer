@@ -1,0 +1,80 @@
+{
+  "captured_at": "2026-11-04T08:40:00+02:00",
+  "cftc": {
+    "nasdaq_20974+": {
+      "four_week_net": 28163,
+      "long": 48004,
+      "net": -5619,
+      "short": 53623,
+      "spreading": 10191,
+      "thirteen_week_method": "DERIVED_SAME_CODE_ARCHIVE_ARITHMETIC",
+      "thirteen_week_net": 71341,
+      "wow_net": 2069
+    },
+    "positions_as_of": "2026-10-27",
+    "published": "2026-10-30",
+    "report": "TFF_FUTURES_ONLY_CONSOLIDATED",
+    "sp_13874+": {
+      "four_week_net": -25872,
+      "long": 102967,
+      "net": -399879,
+      "short": 502846,
+      "spreading": 54518,
+      "thirteen_week_method": "DERIVED_SAME_CODE_ARCHIVE_ARITHMETIC",
+      "thirteen_week_net": -97508,
+      "wow_net": -27009
+    }
+  },
+  "confidence": "MEDIUM",
+  "cutoff": "2026-11-04T08:23:00+02:00",
+  "forced_deleveraging": {
+    "confidence": "LOW",
+    "reason": "no direct prime-broker or fund-flow confirmation",
+    "state": "NOT_INDEPENDENTLY_OBSERVED"
+  },
+  "h_state": "H1_QUIET_HEDGING",
+  "lending_security_shorts": "UNKNOWN_NO_COMPARABLE_PUBLIC_METHOD",
+  "price_positioning_divergence": "MIXED_PRICE_ALREADY_CORRECTED_SP_MORE_BEARISH_NASDAQ_LESS_BEARISH",
+  "prime_broker": "UNKNOWN_SUBSCRIPTION_OR_PRIVATE",
+  "put_call_2026-11-03": {
+    "equity": 0.6,
+    "index": 1.02,
+    "total": 0.86
+  },
+  "report_date": "2026-11-04",
+  "schema": "ai-capex.institutional-derisking-observation.v1",
+  "skew_2026-11-03": {
+    "source_class": "INDEPENDENT_SECONDARY",
+    "value": 150.01
+  },
+  "sources": [
+    "https://www.cftc.gov/dea/futures/financial_lf.htm",
+    "https://www.cboe.com/us/options/market_statistics/daily/",
+    "https://www.cboe.com/tradable_products/vix/vix_futures/"
+  ],
+  "unknowns": [
+    {
+      "field": "prime_broker",
+      "next_action": "use public fallback if methodology becomes comparable",
+      "next_review": "2026-11-11",
+      "owner": "weekly-research",
+      "reason": "subscription/private dataset"
+    },
+    {
+      "field": "lending_security_shorts",
+      "next_action": "check exchange/provider release",
+      "next_review": "2026-11-11",
+      "owner": "weekly-research",
+      "reason": "no public same-method current panel"
+    }
+  ],
+  "vix_2026-11-03": 20.83,
+  "vix_futures_2026-11-03": {
+    "DEC": 19.5477,
+    "FEB": 20.4605,
+    "JAN": 20.1804,
+    "NOV": 19.8993,
+    "shape": "NEAR_TERM_BACKWARDATION_THEN_CONTANGO"
+  },
+  "weekly_delta": "WORSENING_TECHNICALS_AND_SP_POSITIONING_NASDAQ_CFTC_IMPROVING"
+}

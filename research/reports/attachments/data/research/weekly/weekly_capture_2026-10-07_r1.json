@@ -1,0 +1,1819 @@
+{
+  "schema": "ai-capex.weekly-capture.v1",
+  "report_date": "2026-10-07",
+  "revision": 1,
+  "cutoff": "2026-10-07T23:59:59-04:00",
+  "last_completed_us_session": "2026-10-07",
+  "captured_at": "2026-10-09T03:58:00.599Z",
+  "mode": "LATE_RECONSTRUCTION",
+  "original_cutoff": null,
+  "data_status": "PARTIAL",
+  "trading_authority": "NONE",
+  "report": "Docs/research/AI_CAPEX_WEEKLY_COMPLETENESS_2026-10-07_RECOVERED_2026-10-09.md",
+  "original_report": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+  "champion_supplement": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+  "artifacts": {
+    "challenger": "data/research/challenger/ai_roi_challenger_2026-10-07.yaml",
+    "champion": "data/research/champion/champion_observation_2026-10-07.yaml",
+    "macro": "data/research/macro_input_cost_pain_2026-10-07_recovered_2026-10-09.json",
+    "institutional": "data/research/institutional_derisking_2026-10-07_recovered_2026-10-09.json"
+  },
+  "blocks": {
+    "champion": {
+      "section": "## champion",
+      "fields": {
+        "state": {
+          "status": "ASSESSED",
+          "value": "WATCH research carry; fresh numeric band unavailable",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "trade_state": {
+          "status": "ASSESSED",
+          "value": "NO_CANDIDATE research conclusion; canonical runtime decision not computed",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "combined_score": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+            "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml"
+          ],
+          "note": "REQUIRED_ACCEPTED_INPUTS_MISSING",
+          "attempts": [
+            {
+              "source": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+              "outcome": "FRESH_NORMALIZATION_AND_NUMERIC_ASIA_MISSING"
+            },
+            {
+              "source": "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+              "outcome": "OLD_ACCEPTED_BASELINE_ONLY"
+            }
+          ],
+          "reason": "REQUIRED_ACCEPTED_INPUTS_MISSING",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Version/review fresh fundamental normalization and numeric Asia policy; capture canonical technical evidence; keep score null.",
+          "next_review": "2026-10-14"
+        },
+        "fundamental_normalization": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+            "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml"
+          ],
+          "note": "FRESH_ACCEPTED_NORMALIZATION_NOT_PRESENT",
+          "attempts": [
+            {
+              "source": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+              "outcome": "REVIEWED_OCTOBER_FACTS_NOT_NORMALIZED"
+            },
+            {
+              "source": "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+              "outcome": "SEPTEMBER_BASELINE_NOT_OCTOBER_REFRESH"
+            }
+          ],
+          "reason": "FRESH_ACCEPTED_NORMALIZATION_NOT_PRESENT",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Create separate immutable reviewed normalization; no invented scores.",
+          "next_review": "2026-10-14"
+        },
+        "technical": {
+          "status": "ASSESSED",
+          "value": "10 / NORMAL; SMH/SPY WEAK; breadth 0/4; 340 aligned bars",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "canonical_technical": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+            "Docs/TECHNICAL_SIGNAL_CONTRACT_v1.md"
+          ],
+          "note": "TRADINGVIEW_ALERT_NOT_CAPTURED",
+          "attempts": [
+            {
+              "source": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+              "outcome": "PROVIDER_PROXY_ONLY"
+            },
+            {
+              "source": "Docs/TECHNICAL_SIGNAL_CONTRACT_v1.md",
+              "outcome": "PINE_SESSION_PARITY_REQUIRED"
+            }
+          ],
+          "reason": "TRADINGVIEW_ALERT_NOT_CAPTURED",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Collect canonical confirmed Pine evidence; NORMAL does not authorize a prohibited production event.",
+          "next_review": "2026-10-14"
+        },
+        "asia": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+            "Docs/AI_CapEx_Reversal_Phase1_5_Plan_v2.6.md"
+          ],
+          "note": "NO_APPROVED_NUMERIC_NORMALIZATION_OR_MATCHED_MULTI_SESSION_SERIES",
+          "attempts": [
+            {
+              "source": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+              "outcome": "THREE_LOCAL_CLOSES_MIXED_NEWS_CONTEXT_ONLY"
+            },
+            {
+              "source": "Docs/AI_CapEx_Reversal_Phase1_5_Plan_v2.6.md",
+              "outcome": "TD_ASIA_OPEN_ISSUE_72"
+            }
+          ],
+          "reason": "NO_APPROVED_NUMERIC_NORMALIZATION_OR_MATCHED_MULTI_SESSION_SERIES",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Resolve versioned normalization and multi-session local benchmark panel under #72; do not substitute TSM ADS.",
+          "next_review": "2026-10-14"
+        },
+        "leadership": {
+          "status": "OBSERVED",
+          "value": [
+            {
+              "ticker": "MSFT",
+              "close": 529.76,
+              "ma50": 496.126,
+              "ma200": 433.5697,
+              "weekly_pct": 3.28719,
+              "rs50_slope_pct": 9.46727
+            },
+            {
+              "ticker": "GOOGL",
+              "close": 350.5,
+              "ma50": 345.6592,
+              "ma200": 339.61265,
+              "weekly_pct": 1.86585,
+              "rs50_slope_pct": -1.75031
+            },
+            {
+              "ticker": "AMZN",
+              "close": 259.92,
+              "ma50": 258.0088,
+              "ma200": 241.848,
+              "weekly_pct": 4.3227,
+              "rs50_slope_pct": 0.29359
+            },
+            {
+              "ticker": "META",
+              "close": 721.31,
+              "ma50": 633.4318,
+              "ma200": 629.5374,
+              "weekly_pct": -0.53366,
+              "rs50_slope_pct": 4.65663
+            },
+            {
+              "ticker": "ORCL",
+              "close": 143.56,
+              "ma50": 145.1112,
+              "ma200": 162.30685,
+              "weekly_pct": 4.55936,
+              "rs50_slope_pct": 2.35272
+            }
+          ],
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "data/research/leadership/leadership_numeric_panel_2026-10-07_recovered_2026-10-09.json"
+          ],
+          "note": "Provider-derived 340-bar matched five-buyer panel; event/manual qualitative classification unavailable separately; no canonical Pine parity or hidden score."
+        },
+        "F1": {
+          "status": "ASSESSED",
+          "value": "Broad hyperscaler cuts not confirmed",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "F2": {
+          "status": "ASSESSED",
+          "value": "Broad GPU oversupply not confirmed; missing utilization",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "F3": {
+          "status": "ASSESSED",
+          "value": "Credit/renewal dependence WATCH; access not closed",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "F4": {
+          "status": "ASSESSED",
+          "value": "Broad semiconductor deterioration not confirmed",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "F5": {
+          "status": "ASSESSED",
+          "value": "Structural backlog/financing quality WATCH; cancellations not established",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "leadership_events": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/leadership/leadership_numeric_panel_2026-10-07_recovered_2026-10-09.json",
+            "Docs/AI_MARKET_LEADERSHIP_CONTRACT_v1.md"
+          ],
+          "note": "Numeric leadership panel collected; failed high/event windows/reaction qualitative review not complete.",
+          "attempts": [
+            {
+              "source": "data/research/leadership/leadership_numeric_panel_2026-10-07_recovered_2026-10-09.json",
+              "outcome": "MATCHED_NUMERIC_PANEL_RECONSTRUCTED_NO_MANUAL_EVENT_FLAGS"
+            },
+            {
+              "source": "Docs/AI_MARKET_LEADERSHIP_CONTRACT_v1.md",
+              "outcome": "MANUAL_CONTEXT_REQUIRED; NO_AUTOMATIC_THRESHOLDS"
+            }
+          ],
+          "reason": "MANUAL_EVENT_AND_FAILED_HIGH_CONTEXT_UNRESOLVED",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Review named event windows and failed-high/rejection sequences manually under leadership-v1; keep numeric metrics separate.",
+          "next_review": "2026-10-14"
+        }
+      }
+    },
+    "hyperscalers": {
+      "section": "## hyperscalers",
+      "fields": {
+        "MSFT_cash_capex": {
+          "status": "OBSERVED",
+          "value": "FY26 Q4 OCF 55.4B, cash PP&E 35.8B, FCF 19.6B; total CapEx 41B includes leases",
+          "observation_date": "2026-06-30",
+          "published_on": "2026-07-29",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"
+          ],
+          "note": "Latest reviewed disclosure; periods/definitions differ; no aggregate industry FCF inferred. Oracle period ends Aug31."
+        },
+        "GOOGL_cash_capex": {
+          "status": "OBSERVED",
+          "value": "H1 OCF 84.859B, cash PP&E 80.598B; calculated difference 4.261B (H1, not Q2)",
+          "observation_date": "2026-06-30",
+          "published_on": "2026-07-30",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+          ],
+          "note": "Latest reviewed disclosure; periods/definitions differ; no aggregate industry FCF inferred. Oracle period ends Aug31."
+        },
+        "AMZN_cash_capex": {
+          "status": "OBSERVED",
+          "value": "TTM OCF 161.4B; FCF -7.6B; cash investment pressure (TTM, not one quarter)",
+          "observation_date": "2026-06-30",
+          "published_on": "2026-07-30",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report"
+          ],
+          "note": "Latest reviewed disclosure; periods/definitions differ; no aggregate industry FCF inferred. Oracle period ends Aug31."
+        },
+        "META_cash_capex": {
+          "status": "OBSERVED",
+          "value": "Q2 OCF 31.862B, PP&E 30.116B + lease principal .962B, FCF .784B",
+          "observation_date": "2026-06-30",
+          "published_on": "2026-07-29",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx"
+          ],
+          "note": "Latest reviewed disclosure; periods/definitions differ; no aggregate industry FCF inferred. Oracle period ends Aug31."
+        },
+        "ORCL_cash_capex": {
+          "status": "OBSERVED",
+          "value": "Q1 FY27 OCF 23.103B, CapEx 28.499B, FCF -5.396B; financing-adjusted outlay is different",
+          "observation_date": "2026-08-31",
+          "published_on": "2026-09-10",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
+          ],
+          "note": "Latest reviewed disclosure; periods/definitions differ; no aggregate industry FCF inferred. Oracle period ends Aug31."
+        }
+      }
+    },
+    "gpu": {
+      "section": "## gpu",
+      "fields": {
+        "matched_prices": {
+          "status": "ASSESSED",
+          "value": "Ornn Oct6 -> Oct7: H100 2.86 -> 2.85; H200 5.04 -> 5.29; B200 7.56 -> 7.56 USD/GPU-hour",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "Inherited provider reconstruction; exact original print availability unproven. Live Ornn page recheck does not provide a frozen Oct7 panel."
+        },
+        "availability": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://data.ornn.com/",
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "MATCHED_PROVIDER_POPULATION_OR_REALIZED_UTILIZATION_NOT_PUBLICLY_CAPTURED",
+          "attempts": [
+            {
+              "source": "https://data.ornn.com/",
+              "outcome": "LIVE_PRICE_PAGE_NOT_MATCHED_HISTORICAL_UTILIZATION_PANEL"
+            },
+            {
+              "source": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+              "outcome": "TWO_SETTLEMENTS_NOT_UTILIZATION_OR_RENEWALS"
+            }
+          ],
+          "reason": "MATCHED_PROVIDER_POPULATION_OR_REALIZED_UTILIZATION_NOT_PUBLICLY_CAPTURED",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Capture comparable provider cohort, realized utilization and contract renewals; list prices alone are insufficient.",
+          "next_review": "2026-10-14"
+        },
+        "utilization": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://data.ornn.com/",
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "MATCHED_PROVIDER_POPULATION_OR_REALIZED_UTILIZATION_NOT_PUBLICLY_CAPTURED",
+          "attempts": [
+            {
+              "source": "https://data.ornn.com/",
+              "outcome": "LIVE_PRICE_PAGE_NOT_MATCHED_HISTORICAL_UTILIZATION_PANEL"
+            },
+            {
+              "source": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+              "outcome": "TWO_SETTLEMENTS_NOT_UTILIZATION_OR_RENEWALS"
+            }
+          ],
+          "reason": "MATCHED_PROVIDER_POPULATION_OR_REALIZED_UTILIZATION_NOT_PUBLICLY_CAPTURED",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Capture comparable provider cohort, realized utilization and contract renewals; list prices alone are insufficient.",
+          "next_review": "2026-10-14"
+        },
+        "renewals_contract_duration": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://data.ornn.com/",
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "MATCHED_PROVIDER_POPULATION_OR_REALIZED_UTILIZATION_NOT_PUBLICLY_CAPTURED",
+          "attempts": [
+            {
+              "source": "https://data.ornn.com/",
+              "outcome": "LIVE_PRICE_PAGE_NOT_MATCHED_HISTORICAL_UTILIZATION_PANEL"
+            },
+            {
+              "source": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+              "outcome": "TWO_SETTLEMENTS_NOT_UTILIZATION_OR_RENEWALS"
+            }
+          ],
+          "reason": "MATCHED_PROVIDER_POPULATION_OR_REALIZED_UTILIZATION_NOT_PUBLICLY_CAPTURED",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Capture comparable provider cohort, realized utilization and contract renewals; list prices alone are insufficient.",
+          "next_review": "2026-10-14"
+        }
+      }
+    },
+    "financing": {
+      "section": "## financing",
+      "fields": {
+        "OpenAI": {
+          "status": "ASSESSED",
+          "value": "Project Jupiter delay and funding context carried from Sept30; no newly verified broad ROI-led cancellation",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "Anthropic": {
+          "status": "ASSESSED",
+          "value": "Vendor-supported 42B senior / 18B junior reported package; do not double count overlapping facilities",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "CoreWeave": {
+          "status": "ASSESSED",
+          "value": "Aug facility 2.6B, SOFR+5.50%, ~5y debt vs ~3y average contracts; old structure, not Oct new borrowing",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "credit_contracts": {
+          "status": "ASSESSED",
+          "value": "Guarantees/commitments/drawn funds and realized cash are separate; R4 remains level2",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "capacity_funnel": {
+          "status": "ASSESSED",
+          "value": "ANNOUNCED -> GRID_REQUESTED -> CONTRACTED -> FUNDED -> BUILT -> ENERGIZED -> UTILIZED -> MONETIZED -> PROFITABLE; final-stage comparable panel incomplete",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "project_attrition": {
+          "status": "ASSESSED",
+          "value": "Prior power/regulatory execution delays retained; not a new Oct ROI-led wave",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        }
+      }
+    },
+    "semiconductors": {
+      "section": "## semiconductors",
+      "fields": {
+        "NVDA": {
+          "status": "OBSERVED",
+          "value": "Latest reviewed Q2 FY27: revenue96.221B/DC89.0B, GM75%; Q3 guide108B±2% and GM74%±50bp are MANAGEMENT_CLAIM; supplier profit != buyer ROI",
+          "observation_date": "2026-07-26",
+          "published_on": "2026-08-26",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/",
+            "https://blogs.nvidia.com/blog/gpus-openai-gpt-6-astra-ultrafast/"
+          ],
+          "note": "Primary financial release and Oct1 performance claim reviewed; not a new October earnings release or independent buyer ROI proof."
+        },
+        "AMD": {
+          "status": "ASSESSED",
+          "value": "Supply-expansion CEO commentary in Oct6 recap; future deliveries are not realized output",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "AVGO": {
+          "status": "ASSESSED",
+          "value": "Q3 revenue 29.6B/FCF ~13.7B; Q4 guide ~34.8B/AI ~21.7B is forward claim",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        }
+      }
+    },
+    "memory": {
+      "section": "## memory",
+      "fields": {
+        "MU_results": {
+          "status": "ASSESSED",
+          "value": "FY26 Q4 revenue54.23B/OCF43.97B/NG GM87%; FY26 adjusted FCF62.31B",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "DRAM_NAND_bits_ASP": {
+          "status": "ASSESSED",
+          "value": "DRAM bits mid-single digit, prices high teens; NAND bits ~10%, prices ~30% sequential",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "HBM_contracting": {
+          "status": "ASSESSED",
+          "value": "Management most CY27 HBM contracted with price rises; not realized consumption",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "inventory": {
+          "status": "ASSESSED",
+          "value": "Inventory days129, +9; assess jointly with prices",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "capacity": {
+          "status": "ASSESSED",
+          "value": "Expansion/contracted supply visibility; energized/utilized/profitable cohort panel incomplete",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "cancellations": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+            "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf"
+          ],
+          "note": "NO_COMPARABLE_REALIZED_CANCELLATION_SERIES",
+          "attempts": [
+            {
+              "source": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+              "outcome": "CONTRACTING_STRONG_BUT_CANCELLATIONS_UNMEASURED"
+            },
+            {
+              "source": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+              "outcome": "NO_BROAD_BOOKINGS_COLLAPSE_PROOF"
+            },
+            {
+              "source": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+              "outcome": "SEARCH_CANCEL_NO_MATCH; FORWARD_TIGHTNESS_NOT_CANCELLATION_RATE"
+            }
+          ],
+          "reason": "NO_COMPARABLE_REALIZED_CANCELLATION_SERIES",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Collect disclosed cancellations/deferrals with denominator and dates; absence of mention is not zero.",
+          "next_review": "2026-10-14"
+        },
+        "peak_earnings": {
+          "status": "ASSESSED",
+          "value": "Peak-margin risk; current P/E not normalized mid-cycle earnings",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "Cisco_warning": {
+          "status": "ASSESSED",
+          "value": "Financial/capacity mechanisms visible; broad physical 2001 unwind unconfirmed",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        }
+      }
+    },
+    "roi": {
+      "section": "## roi",
+      "fields": {
+        "demand_growth": {
+          "status": "ASSESSED",
+          "value": "YES in supplier contracting/results; not every-project ROI proof",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "monetization_vs_deployment": {
+          "status": "ASSESSED",
+          "value": "MIXED; buyers heterogeneous; comparable sector ratios incomplete",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "payback_lengthening": {
+          "status": "ASSESSED",
+          "value": "INDIRECT WATCH, no broad realized payback time series",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "financing_dependence": {
+          "status": "ASSESSED",
+          "value": "Material vendor/project dependence; access remains open and structured",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "marginal_delays": {
+          "status": "ASSESSED",
+          "value": "Prior power/regulatory delays; no new broad ROI-led wave",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "physical_transmission": {
+          "status": "ASSESSED",
+          "value": "NOT CONFIRMED in reviewed evidence; missing utilization limits inference",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "revenue_per_MW_GPU": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+            "https://data.ornn.com/"
+          ],
+          "note": "MATCHED_DEPLOYED_DENOMINATOR_AND_REALIZED_REVENUE_UNAVAILABLE",
+          "attempts": [
+            {
+              "source": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+              "outcome": "BUYER_TOTAL_REVENUE_NOT_AI_PER_MW_METRIC"
+            },
+            {
+              "source": "https://data.ornn.com/",
+              "outcome": "RENTAL_PRICES_NOT_REALIZED_REVENUE_PER_DEPLOYED_MW"
+            }
+          ],
+          "reason": "MATCHED_DEPLOYED_DENOMINATOR_AND_REALIZED_REVENUE_UNAVAILABLE",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Capture entity/cohort-specific energized, utilized and monetized MW/GPU; no announced-MW denominator.",
+          "next_review": "2026-10-14"
+        }
+      }
+    },
+    "challenger": {
+      "section": "## challenger",
+      "fields": {
+        "score": {
+          "status": "ASSESSED",
+          "value": 60,
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "state": {
+          "status": "ASSESSED",
+          "value": "ALERT",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "stage": {
+          "status": "ASSESSED",
+          "value": "STAGE_5_PROJECT_ATTRITION",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "R1": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "R2": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "R3": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "R4": {
+          "status": "ASSESSED",
+          "value": 2,
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "R5": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "R6": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "R7": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "P1": {
+          "status": "ASSESSED",
+          "value": "WATCH",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "P2": {
+          "status": "ASSESSED",
+          "value": "ANTI_REVERSAL",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "P3": {
+          "status": "ASSESSED",
+          "value": "ANTI_REVERSAL",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "P4": {
+          "status": "ASSESSED",
+          "value": "NEUTRAL",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "divergence": {
+          "status": "ASSESSED",
+          "value": "CHALLENGER_EARLY_WARNING",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        }
+      }
+    },
+    "efficiency": {
+      "section": "## efficiency",
+      "fields": {
+        "task_cost": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "NO_MATCHED_USEFUL_TASK_QUALITY_COMPUTE_CAPACITY_ECONOMICS_PANEL",
+          "attempts": [
+            {
+              "source": "Docs/research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+              "outcome": "MATCHED_METRIC_REQUIRED"
+            },
+            {
+              "source": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+              "outcome": "REQUIRED_METRIC_UNKNOWN_IN_RESEARCH"
+            }
+          ],
+          "reason": "NO_MATCHED_USEFUL_TASK_QUALITY_COMPUTE_CAPACITY_ECONOMICS_PANEL",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Seek fixed-quality/task/hardware measurements and committed-cohort revenue/utilization, separate rebound evidence.",
+          "next_review": "2026-10-14"
+        },
+        "pricing_discipline": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+            "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+          ],
+          "note": "NO_DATED_COMPARABLE_PRODUCT_PRICING_CHANGE_CAPTURED",
+          "attempts": [
+            {
+              "source": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+              "outcome": "NO_VERIFIED_PRODUCT_PRICE_CHANGE"
+            },
+            {
+              "source": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+              "outcome": "GPU_SETTLEMENT_NOT_PRODUCT_MONETIZATION"
+            }
+          ],
+          "reason": "NO_DATED_COMPARABLE_PRODUCT_PRICING_CHANGE_CAPTURED",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Collect dated OpenAI/Anthropic/Google/Microsoft product pricing history; subscription list prices are not costs.",
+          "next_review": "2026-10-14"
+        },
+        "induced_demand": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "NO_MATCHED_USEFUL_TASK_QUALITY_COMPUTE_CAPACITY_ECONOMICS_PANEL",
+          "attempts": [
+            {
+              "source": "Docs/research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+              "outcome": "MATCHED_METRIC_REQUIRED"
+            },
+            {
+              "source": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+              "outcome": "REQUIRED_METRIC_UNKNOWN_IN_RESEARCH"
+            }
+          ],
+          "reason": "NO_MATCHED_USEFUL_TASK_QUALITY_COMPUTE_CAPACITY_ECONOMICS_PANEL",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Seek fixed-quality/task/hardware measurements and committed-cohort revenue/utilization, separate rebound evidence.",
+          "next_review": "2026-10-14"
+        },
+        "committed_capacity_economics": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "NO_MATCHED_USEFUL_TASK_QUALITY_COMPUTE_CAPACITY_ECONOMICS_PANEL",
+          "attempts": [
+            {
+              "source": "Docs/research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+              "outcome": "MATCHED_METRIC_REQUIRED"
+            },
+            {
+              "source": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+              "outcome": "REQUIRED_METRIC_UNKNOWN_IN_RESEARCH"
+            }
+          ],
+          "reason": "NO_MATCHED_USEFUL_TASK_QUALITY_COMPUTE_CAPACITY_ECONOMICS_PANEL",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Seek fixed-quality/task/hardware measurements and committed-cohort revenue/utilization, separate rebound evidence.",
+          "next_review": "2026-10-14"
+        },
+        "assessment": {
+          "status": "ASSESSED",
+          "value": "INCONCLUSIVE; no efficiency-induced deterioration confirmed; no automatic score adjustment",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        }
+      }
+    },
+    "macro": {
+      "section": "## macro",
+      "fields": {
+        "score_range": {
+          "status": "ASSESSED",
+          "value": {
+            "lower": 33,
+            "upper": 68
+          },
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "state_range": {
+          "status": "ASSESSED",
+          "value": [
+            "WATCH",
+            "HIGH_STRESS",
+            "BREAK_ZONE"
+          ],
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "M1": {
+          "status": "ASSESSED",
+          "value": 22,
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+            "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "M2": {
+          "status": "ASSESSED",
+          "value": 11,
+          "observation_date": "2026-08-31",
+          "published_on": "2026-09-11",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.bls.gov/news.release/archives/cpi_09112026.htm"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "M3": {
+          "status": "ASSESSED",
+          "value": {
+            "lower": 0,
+            "upper": 20
+          },
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://stockq.org/index/CRB.php",
+            "https://www.corecommodityllc.com/CoreIndexes.aspx"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "M4": {
+          "status": "ASSESSED",
+          "value": {
+            "lower": 0,
+            "upper": 15
+          },
+          "observation_date": "2026-10-06",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://fred.stlouisfed.org/series/BAMLC0A0CM"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "funding_break": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/MACRO_INPUT_COST_PAIN_BASELINE_2026-09-23.md",
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "NO_FRESH_MATCHED_PROJECT_DEBT_PRINT_PLUS_SYNDICATION_EVIDENCE",
+          "attempts": [
+            {
+              "source": "Docs/research/MACRO_INPUT_COST_PAIN_BASELINE_2026-09-23.md",
+              "outcome": "OLD_89_91_PRINT_NOT_OCT7_PRICE"
+            },
+            {
+              "source": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+              "outcome": "NEW_FINANCE_PACKAGE_IS_NOT_FAILED_SYNDICATION"
+            }
+          ],
+          "reason": "NO_FRESH_MATCHED_PROJECT_DEBT_PRINT_PLUS_SYNDICATION_EVIDENCE",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Recheck same debt instrument/cents and financing difficulty concurrently; old YES is historical.",
+          "next_review": "2026-10-14"
+        },
+        "stagflation_trap": {
+          "status": "ASSESSED",
+          "value": "NO: CPI3.4 <3.5 threshold",
+          "observation_date": "2026-08-31",
+          "published_on": "2026-09-11",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.bls.gov/news.release/archives/cpi_09112026.htm"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "easing_failure": {
+          "status": "ASSESSED",
+          "value": "NO: latest Fed action HIKE, not easing",
+          "observation_date": "2026-09-16",
+          "published_on": "2026-09-16",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "crb_12m": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://stockq.org/index/CRB.php",
+            "https://www.corecommodityllc.com/CoreIndexes.aspx"
+          ],
+          "note": "VARIANT_IDENTITY_AND_FROZEN_OCT7_HISTORY_NOT_VERIFIED",
+          "attempts": [
+            {
+              "source": "https://stockq.org/index/CRB.php",
+              "outcome": "LIVE_OCT8_METRICS_EXCLUDED; OCT7_TABLE_VALUES_NOT_EXTRACTABLE"
+            },
+            {
+              "source": "https://www.corecommodityllc.com/CoreIndexes.aspx",
+              "outcome": "BENCHMARK_DEFINITION_NO_FROZEN_OCT7_PRICE_ER_TR_HISTORY"
+            }
+          ],
+          "reason": "VARIANT_IDENTITY_AND_FROZEN_OCT7_HISTORY_NOT_VERIFIED",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Pin administrator variant/ticker/return type and archive permitted dated 12m/260-session inputs; no CFD/YTD substitution.",
+          "next_review": "2026-10-14"
+        },
+        "crb_ma260": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://stockq.org/index/CRB.php",
+            "https://www.corecommodityllc.com/CoreIndexes.aspx"
+          ],
+          "note": "VARIANT_IDENTITY_AND_FROZEN_OCT7_HISTORY_NOT_VERIFIED",
+          "attempts": [
+            {
+              "source": "https://stockq.org/index/CRB.php",
+              "outcome": "LIVE_OCT8_METRICS_EXCLUDED; OCT7_TABLE_VALUES_NOT_EXTRACTABLE"
+            },
+            {
+              "source": "https://www.corecommodityllc.com/CoreIndexes.aspx",
+              "outcome": "BENCHMARK_DEFINITION_NO_FROZEN_OCT7_PRICE_ER_TR_HISTORY"
+            }
+          ],
+          "reason": "VARIANT_IDENTITY_AND_FROZEN_OCT7_HISTORY_NOT_VERIFIED",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Pin administrator variant/ticker/return type and archive permitted dated 12m/260-session inputs; no CFD/YTD substitution.",
+          "next_review": "2026-10-14"
+        },
+        "ai_spread_3m": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/MACRO_INPUT_COST_PAIN_BASELINE_2026-09-23.md",
+            "https://fred.stlouisfed.org/series/BAMLC0A0CM"
+          ],
+          "note": "SAME_AI_SECTOR_SPREAD_BASKET_NOT_AVAILABLE",
+          "attempts": [
+            {
+              "source": "Docs/research/MACRO_INPUT_COST_PAIN_BASELINE_2026-09-23.md",
+              "outcome": "OLD_APPROXIMATE_AI115_IG78_NO_COMPARABLE_HISTORY"
+            },
+            {
+              "source": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+              "outcome": "BROAD_IG_CONTEXT_ONLY_NOT_AI_BASKET"
+            }
+          ],
+          "reason": "SAME_AI_SECTOR_SPREAD_BASKET_NOT_AVAILABLE",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Fix basket/instruments/OAS definition and matched prior date; broad fallback and unknown premium must be explicit.",
+          "next_review": "2026-10-14"
+        }
+      }
+    },
+    "institutional": {
+      "section": "## institutional",
+      "fields": {
+        "state": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.cftc.gov/dea/futures/financial_lf.htm",
+            "https://www.cboe.com/insights/posts/week-of-10-5-2026-equity-markets-remain-resilient-amidst-continued-yield-surge"
+          ],
+          "note": "INSUFFICIENT_CURRENT_INDEPENDENT_FAMILIES_AND_PERSISTENCE",
+          "attempts": [
+            {
+              "source": "https://www.cftc.gov/dea/futures/financial_lf.htm",
+              "outcome": "ONE_LATEST_FUTURES_FAMILY_WITH_MIXED_WINDOWS"
+            },
+            {
+              "source": "https://www.cboe.com/insights/posts/week-of-10-5-2026-equity-markets-remain-resilient-amidst-continued-yield-surge",
+              "outcome": "BOND_VOL_RATES_CONTEXT_NOT_FUND_MARGIN_OR_NET_EXPOSURE"
+            }
+          ],
+          "reason": "INSUFFICIENT_CURRENT_INDEPENDENT_FAMILIES_AND_PERSISTENCE",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Get dated options/prime-broker/forced funding evidence; retain prior H1 only as Sep23 context, no H3/H4 escalation.",
+          "next_review": "2026-10-14"
+        },
+        "confidence": {
+          "status": "ASSESSED",
+          "value": "LOW",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "nasdaq_positions": {
+          "status": "OBSERVED",
+          "value": {
+            "long": 44814,
+            "short": 78596,
+            "spreading": 10218,
+            "net": -33782,
+            "wow": 1888
+          },
+          "observation_date": "2026-09-29",
+          "published_on": "2026-10-02",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.cftc.gov/dea/futures/financial_lf.htm"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "sp500_positions": {
+          "status": "OBSERVED",
+          "value": {
+            "long": 126466,
+            "short": 500473,
+            "spreading": 48341,
+            "net": -374007,
+            "wow": 1609
+          },
+          "observation_date": "2026-09-29",
+          "published_on": "2026-10-02",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.cftc.gov/dea/futures/financial_lf.htm"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "cftc_4w13w": {
+          "status": "ASSESSED",
+          "value": {
+            "nasdaq_4w": -15748,
+            "nasdaq_13w": 46162,
+            "sp500_4w": -39571,
+            "sp500_13w": -11408
+          },
+          "observation_date": "2026-09-29",
+          "published_on": "2026-10-02",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.cftc.gov/dea/futures/financial_lf.htm",
+            "https://www.cftc.gov/sites/default/files/files/dea/cotarchives/2026/futures/financial_lf090126.htm",
+            "https://www.cftc.gov/sites/default/files/files/dea/cotarchives/2026/futures/financial_lf063026.htm"
+          ],
+          "note": "Same futures-only consolidated series; no addition of mini/micro rows."
+        },
+        "put_call": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.cboe.com/markets/us/options/market-statistics/daily",
+            "https://massive.com/docs/rest/indices/aggregates/custom-bars"
+          ],
+          "note": "NO_VERIFIED_DATE_PINNED_OCT7_EXPORT",
+          "attempts": [
+            {
+              "source": "https://www.cboe.com/markets/us/options/market-statistics/daily",
+              "outcome": "HISTORICAL_EXPORT_UNREADABLE_OR_DYNAMIC_DATE_AMBIGUOUS"
+            },
+            {
+              "source": "https://massive.com/docs/rest/indices/aggregates/custom-bars",
+              "outcome": "INDICES_NOT_OPTIONS_PUT_CALL_HISTORY"
+            }
+          ],
+          "reason": "NO_VERIFIED_DATE_PINNED_OCT7_EXPORT",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Capture date-labelled official Cboe historical export; no live Oct8 curve or unlabeled ratio backfill.",
+          "next_review": "2026-10-14"
+        },
+        "skew": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://cdn.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv",
+            "https://massive.com/docs/rest/indices/aggregates/custom-bars"
+          ],
+          "note": "NO_VERIFIED_DATE_PINNED_OCT7_EXPORT",
+          "attempts": [
+            {
+              "source": "https://cdn.cboe.com/api/global/us_indices/daily_prices/SKEW_History.csv",
+              "outcome": "HISTORICAL_EXPORT_UNREADABLE_OR_DYNAMIC_DATE_AMBIGUOUS"
+            },
+            {
+              "source": "https://massive.com/docs/rest/indices/aggregates/custom-bars",
+              "outcome": "I:VIX_AND_I:SKEW_NOT_ENTITLED"
+            }
+          ],
+          "reason": "NO_VERIFIED_DATE_PINNED_OCT7_EXPORT",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Capture date-labelled official Cboe historical export; no live Oct8 curve or unlabeled ratio backfill.",
+          "next_review": "2026-10-14"
+        },
+        "vix": {
+          "status": "OBSERVED",
+          "value": 15.62,
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.cboe.com/delayed_quotes/_vix/quote_table/"
+          ],
+          "note": "Dated 16:15:01 ET quote, beyond equity16:00 but within explicit EOD recovery cutoff; not original morning run."
+        },
+        "vix_curve": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.cboe.com/markets/us/futures/market-statistics/settlement/futures/daily",
+            "https://massive.com/docs/rest/indices/aggregates/custom-bars"
+          ],
+          "note": "NO_VERIFIED_DATE_PINNED_OCT7_EXPORT",
+          "attempts": [
+            {
+              "source": "https://www.cboe.com/markets/us/futures/market-statistics/settlement/futures/daily",
+              "outcome": "HISTORICAL_EXPORT_UNREADABLE_OR_DYNAMIC_DATE_AMBIGUOUS"
+            },
+            {
+              "source": "https://massive.com/docs/rest/indices/aggregates/custom-bars",
+              "outcome": "I:VIX_AND_I:SKEW_NOT_ENTITLED"
+            }
+          ],
+          "reason": "NO_VERIFIED_DATE_PINNED_OCT7_EXPORT",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Capture date-labelled official Cboe historical export; no live Oct8 curve or unlabeled ratio backfill.",
+          "next_review": "2026-10-14"
+        },
+        "prime_broker": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/INSTITUTIONAL_DERISKING_BASELINE_2026-09-23.md",
+            "https://www.cboe.com/insights/posts/week-of-10-5-2026-equity-markets-remain-resilient-amidst-continued-yield-surge",
+            "https://www.goldmansachs.com/insights/articles/how-hedge-funds-are-trading-semiconductor-stocks"
+          ],
+          "note": "NO_FRESH_ATTRIBUTABLE_NET_OR_GROSS_BOOK_AGGREGATE",
+          "attempts": [
+            {
+              "source": "Docs/research/INSTITUTIONAL_DERISKING_BASELINE_2026-09-23.md",
+              "outcome": "MAY_COMMENTARY_IS_STALE"
+            },
+            {
+              "source": "https://www.cboe.com/insights/posts/week-of-10-5-2026-equity-markets-remain-resilient-amidst-continued-yield-surge",
+              "outcome": "PUBLIC_EXCHANGE_COMMENTARY_NOT_PRIME_BROKER_BOOKS"
+            },
+            {
+              "source": "https://www.goldmansachs.com/insights/articles/how-hedge-funds-are-trading-semiconductor-stocks",
+              "outcome": "FOUND_MAY22_STALE_NOT_CURRENT_WEEK"
+            }
+          ],
+          "reason": "NO_FRESH_ATTRIBUTABLE_NET_OR_GROSS_BOOK_AGGREGATE",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Obtain attributable dated PB publication; CFTC shorts do not reconstruct hedge-fund portfolio.",
+          "next_review": "2026-10-14"
+        },
+        "lending": {
+          "status": "OBSERVED",
+          "value": {
+            "september_avg_daily_loan_B": 230.948833428,
+            "yoy_pct": 16.8,
+            "mom_pct": 1.967
+          },
+          "observation_date": "2026-09-30",
+          "published_on": "2026-10-02",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.theocc.com/newsroom/views/2026/10-02-september-2026-monthly-volume-report"
+          ],
+          "note": "Aggregate lending, not all directional short positions; MoM calculated vs Aug226.493176606B."
+        },
+        "security_shorts": {
+          "status": "OBSERVED",
+          "value": [
+            {
+              "ticker": "AMD",
+              "change_pct": -4.164,
+              "days_to_cover": 2.13
+            },
+            {
+              "ticker": "AMZN",
+              "change_pct": -11.543,
+              "days_to_cover": 2.77
+            },
+            {
+              "ticker": "AVGO",
+              "change_pct": 2.914,
+              "days_to_cover": 1.7
+            },
+            {
+              "ticker": "CRWV",
+              "change_pct": -1.133,
+              "days_to_cover": 2.43
+            },
+            {
+              "ticker": "GOOGL",
+              "change_pct": 12.477,
+              "days_to_cover": 3.5
+            },
+            {
+              "ticker": "META",
+              "change_pct": 7.578,
+              "days_to_cover": 1.57
+            },
+            {
+              "ticker": "MSFT",
+              "change_pct": -9.543,
+              "days_to_cover": 3.73
+            },
+            {
+              "ticker": "MU",
+              "change_pct": -6.974,
+              "days_to_cover": 1.1
+            },
+            {
+              "ticker": "NVDA",
+              "change_pct": -1.366,
+              "days_to_cover": 2.55
+            },
+            {
+              "ticker": "ORCL",
+              "change_pct": 13.997,
+              "days_to_cover": 1.36
+            },
+            {
+              "ticker": "QQQ",
+              "change_pct": 0.124,
+              "days_to_cover": 2.24
+            },
+            {
+              "ticker": "SMH",
+              "change_pct": -7.053,
+              "days_to_cover": 1.88
+            }
+          ],
+          "observation_date": "2026-09-15",
+          "published_on": "2026-09-24",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://massive.com/docs/rest/stocks/short-interest",
+            "https://www.finra.org/filing-reporting/regulatory-filing-systems/short-interest"
+          ],
+          "note": "Matched Aug31->Sep15 FINRA via Massive. Sept30 publishedOct9 excluded. Changes are mixed; no short-float denominator or borrow fee/utilization."
+        },
+        "forced_deleveraging": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.cftc.gov/dea/futures/financial_lf.htm",
+            "https://www.cboe.com/insights/posts/week-of-10-5-2026-equity-markets-remain-resilient-amidst-continued-yield-surge"
+          ],
+          "note": "INSUFFICIENT_CURRENT_INDEPENDENT_FAMILIES_AND_PERSISTENCE",
+          "attempts": [
+            {
+              "source": "https://www.cftc.gov/dea/futures/financial_lf.htm",
+              "outcome": "ONE_LATEST_FUTURES_FAMILY_WITH_MIXED_WINDOWS"
+            },
+            {
+              "source": "https://www.cboe.com/insights/posts/week-of-10-5-2026-equity-markets-remain-resilient-amidst-continued-yield-surge",
+              "outcome": "BOND_VOL_RATES_CONTEXT_NOT_FUND_MARGIN_OR_NET_EXPOSURE"
+            }
+          ],
+          "reason": "INSUFFICIENT_CURRENT_INDEPENDENT_FAMILIES_AND_PERSISTENCE",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Get dated options/prime-broker/forced funding evidence; retain prior H1 only as Sep23 context, no H3/H4 escalation.",
+          "next_review": "2026-10-14"
+        },
+        "price_positioning_divergence": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.cftc.gov/dea/futures/financial_lf.htm",
+            "https://www.cboe.com/insights/posts/week-of-10-5-2026-equity-markets-remain-resilient-amidst-continued-yield-surge"
+          ],
+          "note": "INSUFFICIENT_CURRENT_INDEPENDENT_FAMILIES_AND_PERSISTENCE",
+          "attempts": [
+            {
+              "source": "https://www.cftc.gov/dea/futures/financial_lf.htm",
+              "outcome": "ONE_LATEST_FUTURES_FAMILY_WITH_MIXED_WINDOWS"
+            },
+            {
+              "source": "https://www.cboe.com/insights/posts/week-of-10-5-2026-equity-markets-remain-resilient-amidst-continued-yield-surge",
+              "outcome": "BOND_VOL_RATES_CONTEXT_NOT_FUND_MARGIN_OR_NET_EXPOSURE"
+            }
+          ],
+          "reason": "INSUFFICIENT_CURRENT_INDEPENDENT_FAMILIES_AND_PERSISTENCE",
+          "owner": "AI CapEx Watch collector; #74",
+          "next_action": "Get dated options/prime-broker/forced funding evidence; retain prior H1 only as Sep23 context, no H3/H4 escalation.",
+          "next_review": "2026-10-14"
+        },
+        "weekly_delta": {
+          "status": "ASSESSED",
+          "value": "CFTC latest WoW less short in both; 4W more short, 13W mixed; monthly lending +1.97%; H-state change not measurable",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        }
+      }
+    },
+    "outcomes": {
+      "section": "## outcomes",
+      "fields": {
+        "weekly_delta": {
+          "status": "ASSESSED",
+          "value": "Challenger60 unchanged, P4 NEUTRAL; Macro exact range unavailable; Institutional UNKNOWN instead of unverified H1 carry",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "2w4w8w12w": {
+          "status": "ASSESSED",
+          "value": "PENDING: Oct21/Nov4/Dec2/Dec30; append-only outcome capture",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "next_earnings": {
+          "status": "ASSESSED",
+          "value": "Next hyperscaler earnings-cycle review PENDING",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        },
+        "data_gaps": {
+          "status": "ASSESSED",
+          "value": "All UNAVAILABLE fields listed in this manifest; owner collector/#74/#72; next reviewOct14",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-07",
+          "captured_at": "2026-10-09T03:58:00.599Z",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "Research assessment; no runtime authority."
+        }
+      }
+    }
+  },
+  "preserved_blobs": {
+    "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md": "ea3ceaa90de00ca711d8ab30a30d30bc0fed78c4",
+    "data/research/challenger/ai_roi_challenger_2026-10-07.yaml": "592ed2e8605425b508602cb6c73619ce22fa8113",
+    "data/research/macro_input_cost_pain_2026-09-23.yaml": "c59cf6db1a18a41e5b12ec2886cc76c53a574ef4",
+    "data/research/institutional_derisking_2026-09-23.yaml": "24f50cadab11d1e893d2e88c517167df886188d2"
+  },
+  "unresolved_fields": [
+    "champion.combined_score",
+    "champion.fundamental_normalization",
+    "champion.canonical_technical",
+    "champion.asia",
+    "gpu.availability",
+    "gpu.utilization",
+    "gpu.renewals_contract_duration",
+    "memory.cancellations",
+    "roi.revenue_per_MW_GPU",
+    "efficiency.task_cost",
+    "efficiency.pricing_discipline",
+    "efficiency.induced_demand",
+    "efficiency.committed_capacity_economics",
+    "macro.funding_break",
+    "macro.crb_12m",
+    "macro.crb_ma260",
+    "macro.ai_spread_3m",
+    "institutional.state",
+    "institutional.put_call",
+    "institutional.skew",
+    "institutional.vix_curve",
+    "institutional.prime_broker",
+    "institutional.forced_deleveraging",
+    "institutional.price_positioning_divergence",
+    "champion.leadership_events"
+  ]
+}

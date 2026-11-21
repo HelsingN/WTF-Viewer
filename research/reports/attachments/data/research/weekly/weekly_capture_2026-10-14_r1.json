@@ -1,0 +1,2191 @@
+{
+  "schema": "ai-capex.weekly-capture.v1",
+  "report_date": "2026-10-14",
+  "revision": 1,
+  "cutoff": "2026-10-14T08:25:13+03:00",
+  "last_completed_us_session": "2026-10-13",
+  "captured_at": "2026-10-14T05:52:22.620484+00:00",
+  "mode": "CONTEMPORANEOUS",
+  "original_cutoff": "2026-10-14T08:25:13+03:00",
+  "data_status": "PARTIAL",
+  "trading_authority": "NONE",
+  "report": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+  "original_report": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+  "artifacts": {
+    "champion": "data/research/champion/champion_observation_2026-10-14.json",
+    "challenger": "data/research/challenger/ai_roi_challenger_2026-10-14.yaml",
+    "macro": "data/research/macro_input_cost_pain_2026-10-14.json",
+    "institutional": "data/research/institutional_derisking_2026-10-14.json"
+  },
+  "blocks": {
+    "champion": {
+      "section": "## champion",
+      "fields": {
+        "state": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/champion/champion_observation_2026-10-14.json",
+            "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml"
+          ],
+          "note": "NO_FRESH_ACCEPTED_CANONICAL_DECISION",
+          "attempts": [
+            {
+              "source": "data/research/champion/champion_observation_2026-10-14.json",
+              "outcome": "New research observation explicitly separates current UNKNOWN from carried WATCH.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+              "outcome": "Accepted baseline is September, not an October refresh.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NO_FRESH_ACCEPTED_CANONICAL_DECISION",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Accept a fresh normalized bundle; retain carried WATCH only as historical narrative.",
+          "next_review": "2026-10-21"
+        },
+        "trade_state": {
+          "status": "ASSESSED",
+          "value": "NO_CANDIDATE / NO_TRADE: accepted decision inputs incomplete",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/champion/champion_observation_2026-10-14.json"
+          ],
+          "note": "Fail-closed research conclusion; no runtime decision or order produced."
+        },
+        "combined_score": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+            "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
+          ],
+          "note": "REQUIRED_ACCEPTED_INPUTS_MISSING",
+          "attempts": [
+            {
+              "source": "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+              "outcome": "Only old accepted normalization exists.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+              "outcome": "Latest disclosure rechecked; raw facts are not accepted normalized scores.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "REQUIRED_ACCEPTED_INPUTS_MISSING",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Create separately reviewed immutable normalization and valid numeric Asia/canonical technical inputs; keep Combined Score null.",
+          "next_review": "2026-10-21"
+        },
+        "fundamental_normalization": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+            "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
+          ],
+          "note": "FRESH_REVIEWED_NORMALIZATION_NOT_PRESENT",
+          "attempts": [
+            {
+              "source": "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+              "outcome": "Only old accepted normalization exists.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+              "outcome": "Latest disclosure rechecked; raw facts are not accepted normalized scores.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "FRESH_REVIEWED_NORMALIZATION_NOT_PRESENT",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Create separately reviewed immutable normalization and valid numeric Asia/canonical technical inputs; keep Combined Score null.",
+          "next_review": "2026-10-21"
+        },
+        "technical": {
+          "status": "ASSESSED",
+          "value": "15 / NORMAL; RS UP; 2/4 weak breadth; 344 aligned bars",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/technical/technical_research_2026-10-13_captured_2026-10-14.json"
+          ],
+          "note": "Massive daily ET adjusted PRICE proxy; 10 on 7-Oct ->15 on 13-Oct. Canonical Pine/RTH parity not established; script calculate() called with explicit date, existing CLI bound retained."
+        },
+        "canonical_technical": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/TECHNICAL_SIGNAL_CONTRACT_v1.md",
+            "data/research/technical/technical_research_2026-10-13_captured_2026-10-14.json"
+          ],
+          "note": "CANONICAL_TRADINGVIEW_EVIDENCE_NOT_CAPTURED",
+          "attempts": [
+            {
+              "source": "Docs/TECHNICAL_SIGNAL_CONTRACT_v1.md",
+              "outcome": "Canonical confirmed Pine bundle required.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "data/research/technical/technical_research_2026-10-13_captured_2026-10-14.json",
+              "outcome": "Provider reconstruction available, not an authorized webhook/Pine event.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "CANONICAL_TRADINGVIEW_EVIDENCE_NOT_CAPTURED",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Capture canonical confirmed-bar evidence and verify session/adjustment parity.",
+          "next_review": "2026-10-21"
+        },
+        "asia": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/AI_CapEx_Reversal_Phase1_5_Plan_v2.6.md",
+            "https://investor.tsmc.com/english/monthly-revenue/2026"
+          ],
+          "note": "NO_APPROVED_NUMERIC_ASIA_POLICY_OR_MATCHED_LOCAL_SERIES",
+          "attempts": [
+            {
+              "source": "Docs/AI_CapEx_Reversal_Phase1_5_Plan_v2.6.md",
+              "outcome": "Asia normalization remains deferred under #72.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://investor.tsmc.com/english/monthly-revenue/2026",
+              "outcome": "Monthly sales and Samsung guidance are economic context, not a five-name local-market score.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NO_APPROVED_NUMERIC_ASIA_POLICY_OR_MATCHED_LOCAL_SERIES",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Review Samsung/SK hynix/TSMC/SMIC/Hua Hong with local benchmarks and approved policy; exclude forming 14-Oct Asia bars.",
+          "next_review": "2026-10-21"
+        },
+        "leadership": {
+          "status": "OBSERVED",
+          "value": [
+            {
+              "ticker": "AMZN",
+              "close": 258.58,
+              "ma50": 258.3458,
+              "ma200": 242.4195,
+              "change_since_oct7_pct": -0.516,
+              "rs50_slope_20d_pct": -0.128
+            },
+            {
+              "ticker": "GOOGL",
+              "close": 353.78,
+              "ma50": 345.788,
+              "ma200": 340.418,
+              "change_since_oct7_pct": 0.936,
+              "rs50_slope_20d_pct": -1.472
+            },
+            {
+              "ticker": "META",
+              "close": 762.5,
+              "ma50": 646.9004,
+              "ma200": 630.9987,
+              "change_since_oct7_pct": 5.71,
+              "rs50_slope_20d_pct": 5.716
+            },
+            {
+              "ticker": "MSFT",
+              "close": 543.45,
+              "ma50": 503.0914,
+              "ma200": 434.5525,
+              "change_since_oct7_pct": 2.584,
+              "rs50_slope_20d_pct": 8.567
+            },
+            {
+              "ticker": "ORCL",
+              "close": 143.2,
+              "ma50": 145.9244,
+              "ma200": 161.1793,
+              "change_since_oct7_pct": -0.251,
+              "rs50_slope_20d_pct": 2.525
+            }
+          ],
+          "observation_date": "2026-10-13",
+          "published_on": "2026-10-13",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INDEPENDENT_CONFIRMATION",
+          "sources": [
+            "data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json"
+          ],
+          "note": "Provider-derived price panel, not canonical RTH event attribution. ORCL below both averages while four buyers above MA50; dispersion, not broad buyer breakdown."
+        },
+        "F1": {
+          "status": "ASSESSED",
+          "value": "No newly verified broad CapEx cut; MSFT lease reclassification is not an economic spending cut.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "F2": {
+          "status": "ASSESSED",
+          "value": "GPU index increased; broad oversupply unconfirmed; utilization/renewals missing.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "F3": {
+          "status": "ASSESSED",
+          "value": "Financing dependence and selective equity access worsening; Lambda signed IG credit is counterevidence to a closed credit market.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "F4": {
+          "status": "ASSESSED",
+          "value": "No new broad supplier guidance cut; MU/AVGO price weakness is not bookings deterioration.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "F5": {
+          "status": "ASSESSED",
+          "value": "Concentrated commitments and maturity/renewal risk persist; no broad take-or-pay renegotiation/cancellation series.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "leadership_events": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/AI_MARKET_LEADERSHIP_CONTRACT_v1.md",
+            "data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json"
+          ],
+          "note": "MATCHED_RTH_CAPEX_EVENT_ATTRIBUTION_INCOMPLETE",
+          "attempts": [
+            {
+              "source": "Docs/AI_MARKET_LEADERSHIP_CONTRACT_v1.md",
+              "outcome": "Manual event/failed-high windows required.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json",
+              "outcome": "Prices and MA/RS available; no same-week five-buyer CapEx-cut event window; daily ET bars lack accepted RTH parity.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "MATCHED_RTH_CAPEX_EVENT_ATTRIBUTION_INCOMPLETE",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Capture named CapEx/earnings events with pre/post RTH windows and market controls; do not infer capital-discipline rewards from an isolated rally.",
+          "next_review": "2026-10-21"
+        }
+      }
+    },
+    "hyperscalers": {
+      "section": "## hyperscalers",
+      "fields": {
+        "MSFT_cash_capex": {
+          "status": "OBSERVED",
+          "value": "FY26 Q4: OCF $55.4B; cash PP&E $35.8B; FCF $19.6B; total CapEx $41B including leases. CY26 headline $175B after lease reclassification; economic investment expectation unchanged; Q1 FY27 CapEx >$50B guidance.",
+          "observation_date": "2026-06-30",
+          "published_on": "2026-07-29",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"
+          ],
+          "note": "Latest quarterly filing rechecked, not new weekly cash-flow data. Match periods and cash/lease definitions; no peer aggregate or AI-only FCF inferred. Guidance/narrative is MANAGEMENT_CLAIM; reported cash flows PRIMARY_FACT."
+        },
+        "GOOGL_cash_capex": {
+          "status": "OBSERVED",
+          "value": "H1: OCF $84.859B; cash PP&E $80.598B; difference $4.261B. Versus H1 2025: OCF +32.8%, PP&E +103.3%; incremental PP&E/OCF 1.95x. Q2 rounded OCF $39.1B and CapEx $44.9B. Call guidance $195-205B is secondary-transcript evidence; primary call retrieval failed.",
+          "observation_date": "2026-06-30",
+          "published_on": "2026-07-30",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+            "https://www.earningswhispers.com/transcript/GOOGL/Q22026"
+          ],
+          "note": "Latest quarterly filing rechecked, not new weekly cash-flow data. Match periods and cash/lease definitions; no peer aggregate or AI-only FCF inferred. Guidance/narrative is MANAGEMENT_CLAIM; reported cash flows PRIMARY_FACT."
+        },
+        "AMZN_cash_capex": {
+          "status": "OBSERVED",
+          "value": "TTM: OCF $161.4B (+33%); FCF -$7.6B; implied net PP&E $169.0B. Incremental net PP&E $66.1B versus incremental OCF $40.3B, 1.64x. Q2 cash CapEx $53.1B; H1 $96.3B; most infrastructure supports AWS, with fulfillment also included.",
+          "observation_date": "2026-06-30",
+          "published_on": "2026-07-30",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm"
+          ],
+          "note": "Latest quarterly filing rechecked, not new weekly cash-flow data. Match periods and cash/lease definitions; no peer aggregate or AI-only FCF inferred. Guidance/narrative is MANAGEMENT_CLAIM; reported cash flows PRIMARY_FACT."
+        },
+        "META_cash_capex": {
+          "status": "OBSERVED",
+          "value": "Q2: OCF $31.862B; PP&E $30.116B plus finance-lease principal $0.962B; FCF $0.784B. FY26 guidance $130-145B versus prior $125-145B; no cut.",
+          "observation_date": "2026-06-30",
+          "published_on": "2026-07-29",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx"
+          ],
+          "note": "Latest quarterly filing rechecked, not new weekly cash-flow data. Match periods and cash/lease definitions; no peer aggregate or AI-only FCF inferred. Guidance/narrative is MANAGEMENT_CLAIM; reported cash flows PRIMARY_FACT."
+        },
+        "ORCL_cash_capex": {
+          "status": "OBSERVED",
+          "value": "Q1 FY27: OCF $23.103B; CapEx $28.499B; FCF -$5.396B. OCF includes $11.363B increase in customer prepayments with significant financing component; excluding just that line gives illustrative $11.740B OCF/$-16.759B after CapEx, not GAAP FCF or full normalization. FY26 FCF -$23.686B is a separate annual period. Q1 ATM common-stock sale $20B before commissions; interest $1.428B (+55%). RPO $664B is contracted demand, not profitable revenue.",
+          "observation_date": "2026-08-31",
+          "published_on": "2026-09-10",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
+          ],
+          "note": "Latest quarterly filing rechecked, not new weekly cash-flow data. Match periods and cash/lease definitions; no peer aggregate or AI-only FCF inferred. Guidance/narrative is MANAGEMENT_CLAIM; reported cash flows PRIMARY_FACT."
+        }
+      }
+    },
+    "gpu": {
+      "section": "## gpu",
+      "fields": {
+        "matched_prices": {
+          "status": "OBSERVED",
+          "value": {
+            "H100_SXM": 3.17,
+            "H200": 5.51,
+            "B200": 7.83,
+            "A100_SXM4": 0.96,
+            "change_from_2026_10_06_pct": {
+              "H100": 10.839,
+              "H200": 9.325,
+              "B200": 3.571
+            }
+          },
+          "observation_date": "2026-10-13",
+          "published_on": "2026-10-13",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://data.ornn.com/",
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+          ],
+          "note": "USD/GPU-hour, Ornn executed-trade index settled 13-Oct 20:00Z. Same named indices versus captured 6-Oct snapshots; seven calendar days, one provider; no full history/quality-mix panel or acceleration estimate. No comparison with Lambda list prices."
+        },
+        "availability": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://lambda.ai/pricing",
+            "https://data.ornn.com/"
+          ],
+          "note": "NO_MATCHED_REGION_GPU_QUEUE_OR_CAPACITY_AVAILABILITY_PANEL",
+          "attempts": [
+            {
+              "source": "https://lambda.ai/pricing",
+              "outcome": "Catalog gives products, list prices and offered terms, not realized availability/load/renewal cohorts.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://data.ornn.com/",
+              "outcome": "Backlog/index observations do not disclose the missing matched metric.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NO_MATCHED_REGION_GPU_QUEUE_OR_CAPACITY_AVAILABILITY_PANEL",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Obtain dated multi-provider cohort data with SKU/region/cluster/interconnect/term, realized utilization and renewal economics; no zeros from missing disclosure.",
+          "next_review": "2026-10-21"
+        },
+        "utilization": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://lambda.ai/pricing",
+            "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx"
+          ],
+          "note": "NONPUBLIC_REALIZED_GPU_UTILIZATION_COHORTS",
+          "attempts": [
+            {
+              "source": "https://lambda.ai/pricing",
+              "outcome": "Catalog gives products, list prices and offered terms, not realized availability/load/renewal cohorts.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+              "outcome": "Backlog/index observations do not disclose the missing matched metric.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NONPUBLIC_REALIZED_GPU_UTILIZATION_COHORTS",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Obtain dated multi-provider cohort data with SKU/region/cluster/interconnect/term, realized utilization and renewal economics; no zeros from missing disclosure.",
+          "next_review": "2026-10-21"
+        },
+        "renewals_contract_duration": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://lambda.ai/pricing",
+            "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx"
+          ],
+          "note": "NO_CURRENT_REALIZED_RENEWAL_OR_CONTRACT_SHORTENING_PANEL",
+          "attempts": [
+            {
+              "source": "https://lambda.ai/pricing",
+              "outcome": "Catalog gives products, list prices and offered terms, not realized availability/load/renewal cohorts.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+              "outcome": "Backlog/index observations do not disclose the missing matched metric.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NO_CURRENT_REALIZED_RENEWAL_OR_CONTRACT_SHORTENING_PANEL",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Obtain dated multi-provider cohort data with SKU/region/cluster/interconnect/term, realized utilization and renewal economics; no zeros from missing disclosure.",
+          "next_review": "2026-10-21"
+        }
+      }
+    },
+    "financing": {
+      "section": "## financing",
+      "fields": {
+        "OpenAI": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://openai.com/index/accelerating-the-next-phase-ai/",
+            "https://www.axios.com/2026/10/08/openai-50-billion-arr-anthropic-revenue-accounting"
+          ],
+          "note": "CURRENT_CASH_DRAWN_FINANCING_AND_FULL_COMMITMENT_TERMS_NONPUBLIC",
+          "attempts": [
+            {
+              "source": "https://openai.com/index/accelerating-the-next-phase-ai/",
+              "outcome": "Official earlier round disclosure is historical, not a current cash balance or drawn-funding waterfall.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://www.axios.com/2026/10/08/openai-50-billion-arr-anthropic-revenue-accounting",
+              "outcome": "8-Oct report distinguishes $50B net annualized revenue from $70B grossed-up basis; not audited annual revenue or liquidity.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "CURRENT_CASH_DRAWN_FINANCING_AND_FULL_COMMITMENT_TERMS_NONPUBLIC",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Separate cash received/committed/drawn funds, net/gross ARR/recognized revenue and forecast payment dates; seek current audited/contract evidence.",
+          "next_review": "2026-10-21"
+        },
+        "Anthropic": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.anthropic.com/news/series-h",
+            "https://www.reuters.com/business/broadcom-lend-anthropic-up-42-billion-lease-its-chips-filing-says-2026-10-01/"
+          ],
+          "note": "CURRENT_LIQUIDITY_PUBLIC_FILING_AND_COMPLETED_IPO_TERMS_NOT_CAPTURED",
+          "attempts": [
+            {
+              "source": "https://www.anthropic.com/news/series-h",
+              "outcome": "28-May $65B/$965B round is stale as a current valuation and includes previously committed capital.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://www.reuters.com/business/broadcom-lend-anthropic-up-42-billion-lease-its-chips-filing-says-2026-10-01/",
+              "outcome": "1-Oct media reports up-to-$42B convertible funding/$125.2B lease; underlying public prospectus not independently captured.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "CURRENT_LIQUIDITY_PUBLIC_FILING_AND_COMPLETED_IPO_TERMS_NOT_CAPTURED",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Retrieve public S-1 and transaction documents; reconcile senior guarantees/convertible facility overlap; do not equate proposed $2T IPO valuation with completed financing.",
+          "next_review": "2026-10-21"
+        },
+        "CoreWeave": {
+          "status": "ASSESSED",
+          "value": "High financing dependence: Q2 interest/revenue 24.85%; DDTL5.5 five-year debt versus ~three-year customer contracts; insurance funding strategy announced in 14-Oct 04:00Z FT report. Access remains selective, not closed.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+            "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-2-6-Billion-Loan-Facility-Expanding-Financing-Flexibility-for-AI-Infrastructure/default.aspx",
+            "https://www.ft.com/content/4ffa1853-0e2c-424f-b941-88c6bcac5765"
+          ],
+          "note": "Reported Q2 metrics/closed facility terms are facts; insurance ambitions and capacity sold claims are management claims through FT. Almost-15% unsecured yield is analyst reporting, not a matched verified bond-price series; no company-wide cost trend inferred."
+        },
+        "credit_contracts": {
+          "status": "ASSESSED",
+          "value": "Lambda closed $1.008B delayed-draw IG financing, 6.78% fixed, final maturity 30-May-2033, amortizing, three deployments/two IG offtakers. CoreWeave riskier facility SOFR+550bp; different borrower/structure, not a comparable cost trend.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://lambda.ai/blog/lambda-closes-1-billion-senior-secured-fixed-rate-financing",
+            "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Closes-2-6-Billion-Loan-Facility-Expanding-Financing-Flexibility-for-AI-Infrastructure/default.aspx"
+          ],
+          "note": "Signed facility is not all proceeds drawn. Supplier-backed finance, guarantees, prepayments and take-or-pay need counterparty and cancellation/extension terms; no new blanket renegotiation or extended-payment-term series confirmed."
+        },
+        "capacity_funnel": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://gov.texas.gov/news/post/governor-abbott-directs-comprehensive-data-center-audit",
+            "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
+          ],
+          "note": "NO_COMPLETE_DEDUPLICATED_STAGE_CONVERSION_AND_PROFITABILITY_PANEL",
+          "attempts": [
+            {
+              "source": "https://gov.texas.gov/news/post/governor-abbott-directs-comprehensive-data-center-audit",
+              "outcome": "474GW+ queue disclosed 3-Aug; requests are not deposits/funded/energized end demand.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+              "outcome": "850MW additional delivered capacity and GPUs are reported deployments, not measured utilization or realized project IRR.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NO_COMPLETE_DEDUPLICATED_STAGE_CONVERSION_AND_PROFITABILITY_PANEL",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Identify project IDs and deduplicate ANNOUNCED/GRID_REQUESTED/CONTRACTED/FUNDED/UNDER_CONSTRUCTION/ENERGIZED/UTILIZED/MONETIZED/ECONOMICALLY_PROFITABLE; collect attrition and cash conversion at each transition.",
+          "next_review": "2026-10-21"
+        },
+        "project_attrition": {
+          "status": "ASSESSED",
+          "value": "New Firmus IPO withdrawal on 9-Oct is funding-route attrition, not physical site cancellation. Prior Jupiter power/force-majeure example retained with issuer counterstatement; no newly confirmed broad ROI-led construction cancellation wave.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.marketindex.com.au/asx/mgh/announcements/firmus-update-2A1703265",
+            "https://www.abc.net.au/news/2026-10-09/firmus-float-gets-pulled-following-lacklustre-investor-demand/107246230",
+            "https://www.reuters.com/business/energy/oracle-blue-owl-project-delay-sends-ripples-through-ai-financing-sources-say-2026-09-24/"
+          ],
+          "note": "IPO withdrawal independently reported and company statement reproduced in ASX issuer notice; primary Firmus prospectus/site economics not captured. Stage5 remains inherited localized project risk, not new market-wide escalation."
+        }
+      }
+    },
+    "semiconductors": {
+      "section": "## semiconductors",
+      "fields": {
+        "NVDA": {
+          "status": "OBSERVED",
+          "value": "FY27 Q2 revenue $96.2B (+106% YoY), data center $89.0B (+117%); GAAP GM75%; no new verified broad order/guide cut. Tokens-profitable narrative is management claim.",
+          "observation_date": "2026-07-26",
+          "published_on": "2026-08-26",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027"
+          ],
+          "note": "Latest disclosed results reviewed; growth/GM facts are reported outcomes, forward demand and capacity assertions MANAGEMENT_CLAIM. No supplier self-confirmation of end-customer ROI."
+        },
+        "AMD": {
+          "status": "CARRIED",
+          "value": "Q2 revenue $11.536B (+50%), data center $6.7B (+107%); no new verified accelerator booking deterioration; 2027 scaling plans are not delivered supply.",
+          "observation_date": "2026-06-27",
+          "published_on": "2026-08-04",
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+            "https://ir.amd.com/financial-information/financial-results"
+          ],
+          "note": "LATEST_QUARTER_OBSERVATION_OUTSIDE_90_DAY_REVIEW_BUDGET",
+          "attempts": [
+            {
+              "source": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+              "outcome": "Latest Q2 period ends27-Jun; released4-Aug; no newer completed quarter captured.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://ir.amd.com/financial-information/financial-results",
+              "outcome": "Quarterly results listing still shows Q2; forward supply comments cannot refresh realized period.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "LATEST_QUARTER_OBSERVATION_OUTSIDE_90_DAY_REVIEW_BUDGET",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Recheck next primary AMD quarterly disclosure/order evidence; retain dated Q2 facts as carried, not a new weekly observation.",
+          "next_review": "2026-10-21"
+        },
+        "AVGO": {
+          "status": "OBSERVED",
+          "value": "Q3 revenue $29.6B; AI semis $16.7B (+221% YoY/+54% QoQ); Q4 AI guide $21.7B is management claim. 12-Oct capital-constraint commentary does not revise order guidance.",
+          "observation_date": "2026-08-02",
+          "published_on": "2026-09-02",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial"
+          ],
+          "note": "Latest disclosed results reviewed; growth/GM facts are reported outcomes, forward demand and capacity assertions MANAGEMENT_CLAIM. No supplier self-confirmation of end-customer ROI."
+        }
+      }
+    },
+    "memory": {
+      "section": "## memory",
+      "fields": {
+        "MU_results": {
+          "status": "OBSERVED",
+          "value": "FY26 Q4 revenue $54.229B; OCF $43.97B; adjusted FCF $33.20B; non-GAAP GM87.0%; FY26 revenue $133.188B/adjusted FCF $62.31B. FQ1 FY27 $61.5B ±$1.5B revenue guidance is not realized revenue.",
+          "observation_date": "2026-09-03",
+          "published_on": "2026-09-30",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx"
+          ],
+          "note": "Same latest disclosure as previous weekly, independently rechecked; no new Micron quarter. SCA deposits are financing flows, not OCF."
+        },
+        "DRAM_NAND_bits_ASP": {
+          "status": "OBSERVED",
+          "value": "FQ4 sequential: DRAM bits mid-single-digit and pricing high-teens; NAND bits ~10% and pricing ~30%. TrendForce forecasts 4Q conventional DRAM +10-15% and NAND +15-20%, suggesting slower positive price growth, not realized price falls.",
+          "observation_date": "2026-09-03",
+          "published_on": "2026-09-30",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+            "https://www.trendforce.com/presscenter/news/20260930-13258.html"
+          ],
+          "note": "Issuer realized pricing/bits plus independent industry forecast kept separate; no complete October contract-price print series."
+        },
+        "HBM_contracting": {
+          "status": "OBSERVED",
+          "value": "Micron says most CY2027 HBM bits contracted with significant price increases; not delivered sell-through. Precise current lead-time/renewal/cancellation panel unavailable.",
+          "observation_date": "2026-09-30",
+          "published_on": "2026-09-30",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "MANAGEMENT_CLAIM",
+          "sources": [
+            "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf"
+          ],
+          "note": "Forward contracting statement; full order-level price bands/cancellability/customer concentration remain nonpublic."
+        },
+        "inventory": {
+          "status": "OBSERVED",
+          "value": "Micron inventory $10.4B; DIO129, +9 QoQ. Explanation: build-ahead/incentive costs; expected DIO decline is management claim. Inventory rise with strong ASP is not a confirmed glut.",
+          "observation_date": "2026-09-03",
+          "published_on": "2026-09-30",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_FACT",
+          "sources": [
+            "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf"
+          ],
+          "note": "Latest source reviewed against cutoff; no trading authority."
+        },
+        "capacity": {
+          "status": "OBSERVED",
+          "value": "Micron FY26 net CapEx $27.37B; FY27 H1 ~$25B and higher H2 guided, mostly construction increase. Samsung Q3 guidance sales KRW195T/operating profit KRW107.4T released 8-Oct; finalized detail due 29-Oct.",
+          "observation_date": "2026-10-08",
+          "published_on": "2026-10-08",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "MANAGEMENT_CLAIM",
+          "sources": [
+            "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+            "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+            "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-third-quarter-2026"
+          ],
+          "note": "Component source periods differ: Micron historical CapEx PRIMARY_FACT; forward construction and Samsung pre-earnings figures MANAGEMENT_CLAIM. New fabs/cleanrooms are not immediately productive capacity; individual manufacturers' capacity-addition and order panels incomplete."
+        },
+        "cancellations": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+            "https://www.trendforce.com/research/memory-storage"
+          ],
+          "note": "NONPUBLIC_DOUBLE_ORDERING_CANCELLATION_AND_SELL_THROUGH_PANEL",
+          "attempts": [
+            {
+              "source": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+              "outcome": "Strong contracting/price metrics; no quantified cancellation, double-ordering or end-customer sell-through panel.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://www.trendforce.com/research/memory-storage",
+              "outcome": "Public previews/forecasts available; detailed contract-price/customer/order data subscription-gated; forecasts cannot fill realized cancellation rates.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NONPUBLIC_DOUBLE_ORDERING_CANCELLATION_AND_SELL_THROUGH_PANEL",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Obtain comparable vendor/customer cancellation, lead-time, bit-shipment, inventory and sell-through series; distinguish entitlement from nondisclosure.",
+          "next_review": "2026-10-21"
+        },
+        "peak_earnings": {
+          "status": "ASSESSED",
+          "value": {
+            "price": 953.19,
+            "FY26_nonGAAP_PE": 12.62,
+            "Q4_annualized_nonGAAP_PE": 7.13,
+            "cyclical_margin_sensitivity": [
+              {
+                "gross_margin_assumption_pct": 35.0,
+                "normalized_eps_proxy": 27.39,
+                "price_over_proxy_earnings": 34.8
+              },
+              {
+                "gross_margin_assumption_pct": 45.0,
+                "normalized_eps_proxy": 37.18,
+                "price_over_proxy_earnings": 25.64
+              },
+              {
+                "gross_margin_assumption_pct": 55.00000000000001,
+                "normalized_eps_proxy": 46.96,
+                "price_over_proxy_earnings": 20.3
+              }
+            ]
+          },
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+            "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+            "data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json"
+          ],
+          "note": "Illustrative normalization, not an estimated fair value/forecast: hold FY26 revenue $133.188B; annual non-GAAP Opex $6.841B plus FY27 guided +$2.5B; tax15.5%, 1.15B shares, no net interest income. GM35/45/55 bracket prior FY25 GM40.9% and allow higher AI structural margins. Higher future depreciation/capex/working capital excluded. Peak-earnings sensitivity HIGH; supply reversal unconfirmed."
+        },
+        "Cisco_warning": {
+          "status": "ASSESSED",
+          "value": "Capacity/order acceleration and financing risk visible; Cisco-2001 physical mechanics UNCONFIRMED: no broad bookings collapse, inventory write-downs, contract-price collapse or networking cancellations.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.cisco.com/c/dam/en_us/about/ac49/ac20/downloads/annualreport/ar2001/pdf/AR.pdf",
+            "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+            "https://investors.broadcom.com/news-releases/news-release-details/broadcom-inc-announces-third-quarter-fiscal-year-2026-financial",
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Cisco FY2001 inventory provision $2.77B included $2.2B additional excess charge from sudden demand decline. AI current ASP/contracts counter that outcome. Valuation and financing sensitivity alone do not establish double-ordering/physical overcapacity."
+        }
+      }
+    },
+    "roi": {
+      "section": "## roi",
+      "fields": {
+        "demand_growth": {
+          "status": "ASSESSED",
+          "value": "YES in latest disclosed sales: Azure43%, AWS37%, Google Cloud82%; TSMC September sales +54.6% YoY/-0.6% MoM. Not a same-week end-user unit-demand measure.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+            "https://pr.tsmc.com/english/news/3343"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "monetization_vs_deployment": {
+          "status": "ASSESSED",
+          "value": "MIXED / cash conversion lags at several buyers: Alphabet H1 incremental PP&E/OCF1.95x, Amazon TTM1.64x; MSFT remains FCF positive; AI-only comparable end-demand economics incomplete.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "payback_lengthening": {
+          "status": "ASSESSED",
+          "value": "WATCH / indirect: five-year debt versus three-year customer terms creates renewal/residual-value exposure; no fresh broad realized IRR/payback cohort series supports R3=2.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "financing_dependence": {
+          "status": "ASSESSED",
+          "value": "YES, funding routes and counterparty ratings matter; Firmus IPO withdrawal is new selectivity. Costlier financing at all firms is NOT established by heterogeneous coupons.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "marginal_delays": {
+          "status": "ASSESSED",
+          "value": "Localized prior power/regulatory delays; new financing-route attrition at Firmus; no broad new ROI-led site-cancellation wave.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "physical_transmission": {
+          "status": "ASSESSED",
+          "value": "NOT CONFIRMED: GPU settlement indices rise, latest memory ASP/contracts strong, supplier growth remains positive; utilization and renewals missing.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "revenue_per_MW_GPU": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+            "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx"
+          ],
+          "note": "NO_MATCHED_ENTITY_PERIOD_UTILIZED_CAPACITY_AND_REALIZED_REVENUE_DENOMINATORS",
+          "attempts": [
+            {
+              "source": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+              "outcome": "Quarterly revenue and separately reported power cannot establish cohort revenue per utilized GPU/MW or ROI.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Q1-Results-Driven-by-Triple-Digit-Growth-in-Cloud-Infrastructure-Revenues/default.aspx",
+              "outcome": "New deployments/RPO not matched to realized utilization, revenue and profit by commissioned project.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NO_MATCHED_ENTITY_PERIOD_UTILIZED_CAPACITY_AND_REALIZED_REVENUE_DENOMINATORS",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Match realized numerator to energized/utilized cohort denominator, timing and hardware age; do not divide run-rate/backlog by announced GW.",
+          "next_review": "2026-10-21"
+        }
+      }
+    },
+    "challenger": {
+      "section": "## challenger",
+      "fields": {
+        "score": {
+          "status": "ASSESSED",
+          "value": 60.0,
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "state": {
+          "status": "ASSESSED",
+          "value": "ALERT",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "stage": {
+          "status": "ASSESSED",
+          "value": "STAGE_5_PROJECT_ATTRITION",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "R1": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "R2": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "R3": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "R4": {
+          "status": "ASSESSED",
+          "value": 2,
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "R5": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "R6": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "R7": {
+          "status": "ASSESSED",
+          "value": 1,
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "P1": {
+          "status": "ASSESSED",
+          "value": "WATCH",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "P2": {
+          "status": "ASSESSED",
+          "value": "ANTI_REVERSAL",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "P3": {
+          "status": "ASSESSED",
+          "value": "ANTI_REVERSAL",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "P4": {
+          "status": "ASSESSED",
+          "value": "WATCH",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "Frozen shadow model; no trading signal. Stage5 retains prior localized project evidence; IPO withdrawal not treated as site cancellation. P4 NEUTRAL->WATCH from narrower supplier/credit price weakness, technical NORMAL persists."
+        },
+        "divergence": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/champion/champion_observation_2026-10-14.json",
+            "data/research/challenger/ai_roi_challenger_2026-10-14.yaml"
+          ],
+          "note": "FRESH_CHAMPION_UNAVAILABLE",
+          "attempts": [
+            {
+              "source": "data/research/champion/champion_observation_2026-10-14.json",
+              "outcome": "Current canonical Champion state UNKNOWN.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "data/research/challenger/ai_roi_challenger_2026-10-14.yaml",
+              "outcome": "Against carried WATCH narrative, early-warning divergence persists; fresh classification remains UNKNOWN.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "FRESH_CHAMPION_UNAVAILABLE",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Classify fresh divergence only after complete accepted Champion decision; keep carried comparison separately labelled.",
+          "next_review": "2026-10-21"
+        }
+      }
+    },
+    "efficiency": {
+      "section": "## efficiency",
+      "fields": {
+        "task_cost": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.uber.com/gb/en/blog/efficient-software-factory/",
+            "https://about.att.com/blogs/2026/the-tokenomics-equation.html"
+          ],
+          "note": "NO_CURRENT_FIXED_QUALITY_SUCCESSFUL_TASK_COST_PANEL",
+          "attempts": [
+            {
+              "source": "https://www.uber.com/gb/en/blog/efficient-software-factory/",
+              "outcome": "27-Aug constant-model request-cost reduction34% does not measure current fixed-success tasks including retries.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://about.att.com/blogs/2026/the-tokenomics-equation.html",
+              "outcome": "Routing/caching claims are not a matched current cross-company successful-task panel.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NO_CURRENT_FIXED_QUALITY_SUCCESSFUL_TASK_COST_PANEL",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Track cost per completed useful task at fixed quality/model/hardware/context with retries and supporting compute.",
+          "next_review": "2026-10-21"
+        },
+        "pricing_discipline": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+            "https://data.ornn.com/"
+          ],
+          "note": "NO_COMPLETE_CURRENT_COHORT_PRICING_AND_UNIT_ECONOMICS_COMPARISON",
+          "attempts": [
+            {
+              "source": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+              "outcome": "June GitHub consumption pricing and margin commentary is older context, not a new weekly change.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://data.ornn.com/",
+              "outcome": "Token blended list-price index has shifting model/mix; does not identify fixed-task economics or new quotas/subscriptions.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NO_COMPLETE_CURRENT_COHORT_PRICING_AND_UNIT_ECONOMICS_COMPARISON",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Compare dated subscription/quota/API changes under fixed workloads, distinguish access fee/metered cost and successful output.",
+          "next_review": "2026-10-21"
+        },
+        "induced_demand": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.uber.com/gb/en/blog/efficient-software-factory/",
+            "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"
+          ],
+          "note": "CURRENT_EFFICIENCY_REBOUND_COHORT_NOT_PUBLISHED",
+          "attempts": [
+            {
+              "source": "https://www.uber.com/gb/en/blog/efficient-software-factory/",
+              "outcome": "Historical 9.4x agent requests with costs stabilized since April supports possible rebound, not current AI-industry causal proof.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+              "outcome": "Quarterly revenue/throughput narrative lacks matched compute-per-useful-task cohort decomposition.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "CURRENT_EFFICIENCY_REBOUND_COHORT_NOT_PUBLISHED",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Measure efficiency reduction and volume expansion in the same workload, then net consumed compute and realized revenue.",
+          "next_review": "2026-10-21"
+        },
+        "committed_capacity_economics": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+            "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf"
+          ],
+          "note": "NONPUBLIC_COMMITTED_COHORT_ORIGINAL_PAYBACK_ASSUMPTIONS",
+          "attempts": [
+            {
+              "source": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+              "outcome": "Contracts/EBITDA not realized project IRR or utilization attributable to efficiency.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+              "outcome": "HBM contracting/supplier margins do not measure downstream efficiency-induced capacity economics.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NONPUBLIC_COMMITTED_COHORT_ORIGINAL_PAYBACK_ASSUMPTIONS",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Obtain original assumptions and realized utilization/revenue/payback for same committed cohorts, separate training and inference.",
+          "next_review": "2026-10-21"
+        },
+        "assessment": {
+          "status": "ASSESSED",
+          "value": "INCONCLUSIVE: efficiency gains can hurt model pricing power and improve adoption/customer margins; no confirmed efficiency-induced overcapacity.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.uber.com/gb/en/blog/efficient-software-factory/",
+            "https://about.att.com/blogs/2026/the-tokenomics-equation.html",
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "Historical Uber/AT&T counterevidence kept contextual; no automated R1/R3 adjustment. Rebound and committed-capacity economics must be independently measured."
+        }
+      }
+    },
+    "macro": {
+      "section": "## macro",
+      "fields": {
+        "score_range": {
+          "status": "ASSESSED",
+          "value": {
+            "lower": 33,
+            "upper": 68
+          },
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/macro_input_cost_pain_2026-10-14.json"
+          ],
+          "note": "M1 current Oct13 Treasury; M2 latest published August CPI; M3/M4 missing inputs bounded, not zero-filled. Score is range, no exact point."
+        },
+        "state_range": {
+          "status": "ASSESSED",
+          "value": [
+            "WATCH",
+            "HIGH_STRESS",
+            "BREAK_ZONE"
+          ],
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/macro_input_cost_pain_2026-10-14.json"
+          ],
+          "note": "M1 current Oct13 Treasury; M2 latest published August CPI; M3/M4 missing inputs bounded, not zero-filled. Score is range, no exact point."
+        },
+        "M1": {
+          "status": "ASSESSED",
+          "value": 22,
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/macro_input_cost_pain_2026-10-14.json"
+          ],
+          "note": "M1 current Oct13 Treasury; M2 latest published August CPI; M3/M4 missing inputs bounded, not zero-filled. Score is range, no exact point."
+        },
+        "M2": {
+          "status": "ASSESSED",
+          "value": 11,
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/macro_input_cost_pain_2026-10-14.json"
+          ],
+          "note": "M1 current Oct13 Treasury; M2 latest published August CPI; M3/M4 missing inputs bounded, not zero-filled. Score is range, no exact point."
+        },
+        "M3": {
+          "status": "ASSESSED",
+          "value": {
+            "lower": 0,
+            "upper": 20
+          },
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/macro_input_cost_pain_2026-10-14.json"
+          ],
+          "note": "M1 current Oct13 Treasury; M2 latest published August CPI; M3/M4 missing inputs bounded, not zero-filled. Score is range, no exact point."
+        },
+        "M4": {
+          "status": "ASSESSED",
+          "value": {
+            "lower": 0,
+            "upper": 15
+          },
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/macro_input_cost_pain_2026-10-14.json"
+          ],
+          "note": "M1 current Oct13 Treasury; M2 latest published August CPI; M3/M4 missing inputs bounded, not zero-filled. Score is range, no exact point."
+        },
+        "funding_break": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+            "https://www.ft.com/content/4ffa1853-0e2c-424f-b941-88c6bcac5765"
+          ],
+          "note": "NO_MATCHED_CURRENT_DEBT_PRICE_BELOW95_PLUS_FINANCING_DIFFICULTY",
+          "attempts": [
+            {
+              "source": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Second-Quarter-2026-Results/default.aspx",
+              "outcome": "Closed facility terms not a current cents-on-dollar market print.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://www.ft.com/content/4ffa1853-0e2c-424f-b941-88c6bcac5765",
+              "outcome": "Reported almost15% unsecured yield lacks verified instrument price/maturity/syndication match; Firmus equity withdrawal not debt below95.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NO_MATCHED_CURRENT_DEBT_PRICE_BELOW95_PLUS_FINANCING_DIFFICULTY",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Match specific AI/project debt price and refinancing/syndication difficulty at the same cutoff.",
+          "next_review": "2026-10-21"
+        },
+        "stagflation_trap": {
+          "status": "ASSESSED",
+          "value": "NO: latest available CPI3.4% below3.5% threshold",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.bls.gov/news.release/archives/cpi_09112026.htm"
+          ],
+          "note": "September CPI not yet released at cutoff; future print excluded."
+        },
+        "easing_failure": {
+          "status": "ASSESSED",
+          "value": "NO: latest Fed action is hike, not easing",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "crb_12m": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.corecommodityllc.com/CoreIndexes.aspx",
+            "https://stockq.org/index/CRB.php"
+          ],
+          "note": "RETURN_VARIANT_IDENTITY_AND_DATED_HISTORY_UNRESOLVED",
+          "attempts": [
+            {
+              "source": "https://www.corecommodityllc.com/CoreIndexes.aspx",
+              "outcome": "Administrator benchmark overview; no pinned price/ER/TR history extracted.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://stockq.org/index/CRB.php",
+              "outcome": "Oct8/9 values, mixed dates and ambiguous deviation display; not an accepted Oct13 comparable series.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "RETURN_VARIANT_IDENTITY_AND_DATED_HISTORY_UNRESOLVED",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Pin same administrator variant/ticker/return type and matched 12m/~260-session history; no YTD/CFD replacement.",
+          "next_review": "2026-10-21"
+        },
+        "crb_ma260": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.corecommodityllc.com/CoreIndexes.aspx",
+            "https://stockq.org/index/CRB.php"
+          ],
+          "note": "RETURN_VARIANT_IDENTITY_AND_DATED_HISTORY_UNRESOLVED",
+          "attempts": [
+            {
+              "source": "https://www.corecommodityllc.com/CoreIndexes.aspx",
+              "outcome": "Administrator benchmark overview; no pinned price/ER/TR history extracted.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://stockq.org/index/CRB.php",
+              "outcome": "Oct8/9 values, mixed dates and ambiguous deviation display; not an accepted Oct13 comparable series.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "RETURN_VARIANT_IDENTITY_AND_DATED_HISTORY_UNRESOLVED",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Pin same administrator variant/ticker/return type and matched 12m/~260-session history; no YTD/CFD replacement.",
+          "next_review": "2026-10-21"
+        },
+        "ai_spread_3m": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+            "https://fred.stlouisfed.org/graph/?g=1&cosd=2026-07-01&coed=2026-07-20&id=BAMLC0A0CM"
+          ],
+          "note": "SAME_AI_SPREAD_BASKET_UNAVAILABLE_AND_BROAD_3M_HISTORY_NOT_EXTRACTED",
+          "attempts": [
+            {
+              "source": "https://fred.stlouisfed.org/series/BAMLC0A0CM",
+              "outcome": "Broad IG83bp Oct12 publishedOct13; not sector spread/premium.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://fred.stlouisfed.org/graph/?g=1&cosd=2026-07-01&coed=2026-07-20&id=BAMLC0A0CM",
+              "outcome": "Historical graph retrieval failed; AI instrument/basket history also not defined.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "SAME_AI_SPREAD_BASKET_UNAVAILABLE_AND_BROAD_3M_HISTORY_NOT_EXTRACTED",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Fix instrument/basket/OAS method; obtain same-series three-month comparator and AI premium, with broad fallback explicit.",
+          "next_review": "2026-10-21"
+        }
+      }
+    },
+    "institutional": {
+      "section": "## institutional",
+      "fields": {
+        "nasdaq_positions": {
+          "status": "OBSERVED",
+          "value": {
+            "long": 48139,
+            "short": 74877,
+            "spreading": 11732,
+            "net": -26738,
+            "wow": 7044
+          },
+          "observation_date": "2026-10-06",
+          "published_on": "2026-10-09",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.cftc.gov/dea/futures/financial_lf.htm"
+          ],
+          "note": "Official current changes row, consolidated codes only; no mini/micro or options-combined addition. S&P official WoW differs by1 contract from delta to stored Sep29 snapshot; preserved and disclosed, not silently reconciled."
+        },
+        "sp500_positions": {
+          "status": "OBSERVED",
+          "value": {
+            "long": 114660,
+            "short": 530569,
+            "spreading": 53870,
+            "net": -415909,
+            "wow": -41903
+          },
+          "observation_date": "2026-10-06",
+          "published_on": "2026-10-09",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.cftc.gov/dea/futures/financial_lf.htm"
+          ],
+          "note": "Official current changes row, consolidated codes only; no mini/micro or options-combined addition. S&P official WoW differs by1 contract from delta to stored Sep29 snapshot; preserved and disclosed, not silently reconciled."
+        },
+        "cftc_4w13w": {
+          "status": "OBSERVED",
+          "value": {
+            "nasdaq_4w": 10146,
+            "nasdaq_13w": 41741,
+            "sp500_4w": -53822,
+            "sp500_13w": -50950
+          },
+          "observation_date": "2026-10-06",
+          "published_on": "2026-10-09",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.cftc.gov/dea/futures/financial_lf.htm",
+            "https://www.cftc.gov/sites/default/files/files/dea/cotarchives/2026/futures/financial_lf090826.htm",
+            "https://www.cftc.gov/sites/default/files/files/dea/cotarchives/2026/futures/financial_lf070726.htm"
+          ],
+          "note": "Latest source reviewed against cutoff; no trading authority."
+        },
+        "state": {
+          "status": "ASSESSED",
+          "value": "H1_QUIET_HEDGING",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/institutional_derisking_2026-10-14.json"
+          ],
+          "note": "Two-family evidence: published low-net PB commentary plus rising tail skew/S&P futures shorts. Nasdaq counterevidence; no H3/H4 escalation without stronger persistent independent evidence."
+        },
+        "confidence": {
+          "status": "ASSESSED",
+          "value": "MEDIUM",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/institutional_derisking_2026-10-14.json"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "put_call": {
+          "status": "OBSERVED",
+          "value": {
+            "total": 0.83,
+            "index": 1.06,
+            "equity": 0.54
+          },
+          "observation_date": "2026-10-13",
+          "published_on": "2026-10-13",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.cboe.com/data/mktstat2.aspx",
+            "https://ycharts.com/indicators/categories/market_indices_and_statistics"
+          ],
+          "note": "Cboe values/date cross-check against YCharts dated13Oct; YCharts availability13Oct21:36EDT. All three ratios captured; no persistent put-demand trend inferred from one day."
+        },
+        "skew": {
+          "status": "OBSERVED",
+          "value": {
+            "value": 154.74,
+            "observation_date": "2026-10-13",
+            "provider": "YCharts Cboe-derived fallback",
+            "prior_2026_10_07": 141.84,
+            "change": 12.9
+          },
+          "observation_date": "2026-10-13",
+          "published_on": "2026-10-13",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INDEPENDENT_CONFIRMATION",
+          "sources": [
+            "https://www.cboe.com/us/indices/dashboard/skew/",
+            "https://ycharts.com/indicators/skew_index"
+          ],
+          "note": "Primary dashboard numeric extraction unavailable; fallback Cboe-derived154.74 dated13Oct, update23:13EDT before cutoff. Primary CSV not captured; +12.90 from7Oct is fallback same-series comparison."
+        },
+        "vix": {
+          "status": "OBSERVED",
+          "value": 15.27,
+          "observation_date": "2026-10-13",
+          "published_on": "2026-10-13",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.cboe.com/tradable-products/vix"
+          ],
+          "note": "Dated Cboe display13Oct; not mixed with a forming14Oct quote. Publication time precision insufficient for executable intraday claim."
+        },
+        "vix_curve": {
+          "status": "OBSERVED",
+          "value": {
+            "state": "CONTANGO",
+            "settlement_date": "2026-10-13",
+            "contracts": [
+              {
+                "expiration": "2026-10-21",
+                "settlement": 16.8414
+              },
+              {
+                "expiration": "2026-11-18",
+                "settlement": 17.5962
+              },
+              {
+                "expiration": "2026-12-16",
+                "settlement": 18.1491
+              },
+              {
+                "expiration": "2027-01-20",
+                "settlement": 19.0538
+              },
+              {
+                "expiration": "2027-02-17",
+                "settlement": 19.575
+              },
+              {
+                "expiration": "2027-03-17",
+                "settlement": 19.7839
+              }
+            ]
+          },
+          "observation_date": "2026-10-13",
+          "published_on": "2026-10-13",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.cboe.com/markets/us/futures/market-statistics/settlement/futures/daily"
+          ],
+          "note": "Dated monthly VX settlement curve; exclude discretionary weekly settlements and any14Oct settlement."
+        },
+        "prime_broker": {
+          "status": "OBSERVED",
+          "value": "HEDGING / QUALITATIVE: published Goldman commentary says fundamental long-short net exposure historically low",
+          "observation_date": "2026-10-07",
+          "published_on": "2026-10-09",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIME_BROKER_PUBLISHED",
+          "sources": [
+            "https://www.goldmansachs.com/insights/the-markets/hedge-funds-are-cautious-on-stocks-amid-rates-and-energy-volatility"
+          ],
+          "note": "Public franchise/hedge-fund coverage interview, not current account-level prime leverage table. Gross leverage, AI-sector exposure and weekly numeric changes unavailable; do not invent levels."
+        },
+        "lending": {
+          "status": "OBSERVED",
+          "value": {
+            "period": "2026-09",
+            "published_on": "2026-10-02",
+            "average_daily_loan_value_B": 230.948833428,
+            "yoy_pct": 16.8,
+            "source": "https://www.theocc.com/newsroom/views/2026/10-02-september-2026-monthly-volume-report"
+          },
+          "observation_date": "2026-09-30",
+          "published_on": "2026-10-02",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "PRIMARY_POSITIONING_DATA",
+          "sources": [
+            "https://www.theocc.com/newsroom/views/2026/10-02-september-2026-monthly-volume-report"
+          ],
+          "note": "Latest monthly release, rechecked unchanged; aggregate loans not AI-specific short selling."
+        },
+        "security_shorts": {
+          "status": "OBSERVED",
+          "value": [
+            {
+              "ticker": "AMD",
+              "short_interest": 39281942,
+              "prior_short_interest": 39975696,
+              "change_pct": -1.735,
+              "days_to_cover": 1.63
+            },
+            {
+              "ticker": "AMZN",
+              "short_interest": 86657682,
+              "prior_short_interest": 81440414,
+              "change_pct": 6.406,
+              "days_to_cover": 2.3
+            },
+            {
+              "ticker": "AVGO",
+              "short_interest": 54197605,
+              "prior_short_interest": 51922175,
+              "change_pct": 4.382,
+              "days_to_cover": 2.32
+            },
+            {
+              "ticker": "CRWV",
+              "short_interest": 59952639,
+              "prior_short_interest": 54939326,
+              "change_pct": 9.125,
+              "days_to_cover": 1.75
+            },
+            {
+              "ticker": "GOOGL",
+              "short_interest": 80391960,
+              "prior_short_interest": 87393404,
+              "change_pct": -8.011,
+              "days_to_cover": 2.93
+            },
+            {
+              "ticker": "META",
+              "short_interest": 33572792,
+              "prior_short_interest": 30990107,
+              "change_pct": 8.334,
+              "days_to_cover": 1.25
+            },
+            {
+              "ticker": "MSFT",
+              "short_interest": 61133927,
+              "prior_short_interest": 67346414,
+              "change_pct": -9.225,
+              "days_to_cover": 2.55
+            },
+            {
+              "ticker": "MU",
+              "short_interest": 26023190,
+              "prior_short_interest": 27633780,
+              "change_pct": -5.828,
+              "days_to_cover": 1.06
+            },
+            {
+              "ticker": "NVDA",
+              "short_interest": 311389688,
+              "prior_short_interest": 294225803,
+              "change_pct": 5.834,
+              "days_to_cover": 2.82
+            },
+            {
+              "ticker": "ORCL",
+              "short_interest": 48486262,
+              "prior_short_interest": 50840436,
+              "change_pct": -4.631,
+              "days_to_cover": 1.47
+            },
+            {
+              "ticker": "QQQ",
+              "short_interest": 70458005,
+              "prior_short_interest": 65733364,
+              "change_pct": 7.188,
+              "days_to_cover": 1.95
+            },
+            {
+              "ticker": "SMH",
+              "short_interest": 11595994,
+              "prior_short_interest": 12342349,
+              "change_pct": -6.047,
+              "days_to_cover": 1.9
+            }
+          ],
+          "observation_date": "2026-09-30",
+          "published_on": "2026-10-09",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INDEPENDENT_CONFIRMATION",
+          "sources": [
+            "https://www.finra.org/filing-reporting/regulatory-filing-systems/short-interest",
+            "https://massive.com/docs/rest/stocks/short-interest"
+          ],
+          "note": "New published settlement versus prior weekly Sep15; FINRA publication calendar verified. Short volume not short interest; no float-normalized or borrow-fee claim."
+        },
+        "forced_deleveraging": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.goldmansachs.com/insights/the-markets/hedge-funds-are-cautious-on-stocks-amid-rates-and-energy-volatility",
+            "https://www.ft.com/content/4ffa1853-0e2c-424f-b941-88c6bcac5765"
+          ],
+          "note": "NO_DIRECT_FUND_LIQUIDATION_MARGIN_OR_PB_WITHDRAWAL_EVIDENCE",
+          "attempts": [
+            {
+              "source": "https://www.goldmansachs.com/insights/the-markets/hedge-funds-are-cautious-on-stocks-amid-rates-and-energy-volatility",
+              "outcome": "Cautious low exposure does not establish margin calls or forced liquidation.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://www.ft.com/content/4ffa1853-0e2c-424f-b941-88c6bcac5765",
+              "outcome": "AI corporate financing pressure, not direct forced liquidation of funds.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "NO_DIRECT_FUND_LIQUIDATION_MARGIN_OR_PB_WITHDRAWAL_EVIDENCE",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Seek attributable margin calls, PB haircuts/withdrawal, redemptions or fund liquidations; absence of public evidence is UNKNOWN, not NO.",
+          "next_review": "2026-10-21"
+        },
+        "price_positioning_divergence": {
+          "status": "ASSESSED",
+          "value": "WATCH: S&P near highs while latest published S&P futures net worsens; Nasdaq improves; positions lag prices by one week.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json",
+            "https://www.cftc.gov/dea/futures/financial_lf.htm",
+            "https://ycharts.com/indicators/skew_index"
+          ],
+          "note": "Lag-aware contextual assessment; no Oct13 unpublished CFTC positions or whole-book beta inferred; synchronized full positioning panel missing."
+        },
+        "weekly_delta": {
+          "status": "ASSESSED",
+          "value": "Hedging evidence stronger: skew+12.90; S&P net more short; Nasdaq less short; VIX15.27/contango; shorts mixed. No direct H4 evidence.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/institutional_derisking_2026-10-14.json"
+          ],
+          "note": "Prior recovered H-state UNKNOWN -> current H1 evidence; not proof a real-world H0->H1 transition occurred this week."
+        }
+      }
+    },
+    "outcomes": {
+      "section": "## outcomes",
+      "fields": {
+        "weekly_delta": {
+          "status": "ASSESSED",
+          "value": "Score60/stateALERT/stage5 unchanged; P4 NEUTRAL->WATCH; GPU index higher; new equity-route attrition, revenue-accounting correction and hedging evidence.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+            "data/research/challenger/outcome_review_2026-10-14.json"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "2w4w8w12w": {
+          "status": "ASSESSED",
+          "value": "New append-only2W review of30Sep and4W review of16Sep; warning persists, physical propagation unconfirmed;8W/12W not yet due.",
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "data/research/challenger/outcome_review_2026-10-14.json"
+          ],
+          "note": "Research judgment from the cited information set; not a primary measurement."
+        },
+        "next_earnings": {
+          "status": "UNAVAILABLE",
+          "value": null,
+          "observation_date": null,
+          "published_on": null,
+          "earliest_available_at": null,
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+            "https://pr.tsmc.com/english/news/3343"
+          ],
+          "note": "FIVE_BUYER_PRIMARY_EARNINGS_CALENDAR_NOT_COMPLETELY_VERIFIED",
+          "attempts": [
+            {
+              "source": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+              "outcome": "Latest completed quarterly disclosure only; future event date not fully captured.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            },
+            {
+              "source": "https://pr.tsmc.com/english/news/3343",
+              "outcome": "15-Oct TSMC detailed earnings and29-Oct Samsung detail are future checkpoints, not current evidence.",
+              "attempted_at": "2026-10-14T05:52:22.620484+00:00"
+            }
+          ],
+          "reason": "FIVE_BUYER_PRIMARY_EARNINGS_CALENDAR_NOT_COMPLETELY_VERIFIED",
+          "owner": "AI CapEx Watch collector / issue #76; normalization and Asia policy under #72",
+          "next_action": "Verify all five buyer next earnings dates from primary IR calendars and evaluate post-release realized cash/investment metrics.",
+          "next_review": "2026-10-21"
+        },
+        "data_gaps": {
+          "status": "ASSESSED",
+          "value": [
+            "champion.state",
+            "champion.combined_score",
+            "champion.fundamental_normalization",
+            "champion.canonical_technical",
+            "champion.asia",
+            "champion.leadership_events",
+            "gpu.availability",
+            "gpu.utilization",
+            "gpu.renewals_contract_duration",
+            "financing.OpenAI",
+            "financing.Anthropic",
+            "financing.capacity_funnel",
+            "semiconductors.AMD",
+            "memory.cancellations",
+            "roi.revenue_per_MW_GPU",
+            "challenger.divergence",
+            "efficiency.task_cost",
+            "efficiency.pricing_discipline",
+            "efficiency.induced_demand",
+            "efficiency.committed_capacity_economics",
+            "macro.funding_break",
+            "macro.crb_12m",
+            "macro.crb_ma260",
+            "macro.ai_spread_3m",
+            "institutional.forced_deleveraging",
+            "outcomes.next_earnings"
+          ],
+          "observation_date": "2026-10-14",
+          "published_on": "2026-10-14",
+          "earliest_available_at": null,
+          "availability_precision": "DATE_ONLY_NO_EXECUTABLE_INTRADAY_CLAIM",
+          "captured_at": "2026-10-14T05:52:22.620484+00:00",
+          "evidence_class": "INFERENCE",
+          "sources": [
+            "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+          ],
+          "note": "All required fields are present; unresolved inputs remain explicitly listed with current source attempts/owner/action/review. Structural validation is not numerical completeness."
+        }
+      }
+    }
+  },
+  "preserved_blobs": {
+    "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md": "ea3ceaa90de00ca711d8ab30a30d30bc0fed78c4",
+    "data/research/challenger/ai_roi_challenger_2026-10-07.yaml": "592ed2e8605425b508602cb6c73619ce22fa8113",
+    "data/research/macro_input_cost_pain_2026-09-23.yaml": "c59cf6db1a18a41e5b12ec2886cc76c53a574ef4",
+    "data/research/institutional_derisking_2026-09-23.yaml": "24f50cadab11d1e893d2e88c517167df886188d2"
+  },
+  "unresolved_fields": [
+    "champion.state",
+    "champion.combined_score",
+    "champion.fundamental_normalization",
+    "champion.canonical_technical",
+    "champion.asia",
+    "champion.leadership_events",
+    "gpu.availability",
+    "gpu.utilization",
+    "gpu.renewals_contract_duration",
+    "financing.OpenAI",
+    "financing.Anthropic",
+    "financing.capacity_funnel",
+    "semiconductors.AMD",
+    "memory.cancellations",
+    "roi.revenue_per_MW_GPU",
+    "challenger.divergence",
+    "efficiency.task_cost",
+    "efficiency.pricing_discipline",
+    "efficiency.induced_demand",
+    "efficiency.committed_capacity_economics",
+    "macro.funding_break",
+    "macro.crb_12m",
+    "macro.crb_ma260",
+    "macro.ai_spread_3m",
+    "institutional.forced_deleveraging",
+    "outcomes.next_earnings"
+  ],
+  "previous_manifest": "data/research/weekly/weekly_capture_2026-10-07_r1.json",
+  "cutoff_policy": "13-Oct US regular session only;14-Oct pre-cutoff releases separately identified; no14-Oct US/Asia completed-session assumption."
+}

@@ -1,0 +1,102 @@
+{
+  "schema": "ai-capex.macro-input-cost-pain.observation.v1",
+  "as_of": "2026-10-14T08:25:13+03:00",
+  "captured_at": "2026-10-14T05:52:22.620484+00:00",
+  "contract": "Docs/MACRO_INPUT_COST_PAIN_OVERLAY_v1.md",
+  "source_research": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+  "trading_authority": "NONE",
+  "status": "PARTIAL",
+  "components": {
+    "M1": {
+      "lower": 22,
+      "upper": 22,
+      "max": 30,
+      "us10y_pct": 5.21,
+      "prior_date": "2026-07-13",
+      "us10y_3m_prior_pct": 4.62,
+      "change_bp": 59,
+      "subscores": {
+        "level": 14,
+        "change": 4,
+        "policy": 4
+      },
+      "source": [
+        "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+        "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+      ]
+    },
+    "M2": {
+      "lower": 11,
+      "upper": 11,
+      "max": 20,
+      "cpi_yoy_pct": 3.4,
+      "monthly_pct": 0.4,
+      "energy_yoy_pct": 16.3,
+      "period": "2026-08",
+      "published_on": "2026-09-11",
+      "subscores": {
+        "cpi": 3,
+        "energy": 4,
+        "reacceleration": 4
+      },
+      "note": "Monthly >=.3 and no YoY improvement meets frozen rule; not proof of monotone three-month acceleration. September release at 14-Oct 08:30 ET is AFTER cutoff."
+    },
+    "M3": {
+      "lower": 0,
+      "upper": 20,
+      "max": 20,
+      "variant_status": "UNKNOWN",
+      "momentum_12m": null,
+      "distance_ma260_pct": null,
+      "note": "StockQ dated Oct8/9 mixed metrics; primary return variant unpinned. No price/ER/TR or CFD substitution."
+    },
+    "M4": {
+      "lower": 0,
+      "upper": 15,
+      "max": 30,
+      "mode": "BROAD_IG_FALLBACK",
+      "broad_ig_oas_bp": 83,
+      "observation_date": "2026-10-12",
+      "published_on": "2026-10-13",
+      "spread_level_points": 0,
+      "three_month_widening_points": [
+        0,
+        10
+      ],
+      "sector_premium_points": [
+        0,
+        5
+      ],
+      "ai_spread_bp": null,
+      "ai_spread_3m_change_bp": null
+    }
+  },
+  "score": {
+    "lower_bound": 33,
+    "upper_bound": 68,
+    "canonical_point_estimate": null,
+    "state_range": [
+      "WATCH",
+      "HIGH_STRESS",
+      "BREAK_ZONE"
+    ],
+    "precision": "LOGICAL_MISSING_INPUT_BOUNDS_NOT_CONFIDENCE_INTERVAL"
+  },
+  "flags": {
+    "FUNDING_BREAK_FLAG": "UNKNOWN",
+    "STAGFLATION_TRAP_FLAG": "NO",
+    "EASING_FAILURE_FLAG": "NO"
+  },
+  "delta": {
+    "prior_as_of": "2026-10-07",
+    "prior_range": [
+      33,
+      68
+    ],
+    "score_range_change": "UNCHANGED",
+    "ten_year_change_bp": -7,
+    "note": "10Y level eases5.28->5.21; three-month change59bp still maps to4 points. No claim AI credit improves from broad IG."
+  },
+  "changes_champion": false,
+  "changes_challenger": false
+}

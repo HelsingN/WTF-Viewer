@@ -1,0 +1,279 @@
+"""Research-only Challenger v2 acceptance tests: missingness, PIT and evidence."""
+from copy import deepcopy
+from datetime import datetime, timedelta, timezone
+
+import pytest
+
+from scoring.challenger_v2 import evaluate_challenger_v2
+
+ASOF = "2026-11-03T00:00:00+00:00"
+ISSUER_SOURCE = "https://www.sec.gov/Archives/"
+EVENT_SOURCE = "https://example.org/verified-primary-event"
+
+
+def issuer(level: int, *, root: str = "core-a") -> dict:
+    return {
+        "level": level,
+        "first_public_at": "2026-11-02T10:00:00-05:00",
+        "availability_basis": "FIRST_PUBLIC_VERIFIED",
+        "valid_until": "2026-12-10T00:00:00+00:00",
+        "source_class": "PRIMARY_FACT",
+        "source_url": ISSUER_SOURCE,
+        "measurement": "Comparable issuer quarter, reviewed manually",
+        "rationale": "Reviewed source supports selected level",
+        "counterevidence": "Reviewed opposing revenue and credit access",
+        "causal_root_id": root,
+    }
+
+
+def snapshot(levels=(1, 1, 1)) -> dict:
+    return {
+        "schema": "ai-capex.challenger-observable.v2-draft",
+        "as_of": ASOF,
+        "cohort_version": "unit-test-frozen-2026-10-01",
+        "cohort_frozen_at": "2026-10-01T00:00:00+00:00",
+        "core": {
+            "R1": {
+                "roster": {"A": "0.5", "B": "0.5"},
+                "observations": {
+                    "A": issuer(levels[0], root="r1-a"),
+                    "B": issuer(levels[0], root="r1-b"),
+                },
+            },
+            "R2": {
+                "roster": {"C": "0.5", "D": "0.5"},
+                "observations": {
+                    "C": issuer(levels[1], root="r2-c"),
+                    "D": issuer(levels[1], root="r2-d"),
+                },
+            },
+            "R4": {
+                "roster": {"E": "0.5", "F": "0.5"},
+                "observations": {
+                    "E": issuer(levels[2], root="r4-e"),
+                    "F": issuer(levels[2], root="r4-f"),
+                },
+            },
+        },
+        "events": [],
+    }
+
+
+def event(event_id: str, factor: str, impact: str, *, root: str | None = None) -> dict:
+    return {
+        "id": event_id,
+        "factor": factor,
+        "impact": impact,
+        "kind": "STATE",
+        "source_class": "PRIMARY_FACT",
+        "source_url": EVENT_SOURCE,
+        "confidence": "HIGH",
+        "first_public_at": "2026-11-02T10:00:00-05:00",
+        "review_by": "2026-12-10T00:00:00+00:00",
+        "causal_root_id": root or event_id,
+        "effect_id": event_id + "-outcome",
+        "rationale": "Independently verified economic outcome",
+        "counterevidence": "No material contrary primary filing found",
+        "qualification_policy": "OBSERVABLE_EVENT_QUALIFICATION_V2_1",
+        "observable_outcome": {
+            "kind": {"R3":"REALIZED_COMPUTE_COST_INTENSITY",
+                     "R5":"EXECUTED_CONTRACT_AMENDMENT",
+                     "R6":"REVENUE_GENERATING_CAPACITY",
+                     "R7":"FUNDED_SITE_CANCELLATION"}[factor],
+            "scope":"Synthetic factor-specific economic observation (test only)",
+            "observed_change":"Confirmed real change in outcome in synthetic fixture",
+            "comparison_basis":"Like-for-like controlled test comparison",
+            "independent_effect_reason":"Separate observed consequence, not another core label",
+            "uncertainties":"Underlying valuation and future implications unknown",
+            "impact_basis":"REPEATED_OR_TERMINAL_CONFIRMED" if abs(float(impact)) == 1 else "SINGLE_VERIFIED_CHANGE",
+            "direction":"DETERIORATION" if float(impact)>0 else "IMPROVEMENT",
+            "corroboration_url":"https://example.org/independent-confirmation",
+        },
+    }
+
+
+def test_exact_core_and_frozen_relative_weights() -> None:
+    s = snapshot(levels=(1, 2, 0))
+    result = evaluate_challenger_v2(s)
+    assert result["core_interval"] == ["45.45", "45.45"]
+    assert result["final_exact_score"] == "45.45"
+    assert result["core_coverage_pct"] == "100.00"
+    assert result["trading_signal"] is False
+    assert result["category"] is None
+    assert result["calibration"] == "UNCALIBRATED"
+
+
+def test_missing_issuer_is_bounded_not_zero_or_reweighted() -> None:
+    s = snapshot(levels=(1, 2, 0))
+    del s["core"]["R1"]["observations"]["B"]
+    result = evaluate_challenger_v2(s)
+    assert result["core_factors"]["R1"]["level_bounds"] == ["0.50", "1.50"]
+    assert result["core_factors"]["R1"]["coverage_pct"] == "50.00"
+    assert result["core_interval"] == ["36.36", "54.55"]
+    assert result["final_exact_score"] is None
+    assert result["status"] == "LOW_COVERAGE_BOUND_ONLY"
+
+
+def test_stale_and_incomplete_provenance_do_not_turn_into_zeros() -> None:
+    s = snapshot()
+    s["core"]["R1"]["observations"]["A"]["valid_until"] = "2026-11-02T18:00:00+00:00"
+    s["core"]["R1"]["observations"]["B"]["first_public_at"] = None
+    r = evaluate_challenger_v2(s)
+    assert r["core_factors"]["R1"]["missing_or_stale"] == {
+        "A": "STALE",
+        "B": "NO_FIRST_PUBLIC_TIME",
+    }
+    assert r["final_exact_score"] is None
+
+
+def test_bad_roster_or_noninteger_levels_fail_closed() -> None:
+    s = snapshot()
+    s["core"]["R1"]["roster"]["A"] = "0.4"
+    with pytest.raises(ValueError, match="sum to 1"):
+        evaluate_challenger_v2(s)
+    s = snapshot()
+    s["core"]["R1"]["observations"]["A"]["level"] = "1"
+    with pytest.raises(ValueError, match="level must be integer"):
+        evaluate_challenger_v2(s)
+
+
+def test_no_future_leakage_and_timezone_is_mandatory() -> None:
+    s = snapshot()
+    s["core"]["R1"]["observations"]["A"]["first_public_at"] = "2026-11-04T00:00:00+00:00"
+    with pytest.raises(ValueError, match="PIT lookahead"):
+        evaluate_challenger_v2(s)
+    s = snapshot()
+    s["core"]["R1"]["observations"]["A"]["first_public_at"] = "2026-11-02T12:00:00"
+    with pytest.raises(ValueError, match="timezone required"):
+        evaluate_challenger_v2(s)
+
+
+def test_opposing_qualified_evidence_changes_only_one_core_score() -> None:
+    s = snapshot()
+    s["events"] = [event("site-loss", "R3", "1"), event("contract-recovery", "R5", "-1")]
+    result = evaluate_challenger_v2(s)
+    assert result["core_interval"] == ["50.00", "50.00"]
+    assert result["event_adjustments"]["R3"] == "4.00"
+    assert result["event_adjustments"]["R5"] == "-3.00"
+    assert result["final_exact_score"] == "51.00"
+    assert result["used_event_ids"] == ["site-loss", "contract-recovery"]
+
+
+def test_low_confidence_and_stale_state_are_not_scored() -> None:
+    s = snapshot()
+    low = event("low", "R3", "1")
+    low["confidence"] = "LOW"
+    stale = event("stale", "R5", "-1")
+    stale["review_by"] = "2026-11-02T18:00:00+00:00"
+    s["events"] = [low, stale]
+    result = evaluate_challenger_v2(s)
+    assert result["final_exact_score"] == "50.00"
+    assert {x["reason"] for x in result["excluded_events"]} == {"NOT_QUALIFIED", "STALE_STATE"}
+
+
+def test_future_event_and_duplicate_economic_outcome_fail_closed() -> None:
+    s = snapshot()
+    future = event("future", "R7", "1")
+    future["first_public_at"] = "2026-11-04T00:00:00+00:00"
+    s["events"] = [future]
+    with pytest.raises(ValueError, match="PIT lookahead"):
+        evaluate_challenger_v2(s)
+    s = snapshot()
+    e1 = event("news-1", "R7", "1", root="same-loan")
+    e2 = event("news-2", "R7", "1", root="same-loan")
+    e2["effect_id"] = e1["effect_id"]
+    s["events"] = [e1, e2]
+    with pytest.raises(ValueError, match="duplicate counted economic effect"):
+        evaluate_challenger_v2(s)
+
+
+def test_core_overlap_requires_distinct_independent_observed_effect() -> None:
+    s = snapshot()
+    duplicate = event("loan-headline", "R5", "1", root="r4-e")
+    s["events"] = [duplicate]
+    r = evaluate_challenger_v2(s)
+    assert r["final_exact_score"] == "50.00"
+    assert r["excluded_events"][0]["reason"] == "OVERLAPS_CORE"
+    s["events"][0]["independent_effect"] = True
+    r2 = evaluate_challenger_v2(s)
+    assert r2["event_adjustments"]["R5"] == "3.00"
+
+
+def test_transient_decay_and_per_factor_caps() -> None:
+    s = snapshot()
+    one = event("transient", "R3", "1")
+    one["kind"] = "EVENT"
+    first = datetime.fromisoformat(ASOF) - timedelta(days=90)
+    one["first_public_at"] = first.isoformat()
+    one["expires_at"] = (datetime.fromisoformat(ASOF) + timedelta(days=1)).isoformat()
+    s["events"] = [one]
+    r = evaluate_challenger_v2(s)
+    assert r["event_adjustments"]["R3"] == "2.00"
+    assert r["final_exact_score"] == "52.00"
+    s = snapshot()
+    s["events"] = [event("a", "R7", "1"), event("b", "R7", "1")]
+    r = evaluate_challenger_v2(s)
+    assert r["event_adjustments"]["R7"] == "4.00"
+    assert r["final_exact_score"] == "54.00"
+
+
+def test_superseding_verified_state_prevents_old_state_recount() -> None:
+    s = snapshot()
+    old = event("old-site-closed", "R7", "1", root="site-42")
+    new = event("site-reopened", "R7", "-1", root="site-42")
+    new["first_public_at"] = "2026-11-02T15:00:00-05:00"
+    new["supersedes"] = ["old-site-closed"]
+    new["independent_effect"] = True
+    s["events"] = [old, new]
+    r = evaluate_challenger_v2(s)
+    assert r["final_exact_score"] == "46.00"
+    assert any(x["id"] == "old-site-closed" and x["reason"] == "SUPERSEDED" for x in r["excluded_events"])
+
+
+def test_conservative_public_by_accepts_reused_source_without_fabricated_release_minute() -> None:
+    s = snapshot()
+    observation = s["core"]["R1"]["observations"]["A"]
+    observation.pop("first_public_at")
+    observation["known_public_by_at"] = "2026-11-02T20:00:00+00:00"
+    observation["availability_basis"] = "CONSERVATIVE_KNOWN_PUBLIC_BY"
+    r = evaluate_challenger_v2(s)
+    assert r["core_factors"]["R1"]["coverage_pct"] == "100.00"
+    assert r["final_exact_score"] == "50.00"
+
+
+def test_known_by_must_be_verified_and_before_cutoff() -> None:
+    s = snapshot()
+    observation = s["core"]["R1"]["observations"]["A"]
+    observation.pop("first_public_at")
+    observation["known_public_by_at"] = "2026-11-02T20:00:00+00:00"
+    # Without explicitly declaring the conservative-basis proof, fail as missing.
+    r = evaluate_challenger_v2(s)
+    assert r["core_factors"]["R1"]["missing_or_stale"]["A"] == "UNVERIFIED_KNOWN_BY_BASIS"
+    observation["availability_basis"] = "CONSERVATIVE_KNOWN_PUBLIC_BY"
+    observation["known_public_by_at"] = "2026-11-04T00:00:00+00:00"
+    with pytest.raises(ValueError, match="PIT lookahead"):
+        evaluate_challenger_v2(s)
+    observation["known_public_by_at"] = "2026-11-02T20:00:00+00:00"
+    observation["first_public_at"] = "2026-11-02T19:00:00+00:00"
+    with pytest.raises(ValueError, match="exactly one availability"):
+        evaluate_challenger_v2(s)
+
+
+def test_cohort_must_precede_point_in_time_cutoff() -> None:
+    s = snapshot()
+    s["cohort_frozen_at"] = "2026-11-04T00:00:00+00:00"
+    with pytest.raises(ValueError, match="frozen before PIT"):
+        evaluate_challenger_v2(s)
+    s = snapshot()
+    del s["cohort_version"]
+    with pytest.raises(ValueError, match="cohort_version"):
+        evaluate_challenger_v2(s)
+
+
+def test_source_absence_does_not_force_research_loop() -> None:
+    s = snapshot()
+    s["core"]["R4"]["observations"] = {}
+    r = evaluate_challenger_v2(s)
+    assert r["status"] == "LOW_COVERAGE_BOUND_ONLY"
+    assert set(r["core_factors"]["R4"]["missing_or_stale"]) == {"E", "F"}
+    assert r["final_exact_score"] is None

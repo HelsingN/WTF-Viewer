@@ -1,0 +1,153 @@
+schema: ai-capex.roi-challenger-shadow.v1
+as_of: 2026-09-30
+status: RESEARCH_SHADOW
+trading_authority: NONE
+model_contract: Docs/AI_ROI_CHALLENGER_MODEL_v1.md
+context_contract: Docs/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md
+champion_strategy: Docs/AI_CapEx_Reversal_Strategy_v1.3.md
+source_research:
+  - Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-30.md
+prior_observation:
+  - data/research/challenger/ai_roi_challenger_2026-09-23.yaml
+
+champion_reference:
+  decision_state: WATCH
+  reversal_state: NOT_CONFIRMED
+  trade_candidate: NO_CANDIDATE
+  numeric_combined_score: UNKNOWN_NOT_RECOMPUTED_HERE
+  changed_by_this_observation: false
+
+challenger:
+  score: 60.0
+  state: ALERT
+  causal_stage: STAGE_5_PROJECT_ATTRITION
+  divergence_class: CHALLENGER_EARLY_WARNING
+  trading_signal: false
+
+components:
+  R1_monetization_vs_capex:
+    level: 1
+    weight: 20
+    contribution: 10.0
+    rationale: >-
+      Cloud/AI revenue and backlog continue to grow strongly, but capital deployment
+      and long-duration compute commitments are growing at extraordinary scale and
+      cash conversion remains heterogeneous.
+  R2_cash_conversion_fcf:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: >-
+      Oracle remains the clearest high-growth/negative-FCF example while stronger
+      hyperscaler cash generation prevents a broad level-2 classification.
+  R3_payback_duration_project_economics:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: >-
+      Power delays, below-par project debt and binding multi-year compute obligations
+      increase duration/payback risk, but direct realized payback deterioration is
+      still not sufficiently disclosed for level 2.
+  R4_financing_refinancing_dependence:
+    level: 2
+    weight: 20
+    contribution: 20.0
+    rationale: >-
+      CoreWeave and other AI infrastructure participants continue large financing,
+      project finance remains selective, and sector buildout increasingly depends on
+      debt, converts, customer prepayments, warrants and long-duration commitments.
+  R5_backlog_contract_quality:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Anthropic's largely binding long-duration commitments strengthen supplier
+      backlog quality but simultaneously concentrate buyer duration/counterparty
+      risk. Headline contracted value is not equivalent to profitable end demand.
+  R6_capacity_funnel_ghost_demand:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Multiple power/grid delays reinforce the gap between announced or contracted
+      capacity and energized/utilized capacity. Broad ghost-demand confirmation is
+      still absent.
+  R7_project_attrition:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Oracle Project Jupiter force majeure, the Nscale UK grid delay and a Sydney
+      project withdrawal form a multi-project attrition/delay cluster, but causes are
+      mainly power/regulatory/execution rather than a broad ROI-driven cancellation wave.
+
+physical_confirmation:
+  P1_gpu_compute:
+    state: WATCH
+    rationale: >-
+      Availability is broad and low-end B200 pricing is competitive, but H100 pricing
+      is not in generalized collapse and utilization/renewal deterioration remains
+      insufficiently observed.
+  P2_memory:
+    state: ANTI_REVERSAL
+    rationale: >-
+      HBM remains capacity intensive and tight; Samsung expects HBM to consume nearly
+      30% of DRAM wafer capacity next year versus about 20% currently. Micron Q4 FY26
+      is not yet released as of this observation timestamp.
+  P3_semiconductor_networking:
+    state: ANTI_REVERSAL
+    rationale: >-
+      No broad accelerator/networking bookings, shipment or margin collapse is confirmed.
+  P4_market_technical:
+    state: WATCH
+    rationale: >-
+      Alphabet shows leadership weakness/failed reacceleration and broad market breadth
+      is weak, but SMH remains above major moving averages and sector breakdown is not
+      confirmed.
+
+weekly_delta:
+  prior_as_of: 2026-09-23
+  prior_score: 60.0
+  score_change: 0.0
+  prior_state: ALERT
+  new_state: ALERT
+  prior_stage: STAGE_4_FINANCING_STRESS_LENDER_TIGHTENING
+  stage_change: STAGE_5_PROJECT_ATTRITION
+  changed_components: {}
+  physical_changes:
+    P4_market_technical: "UNKNOWN -> WATCH"
+  evidence_change: >-
+    The score is unchanged, but evidence has propagated into observable project
+    delay/attrition across multiple builds. This is not yet a broad ROI-driven
+    cancellation wave and physical hardware/memory confirmation remains absent.
+
+cisco_warning:
+  state: FINANCIAL_CAPACITY_MECHANICS_VISIBLE_PHYSICAL_2001_MECHANICS_ABSENT
+  present:
+    - orders_and_capacity_acceleration
+    - very_large_long_duration_commitments
+    - financing_dependence
+    - vendor_project_support_structures
+    - selective_credit_risk_pricing
+    - project_delays_and_cancellation_examples
+  absent_or_unconfirmed:
+    - broad_bookings_collapse
+    - broad_roi_driven_cancellations
+    - gpu_utilization_collapse
+    - memory_inventory_glut
+    - memory_contract_price_collapse
+    - networking_order_collapse
+    - hyperscaler_capex_cuts
+
+interpretation: >-
+  Challenger remains ALERT at 60 but advances to Stage 5 because real project
+  attrition/delay is now observable. Champion remains WATCH / NO_CANDIDATE and sole
+  trading authority. The divergence remains an early warning because GPU, memory and
+  semiconductor/networking evidence still does not confirm a physical reversal.
+
+forward_outcomes:
+  two_weeks: PENDING
+  four_weeks: PENDING
+  eight_weeks: PENDING
+  twelve_weeks: PENDING
+  next_hyperscaler_earnings_cycle: PENDING

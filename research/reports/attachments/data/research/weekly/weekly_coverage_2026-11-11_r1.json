@@ -1,0 +1,76 @@
+{
+  "blocks": {
+    "challenger_v2": {
+      "freshness": "2026-11-11T08:17:14+02:00",
+      "status": "PARTIAL",
+      "unknowns": [
+        "R4/MSFT",
+        "R4/GOOGL"
+      ]
+    },
+    "champion": {
+      "freshness": "2026-11-10 US close",
+      "status": "PARTIAL",
+      "unknowns": [
+        "Combined Score",
+        "canonical F2 utilization/renewals",
+        "full Asia leadership panel"
+      ]
+    },
+    "event_registry": {
+      "freshness": "38 events through 2026-11-10 (including CoreWeave EVT-20261110-5B07CE307DC3, merged via PR #193)",
+      "status": "PARTIAL",
+      "unknowns": [
+        "2026-11-10 Daily Close PENDING_DAILY_REPORT"
+      ]
+    },
+    "gpu_compute": {
+      "freshness": "2026-11-10",
+      "status": "PARTIAL",
+      "unknowns": [
+        "utilization",
+        "renewals",
+        "comparable contract duration"
+      ]
+    },
+    "hyperscaler_cash_capex": {
+      "freshness": "latest five issuer quarters",
+      "status": "CARRIED_RECHECKED",
+      "unknowns": []
+    },
+    "institutional": {
+      "freshness": "CFTC 2026-11-03; market 2026-11-10",
+      "status": "PARTIAL",
+      "unknowns": [
+        "full prime-broker panel",
+        "lending shorts"
+      ]
+    },
+    "macro_pain": {
+      "freshness": "2026-11-10",
+      "status": "PARTIAL",
+      "unknowns": [
+        "October CPI YoY",
+        "CRB same-variant history",
+        "AI-sector OAS"
+      ]
+    },
+    "memory_semis_networking": {
+      "freshness": "2026-11-04 bulletin and current issuer results",
+      "status": "PARTIAL",
+      "unknowns": [
+        "sell-through",
+        "double ordering"
+      ]
+    }
+  },
+  "captured_at": "2026-11-11T08:24:18+02:00",
+  "change_vs_previous": "Financial/market warning materially worse; Challenger interval unchanged after PIT recheck; P1 moved to WATCH; physical memory and supplier data remain anti-reversal.",
+  "cutoff": "2026-11-11T08:17:14+02:00",
+  "data_status": "PARTIAL",
+  "legacy_v1_validator_applicable": false,
+  "report_date": "2026-11-11",
+  "schema": "ai-capex.weekly-coverage-manifest.v1",
+  "unresolved_count": 13,
+  "validator": "python scripts/research/validate_weekly_challenger_v2.py --latest"
+}

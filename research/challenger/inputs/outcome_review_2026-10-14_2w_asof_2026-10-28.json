@@ -1,0 +1,35 @@
+{
+  "schema": "ai-capex.challenger-outcome-review.v1",
+  "review_date": "2026-11-03",
+  "observation_cutoff": "2026-10-28T16:00:00-04:00",
+  "research_capture_date": "2026-11-03",
+  "status": "PARTIAL_CENSORED",
+  "trading_authority": "NONE",
+  "source_research": "Docs/research/AI_ROI_CHALLENGER_PIT_REASSESSMENT_2026-11-02.md",
+  "reviews": [
+    {
+      "observation": "data/research/challenger/ai_roi_challenger_2026-10-14.yaml",
+      "window_weeks": 2,
+      "due_date": "2026-10-28",
+      "original_score": 60.0,
+      "original_state": "ALERT",
+      "original_stage": "STAGE_5_PROJECT_ATTRITION",
+      "result": "FINANCING_WARNING_PERSISTS_PHYSICAL_PROPAGATION_UNCONFIRMED",
+      "result_status": "PARTIAL_NOT_VALIDATED",
+      "market_return_smh_oct14_to_oct28": null,
+      "market_return_qqq_oct14_to_oct28": null,
+      "gpu_utilization_renewal_outcome": null,
+      "project_roi_attrition_outcome": null,
+      "evidence": "Financing selectivity and high spending persisted; 28-Oct strong Vertiv orders and supplier demand counter broad physical weakness. 28-Oct post-16:00 EDT MSFT/GOOGL earnings excluded from strict 16:00 EDT outcome window. No matched canonical ETF or project ROI panel.",
+      "lead_time_validation": "UNKNOWN",
+      "false_positive_label": "UNKNOWN",
+      "trade_pnl": null
+    }
+  ],
+  "next_due": {
+    "four_weeks": "2026-11-11",
+    "eight_weeks": "2026-12-09",
+    "twelve_weeks": "2027-01-06"
+  },
+  "historical_mutation": false
+}

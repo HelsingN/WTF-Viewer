@@ -1,0 +1,10 @@
+{
+  "name": "paper",
+  "broker_env": "PAPER",
+  "broker_adapter": "simulated",
+  "live_trading_enabled": false,
+  "manual_approval_required": true,
+  "database_path": "data/paper.db",
+  "log_dir": "logs/paper",
+  "order_id_namespace": "paper"
+}

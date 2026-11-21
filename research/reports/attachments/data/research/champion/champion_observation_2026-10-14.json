@@ -1,0 +1,38 @@
+{
+  "schema": "ai-capex.champion-research-observation.v1",
+  "as_of": "2026-10-14T08:25:13+03:00",
+  "report_date": "2026-10-14",
+  "captured_at": "2026-10-14T05:52:22.620484+00:00",
+  "strategy": "Docs/AI_CapEx_Reversal_Strategy_v1.3.md",
+  "source_research": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+  "trading_authority": "NONE",
+  "fresh_canonical_state": "UNKNOWN",
+  "numeric_combined_score": null,
+  "carried_narrative": {
+    "as_of": "2026-10-07",
+    "state": "WATCH",
+    "not_current_canonical": true
+  },
+  "trade_state": "NO_CANDIDATE",
+  "technical_reconstruction": "data/research/technical/technical_research_2026-10-13_captured_2026-10-14.json",
+  "leadership_panel": "data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json",
+  "F1_F5": {
+    "F1": "No newly verified broad CapEx cut; MSFT lease reclassification is not an economic spending cut.",
+    "F2": "GPU index increased; broad oversupply unconfirmed; utilization/renewals missing.",
+    "F3": "Financing dependence and selective equity access worsening; Lambda signed IG credit is counterevidence to a closed credit market.",
+    "F4": "No new broad supplier guidance cut; MU/AVGO price weakness is not bookings deterioration.",
+    "F5": "Concentrated commitments and maturity/renewal risk persist; no broad take-or-pay renegotiation/cancellation series."
+  },
+  "blockers": [
+    "fresh accepted fundamental normalization",
+    "canonical Pine technical bundle/session parity",
+    "numeric Asia normalization and matched local series"
+  ],
+  "gates": {
+    "CORE_PHASE1_GATE": "PASS",
+    "BROKER_SPECIFIC_GATE": "BLOCKED",
+    "READY_FOR_PHASE_2": "NO",
+    "LIVE_TRADING_ENABLED": false,
+    "MANUAL_APPROVAL_REQUIRED": true
+  }
+}

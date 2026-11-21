@@ -1,0 +1,170 @@
+schema: ai-capex.fundamental-snapshot.v2
+snapshot_id: fundamental-2026-09-02-v2
+as_of: 2026-09-02
+created_at: 2026-09-09
+research_period: weekly_watch_2026-08-29_to_2026-09-02
+status: VALID
+supersedes: fundamental-2026-09-02-v1
+revision_decision: REVISE
+source_report: "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-02.md"
+confidence: 0.90
+
+# 0..100: higher = stronger reversal/stress evidence.
+# Numeric component scores and F1..F5 are carried forward from the 2026-09-02
+# research normalization. This v2 record is a schema-governance normalization,
+# not a trading-model retune.
+components:
+  hyperscaler_capex: 15
+  fcf_pressure: 60
+  neocloud_credit: 35
+  gpu_oversupply: 10
+  semiconductor_guidance: 20
+  rpo_backlog: 10
+
+triggers:
+  F1_hyperscaler_capex_discipline: 0
+  F2_gpu_compute_oversupply: 0
+  F3_neocloud_credit_stress: 1
+  F4_semiconductor_guidance_deterioration: 0
+  F5_rpo_backlog_quality_deterioration: 0
+
+context:
+  physical_demand: VERY_STRONG_SUPPLY_CONSTRAINED
+  hyperscaler_capex_guidance: EXPANDING
+  cloud_backlog: EXPANDING_BUT_QUALITY_WATCH
+  gpu_memory_network_demand: VERY_STRONG
+  financial_pressure: DETERIORATING
+  market_capex_tolerance: SELECTIVE_ROI_SENSITIVE
+  capex_reversal: NOT_CONFIRMED
+  memory_cycle_state: SHORTAGE
+  peak_earnings_risk: HIGH
+  market_wide_credit_stress: LOW_TO_MODERATE
+
+forensic_states:
+  physical_demand_state: STRONG
+  end_customer_economics_state: MIXED
+  financing_dependence_state: HIGH
+  cash_conversion_state: WATCH
+  counterparty_concentration_state: HIGH
+  credit_market_state: NORMAL
+  circularity_risk_state: ELEVATED
+  memory_cycle_state: SHORTAGE
+
+market_confirmation:
+  technical_state_refresh: NOT_INCLUDED_IN_THIS_WEEKLY_FUNDAMENTAL_CAPTURE
+  prior_reference_snapshot: fundamental-2026-08-28-v1
+  trade_state: NO_CONFIRMED_REVERSAL_NO_CANDIDATE
+
+memory_watch:
+  micron:
+    state: SHORTAGE_WITH_PEAK_EARNINGS_RISK
+    observation: "FQ3-26 revenue $41.456B, GAAP gross margin 84.6%, operating margin 80.4%, OCF $25.39B, CapEx $7.1B and adjusted FCF $18.3B. Current profitability is far above the prior-year margin regime, so normalized valuation risk is high, but no actual gross-margin or pricing reversal is confirmed."
+    confidence: HIGH
+  independent_pricing:
+    state: TIGHT
+    observation: "TrendForce 2-Sep DRAM/NAND updates show strong server/AI demand, upward/revised contract pricing and HBM pricing power; consumer spot demand is weaker but does not yet represent AI/server memory oversupply."
+    confidence: HIGH
+  sk_hynix:
+    state: EXPANSION_MANAGEMENT_CLAIM
+    observation: "SK hynix is expanding HBM4E capacity and management expects memory tightness through 2030; this is consistent with current pricing evidence but remains a management forecast."
+    confidence: MEDIUM_HIGH
+  cisco_2000_warning:
+    state: STRUCTURAL_ONLY
+    observation: "Current market does not show Cisco-2001 mechanics: no confirmed bookings collapse, inventory glut, broad memory price decline, HBM availability surge or hyperscaler CapEx cuts. Peak-margin plus future-capacity risk remains relevant as a scenario framework."
+
+key_evidence:
+  - entity: NVIDIA
+    metric: Q2_FY2027_revenue_data_center_guidance
+    observation: "Revenue $96.2B; Data Center $89.0B; Q3 revenue guidance $108B +/-2%."
+    direction: ANTI_REVERSAL
+    evidence_class: PRIMARY_FACT
+    independent_confirmation_state: CONFIRMED
+    confidence: HIGH
+    source_reference: "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027/default.aspx"
+
+  - entity: Microsoft
+    metric: capex_cash_flow_rpo
+    observation: "FY26 Q4 CapEx about $41B; cash PP&E $35.8B; OCF $55.4B; FCF $19.6B; commercial RPO $678B."
+    direction: MIXED
+    evidence_class: PRIMARY_FACT
+    independent_confirmation_state: CONFIRMED
+    confidence: HIGH
+    source_reference: "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4"
+    notes: "Management narrative from the same event is not merged into this PRIMARY_FACT record."
+
+  - entity: Amazon
+    metric: aws_growth_and_cash_conversion
+    observation: "AWS sales +37% YoY to $42.2B; TTM OCF $161.4B; TTM FCF -$7.6B, with PP&E increase primarily reflecting AI investment."
+    direction: MIXED
+    evidence_class: PRIMARY_FACT
+    independent_confirmation_state: CONFIRMED
+    confidence: HIGH
+    source_reference: "https://www.aboutamazon.com/news/company-news/amazon-earnings-q2-2026-report"
+
+  - entity: Alphabet
+    metric: capex_vs_operating_cash_flow
+    observation: "Q2 OCF $39.1B versus CapEx $44.9B."
+    direction: REVERSAL_RISK
+    evidence_class: PRIMARY_FACT
+    independent_confirmation_state: CONFIRMED
+    confidence: HIGH
+    source_reference: "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm"
+
+  - entity: Meta
+    metric: capex_vs_cash_flow
+    observation: "Q2 CapEx including finance-lease principal $31.08B; OCF $31.86B; FCF $784M; long-term debt $83.66B."
+    direction: REVERSAL_RISK
+    evidence_class: PRIMARY_FACT
+    independent_confirmation_state: CONFIRMED
+    confidence: HIGH
+    source_reference: "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results/default.aspx"
+
+  - entity: Micron
+    metric: peak_cycle_profitability
+    observation: "FQ3-26 revenue $41.456B, GAAP gross margin 84.6%, GAAP operating margin 80.4%, OCF $25.39B, CapEx $7.1B, adjusted FCF $18.3B."
+    direction: MIXED
+    evidence_class: PRIMARY_FACT
+    independent_confirmation_state: CONFIRMED
+    confidence: HIGH
+    source_reference: "https://investors.micron.com/financials/quarterly-results/"
+
+  - entity: Memory_market
+    metric: dram_nand_hbm_pricing_2026_09_02
+    observation: "TrendForce reported upward/revised DRAM contract pricing, strong server/AI demand and continued HBM pricing power; NAND contract prices were supported by server/AI demand while consumer spot demand remained weak."
+    direction: ANTI_REVERSAL
+    evidence_class: INDEPENDENT_CONFIRMATION
+    independent_confirmation_state: CONFIRMED
+    confidence: HIGH
+    source_reference: "https://www.trendforce.com/research/download/RP260902ZP ; https://www.trendforce.com/research/download/RP260902CD"
+
+  - entity: US_data_center_pipeline
+    metric: ghost_demand_grid_requests
+    observation: "US data-center grid requests exceed 700 GW and stronger deposit/verification requirements have reduced some utility forecasts."
+    direction: REVERSAL_RISK
+    evidence_class: INDEPENDENT_CONFIRMATION
+    independent_confirmation_state: CONFIRMED
+    confidence: HIGH
+    source_reference: "https://www.reuters.com/business/texas-halt-powering-data-centers-reflects-us-reckoning-over-ghost-demand-2026-09-01/"
+
+  - entity: Anthropic_Nscale_Lambda
+    metric: contracted_compute_commitments
+    observation: "Anthropic has committed large multi-year compute spending including about $45B with Nscale and about $35B with Lambda; Nscale is presenting roughly $103B contracted revenue ahead of a potential IPO."
+    direction: MIXED
+    evidence_class: INDEPENDENT_CONFIRMATION
+    independent_confirmation_state: PARTIAL
+    confidence: MEDIUM_HIGH
+    source_reference: "https://www.reuters.com/technology/artificial-intelligence/anthropic-was-cautious-mega-infra-deals-then-demand-surged-2026-09-02/ ; https://www.reuters.com/business/media-telecom/nscale-touts-103-billion-contracted-revenue-ahead-potential-ipo-information-2026-09-02/"
+
+revision_summary: >-
+  SCHEMA NORMALIZATION. The research conclusion from the 2-Sep weekly watch is unchanged:
+  physical AI demand remains very strong, memory remains supply-constrained, financing dependence
+  is HIGH, backlog quality is on WATCH, and no CapEx reversal is confirmed. The v2 record removes
+  research-only top-level structures that were never part of the strict runtime schema and restores
+  the frozen evidence taxonomy without changing component scores or F1-F5 triggers.
+
+notes: >-
+  This is the current strict runtime normalization of the historical fundamental-2026-09-02-v1
+  research record. The historical v1 payload is retained unchanged under data/fundamentals/history/.
+  `state_delta_vs_previous` and `backlog_quality_watch` remain available in the source research report
+  rather than becoming arbitrary top-level runtime fields. No Combined Score, F1-F5, technical-v1,
+  strategy, broker, or execution behavior is changed by this schema migration.

@@ -1,0 +1,102 @@
+schema: ai-capex.institutional-derisking-overlay.v1
+as_of: 2026-09-23
+status: RESEARCH_SHADOW
+trading_authority: NONE
+contract: Docs/INSTITUTIONAL_DERISKING_OVERLAY_v1.md
+source_research:
+  - Docs/research/INSTITUTIONAL_DERISKING_BASELINE_2026-09-23.md
+  - Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-23.md
+
+institutional_state:
+  state: H1_QUIET_HEDGING
+  confidence: MEDIUM
+  trading_signal: false
+  weekly_delta: MIXED_NO_ACCELERATION_TO_H3
+
+cftc:
+  as_of: 2026-09-15
+  nasdaq_100_consolidated_leveraged_funds:
+    long: 46085
+    short: 59137
+    spreading: 30161
+    net_long_minus_short: -13052
+    wow_long_change: 4045
+    wow_short_change: -19789
+    wow_net_change: 23834
+    interpretation: NET_SHORT_BUT_MATERIALLY_LESS_SHORT_WOW
+  sp500_consolidated_leveraged_funds:
+    long: 146263
+    short: 458094
+    spreading: 183336
+    net_long_minus_short: -311831
+    wow_long_change: 6985
+    wow_short_change: -43271
+    wow_net_change: 50256
+    interpretation: HEAVILY_NET_SHORT_BUT_LESS_SHORT_WOW
+  caveat: >-
+    Leveraged Funds is a CFTC regulatory category, not a pure hedge-fund census.
+    Futures shorts can hedge long cash-equity books; levels are not standalone
+    directional crash signals.
+
+options_volatility:
+  vix_spot_2026_09_23: 14.6
+  vix_term_structure: CONTANGO
+  skew_latest_approx: 145
+  options_hedging_state: WATCH
+  interpretation: >-
+    Tail-risk insurance demand is visible, but low spot VIX and contango do not
+    confirm acute active de-risking or forced deleveraging.
+
+prime_broker_published:
+  state: HEDGING_PROFIT_TAKING_EVIDENCE_STALE_FOR_SAME_WEEK
+  latest_structural_evidence:
+    - source: Goldman Sachs Prime Services
+      date: 2026-05-22
+      observation: >-
+        Hedge-fund clients were taking profits in semiconductor/equipment names and
+        hedging broader market exposure; commentary characterized this as profit
+        taking rather than a fundamental regime shift away from AI.
+  caveat: DO_NOT_TREAT_STALE_COMMENTARY_AS_CURRENT_WEEK_POSITIONING
+
+securities_lending:
+  state: WATCH_CONTEXT_ONLY
+  occ_august_2026_avg_daily_loan_value_usd: 226493176606
+  yoy_change_pct: 24.4
+  caveat: AGGREGATE_MARKET_NOT_AI_SPECIFIC
+
+forced_deleveraging:
+  broad_confirmation: false
+  state: NO
+  rationale: >-
+    No broad combination of documented margin calls, prime-broker haircuts,
+    redemptions, indiscriminate selling and VIX backwardation is confirmed.
+
+price_positioning_divergence:
+  state: PARTIAL_WATCH
+  rationale: >-
+    Public institutional commentary supports quiet hedging while headline AI/tech
+    prices remain strong, but the latest CFTC week became less net short, so there is
+    no clean worsening divergence yet.
+
+interaction:
+  champion_state: WATCH
+  champion_trade_state: NO_CANDIDATE
+  challenger_state: ALERT
+  challenger_stage: STAGE_4_FINANCING_STRESS_LENDER_TIGHTENING
+  macro_pain_context: HIGH_STRESS_TO_BREAK_ZONE_BOUNDARY
+  physical_confirmation: LARGELY_ANTI_REVERSAL
+  conclusion: >-
+    Institutional positioning currently supports preparedness and higher monitoring
+    frequency, not bearish execution. It does not alter Champion thresholds or
+    create an entry signal.
+
+promotion_conditions:
+  H1_to_H2_or_H3:
+    - persistent_nasdaq_or_smh_highs_while_leveraged_net_exposure_worsens
+    - fresh_prime_broker_technology_semiconductor_net_exposure_decline
+    - persistent_index_etf_short_build
+    - sustained_put_skew_or_put_call_deterioration_with_resilient_spot
+    - ai_specific_short_interest_or_borrow_acceleration
+    - ai_credit_spread_widening_concurrent_with_equity_hedging
+  H3_rule: AT_LEAST_TWO_INDEPENDENT_POSITIONING_FAMILIES_PLUS_PERSISTENCE
+  H4_rule: DIRECT_FORCED_LIQUIDATION_OR_FUNDING_EVIDENCE_REQUIRED

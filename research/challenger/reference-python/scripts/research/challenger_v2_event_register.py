@@ -1,0 +1,634 @@
+"""PIT-safe, append-reviewed HIGH/CRITICAL registry and v2 recalculation.
+
+A news priority does not imply an R3/R5/R6/R7 score. Only an explicitly
+reviewed, economically distinct QUALIFIED outcome is admitted. Inserting a
+QUALIFIED review automatically writes a reproducible v2 recalculation JSON.
+GitHub CI independently recomputes and rejects missing/mismatched artifacts.
+No network, broker or trading actions. No automatic merges.
+"""
+from __future__ import annotations
+
+import argparse
+from copy import deepcopy
+from datetime import datetime, timezone
+import hashlib
+import json
+from pathlib import Path
+import re
+from typing import Any
+
+from scoring.challenger_v2_event_policy import validate_observable_qualification
+from scoring.challenger_v2 import (
+    APPROVED_RESEARCH_COHORT_AT, APPROVED_RESEARCH_COHORT_VERSION,
+    evaluate_challenger_v2,
+)
+from one_off_challenger_v2_full_recalculation import calculate as baseline_calculate
+
+ROOT = Path(__file__).resolve().parents[2]
+REGISTRY = Path("data/research/events/challenger_v2_event_registry.json")
+RECALCS = Path("data/research/events/recalculations")
+SCHEMA = "ai-capex.challenger-v2.event-registry.v1"
+DECISIONS = {"PENDING_REVIEW", "CORE_ONLY", "PHYSICAL_ONLY", "MACRO_ONLY",
+             "NOT_QUALIFIED_CLOSED",
+             "CONTEXT_ONLY", "EARLY_WARNING", "QUALIFIED", "EXCLUDED_DUPLICATE", "EXCLUDED_OUT_OF_SCOPE"}
+EVENT_FACTORS = {"R3", "R5", "R6", "R7"}
+WARNING_DIRECTIONS = {"DETERIORATION", "IMPROVEMENT", "MIXED"}
+WARNING_CONFIDENCES = {"LOW", "MEDIUM", "HIGH"}
+CORE_FACTORS = {"R1", "R2", "R4"}
+IDENTITY_RE = re.compile(r"^[A-Z0-9][A-Z0-9_-]{5,119}$")
+ID_RE = re.compile(r"^EVT-\d{8}-[0-9A-F]{12}$")
+
+
+def _time(value: str, label: str) -> datetime:
+    try:
+        dt = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        if dt.utcoffset() is None:
+            raise ValueError("timezone required")
+        return dt.astimezone(timezone.utc)
+    except (TypeError, ValueError, AttributeError) as exc:
+        raise ValueError(f"{label}: aware ISO timestamp required") from exc
+
+
+def _utc(dt: datetime) -> str:
+    return dt.isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def _hash(data: Any) -> str:
+    return hashlib.sha256(json.dumps(data, sort_keys=True, ensure_ascii=False,
+                                      separators=(",", ":")).encode("utf-8")).hexdigest()
+
+
+def event_id(event_date: str, event_key: str) -> str:
+    day = datetime.strptime(event_date, "%Y-%m-%d").date()
+    key = event_key.upper()
+    if not IDENTITY_RE.fullmatch(key):
+        raise ValueError("event_key must be stable canonical uppercase ID (>=6 chars)")
+    return f"EVT-{day:%Y%m%d}-{hashlib.sha256(key.encode()).hexdigest()[:12].upper()}"
+
+
+def registry_empty() -> dict[str, Any]:
+    return {"schema": SCHEMA, "events": []}
+
+
+def _read_json(path: Path) -> Any:
+    return json.loads(path.read_text(encoding="utf-8"),
+                      parse_constant=lambda name: (_ for _ in ()).throw(ValueError(name)))
+
+
+def _write_json(path: Path, obj: Any) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(obj, indent=2, ensure_ascii=False, sort_keys=True) + "\n",
+                    encoding="utf-8")
+
+
+def _source_date(event: dict[str, Any]) -> datetime | None:
+    exact = event.get("first_public_at")
+    known = event.get("known_public_by_at")
+    if bool(exact) == bool(known):
+        raise ValueError(f"{event['id']}: exactly one source availability time")
+    return _time(exact or known, "event source public-by")
+
+
+def _source_link_valid(root: Path, url: str) -> bool:
+    if url.startswith("https://"):
+        return True
+    target = (root / url).resolve()
+    try:
+        target.relative_to(root.resolve())
+    except ValueError:
+        return False
+    return target.is_file()
+
+
+def _review_at(event: dict[str, Any], when: datetime) -> dict[str, Any] | None:
+    choices = [x for x in event["reviews"] if _time(x["reviewed_at"], "review time") <= when]
+    return choices[-1] if choices else None
+
+
+def validate_registry(registry: dict[str, Any], root: Path = ROOT) -> None:
+    if registry.get("schema") != SCHEMA or not isinstance(registry.get("events"), list):
+        raise ValueError("invalid event registry schema")
+    ids: set[str] = set()
+    keys: set[str] = set()
+    roots: dict[tuple[str, str], str] = {}
+    for e in registry["events"]:
+        eid = event_id(e["event_date"], e["event_key"])
+        if e.get("id") != eid or not ID_RE.fullmatch(eid):
+            raise ValueError("unstable event ID")
+        if eid in ids or e["event_key"] in keys:
+            raise ValueError("duplicate event ID or canonical economic occurrence")
+        ids.add(eid)
+        keys.add(e["event_key"])
+        if e.get("priority") not in {"HIGH", "CRITICAL"}:
+            raise ValueError(f"{eid}: only HIGH/CRITICAL belong in this registry")
+        if not isinstance(e.get("entity"), str) or not e["entity"].strip():
+            raise ValueError(f"{eid}: entity missing")
+        if not isinstance(e.get("title"), str) or not e["title"].strip():
+            raise ValueError(f"{eid}: title missing")
+        refs = e.get("source_refs")
+        if not isinstance(refs, list) or not refs or any(
+                not isinstance(ref, str) or not _source_link_valid(root, ref) for ref in refs):
+            raise ValueError(f"{eid}: missing/broken source link")
+        published = _source_date(e)
+        registered = _time(e["registered_at"], "registered_at")
+        if published > registered:
+            raise ValueError(f"{eid}: registered before publicly available")
+        if e.get("first_public_at") is not None and e.get("source_precision") != "FIRST_PUBLIC_VERIFIED":
+            raise ValueError(f"{eid}: exact first-public time not certified")
+        if e.get("known_public_by_at") is not None and e.get("source_precision") != "CONSERVATIVE_KNOWN_PUBLIC_BY":
+            raise ValueError(f"{eid}: public-by timestamp mislabeled as first-public")
+        if not isinstance(e.get("reviews"), list) or not e["reviews"]:
+            raise ValueError(f"{eid}: no review/disposition")
+        prev: datetime | None = None
+        for review in e["reviews"]:
+            reviewed = _time(review["reviewed_at"], "reviewed_at")
+            if reviewed < published or reviewed < registered or (prev is not None and reviewed <= prev):
+                raise ValueError(f"{eid}: backdated/non-monotone review")
+            prev = reviewed
+            decision = review.get("decision")
+            if decision not in DECISIONS or not str(review.get("reason", "")).strip():
+                raise ValueError(f"{eid}: missing disposition/reason")
+            if not str(review.get("reviewer", "")).strip():
+                raise ValueError(f"{eid}: missing reviewer attribution")
+            factor = review.get("factor")
+            if decision == "EARLY_WARNING":
+                if factor not in EVENT_FACTORS:
+                    raise ValueError(f"{eid}: EARLY_WARNING must route to R3/R5/R6/R7")
+                if (review.get("direction") not in WARNING_DIRECTIONS
+                        or review.get("confidence") not in WARNING_CONFIDENCES):
+                    raise ValueError(f"{eid}: EARLY_WARNING requires direction and confidence")
+                if not isinstance(review.get("counterevidence"), str) or not review["counterevidence"].strip():
+                    raise ValueError(f"{eid}: EARLY_WARNING requires substantive counterevidence")
+                refs = review.get("evidence_refs")
+                if not isinstance(refs, list) or not refs or any(
+                        not isinstance(ref, str) or not _source_link_valid(root, ref) for ref in refs):
+                    raise ValueError(f"{eid}: EARLY_WARNING requires valid evidence references")
+                next_at = _time(review.get("next_review_at"), "EARLY_WARNING next_review_at")
+                if next_at <= reviewed:
+                    raise ValueError(f"{eid}: EARLY_WARNING review deadline must be in future")
+                triggers = review.get("qualification_triggers")
+                if not isinstance(triggers, list) or not triggers or any(
+                        not isinstance(t, str) or not t.strip() for t in triggers):
+                    raise ValueError(f"{eid}: EARLY_WARNING requires explicit qualification triggers")
+                if review.get("scored_event") is not None:
+                    raise ValueError(f"{eid}: EARLY_WARNING may not change numeric Challenger score")
+                proof_time = review.get("filing_acceptance_at")
+                if proof_time is not None and _time(proof_time, "filing acceptance") > reviewed:
+                    raise ValueError(f"{eid}: source filing acceptance after assessment")
+            if decision == "QUALIFIED":
+                item = review.get("scored_event")
+                if not isinstance(item, dict) or item.get("id") != eid:
+                    raise ValueError(f"{eid}: QUALIFIED requires scored_event with canonical ID")
+                if item.get("factor") not in EVENT_FACTORS:
+                    raise ValueError(f"{eid}: QUALIFIED requires R3/R5/R6/R7")
+                exact = e.get("first_public_at") or review.get("first_public_at_verified")
+                bound = review.get("public_by_verified_at") if not exact else None
+                if exact:
+                    if item.get("first_public_at") != exact or item.get("known_public_by_at"):
+                        raise ValueError(f"{eid}: QUALIFIED first-public provenance mismatch")
+                    verified = _time(exact, "qualified first publication")
+                    if verified > reviewed:
+                        raise ValueError(f"{eid}: source published after assessment")
+                    if e.get("known_public_by_at"):
+                        if verified > published:
+                            raise ValueError(f"{eid}: verified publication exceeds original known-public bound")
+                        proof = review.get("publication_proof_url")
+                        if not isinstance(proof, str) or not proof.startswith("https://"):
+                            raise ValueError(f"{eid}: later verified source time requires proof")
+                else:
+                    # A defensible *latest-known-by* timestamp is not invented
+                    # to be the precise earliest public dissemination minute.
+                    if (not bound or bound != e.get("known_public_by_at")
+                            or item.get("known_public_by_at") != bound
+                            or item.get("availability_basis") != "CONSERVATIVE_KNOWN_PUBLIC_BY"
+                            or item.get("first_public_at") is not None):
+                        raise ValueError(f"{eid}: QUALIFIED needs independently verified public-by bound")
+                    proof = review.get("publication_proof_url")
+                    if (not isinstance(proof, str) or not proof.startswith("https://")
+                            or item.get("publication_proof_url") != proof
+                            or _time(bound, "qualified known-public-by") > reviewed):
+                        raise ValueError(f"{eid}: qualified conservative publication proof missing")
+                validate_observable_qualification(item)
+                if (item.get("source_class") not in {"PRIMARY_FACT", "INDEPENDENT_CONFIRMATION"}
+                        or item.get("confidence") not in {"MEDIUM", "HIGH"}
+                        or not str(item.get("source_url", "")).startswith("https://")):
+                    raise ValueError(f"{eid}: evidence level not QUALIFIED")
+                root_key = (str(item.get("causal_root_id")), str(item.get("effect_id")))
+                if root_key in roots and roots[root_key] != eid:
+                    raise ValueError(f"{eid}: duplicate scored economic outcome ({roots[root_key]})")
+                roots[root_key] = eid
+                if factor != item["factor"]:
+                    raise ValueError(f"{eid}: factor/qualified payload mismatch")
+            if decision == "NOT_QUALIFIED_CLOSED":
+                if factor not in EVENT_FACTORS:
+                    raise ValueError(f"{eid}: closed event requires explicit R3/R5/R6/R7 factor")
+                if (not str(review.get("counterevidence", "")).strip()
+                        or not isinstance(review.get("evidence_refs"), list)
+                        or not review["evidence_refs"]
+                        or not isinstance(review.get("reopen_only_on"), list)
+                        or not review["reopen_only_on"]):
+                    raise ValueError(f"{eid}: final assessment must include both-sided sources and finite reopening triggers")
+                for ref in review["evidence_refs"]:
+                    if not _source_link_valid(root, ref):
+                        raise ValueError(f"{eid}: closed assessment broken source")
+            if decision != "QUALIFIED" and review.get("scored_event") is not None:
+                raise ValueError(f"{eid}: nonqualified record must not contain scoring payload")
+            elif factor is not None and factor not in CORE_FACTORS | EVENT_FACTORS | {
+                    "PHYSICAL", "MACRO", "CONTEXT", "OUT_OF_SCOPE"}:
+                raise ValueError(f"{eid}: unrecognized factor route")
+
+
+def register(registry: dict[str, Any], incoming: dict[str, Any], root: Path = ROOT) -> dict[str, Any]:
+    new = deepcopy(registry)
+    incoming = deepcopy(incoming)
+    eid = event_id(incoming["event_date"], incoming["event_key"])
+    if any(e["id"] == eid or e["event_key"] == incoming["event_key"]
+           for e in new["events"]):
+        raise ValueError(f"duplicate event occurrence: {incoming['event_key']}")
+    incoming["id"] = eid
+    if not incoming.get("reviews"):
+        incoming["reviews"] = [{
+            "decision": "PENDING_REVIEW", "reason": "Needs source/causal-outcome assessment",
+            "factor": None, "reviewer": "event-registry",
+            "reviewed_at": incoming["registered_at"],
+        }]
+    new["events"].append(incoming)
+    new["events"].sort(key=lambda x: (x["event_date"], x["id"]))
+    validate_registry(new, root)
+    return new
+
+
+def assess(registry: dict[str, Any], incoming: dict[str, Any], root: Path = ROOT) -> dict[str, Any]:
+    new = deepcopy(registry)
+    eid = incoming["id"]
+    item = next((x for x in new["events"] if x["id"] == eid), None)
+    if item is None:
+        raise ValueError(f"unknown event ID {eid}")
+    review = {k: v for k, v in incoming.items() if k != "id"}
+    previous = item["reviews"][-1]
+    if previous["decision"] == "NOT_QUALIFIED_CLOSED":
+        # A completed finite review cannot be restarted only because a date
+        # elapsed. A genuinely new primary fact or documented source/PIT error
+        # is needed; the original decision remains append-only.
+        new_public = review.get("reopen_source_public_at")
+        error_fix = review.get("corrects_verifiable_error") is True
+        if not (
+            new_public and str(review.get("reopen_source_url", "")).startswith("https://")
+            and _time(new_public, "reopen source time") > _time(previous["reviewed_at"], "closed review")
+            or error_fix and str(review.get("correction_proof_url", "")).startswith("https://")
+        ):
+            raise ValueError("final event assessment cannot reopen without new source or proven error")
+    if any(x["reviewed_at"] == review.get("reviewed_at") for x in item["reviews"]):
+        raise ValueError("duplicate event review time")
+    item["reviews"].append(review)
+    validate_registry(new, root)
+    return new
+
+
+def _latest_reviewed_weekly_core(root: Path, when: datetime) -> tuple[dict[str, Any], str] | None:
+    folder = root / "data/research/weekly"
+    try:
+        from validate_weekly_challenger_v2 import validate_capture
+    except ImportError:
+        return None
+    available = []
+    for path in sorted(folder.glob("weekly_challenger_v2_*_r*.json")):
+        weekly = _read_json(path)
+        if weekly.get("review_status") != "REVIEWER_ACCEPTED_RESEARCH_ONLY":
+            continue
+        cutoff = _time(weekly["cutoff"], "weekly cutoff")
+        if cutoff <= when and validate_capture(weekly, root)["valid"]:
+            available.append((cutoff, path, weekly["snapshot"]))
+    if not available:
+        return None
+    _, path, snapshot = max(available, key=lambda x: (x[0], str(x[1])))
+    return deepcopy(snapshot), str(path.relative_to(root))
+
+
+def _baseline(root: Path, when: datetime) -> tuple[dict[str, Any], str]:
+    weekly = _latest_reviewed_weekly_core(root, when)
+    if weekly:
+        return weekly
+    # The reviewed one-off evidence is immutable historical provenance.
+    # Source freshness is RE-EVALUATED for the new as_of, never carried as a
+    # live score. This fallback may become LOW_COVERAGE when sources expire.
+    if root.resolve() != ROOT.resolve():
+        path = root / "data/research/events/test_baseline_snapshot.json"
+        if path.is_file():
+            return _read_json(path), str(path.relative_to(root))
+    return deepcopy(baseline_calculate()["snapshot"]), (
+        "scripts/research/one_off_challenger_v2_full_recalculation.py"
+        "::2026-11-04T00:00:00Z"
+    )
+
+
+def current_early_warnings(registry: dict[str, Any], when: datetime) -> list[dict[str, Any]]:
+    """Current two-sided warnings and overdue follow-ups; NEVER score adjustments."""
+    out = []
+    for entry in registry["events"]:
+        review = _review_at(entry, when)
+        if not review or review["decision"] != "EARLY_WARNING":
+            continue
+        due_at = _time(review["next_review_at"], "next review")
+        out.append({
+            "id": entry["id"], "entity": entry["entity"], "factor": review["factor"],
+            "direction": review["direction"], "confidence": review["confidence"],
+            "next_review_at": review["next_review_at"],
+            "review_due": due_at <= when,
+            "qualification_triggers": review["qualification_triggers"],
+            "reassessment_policy": "NEW_MATERIAL_FACT_OR_VERIFIABLE_ERROR_ONLY",
+        })
+    return sorted(out, key=lambda item: (item["next_review_at"], item["id"]))
+
+
+def _qualified_events(registry: dict[str, Any], when: datetime) -> list[dict[str, Any]]:
+    result = []
+    for entry in registry["events"]:
+        review = _review_at(entry, when)
+        if review and review["decision"] == "QUALIFIED":
+            result.append(deepcopy(review["scored_event"]))
+    return sorted(result, key=lambda e: (e.get("first_public_at") or e["known_public_by_at"], e["id"]))
+
+
+def _artifact_name(eid: str, at: str) -> str:
+    stamp = _time(at, "review").strftime("%Y%m%dT%H%M%SZ")
+    suffix = hashlib.sha256(at.encode("utf-8")).hexdigest()[:8]
+    return f"{eid}_{stamp}_{suffix}.json"
+
+
+def _all_transitions(registry: dict[str, Any]) -> list[tuple[str, dict[str, Any]]]:
+    out: list[tuple[str, dict[str, Any]]] = []
+    for entry in registry["events"]:
+        last = None
+        for review in entry["reviews"]:
+            decision = review["decision"]
+            if decision == "QUALIFIED" or (last == "QUALIFIED" and decision != last):
+                out.append((entry["id"], review))
+            last = decision
+    return out
+
+
+def recalculate(registry: dict[str, Any], event_id_trigger: str,
+                review: dict[str, Any], root: Path = ROOT,
+                base_snapshot: dict[str, Any] | None = None) -> dict[str, Any]:
+    as_of = _time(review["reviewed_at"], "review timestamp")
+    if as_of < APPROVED_RESEARCH_COHORT_AT:
+        raise ValueError("cannot use approved v2 prior to cohort freeze")
+    if base_snapshot is None:
+        base_snapshot, provenance = _baseline(root, as_of)
+    else:
+        base_snapshot, provenance = deepcopy(base_snapshot), "provided_test_or_curated_snapshot"
+    base_time = _time(base_snapshot["as_of"], "baseline snapshot as_of")
+    if base_time > as_of:
+        raise ValueError("future core snapshot unavailable at event decision cutoff")
+    if base_snapshot.get("cohort_version") != APPROVED_RESEARCH_COHORT_VERSION:
+        raise ValueError("cannot reuse an unapproved cohort")
+    snapshot = deepcopy(base_snapshot)
+    snapshot["as_of"] = _utc(as_of)
+    snapshot["events"] = _qualified_events(registry, as_of)
+    # Treated as a research replay of source observations with renewed PIT
+    # and validity checks, never as fresh issuer disclosures.
+    evaluation = evaluate_challenger_v2(snapshot)
+    if review["decision"] == "QUALIFIED" and event_id_trigger not in evaluation["used_event_ids"]:
+        raise ValueError("QUALIFIED event excluded by PIT/overlap/expiry; cannot claim QUALIFIED")
+    return {
+        "schema": "ai-capex.challenger-v2.event-recalculation.v1",
+        "trigger_event_id": event_id_trigger,
+        "trigger_review_at": _utc(as_of),
+        "trigger_decision": review["decision"],
+        "core_snapshot_provenance": provenance,
+        "core_original_as_of": _utc(base_time),
+        "core_sources_rechecked_at_trigger": True,
+        "snapshot": snapshot,
+        "evaluation": evaluation,
+        "registry_view_event_ids": [x["id"] for x in snapshot["events"]],
+        "research_only": True,
+        "review_status": "REQUIRES_HUMAN_REVIEW",
+        "calibration": "UNCALIBRATED",
+        "trading_signal": False,
+    }
+
+
+DAILY_INDEX = Path("data/research/events/daily_high_critical_index.json")
+
+
+def _priority_rows(report: Path) -> list[str]:
+    """Extract the announced HIGH/CRITICAL rows from the original Daily Close.
+
+    Report table header/column ordering varies; priority appears in either
+    of the first two columns. Carryover, pending and HIGH-conditional (in-line
+    macro watch) must not be counted as newly registered events.
+    """
+    lines = report.read_text(encoding="utf-8").splitlines()
+    start = next((i for i, line in enumerate(lines)
+                  if line.startswith("## ") and (
+                      "event ledger" in line.lower()
+                      or "publication manifest" in line.lower())), None)
+    if start is None:
+        raise ValueError(f"{report.name}: no named event ledger or publication manifest")
+    end = next((i for i in range(start + 1, len(lines))
+                if lines[i].startswith("## ")), len(lines))
+    out = []
+    for raw in lines[start:end]:
+        if not raw.lstrip().startswith("|"):
+            continue
+        cells = [x.strip().replace("**", "") for x in raw.strip().strip("|").split("|")]
+        priorities = cells[:2]
+        if any(re.match(r"^(CRITICAL|HIGH)(?:\s|$|[,;(])", x, flags=re.I)
+               for x in priorities):
+            out.append(" ".join(raw.strip().split()))
+    return out
+
+
+
+def validate_daily_index(registry: dict[str, Any], root: Path = ROOT) -> None:
+    """Reconcile all daily HIGH/CRITICAL IDs; future reports need an index."""
+    index = _read_json(root / DAILY_INDEX)
+    if (index.get("schema") != "ai-capex.challenger-v2.daily-high-critical-index.v1"
+            or not isinstance(index.get("records"), list)):
+        raise ValueError("bad daily HIGH/CRITICAL index")
+    index_days: set[str] = set()
+    known = {e["id"]: e for e in registry["events"]}
+    included: set[str] = set()
+    for item in index["records"]:
+        day = item["date"]
+        datetime.strptime(day, "%Y-%m-%d")
+        if day in index_days:
+            raise ValueError("duplicate daily inventory")
+        index_days.add(day)
+        report = f"Docs/research/AI_CAPEX_DAILY_CLOSE_{day}.md"
+        if item["source_report"] != report:
+            raise ValueError(f"{day}: wrong source Daily Close path")
+        has_report = (root / report).is_file()
+        state = item.get("source_report_status")
+        if has_report:
+            report_rows = _priority_rows(root / report)
+            if len(report_rows) != item["high_critical_count"]:
+                raise ValueError(f"{day}: report HIGH/CRITICAL count differs from registry")
+            if item.get("reported_priority_rows") != report_rows:
+                raise ValueError(f"{day}: source event ledger rows changed/unreconciled")
+            if state != "RECONCILED_TO_DAILY_LEDGER":
+                raise ValueError(f"{day}: report published but daily index not reconciled")
+        if not has_report:
+            if state != "PENDING_DAILY_REPORT":
+                raise ValueError(f"{day}: missing Daily Close without explicit pending status")
+            for eid in item["event_ids"]:
+                if eid in known and not any(x.startswith("https://")
+                                            for x in known[eid]["source_refs"]):
+                    raise ValueError(f"{eid}: pending daily report requires original web source")
+        ids = item["event_ids"]
+        if len(ids) != len(set(ids)) or len(ids) != item["high_critical_count"]:
+            raise ValueError(f"{day}: declared HIGH/CRITICAL count mismatches IDs")
+        for eid in ids:
+            if eid not in known or known[eid]["event_date"] != day:
+                raise ValueError(f"{day}: unregistered or wrong-date HIGH/CRITICAL {eid}")
+            if eid in included:
+                raise ValueError(f"{eid}: duplicate inventory reference")
+            included.add(eid)
+    if included != set(known):
+        raise ValueError(f"events not covered by daily index: {sorted(set(known) - included)}")
+    reports = (root / "Docs/research").glob("AI_CAPEX_DAILY_CLOSE_????-??-??.md")
+    for path in reports:
+        day = path.stem[-10:]
+        if day >= "2026-10-27" and day not in index_days:
+            raise ValueError(f"{day}: new Daily Close missing HIGH/CRITICAL index")
+
+
+def update_daily_index(registry: dict[str, Any], root: Path = ROOT,
+                       reconcile_date: str | None = None) -> dict[str, Any]:
+    """Register each new occurrence in the matching daily index immediately.
+
+    The hourly collector can safely save original-source events BEFORE Daily
+    Close exists. Such dates remain PENDING_DAILY_REPORT, not falsely COMPLETE.
+    """
+    path = root / DAILY_INDEX
+    index = _read_json(path) if path.is_file() else {
+        "schema": "ai-capex.challenger-v2.daily-high-critical-index.v1", "records": []}
+    existing = {item["date"]: item for item in index["records"]}
+    dates = {e["event_date"] for e in registry["events"]}
+    if reconcile_date:
+        datetime.strptime(reconcile_date, "%Y-%m-%d")
+        dates.add(reconcile_date)
+    for day in dates:
+        records = sorted(e["id"] for e in registry["events"] if e["event_date"] == day)
+        report = f"Docs/research/AI_CAPEX_DAILY_CLOSE_{day}.md"
+        available = (root / report).is_file()
+        rows = _priority_rows(root / report) if available else []
+        reconciled = available and len(rows) == len(records)
+        existing[day] = {
+            "date": day,
+            "source_report": report,
+            "source_report_status": (
+                "RECONCILED_TO_DAILY_LEDGER" if reconciled else
+                "RECONCILIATION_PENDING" if available else "PENDING_DAILY_REPORT"),
+            "reported_priority_rows": rows,
+            "high_critical_count": len(records),
+            "event_ids": records,
+            "review_state": (
+                "UNRESOLVED_CANDIDATES" if any(e["reviews"][-1]["decision"] == "PENDING_REVIEW"
+                    for e in registry["events"] if e["event_date"] == day)
+                else "EARLY_WARNING_FOLLOWUP_REQUIRED" if any(e["reviews"][-1]["decision"] == "EARLY_WARNING"
+                    for e in registry["events"] if e["event_date"] == day)
+                else "ROUTED_FOR_MODEL_REVIEW"),
+        }
+    return {"schema": "ai-capex.challenger-v2.daily-high-critical-index.v1",
+            "records": [existing[k] for k in sorted(existing)]}
+
+
+def verify_append_only(previous: dict[str, Any], current: dict[str, Any]) -> None:
+    """Existing registered economic identity and review history are immutable."""
+    if previous.get("schema") != SCHEMA or current.get("schema") != SCHEMA:
+        raise ValueError("cannot compare malformed registry revisions")
+    originals = {e["id"]: e for e in previous.get("events", [])}
+    latest = {e["id"]: e for e in current.get("events", [])}
+    for eid, old in originals.items():
+        if eid not in latest:
+            raise ValueError(f"{eid}: deleting registered event forbidden")
+        new = latest[eid]
+        fixed = {k: v for k, v in old.items() if k != "reviews"}
+        if fixed != {k: v for k, v in new.items() if k != "reviews"}:
+            raise ValueError(f"{eid}: overwriting original occurrence/provenance forbidden")
+        prefix = new.get("reviews", [])[:len(old.get("reviews", []))]
+        if prefix != old.get("reviews", []):
+            raise ValueError(f"{eid}: review history may only be appended")
+
+
+def sync(registry: dict[str, Any], root: Path = ROOT,
+         *, check: bool = False, emit_dir: Path | None = None,
+         base_snapshot: dict[str, Any] | None = None) -> list[str]:
+    validate_registry(registry, root)
+    changed: list[str] = []
+    for eid, review in _all_transitions(registry):
+        rel = RECALCS / _artifact_name(eid, review["reviewed_at"])
+        path = root / rel
+        if check and path.is_file():
+            # Recompute using the frozen base embedded in that historical
+            # artifact; a newer weekly snapshot must not mutate its meaning.
+            existing = _read_json(path)
+            artifact = recalculate(registry, eid, review, root,
+                                   base_snapshot=existing["snapshot"])
+            # Preserve documented original base as-of and provenance:
+            artifact["core_original_as_of"] = existing["core_original_as_of"]
+            artifact["core_snapshot_provenance"] = existing["core_snapshot_provenance"]
+            # The stored snapshot is already at trigger time; validate the
+            # original public-source basis via original baseline snapshot.
+            if existing["snapshot"] != artifact["snapshot"] or existing != artifact:
+                raise ValueError(f"stale/corrupt QUALIFIED recalculation: {rel}")
+        else:
+            artifact = recalculate(registry, eid, review, root, base_snapshot)
+            if not check:
+                _write_json(path, artifact)
+                changed.append(rel.as_posix())
+            elif not path.is_file():
+                if emit_dir is not None:
+                    _write_json(emit_dir / path.name, artifact)
+                raise ValueError(f"QUALIFIED event requires saved recalculation: {rel}")
+        if emit_dir is not None and path.is_file():
+            _write_json(emit_dir / path.name, artifact)
+    return changed
+
+
+def main() -> None:
+    cli = argparse.ArgumentParser(description=__doc__)
+    g = cli.add_mutually_exclusive_group()
+    g.add_argument("--register", type=Path, help="JSON event -> stable ID and pending review")
+    g.add_argument("--assess", type=Path, help="JSON review with event ID -> scored if QUALIFIED")
+    g.add_argument("--check", action="store_true", help="CI validates registry and all triggers")
+    g.add_argument("--warnings", action="store_true", help="list early warnings and next-review deadlines without scoring")
+    cli.add_argument("--emit-dir", type=Path, help="copy recalculation output for CI artifact")
+    cli.add_argument("--root", type=Path, default=ROOT)
+    cli.add_argument("--reconcile-date", help="explicitly reconcile one day after Daily Close is published")
+    cli.add_argument("--base-registry", type=Path, help="CI main version for append-only audit")
+    a = cli.parse_args()
+    path = a.root / REGISTRY
+    registry = _read_json(path) if path.is_file() else registry_empty()
+    if a.warnings:
+        validate_registry(registry, a.root)
+        print(json.dumps({"early_warnings": current_early_warnings(
+            registry, datetime.now(timezone.utc))}, ensure_ascii=False, sort_keys=True))
+        return
+    if a.register:
+        registry = register(registry, _read_json(a.register), a.root)
+    elif a.assess:
+        registry = assess(registry, _read_json(a.assess), a.root)
+    validate_registry(registry, a.root)
+    if a.check:
+        validate_daily_index(registry, a.root)
+    if a.base_registry:
+        verify_append_only(_read_json(a.base_registry), registry)
+    artifacts = sync(registry, a.root, check=a.check, emit_dir=a.emit_dir)
+    if not a.check:
+        # Do not persist invalid QUALIFIED status if the recalculation fails.
+        index = update_daily_index(registry, a.root, reconcile_date=a.reconcile_date)
+        _write_json(path, registry)
+        _write_json(a.root / DAILY_INDEX, index)
+    print(json.dumps({"registry": str(REGISTRY), "events": len(registry["events"]),
+                      "qualified_current": sum(_review_at(e, datetime.max.replace(
+                          tzinfo=timezone.utc))["decision"] == "QUALIFIED"
+                          for e in registry["events"]), "recalculations_written": artifacts,
+                      "status": "VALIDATED" if a.check else "UPDATED"},
+                     sort_keys=True))
+
+
+if __name__ == "__main__":
+    main()

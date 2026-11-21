@@ -1,0 +1,242 @@
+{
+  "records": [
+    {
+      "date": "2026-10-27",
+      "event_ids": [
+        "EVT-20261027-1C51396E8F19",
+        "EVT-20261027-696CA8EB6128",
+        "EVT-20261027-8B285369BF04",
+        "EVT-20261027-CBFCDAC5D4BA"
+      ],
+      "high_critical_count": 4,
+      "reported_priority_rows": [
+        "| HIGH | **01:52 EDT** | NVIDIA / Meta: расширение Muse, Vera Rubin, Spectrum-X, BlueField-4 и **намерение NVIDIA инвестировать $3 млрд** в equity offering Meta | Первичный GlobeNewswire, точная минута |",
+        "| HIGH | **07:00 EDT** | Galaxy Digital Q3: **133 MW delivered revenue-generating IT load**, Helios I Phase II financed; $69 млн DC adjusted EBITDA | Первичный PRNewswire, точная минута |",
+        "| HIGH | **07:00 EDT** (вторичный репост Business Wire; оригинал датирован 27.10) | Corning Q3: Optical Communications +44%, Gen AI product sales >+100% YoY, core EPS $0.91 | Issuer IR + Business Wire syndicated timestamp |",
+        "| HIGH (условный macro/physical) | **08:30 EDT** | US Census advance durable goods, September: headline +1.8%, core capital goods orders +0.5%, shipments +1.2% | Census release schedule verified; численные значения вторично, первичный актуальный PDF не извлечён |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-27.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-10-28",
+      "event_ids": [
+        "EVT-20261028-1A2A9654B98C",
+        "EVT-20261028-23996215D697",
+        "EVT-20261028-2CD983B9205C",
+        "EVT-20261028-2E0677183D70",
+        "EVT-20261028-7A2314216CBC",
+        "EVT-20261028-90CD64BCCC19",
+        "EVT-20261028-BB024372A0E3"
+      ],
+      "high_critical_count": 7,
+      "reported_priority_rows": [
+        "| **CRITICAL** | Fed / 2026-10-28 FOMC statement | **14:00 EDT**, explicitly on Fed statement | Target 3.75–4.00%, hold; vote 10–2; Cook/Hammack wanted +25 bp | In-day verified |",
+        "| **CRITICAL** | Microsoft / FY27 Q1 earnings release | 28 Oct **after 16:00 EDT**; official page does not specify minute; external reporting appeared ~16:07 EDT | Revenue $92.279bn; non-GAAP EPS $4.89; Azure +48%; CFO $58.0bn; PPE cash additions $39.367bn | In-day verified, exact original minute **UNKNOWN** |",
+        "| **CRITICAL** | Alphabet / Q3 2026 earnings and 8-K | 28 Oct **after 16:00 EDT**; contemporaneous secondary publication ~16:03–16:19 EDT; SEC 8-K and release reported | Revenue ~$127.58bn; Google Cloud ~$30.71bn (+103%); capex ~$51.36bn; FCF ~−$9.1bn | In-day verified by issuer release reproduction/8-K mirror; original primary URL and precise minute **PARTIAL** |",
+        "| **HIGH** | Vertiv / Q3 2026 results | 28 Oct **before 09:30 EDT**; exact release minute not confirmed | Sales $4.313bn (+61%); organic orders >100% YoY; adj. FCF $652m; raised FY guidance | In-day verified |",
+        "| **HIGH** | GE Vernova / Q3 2026 and Trench deal | 28 Oct **before 09:30 EDT**; exact release minute not confirmed | Raised 2026 revenue/FCF guidance; backlog projected >$200bn Q4; $9bn Trench agreement | In-day verified |",
+        "| **HIGH** | Amphenol / Q3 2026 results | 28 Oct; exact original minute **UNKNOWN** | Sales $10.230bn (+65%); organic +37%; Communications Solutions organic +51% | In-day verified; timing incomplete |",
+        "| **HIGH** | KLA / FY27 Q1 results | 28 Oct **after 16:00 EDT**, secondary wire ~16:06 EDT; exact issuer minute not confirmed | Revenue $4.136bn; non-GAAP EPS $1.22; FY27 Q2 revenue guide $4.7bn ±$0.2bn | In-day verified |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-28.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-10-29",
+      "event_ids": [
+        "EVT-20261029-0265FD8103A5",
+        "EVT-20261029-5708B81ECA7D",
+        "EVT-20261029-6022D9525B63",
+        "EVT-20261029-AD65F9A50BB5",
+        "EVT-20261029-C5D91EE82978",
+        "EVT-20261029-E6D43C7AB9FB"
+      ],
+      "high_critical_count": 6,
+      "reported_priority_rows": [
+        "| **CRITICAL** | Amazon Q3 2026 | **29-Oct 16:01 EDT** — issuer-distributed Business Wire copy timestamp; issuer IR dated 29-Oct | Revenue $201.944bn, AWS $45.984bn (+39.3%), quarterly gross cash PPE purchases $77.259bn, **Q3 cash FCF proxy −$33.456bn**, **TTM FCF −$42.357bn**; FY26 cash capex guide ~$220bn | Exact issuer IR minute not displayed; wire timestamp independently visible |",
+        "| **HIGH** | Microsoft 10-series senior-note offering | **29-Oct 07:33 EDT SEC acceptance**, preliminary 424B2; available 08:21 EDT according to filing mirror | Ten proposed senior unsecured series; preliminary filing **does not specify total principal**. ~$25bn targeted / ~$115bn orders from secondary reporting, not completed proceeds | SEC filing is primary; amount is secondary estimate; distinguish proposed vs priced/settled |",
+        "| **HIGH** | STMicroelectronics Q3 | **29-Oct before European market open**; issuer scheduled earnings call **04:30 EDT**, precise release minute unknown | Revenue $3.76bn (+17.9% YoY), adjusted operating income $429m, Q4 revenue midpoint $4.15bn; AI datacenter revenue ambition ~$1.3bn 2026 per Reuters management interview | $1.3bn figure secondary; exact original release minute UNKNOWN |",
+        "| **HIGH** | US BEA GDP Q3 advance | **29-Oct 08:30 EDT** embargo release | GDP **+3.4% SAAR** vs Q2 +2.2%; final sales to private domestic purchasers +4.9%; core PCE quarterly +2.5% SAAR | No source-consistent canonical pre-release consensus |",
+        "| **HIGH** | US BEA September PCE/income | **29-Oct 08:30 EDT** embargo release | Headline PCE **+0.5% MoM / +3.6% YoY**, core **+0.3% MoM / +3.1% YoY**; real PCE ~flat, real DPI −0.3% MoM | Not CPI/PPI; do not confuse annual and monthly rates |",
+        "| **HIGH** | Intel Q3 2026 | **29-Oct 16:01 EDT**, Nasdaq-hosted issuer Business Wire | Revenue $16.513bn (+21%), DCAI **$7.318bn (+78%)**, Q4 revenue guide **$15–16bn** vs secondary ~$17.3bn consensus | Post-close event; webcast at 17:00 EDT, full transcript not audited |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-29.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-10-30",
+      "event_ids": [
+        "EVT-20261030-12BB151B63C3",
+        "EVT-20261030-141B0E39EB0B",
+        "EVT-20261030-6FCBD43088D8"
+      ],
+      "high_critical_count": 3,
+      "reported_priority_rows": [
+        "| **17:14 EDT Oct 30** (21:14 UTC Reuters) | **CRITICAL, secondary confirmed** | S&P Global Ratings / Meta negative outlook / 2026-10-30 | S&P revised Meta **outlook to negative** due to uncertainty about CapEx and free operating cash flow. Reuters explicitly reports rating agency action. | **Original S&P rating action and effective time not retrieved**; do not claim the underlying rating was downgraded. Released after US regular close; today's close is NOT a reaction to this announcement. |",
+        "| **During US Oct 30 session** (Reuters original item 07:24 EDT, subsequently updated; precise Markit observation timestamp unknown) | **HIGH** | Intel five-year CDS / Markit / 2026-10-30 | Reuters cites Markit **124.75 bp, +17.5 bp**, an all-time high and largest prospective daily widening since Oct 2022. | Proprietary Markit quote and exact time not available; indicative secondary-source credit observation, not canonical CDS tick. |",
+        "| **16:00 EDT market close**; Reuters closing summary after close | **HIGH, market observation** | AI semiconductor sector repricing / US session / 2026-10-30 | Nasdaq **−2.86%**, SOX **−7.2%**, Intel **−28.6%**, Nvidia **−4.2%**, AMD **−10.9%**; Japan and Korea also fell earlier. | **Price reaction to Oct 29 corporate reports**, not a second corporate earnings publication. Broad macro/geopolitical risks and valuations confound causality. |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-30.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-11-02",
+      "event_ids": [
+        "EVT-20261102-3494488216EC",
+        "EVT-20261102-470CF3B26AEB",
+        "EVT-20261102-691158BC3105",
+        "EVT-20261102-6DFE079F76A6",
+        "EVT-20261102-B5D7531BA811",
+        "EVT-20261102-F3412A927717"
+      ],
+      "high_critical_count": 6,
+      "reported_priority_rows": [
+        "| CRITICAL | **09:24 EST SEC acceptance**, available 09:25 EST | Anthropic PBC / S-1/A / 2026-11-02 / registration 333-299633 | Filing text mirrored in full; SEC acceptance time independently reported by filing mirror; direct SEC accession URL not retrieved |",
+        "| CRITICAL | **Before 08:00 EST** investor call; Reuters initial story 12:10 UTC = 07:10 EST | Marvell + Lumentum / definitive merger / Nov 2 | **Primary SEC Exhibit 99.1 verified**; exact first press release minute UNKNOWN |",
+        "| HIGH | Reuters **13:22 UTC = 08:22 EST** | Oracle / $20bn bond and equity financing / Nov 2 | Reuters reports regulatory filings; original same-day SEC offering docs not independently opened; not a claim funds raised |",
+        "| HIGH | Reuters **14:12 UTC = 09:12 EST** | Alphabet / €6bn seven-tranche bond offering / Nov 2 | Reuters cites SEC and bank orderbook; original prospectus and final pricing PENDING |",
+        "| HIGH | **10:00 EST** scheduled ISM release | ISM October 2026 Manufacturing PMI | **Original ISM release verified**, actual 55.5 |",
+        "| HIGH | Reuters **21:06 UTC = 16:06 EST** | Palantir / Q3 2026 results / Nov 2 | Reuters summarizes company release; direct issuer Q3 release not retrieved before cutoff |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-02.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-11-03",
+      "event_ids": [
+        "EVT-20261103-01AFF3D32721"
+      ],
+      "high_critical_count": 1,
+      "reported_priority_rows": [
+        "| HIGH | BLS September 2026 JOLTS / BLS-JOLTS-SEP2026 | 2026-11-03 10:00 EST (15:00 UTC), BLS USDL-26-1630 | MACRO_ONLY; no Challenger R3/R5/R6/R7 numeric effect |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-03.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-11-04",
+      "event_ids": [
+        "EVT-20261104-01B78A7859FE",
+        "EVT-20261104-0A094097F23D",
+        "EVT-20261104-1DD90E723871",
+        "EVT-20261104-FBF1ADCE4DE8"
+      ],
+      "high_critical_count": 4,
+      "reported_priority_rows": [
+        "| CRITICAL | US 2026 midterm congressional-control outcome, `EVT-20261104-0A094097F23D` | Associated Press and Reuters reported Democrats taking both chambers by the Nov 4 cutoff; **known_public_by_at=2026-11-04T21:33:00Z** (conservative report-cutoff upper bound). AP projections are **not** official certified election results. | MACRO_ONLY. Political and market reaction; no executed project cancellation/payment change, so **not R7/R5 QUALIFIED**. |",
+        "| HIGH | Arm FYE27 Q2 results, `EVT-20261104-FBF1ADCE4DE8` | Arm issuer shareholder letter + Business Wire issuer release **2026-11-04 16:04 EST = 21:04 UTC**; `known_public_by_at`, not assumed uniquely earliest public minute. Revenue **$1.443bn (+27% YoY)**; licensing **$773m (+50%)**, royalties **$670m (+8%)**, datacenter royalties doubled. Adjusted EPS **$0.52**; analyst expectation about **$0.47**. | CONTEXT_ONLY (supplier monetization/counterevidence against physical contraction). Arm is outside fixed R1/R2/R4 issuer panels; vendor royalty revenue is not a demonstrated independent R3/R6 outcome. |",
+        "| HIGH | ISM October Services PMI, `EVT-20261104-1DD90E723871` | ISM primary release at scheduled **2026-11-04 10:00 EST = 15:00 UTC**; `known_public_by_at` based on issuer schedule + published report. PMI **54.5** versus **54.8** expected and **54.9** September; prices **73.0**, employment **51.4**. | MACRO_ONLY; no direct R3/R5/R6/R7 signed outcome. |",
+        "| HIGH | ADP October National Employment Report, `EVT-20261104-01B78A7859FE` | ADP original issuer report dated Nov 4: US private payrolls **+86,000**; media-center article does not establish exact original public minute. **known_public_by_at=2026-11-04T21:33:00Z** (documented no later than report cutoff), not invented 08:15 first-public time. | MACRO_ONLY; independent labor report, not BLS NFP or a qualified AI CapEx reversal. |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-04.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-11-05",
+      "event_ids": [
+        "EVT-20261105-8FE101712C8E",
+        "EVT-20261105-D4225EF30E14"
+      ],
+      "high_critical_count": 2,
+      "reported_priority_rows": [
+        "| HIGH | BLS embargo release 08:30 EST (scheduled and primary document); original dissemination minute is consistent with official release schedule; conservative registry `known_public_by_at=2026-11-05T21:35:00Z` | `EVT-20261105-8FE101712C8E`: preliminary Q3 US nonfarm productivity **+3.6% SAAR**, unit labor costs **−0.7% SAAR**. Reuters pre-release consensus **+2.8%** and **+0.6%** respectively; surprises **+0.8 pp** and **−1.3 pp**. Previous quarter productivity revised to +2.1%. | **MACRO_ONLY**: aggregate productivity does not measure realized AI compute cost / end-user project yield; no R3 signed event. |",
+        "| CRITICAL (market repricing observation) | Nov 5 US regular close 16:00 EST, post-close Reuters report; original Reuters update minute not certified; registry `known_public_by_at=2026-11-05T21:35:00Z` | `EVT-20261105-D4225EF30E14`: Nasdaq **−5.52%**, Philadelphia SOX **over −12%**, NVDA **over −9%**, broad AI-equity unwind. The economic occurrence is the Nov-5 price drawdown, not the Nov-4 election itself. | **CONTEXT_ONLY**: technical/positioning risk and repricing; share price is not an executed project cancellation, paid MW outage, or verified R3/R5/R6/R7 cash result. |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-05.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-11-06",
+      "event_ids": [
+        "EVT-20261106-4821AD973FCB",
+        "EVT-20261106-E44CA00A9292"
+      ],
+      "high_critical_count": 2,
+      "reported_priority_rows": [
+        "| CRITICAL | `EVT-20261106-E44CA00A9292` — BLS October Employment Situation | [BLS CES original](https://www.bls.gov/ces/news.htm), [release](https://www.bls.gov/news.release/empsit.nr0.htm); scheduled 08:30 EST, but first-public minute **not independently proven**; conservative **known_public_by 16:25 EST** | **+165k** payrolls vs Reuters pre-release **+65k**, surprise **+100k**; unemployment **4.1%** vs **4.2%** expected; Aug/Sep net revision **+84k**; wages +0.4% m/m vs 0.3% forecast | `MACRO_ONLY`; hawkish interest-rate pressure, not direct R3/R5/R6/R7 outcome |",
+        "| HIGH | `EVT-20261106-4821AD973FCB` — TeraWulf Q3 | [Original issuer release](https://investors.terawulf.com/news-events/press-releases/detail/149/terawulf-reports-third-quarter-2026-results), dated Nov 6, first-public minute **UNKNOWN**; conservative **known_public_by 16:25 EST** | HPC lease revenue **$63.0m** (~83% of $76.2m total), **102MW revenue-generating** Lake Mariner critical IT capacity online as of Sep 30; **336MW still under construction**. No comparable sell-side consensus verified | `R6 EARLY_WARNING IMPROVEMENT`; observed paid operation, but distinct incremental vs prior baseline not verified; **not QUALIFIED** |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-06.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-11-10",
+      "event_ids": [
+        "EVT-20261110-5B07CE307DC3",
+        "EVT-20261110-8A35ECE41917",
+        "EVT-20261110-D3B018231628"
+      ],
+      "high_critical_count": 3,
+      "reported_priority_rows": [
+        "| CRITICAL | `EVT-20261110-8A35ECE41917` — SoftBank FY2026 Q2 | [Issuer results](https://group.softbank/en/event/earnings_2026q2); original minute UNKNOWN; conservative known-public-by 2026-11-10T19:05:20Z | R7 EARLY_WARNING LOW; project mapping unverified, not QUALIFIED |",
+        "| HIGH | `EVT-20261110-D3B018231628` — BLS October CPI | [BLS original](https://www.bls.gov/news.release/archives/cpi_11102026.htm); official 08:30 EST embargo, first-public minute not independently verified; conservative known-public-by 2026-11-10T19:05:20Z | MACRO_ONLY, no signed R3–R7 effect |",
+        "| CRITICAL | `EVT-20261110-5B07CE307DC3` — CoreWeave Q3 earnings | [SEC Exhibit 99.1](https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm); original minute UNKNOWN, conservative late-discovery known-public-by 2026-11-10T22:52:43Z | R6 EARLY_WARNING IMPROVEMENT; no QUALIFIED event |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-10.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-11-11",
+      "event_ids": [
+        "EVT-20261111-BFF3973B9E78",
+        "EVT-20261111-D4570B4103FA"
+      ],
+      "high_critical_count": 2,
+      "reported_priority_rows": [
+        "| HIGH | Talen Energy — seven-year forward 750 MW Guernsey PJM generation capacity agreement; source 06:30 EST; not delivered AI compute |",
+        "| HIGH | Quantum DC Tungkillo — Australian 12-Nov 08:14 ACDT / New York 11-Nov 16:44 EST, AFTER original Daily Close 16:27 EST cutoff; 1.2 GW proposed planning programme paused, NOT_QUALIFIED_CLOSED |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-11.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-11-12",
+      "event_ids": [
+        "EVT-20261112-596801136B58",
+        "EVT-20261112-8078B5459010",
+        "EVT-20261112-9753CB400B21",
+        "EVT-20261112-ABB2390AE170",
+        "EVT-20261112-EE567E3A09CE"
+      ],
+      "high_critical_count": 5,
+      "reported_priority_rows": [
+        "| CRITICAL | NVIDIA — leadership transition; original issuer timestamp not verified; CONTEXT_ONLY |",
+        "| CRITICAL | Nebius — Q3 2026 results and third-party capacity-delay guidance; CONTEXT_ONLY |",
+        "| HIGH | Applied Materials — FY2026 Q4 results after close; CONTEXT_ONLY |",
+        "| HIGH | Cerebras — Q3 2026 results and contracted capacity; EARLY_WARNING |",
+        "| HIGH | Cisco — FY2027 Q1 earnings and hyperscaler AI revenue outlook; CONTEXT_ONLY |"
+      ],
+      "review_state": "EARLY_WARNING_FOLLOWUP_REQUIRED",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-12.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    },
+    {
+      "date": "2026-11-13",
+      "event_ids": [
+        "EVT-20261113-08259782CC5E",
+        "EVT-20261113-1D70E4821EC3"
+      ],
+      "high_critical_count": 2,
+      "reported_priority_rows": [
+        "| HIGH | BLS — October 2026 PPI release; MACRO_ONLY, official embargo 08:30 EST, first-public minute unverified |",
+        "| HIGH | Federal Reserve — November Financial Stability Report, AI financing/leverage; known public by 21:10 EST, AFTER original 16:34 EST cutoff; MACRO_ONLY |"
+      ],
+      "review_state": "ROUTED_FOR_MODEL_REVIEW",
+      "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-13.md",
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+    }
+  ],
+  "schema": "ai-capex.challenger-v2.daily-high-critical-index.v1"
+}

@@ -1,0 +1,23 @@
+# AI CapEx Daily Close — 2026-11-16 (DRAFT / CHANGES_REQUIRED)
+
+**US session:** Monday November 16, 2026; 09:30–16:00 EST. **Research cutoff:** 16:30 EST (21:30 UTC). **Trading:** NO_TRADE. **Challenger:** v2.1 only, NO_CURRENT_V2_SCORE (no newly validated PIT snapshot), category=null, calibration=UNCALIBRATED, trading_signal=false. **Market coverage:** PARTIAL. **Event registration/index:** REGISTRATION_PENDING, NOT RECONCILED. **Report audit:** CHANGES_REQUIRED. **Issue:** #226.
+
+## HIGH — BXDC / AWS $5bn sale-leaseback
+
+**Primary:** [Blackstone press release, November 16](https://www.blackstone.com/news/press/blackstone-digital-infrastructure-trust-announces-5-billion-acquisition-of-stabilized-data-center-portfolio/) and [SEC 8-K](https://www.sec.gov/Archives/edgar/data/2100161/000119312526461954/d115778d8k.htm). Filing acceptance reported at **06:45 EST November 16** by a contemporaneous EDGAR mirror (verify against official SEC acceptance metadata before FINAL). Agreement signed November 11, **not** a November 11 public signal. Original press-release minute UNKNOWN. Conservative known-public-by 06:45 EST based on SEC filing acceptance, subject to primary verification.
+
+BXDC agrees to acquire 75.1% of two AWS joint ventures with **$5.0bn total property gross value (100% share, NOT purchase consideration)**. 13 newly built powered shells, 647 MW aggregate IT capacity; AWS retains 24.9%, leases all space for weighted-average 12 years initially, up to 32 years, triple-net, 2.75% rent escalator; parent payment guarantee. Initial capitalization rate 7.0%. Closing expected Q4 and conditional. The SEC 8-K describes a definitive agreement, **not completed cash payment**.
+
+**Economic interpretation:** material alternative financing/capital recycling for AWS, long-term enforceable lease structure and third-party financing interest. R4 credit/funding context; R5 possible signed contractual commitment but *not yet demonstrated implemented cash flows/closed transaction*, so NOT QUALIFIED at this cutoff. R6 physical capacity exists, but powered shell MW is not independently verified billable AI compute utilization; avoid attributing a new R6 signed delta. R3 and R7 no verified realized outcome. R1/R2/R4 fixed cohort must not be silently reweighted. P1 physical capacity contextual; P2–P4 no independently established new observation. Counterevidence: debt and future lease obligations remain; sale-leaseback may shift funding rather than improve project economics; closing conditions and true proceeds unresolved. No independent causal surprise/consensus benchmark established.
+
+**Canonical registration:** proposed event_key `BXDC-AWS-20261116-SALE-LEASEBACK-13-DATACENTERS`; **EVT ID not assigned by canonical registrar**. Do not fabricate. Registry and daily_high_critical_index update pending; this blocks COMPLETE.
+
+## Other developments / market context
+
+NVIDIA leadership uncertainty (resignation announced November 12) is **prior-period news**, not a fresh November 16 event. November 16 reports discuss continuing repercussions and pending quarterly earnings, not a new independent primary disclosure. [AP November 16 market coverage](https://apnews.com/article/35786b8f539ec95f16ae0500f71cfcc7) reports S&P 500 down about 1.9%, Nasdaq down about 2.5%, and Asian weakness, but these are secondary rounded values, not timestamped verified closing prices. SMH/QQQ/SOXX/SPY and Asia closing prints, timestamp, benchmark surprise and event-window attribution: UNKNOWN/PARTIAL. Do not assert that the BXDC deal caused index moves.
+
+## Model and publication controls
+
+Champion F1–F5: no new validated canonical input or trading authorization. Fundamental layer: sale-leaseback funding observation, not measured incremental AI payback. Technical: broad risk-off reported, precise signals UNKNOWN. Financial: funding transfer and future lease liabilities both matter. Institutional: Blackstone financing is evidence of investor participation, not independent proof of project ROIC. Macro: no new verified same-day CPI/NFP/PPI/FOMC release included here. Challenger frozen core remains unchanged without a new PIT-valid snapshot; R3/R5/R6/R7 signed adjustments **zero new QUALIFIED claims**, not imputed zero risk. P1–P4 reported separately.
+
+**Required before owner review/merge:** canonical event registrar assigns EVT ID, append-only event registry + daily index reconciliation; verify SEC first availability, other HIGH/CRITICAL releases, official market closes and timestamps; run .agents/skills/ai-capex-report-audit/SKILL.md; exact-head CI; owner PASS. This draft is deliberately NOT COMPLETE and not a trading signal.

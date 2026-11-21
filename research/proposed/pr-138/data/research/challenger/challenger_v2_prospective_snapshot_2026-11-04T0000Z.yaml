@@ -1,0 +1,196 @@
+# New v2 prospective research observation, after the genuine 2026-11-03T22:28:54Z cohort freeze.
+# Manual issuer-level assessment of SEC/IR documents already public by this cutoff;
+# NOT previous 2026-11-02 POSTHOC replay; NOT a trading signal, NOT calibrated alert.
+# Source availability follows the reviewed conservative next-business-day/noon ET rule.
+# All dollar measurements are USD billions except where explicitly otherwise noted.
+schema: ai-capex.challenger-observable.v2-draft
+as_of: "2026-11-04T00:00:00+00:00"
+cohort_version: CHALLENGER_V2_RESEARCH_APPROVED_2026-11-04
+cohort_frozen_at: "2026-11-03T22:28:54Z"
+core:
+  R1:
+    roster:
+      MSFT: ".20"
+      GOOGL: ".20"
+      AMZN: ".20"
+      META: ".20"
+      ORCL: ".20"
+    observations:
+      MSFT:
+        level: 1
+        known_public_by_at: "2026-10-29T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.htm"
+        measurement: "Revenue 92.279/77.673 USD bn, cash PPE 39.367/19.394 USD bn; CapEx growth 102.985%, revenue growth 18.804%, gap 84.181pp; intensity +70.857%."
+        rationale: "Matched consolidated quarter growth gap >=20pp and rising intensity; WATCH=1 only, NOT proof of AI project IRR decline."
+        counterevidence: "Azure +48% YoY and strong cloud demand; corporate CapEx includes non-AI assets."
+        causal_root_id: "R1-MSFT-2026-source-panel"
+      GOOGL:
+        level: 1
+        known_public_by_at: "2026-10-29T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.htm"
+        measurement: "Revenue growth +25% approximate, cash CapEx 51.36/23.95 USD bn; CapEx growth +114.447%, gap +89.447pp approx, intensity +71.557% approx."
+        rationale: "Rounded, same-issuer consolidated YoY pair exceeds 20pp WATCH diagnostic with substantial margin."
+        counterevidence: "Google Cloud +103% YoY and growing operating income; rounded public input and non-AI spending."
+        causal_root_id: "R1-GOOGL-2026-source-panel"
+      AMZN:
+        level: 1
+        known_public_by_at: "2026-10-30T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/0001018724-26-000040-index.htm"
+        measurement: "Revenue 201.944/180.169 USD bn, cash PPE 77.259/35.095 USD bn; gap +108.057pp, intensity +96.405%."
+        rationale: "Comparable consolidated YoY investment intensity expansion supports level 1, not issuer failure."
+        counterevidence: "AWS +39.3% YoY and 38.7% operating margin; other businesses and gross purchases included."
+        causal_root_id: "R1-AMZN-2026-source-panel"
+      META:
+        level: 1
+        known_public_by_at: "2026-10-22T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/0001628280-26-066700-index.htm"
+        measurement: "Revenue 64.601/51.242 USD bn, cash PPE 33.942/18.829 USD bn; gap +54.194pp, intensity +42.987%."
+        rationale: "Same-quarter comparable corporate CapEx growth exceeds monetization by >=20pp; WATCH=1."
+        counterevidence: "Advertising and pricing revenue growth; no isolated AI project failure. R2 shares the CapEx cash input."
+        causal_root_id: "R1-META-2026-source-panel"
+      ORCL:
+        level: 1
+        known_public_by_at: "2026-09-14T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/0001193125-26-389274-index.htm"
+        measurement: "Revenue 19.345/14.926 USD bn, cash CapEx 28.499/8.502 USD bn; gap +205.597pp, intensity +158.633%."
+        rationale: "Corporate investment intensity materially exceeds revenue growth; WATCH=1."
+        counterevidence: "OCI +121% YoY; 850MW claimed delivered; gross cash corporate proxy not AI-only returns."
+        causal_root_id: "R1-ORCL-2026-source-panel"
+  R2:
+    roster:
+      MSFT: ".20"
+      GOOGL: ".20"
+      AMZN: ".20"
+      META: ".20"
+      ORCL: ".20"
+    observations:
+      MSFT:
+        level: 1
+        known_public_by_at: "2026-10-29T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.htm"
+        measurement: "OCF 45.057/58.000 USD bn, cash PPE 19.394/39.367; gross cash PPE proxy 25.663 -> 18.633, FCF/OCF ratio decline -24.831pp YoY."
+        rationale: "Matched positive-OCF fiscal Q1 quarters with >=10pp same-basis deterioration; WATCH=1."
+        counterevidence: "Gross proxy remains positive; leases/principal unavailable, cannot infer lease-inclusive FCF or level 2."
+        causal_root_id: "R2-MSFT-2026-source-panel"
+      GOOGL:
+        level: 1
+        known_public_by_at: "2026-10-29T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.htm"
+        measurement: "OCF 39.1/42.3 USD bn, cash PPE 44.9/51.36; gross PPE cash proxy -5.8 -> -9.06 USD bn Q2 to Q3 2026."
+        rationale: "Negative same-accounting-basis latest gross proxy qualifies WATCH=1 (not level 2)."
+        counterevidence: "Rounded amounts, finance leases and incentives incomplete; Google Cloud demand exceptionally strong."
+        causal_root_id: "R2-GOOGL-2026-source-panel"
+      AMZN:
+        level: 1
+        known_public_by_at: "2026-10-30T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/0001018724-26-000040-index.htm"
+        measurement: "OCF 35.525/42.422 USD bn, PPE 35.095/77.259, incentives 0.867/1.381; net PPE cash proxy +1.297 -> -33.456 USD bn YoY."
+        rationale: "Latest comparable net PPE cash proxy negative; WATCH=1 only."
+        counterevidence: "Unknown finance lease principal, TTM FCF data distinct and not mixed with quarterly comparison; AWS growth strong."
+        causal_root_id: "R2-AMZN-2026-source-panel"
+      META:
+        level: 1
+        known_public_by_at: "2026-10-22T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/0001628280-26-066700-index.htm"
+        measurement: "OCF 31.862/32.786 USD bn; cash PPE 30.116/33.942; finance lease principal 0.962/0.964; lease-inclusive FCF +0.784 -> -2.120 USD bn QoQ."
+        rationale: "Issuer reconciled latest lease-inclusive FCF negative, after previously positive, supports WATCH=1."
+        counterevidence: "One negative quarter; strong ad cash generation and healthy liquidity; level 2 not evidenced."
+        causal_root_id: "R2-META-2026-source-panel"
+      ORCL:
+        level: 1
+        known_public_by_at: "2026-09-14T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/0001193125-26-389274-index.htm"
+        measurement: "OCF 8.140/23.103 USD bn, cash PPE 8.502/28.499; gross PPE proxy -0.362 -> -5.396 USD bn FYQ1 YoY."
+        rationale: "Latest same-basis gross cash proxy negative and deteriorating; WATCH=1."
+        counterevidence: "OCF includes 11.363 USD bn financing-component customer prepayments; gross proxy excludes unknown leases; OCI +121%."
+        causal_root_id: "R2-ORCL-2026-source-panel"
+  R4:
+    roster:
+      MSFT: ".10"
+      GOOGL: ".10"
+      AMZN: ".10"
+      META: ".10"
+      ORCL: ".10"
+      CRWV: ".25"
+      IREN: ".25"
+    observations:
+      ORCL:
+        level: 1
+        known_public_by_at: "2026-11-03T12:00:00-05:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-05T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Pricing-of-20-Billion-of-Common-Stock-and-Senior-Notes/default.aspx"
+        measurement: "Oracle Corporation 2 Nov priced 86,206,897 shares at $116 (~$10bn equity gross) and $10bn senior unsecured debt notes (coupons 7.00%-8.65%); combined ~$20bn, closing planned 4 Nov, not yet cash received. Existing 28.499 cash CapEx vs 23.103 OCF FY27Q1, 11.363 customer financing prepayments; $125.34bn borrowings at Aug 31 per Reuters."
+        rationale: "Material newly priced issuer-level $20bn external equity+debt financing contemporaneous with cash-investment pressure and large outstanding borrowings supports incremental financing reliance, R4 level 1 only."
+        counterevidence: "Successful pricing demonstrates capital access; proceeds for broad corporate purposes (CapEx/refinance/buybacks), not 100% AI projects; no matched risk-spread series, default or covenant break; closing still prospective."
+        causal_root_id: "R4-ORCL-2026-source-panel"
+      CRWV:
+        level: 1
+        known_public_by_at: "2026-08-12T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/0001769628-26-000366-index.htm"
+        measurement: "CCAC VIII consolidated SPV DDTL 4.0 $8.5bn committed, $2.837bn outstanding Jun 30, SEC 10-Q Aug 11; non-recourse except limited bad-acts."
+        rationale: "Issuer-linked verified incremental financing dependence on asset/project secured debt; consolidated company WATCH=1."
+        counterevidence: "Borrower subsidiary not parent; $8.5bn commitments not fully drawn; company raised financing successfully, no documented covenant breach."
+        causal_root_id: "R4-CRWV-2026-source-panel"
+      IREN:
+        level: 1
+        known_public_by_at: "2026-08-28T12:00:00-04:00"
+        availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+        valid_until: "2026-11-17T23:59:59-05:00"
+        source_class: PRIMARY_FACT
+        source_url: "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/0001878848-26-000052-index.htm"
+        measurement: "IE US Hardware 3 LLC consolidated SPV financing $3.645bn commitments = 1.545bn loan plus 2.100bn notes, only $0.938bn funded Jun 30 in Aug27 10-K."
+        rationale: "Verified material incremental AI project financing and entity-level collateral structure; consolidated WATCH=1."
+        counterevidence: "Non-recourse structure and limited parent hedge/remarketing guarantees; compliant covenants and Microsoft customer-backed access."
+        causal_root_id: "R4-IREN-2026-source-panel"
+events:
+  # Single-site, actually deferred contracted capacity/revenue, verified issuer ASX announcement;
+  # previous October research already noted NEXTDC, counted ONCE as a continuing state, not as new Nov3 news.
+  - id: NXT-M3-GRID-POWER-DELAY-2026-10-21
+    factor: R6
+    impact: "0.5"
+    kind: EVENT
+    source_class: PRIMARY_FACT
+    source_url: "https://www.ots.at/presseaussendung/EQS_20261020_EQS0010/eqs-adhoc-nextdc-limited-m3-melbourne-power-delay-and-revised-fy27-guidance"
+    confidence: MEDIUM
+    first_public_at: "2026-10-21T08:35:00+11:00"
+    expires_at: "2026-11-20T23:59:59+11:00"
+    causal_root_id: "NEXTDC-M3-JEMENA-POWER-RAMP-2026OCT"
+    effect_id: "M3-CONTRACTED-CAPACITY-BILLING-AND-FY27-GUIDANCE-DEFERRED"
+    rationale: "Issuer ASX 21 Oct 08:35 AEDT guidance cut: new M3 grid power supply shifted to FY28; contracted delivery/billing deferred, FY27 net revenue guidance A$615-640m -> A$475-500m; distinct R6 physical funnel event, already known in October and not scored again under R7."
+    counterevidence: "Customer capacity remains contracted, not evidence of AI demand collapse or confirmed loss; utility permitting delay not failed GPU payback, NEXTDC reported A$8.675bn liquidity, covenants compliant; impact +0.5 not +1 and uncalibrated."
+    publication_crosscheck: "ASX release 2026-10-21 08:35 AEDT corroborated by multiple market announcement archives; issuer release transmitted via EQS 2026-10-20 23:39 CEST; primary issuer text reproduced on OTS/EQS."

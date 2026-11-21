@@ -1,0 +1,130 @@
+schema: ai-capex.champion-research.v1
+observation_id: champion-research-2026-10-07-close
+as_of: "2026-10-07T16:00:00-04:00"
+captured_on: "2026-10-08"
+scope: RESEARCH_ONLY
+base_commit: 485c73f7973f3f7e249ba90cb9ade6c3506cb2ea
+source_report: Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md
+supplement: Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md
+technical_ref: data/research/champion/technical_snapshot_2026-10-07.json
+strategy_authority: v1.3
+technical_version: technical-v1
+original_intraday_decision_cutoff: UNKNOWN
+canonical_runtime_ingested: false
+trading_authority_created: false
+
+outcome:
+  research_reversal: NOT_CONFIRMED
+  research_trade_implication: NO_CANDIDATE
+  original_champion_watch_label: RESEARCH_MONITORING_LABEL_WITHOUT_SCORE
+  technical_proxy_score: 10
+  technical_proxy_regime: NORMAL
+  smh_spy_relative_strength: WEAK
+  breadth_weak_count: 0
+  fresh_combined_score: null
+  canonical_runtime_decision: NOT_COMPUTED
+  engine_behavior_with_missing_required_inputs: UNKNOWN
+  challenger_score_reference_only: 60.0
+  challenger_state_reference_only: ALERT
+  challenger_trading_authority: NONE
+
+required_inputs:
+  provider_technical_reconstruction: COMPLETE
+  canonical_tradingview_signal: NOT_CAPTURED
+  fresh_accepted_fundamental_normalization: NOT_PRESENT
+  asia_numeric_input: UNKNOWN
+  asia_price_and_fundamental_context: PARTIAL_RESEARCH_CAPTURE
+
+fundamental_review:
+  F1_hyperscaler_capex_discipline:
+    assessment: NOT_CONFIRMED
+    note: Reviewed spending remains expansionary; higher funding needs are not a CapEx cut.
+  F2_gpu_compute_oversupply:
+    assessment: NOT_CONFIRMED_WITH_MISSING_UTILIZATION
+    note: Two comparable Ornn settlements do not establish broad oversupply; utilization and renewals remain unknown.
+  F3_neocloud_credit_stress:
+    assessment: WATCH
+    note: Duration and collateral/refinancing dependence are material; credit access remains open in reviewed disclosures.
+  F4_semiconductor_guidance_deterioration:
+    assessment: NOT_CONFIRMED
+    note: Micron and Broadcom results/guidance counter a broad physical unwind; inventory alone is insufficient.
+  F5_rpo_backlog_quality_deterioration:
+    assessment: STRUCTURAL_QUALITY_WATCH
+    note: Vendor support and long customer commitments warrant monitoring; cancellation/default wave is not established.
+  numeric_trigger_levels_refreshed: false
+  numeric_component_scores_refreshed: false
+
+baseline_scenario:
+  scope: CONDITIONAL_OLD_FUNDAMENTALS_PLUS_NEW_TECHNICAL
+  fresh_current_combined_score: false
+  fundamental_snapshot_id: fundamental-2026-09-02-v2
+  fundamental_as_of: "2026-09-02"
+  components:
+    hyperscaler_capex: 15
+    fcf_cash_pressure: 60
+    neocloud_credit: 35
+    gpu_pricing_utilization: 10
+    semiconductor_guidance: 20
+    rpo_backlog: 10
+    technical_us: 10
+    asia_confirmation: null
+  weighted_fundamental_subtotal: 19.25
+  weighted_technical_subtotal: 1.0
+  known_subtotal: 20.25
+  formula: "20.25 + 0.10 * Asia; Asia UNKNOWN in [0,100]"
+  conditional_combined_score_min: 20.25
+  conditional_combined_score_max: 30.25
+  conditional_score_band: NORMAL
+  baseline_triggers: {F1: 0, F2: 0, F3: 1, F4: 0, F5: 0}
+  baseline_active_trigger_count: 1
+  decision_engine_executed_with_scenario: false
+  warning: This interval is not a confidence interval or a bound on unnormalized fresh fundamental evidence.
+
+entry_gate_review:
+  min_combined_score: 75
+  current_combined_score_gate: NOT_EVALUABLE
+  min_fundamental_active_triggers: 3
+  refreshed_trigger_count_gate: NOT_EVALUABLE
+  baseline_trigger_count_gate: FAIL
+  require_smh_breakdown: true
+  provider_reconstruction_breakdown_gate: FAIL
+  strategy_a_require_smh_spy_down: true
+  provider_reconstruction_rs_gate: FAIL
+  conclusion: Research evidence does not justify a bearish candidate; no canonical execution bundle was created.
+
+asia_context:
+  local_date: "2026-10-07"
+  interpretation: MIXED_WITH_KOREAN_WEAKNESS
+  score: null
+  score_status: UNKNOWN_NO_APPROVED_NUMERIC_NORMALIZATION
+  prices:
+    - {symbol: "TWSE:2330", close: 2585, currency: TWD, day_pct: 0.0, benchmark: TAIEX, benchmark_pct: -0.03, relative_pp: 0.03}
+    - {symbol: "KRX:000660", close: 1723000, currency: KRW, day_pct: -2.82, benchmark: KOSPI, benchmark_pct: -1.98, relative_pp: -0.84}
+    - {symbol: "KRX:005930", close: 268500, currency: KRW, day_pct: -1.29, benchmark: KOSPI, benchmark_pct: -1.98, relative_pp: 0.69}
+  benchmark_closes: {TAIEX: 49806.37, KOSPI: 6803.90}
+  price_source_quality: NEWS_REPORTED_LOCAL_CLOSES_NOT_EXCHANGE_RAW_EXPORTS
+  numeric_policy_created: false
+  missing: [MULTI_SESSION_LOCAL_SERIES, MATCHED_ASIA_SCORE_NORMALIZATION]
+
+gpu_context:
+  provider: Ornn
+  metric: DAILY_SETTLED_USD_PER_GPU_HOUR
+  source_reference: https://data.ornn.com/
+  settlements:
+    - {date: "2026-10-06", H100: 2.86, H200: 5.04, B200: 7.56, provenance: ORIGINAL_WEEKLY_SOURCE_S7}
+    - {date: "2026-10-07", H100: 2.85, H200: 5.29, B200: 7.56, provenance: OCT8_SOURCE_RECHECK_OF_OCT7_SETTLEMENT}
+  utilization: UNKNOWN
+  renewals: UNKNOWN
+  broad_price_collapse: NOT_ESTABLISHED
+  exact_first_publication_timestamp: UNVERIFIED
+
+excluded_from_oct7_assessment:
+  - Samsung preliminary Q3 guidance released on 2026-10-08 Korea date.
+  - TSMC September revenue release scheduled/published on 2026-10-08 Taiwan date.
+  - Any Oct8 US session or future performance.
+
+remaining_for_canonical_score:
+  - Accept a new immutable fundamental-snapshot.v2 normalization with dated sources and explicit component/trigger decisions.
+  - Supply a versioned VALID Asia numeric input with documented normalization; UNKNOWN must not become zero.
+  - Capture canonical TradingView evidence and input availability before an independently requested runtime replay.
+  - Preserve this research capture rather than backdating a later normalization into the original weekly.

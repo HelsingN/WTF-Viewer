@@ -1,0 +1,84 @@
+# APPROVED FOR PROSPECTIVE RESEARCH ONLY. NOT AN ACTIVE TRADING MODEL.
+# This cohort is first fixed by the review decision's real GitHub commit time.
+schema: ai-capex.challenger-v2.cohort.v1
+version: CHALLENGER_V2_RESEARCH_APPROVED_2026-11-04
+status: RESEARCH_APPROVED_NOT_ACTIVE
+cohort_frozen_at: '2026-11-03T22:28:54Z'
+freeze_evidence_commit: 'cac10cb3f3d4aac8a61f66b75b7ec785941dcb7d'
+review_document: 'Docs/research/CHALLENGER_V2_COHORT_LEVEL_THRESHOLD_REVIEW_2026-11-04.md'
+not_valid_for_historical_cutoffs_before_freeze: true
+cutover_authorized: false
+trading_signal: false
+calibration: UNVALIDATED
+notes:
+  - 'Prospective issuer selection only: Sept/Oct and 2 Nov replay is explicitly POSTHOC.'
+  - 'R4 50/50 weighting is a *stress panel* convention, not economic market share.'
+  - 'Never renormalize missing issuer weights. Missing private source data is UNKNOWN.'
+  - 'Do not use until source availability/borrower verification and reviewer acceptance are separately complete.'
+  - 'No new concurrent Challenger scheduled job; only single future cutover.'
+core:
+  R1:
+    relative_factor_weight: 20
+    issuer_weights:
+      MSFT: '0.20'
+      GOOGL: '0.20'
+      AMZN: '0.20'
+      META: '0.20'
+      ORCL: '0.20'
+    metric: 'matched consolidated revenue YoY vs consolidated cash CapEx YoY'
+    watch_growth_gap_pp: '20'
+    level2_requires: 'two periods plus independent worsening realized economic yield'
+    max_age_days: 150
+    min_weight_coverage: '0.70'
+  R2:
+    relative_factor_weight: 15
+    issuer_weights:
+      MSFT: '0.20'
+      GOOGL: '0.20'
+      AMZN: '0.20'
+      META: '0.20'
+      ORCL: '0.20'
+    metric: 'same-basis FCF/proxy divided by OCF; lease components explicit'
+    watch_margin_deterioration_pp: '10'
+    level2_requires: 'two negative worsening complete lease-inclusive periods or actual cash emergency'
+    max_age_days: 150
+    min_weight_coverage: '0.70'
+  R4:
+    relative_factor_weight: 20
+    issuer_weights:
+      MSFT: '0.10'
+      GOOGL: '0.10'
+      AMZN: '0.10'
+      META: '0.10'
+      ORCL: '0.10'
+      CRWV: '0.25'
+      IREN: '0.25'
+    strata:
+      large_platform:
+        names: [MSFT, GOOGL, AMZN, META, ORCL]
+        minimum_within_stratum_coverage: '0.60'
+      project_neocloud:
+        names: [CRWV, IREN]
+        minimum_within_stratum_coverage: '0.50'
+    watch_requires: 'verified legal borrower plus material INCREMENTAL financing dependence'
+    level2_requires: 'real refinancing failure/covenant breach or same-issue repricing with rollover need'
+    max_age_days: 180
+    min_weight_coverage: '0.70'
+  event_overlay:
+    status: 'RESEARCH_GUARDRAILS_ONLY_NOT_CALIBRATED'
+    signed_caps:
+      R3: '4'
+      R5: '3'
+      R6: '4'
+      R7: '4'
+    initial_events: []
+  physical_overlay:
+    status: SEPARATE_NO_CORE_POINTS
+context_only:
+  R4_CREDIT_ACCESS:
+    - LAMBDA_PRIVATE
+output:
+  require_interval_with_missing: true
+  category: null
+  no_trade: true
+  live_schedule_enabled: false

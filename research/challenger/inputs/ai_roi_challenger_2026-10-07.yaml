@@ -1,0 +1,161 @@
+# Recovery capture: 2026-10-07T23:28:14Z (2026-10-08 Asia/Jerusalem).
+# as_of is the supplied weekly research date, not an exact intraday decision cutoff.
+# Source provenance/limitations are in source_research; no runtime schema is changed.
+schema: ai-capex.roi-challenger-shadow.v1
+as_of: 2026-10-07
+status: RESEARCH_SHADOW
+trading_authority: NONE
+model_contract: Docs/AI_ROI_CHALLENGER_MODEL_v1.md
+context_contract: Docs/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md
+champion_strategy: Docs/AI_CapEx_Reversal_Strategy_v1.3.md
+source_research:
+  - Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md
+prior_observation:
+  - data/research/challenger/ai_roi_challenger_2026-09-30.yaml
+
+champion_reference:
+  decision_state: WATCH
+  reversal_state: NOT_CONFIRMED
+  trade_candidate: NO_CANDIDATE
+  numeric_combined_score: UNKNOWN_NOT_RECOMPUTED_HERE
+  changed_by_this_observation: false
+
+challenger:
+  score: 60.0
+  state: ALERT
+  causal_stage: STAGE_5_PROJECT_ATTRITION
+  divergence_class: CHALLENGER_EARLY_WARNING
+  trading_signal: false
+
+components:
+  R1_monetization_vs_capex:
+    level: 1
+    weight: 20
+    contribution: 10.0
+    rationale: >-
+      Demand and supplier economics remain strong while comparable end-customer
+      monetization versus deployment remains incomplete. No automatic efficiency
+      or pricing-discipline adjustment is made.
+  R2_cash_conversion_fcf:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: >-
+      Strong memory cash generation is counterevidence to broad cash-flow distress,
+      but is not proof that all marginal infrastructure buyers earn acceptable returns.
+      Existing heterogeneous cash-conversion baseline is retained.
+  R3_payback_duration_project_economics:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: >-
+      Contract/debt duration and residual-value assumptions remain material.
+      CoreWeave renewal/re-leasing exposure is relevant context; a broad realized
+      payback deterioration series remains unavailable. Efficiency impact is UNKNOWN.
+  R4_financing_refinancing_dependence:
+    level: 2
+    weight: 20
+    contribution: 20.0
+    rationale: >-
+      Vendor-supported financing and reported debt syndication strengthen qualitative
+      dependence evidence. Announced facilities, drawn funds and completed financing
+      are distinct; overlapping arrangements must not be added as independent exposure.
+  R5_backlog_contract_quality:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Binding commitments support supplier visibility while concentrating buyer
+      funding and counterparty risk. Contracted value and deposits do not establish
+      realized profitable end demand.
+  R6_capacity_funnel_ghost_demand:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Preserve ANNOUNCED through ECONOMICALLY_PROFITABLE distinctions.
+      Strong contracts or financing do not prove energized, monetized or profitable
+      capacity; broad ghost-demand confirmation is still absent.
+  R7_project_attrition:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Prior power/regulatory/execution delay examples are carried forward.
+      No new broad ROI-led cancellation wave is established in this recovered review;
+      Stage 5 remains the prior causal baseline, not a new escalation.
+
+physical_confirmation:
+  P1_gpu_compute:
+    state: WATCH
+    rationale: >-
+      A current transaction-price cross-section does not establish a broad price
+      collapse or a comparable trend against earlier listing averages.
+      Utilization, renewals and a matched multi-provider panel remain UNKNOWN.
+  P2_memory:
+    state: ANTI_REVERSAL
+    rationale: >-
+      Micron reported results and operating evidence strengthen memory counterevidence
+      to physical unwind. Inventory requires joint assessment with prices and
+      contracting; forward supply claims remain management claims.
+  P3_semiconductor_networking:
+    state: ANTI_REVERSAL
+    rationale: >-
+      No broad accelerator/networking order deterioration is established by reviewed
+      evidence. Supply-expansion commentary is forward-looking, not delivered output.
+  P4_market_technical:
+    state: NEUTRAL
+    rationale: >-
+      The 6-Oct market report supports improved broad market/semiconductor context.
+      This is a research judgment, not a fresh runtime technical bundle;
+      single-company leadership weakness does not confirm sector breakdown.
+
+weekly_delta:
+  prior_as_of: 2026-09-30
+  prior_score: 60.0
+  score_change: 0.0
+  prior_state: ALERT
+  new_state: ALERT
+  prior_stage: STAGE_5_PROJECT_ATTRITION
+  stage_change: UNCHANGED
+  changed_components: {}
+  physical_changes:
+    P4_market_technical: "WATCH -> NEUTRAL"
+  evidence_change: >-
+    Stronger memory counterevidence and vendor-supported financing dependence
+    coexist. R4 is already level 2; qualitative strengthening does not raise score.
+    No new ROI-led attrition wave or efficiency-induced deterioration is confirmed.
+
+cisco_warning:
+  state: FINANCIAL_CAPACITY_MECHANICS_VISIBLE_PHYSICAL_2001_MECHANICS_ABSENT
+  present:
+    - orders_and_capacity_acceleration
+    - very_large_long_duration_commitments
+    - financing_dependence
+    - vendor_project_support_structures
+    - selective_credit_risk_pricing
+    - prior_project_delay_examples
+  absent_or_unconfirmed:
+    - broad_bookings_collapse
+    - broad_roi_driven_cancellations
+    - gpu_utilization_collapse
+    - memory_inventory_glut
+    - memory_contract_price_collapse
+    - networking_order_collapse
+    - hyperscaler_capex_cuts
+    - efficiency_induced_overcapacity
+
+interpretation: >-
+  Recovered 7-Oct research retains Challenger 60 / ALERT / Stage 5 and
+  CHALLENGER_EARLY_WARNING. Champion WATCH / NO_CANDIDATE remains the supplied
+  research reference, not a recomputed DecisionInputBundle. P4 improves to NEUTRAL.
+  Efficiency evidence is inconclusive: strong memory demand does not directly
+  measure induced-demand absorption or compute per useful task. Challenger has no
+  trading authority; weights, Strategy, runtime and gates are unchanged.
+
+forward_outcomes:
+  two_weeks: PENDING
+  four_weeks: PENDING
+  eight_weeks: PENDING
+  twelve_weeks: PENDING
+  next_hyperscaler_earnings_cycle: PENDING

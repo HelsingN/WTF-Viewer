@@ -1,0 +1,151 @@
+{
+  "schema": "ai-capex.weekly-requirements.v1",
+  "effective_report_date": "2026-10-07",
+  "blocks": {
+    "champion": [
+      "state",
+      "trade_state",
+      "combined_score",
+      "fundamental_normalization",
+      "technical",
+      "canonical_technical",
+      "asia",
+      "leadership",
+      "F1",
+      "F2",
+      "F3",
+      "F4",
+      "F5",
+      "leadership_events"
+    ],
+    "hyperscalers": [
+      "MSFT_cash_capex",
+      "GOOGL_cash_capex",
+      "AMZN_cash_capex",
+      "META_cash_capex",
+      "ORCL_cash_capex"
+    ],
+    "gpu": [
+      "matched_prices",
+      "availability",
+      "utilization",
+      "renewals_contract_duration"
+    ],
+    "financing": [
+      "OpenAI",
+      "Anthropic",
+      "CoreWeave",
+      "credit_contracts",
+      "capacity_funnel",
+      "project_attrition"
+    ],
+    "semiconductors": [
+      "NVDA",
+      "AMD",
+      "AVGO"
+    ],
+    "memory": [
+      "MU_results",
+      "DRAM_NAND_bits_ASP",
+      "HBM_contracting",
+      "inventory",
+      "capacity",
+      "cancellations",
+      "peak_earnings",
+      "Cisco_warning"
+    ],
+    "roi": [
+      "demand_growth",
+      "monetization_vs_deployment",
+      "payback_lengthening",
+      "financing_dependence",
+      "marginal_delays",
+      "physical_transmission",
+      "revenue_per_MW_GPU"
+    ],
+    "challenger": [
+      "score",
+      "state",
+      "stage",
+      "R1",
+      "R2",
+      "R3",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "divergence"
+    ],
+    "efficiency": [
+      "task_cost",
+      "pricing_discipline",
+      "induced_demand",
+      "committed_capacity_economics",
+      "assessment"
+    ],
+    "macro": [
+      "score_range",
+      "state_range",
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "funding_break",
+      "stagflation_trap",
+      "easing_failure",
+      "crb_12m",
+      "crb_ma260",
+      "ai_spread_3m"
+    ],
+    "institutional": [
+      "state",
+      "confidence",
+      "nasdaq_positions",
+      "sp500_positions",
+      "cftc_4w13w",
+      "put_call",
+      "skew",
+      "vix",
+      "vix_curve",
+      "prime_broker",
+      "lending",
+      "security_shorts",
+      "forced_deleveraging",
+      "price_positioning_divergence",
+      "weekly_delta"
+    ],
+    "outcomes": [
+      "weekly_delta",
+      "2w4w8w12w",
+      "next_earnings",
+      "data_gaps"
+    ]
+  },
+  "freshness_review_days": {
+    "default": 130,
+    "champion": 7,
+    "hyperscalers": 130,
+    "gpu": 7,
+    "financing": 90,
+    "semiconductors": 90,
+    "memory": 90,
+    "roi": 7,
+    "challenger": 7,
+    "efficiency": 7,
+    "macro": 60,
+    "institutional": 32,
+    "outcomes": 7
+  },
+  "field_overrides": {
+    "macro.M1": 3,
+    "institutional.vix": 3,
+    "institutional.nasdaq_positions": 10,
+    "institutional.sp500_positions": 10,
+    "institutional.cftc_4w13w": 10
+  },
+  "note": "Collection freshness budgets only; not runtime TTL. Latest monthly/quarterly publications require calendar review."
+}

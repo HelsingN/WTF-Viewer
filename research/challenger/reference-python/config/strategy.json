@@ -1,0 +1,96 @@
+{
+  "signal_schema": "ai-capex.signal.v1",
+  "technical_version": "technical-v1",
+  "leadership_version": "leadership-v1",
+  "strategy_versions": {
+    "broad_semiconductor_reversal": "broad-semi-reversal-v1.1",
+    "crwv_credit_crack": "crwv-credit-crack-v1.0",
+    "memory_downcycle": "memory-downcycle-v1.1"
+  },
+  "priority": ["A", "B", "C"],
+  "combined_score_weights": {
+    "hyperscaler_capex": 20,
+    "fcf_cash_pressure": 10,
+    "neocloud_credit": 15,
+    "gpu_pricing_utilization": 10,
+    "semiconductor_guidance": 15,
+    "rpo_backlog": 10,
+    "technical_us": 10,
+    "asia_confirmation": 10
+  },
+  "state_thresholds": {
+    "normal_max": 39,
+    "watch_max": 59,
+    "alert_max": 74,
+    "reversal_candidate_min": 75,
+    "confirmed_min": 85
+  },
+  "entry": {
+    "min_combined_score": 75,
+    "min_fundamental_triggers": 3,
+    "require_smh_breakdown": true,
+    "require_smh_spy_down": true
+  },
+  "leadership_context": {
+    "enabled": true,
+    "combined_score_weight": 0,
+    "market_rejection_enabled": true,
+    "failed_high_context_enabled": true
+  },
+  "instrument_selection": {
+    "enabled": true,
+    "allow_no_candidate": true,
+    "already_priced_guard": true,
+    "relative_strength_context": true,
+    "broad_semiconductor_candidates": ["SMH", "SOXX"],
+    "memory_candidates": ["MU"],
+    "credit_candidates": ["CRWV"],
+    "broad_tech_research_candidates": ["QQQ"]
+  },
+  "dte_policy": {
+    "status": "RESEARCH",
+    "strong_confirmed_breakdown": {
+      "min": 45,
+      "max": 65
+    },
+    "standard_confirmation": {
+      "min": 75,
+      "max": 100
+    },
+    "above_120_requires_explicit_rationale": true,
+    "legacy_120_270_default": false
+  },
+  "strike_policy": {
+    "long_put": "NEAR_ATM",
+    "short_put": "SCENARIO_TARGET_BASED",
+    "fixed_pct_offset_is_final_rule": false,
+    "require_liquidity_check": true,
+    "require_scenario_payoff_check": true
+  },
+  "strategy_a": {
+    "name": "broad_semiconductor_reversal",
+    "structure": "bear_put_spread",
+    "candidates": ["SMH", "SOXX"],
+    "dte_policy_ref": "dte_policy",
+    "strike_policy_ref": "strike_policy"
+  },
+  "strategy_b": {
+    "name": "crwv_credit_crack",
+    "structure": "bear_put_spread",
+    "candidates": ["CRWV"]
+  },
+  "strategy_c": {
+    "name": "memory_downcycle",
+    "structure": "bear_put_spread",
+    "candidates": ["MU"],
+    "require_memory_specific_confirmation": true,
+    "mu_smh_relative_strength_diagnostic": true
+  },
+  "execution": {
+    "default_order_type": "LIMIT_COMBO",
+    "automatic_market_order": false,
+    "after_hours_auto_execution": false,
+    "passive_hold_to_expiration": false,
+    "broker_permission_expands_strategy": false
+  }
+}

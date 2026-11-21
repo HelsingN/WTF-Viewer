@@ -1,0 +1,96 @@
+# Finite R3/R5/R6/R7 event review for the 2026-11-04T00:00:00Z as-of.
+# DO NOT transform these into score adjustments without distinct, verified
+# realized outcome plus source time, counterpart and causal-root de-dup review.
+schema: ai-capex.challenger-v2.event-review.v1
+as_of: '2026-11-04T00:00:00+00:00'
+status: FINITE_RESEARCH_CONTEXT_REVIEW_NO_QUALIFIED_SIGNED_EVENTS
+calibration: UNCALIBRATED
+qualified_positive_count: 0
+qualified_negative_count: 0
+accepted_scoring_events: []
+not_scored_reason: >
+  These are observable contexts and management plans, not independent
+  realized signed outcomes admissible to v2. An empty score adjustment
+  is not evidence that project/counterparty risk is absent.
+candidates:
+  - id: CRWV-DURATION
+    factor: R3
+    direction_candidate: POSITIVE_DETERIORATION
+    status: CONTEXT_ONLY
+    source_research: Docs/research/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md
+    reason: Debt-vs-contract tenor mismatch is not observed project payback; same root as R4
+  - id: ANTHROPIC-COMPUTE-RATIO
+    factor: R3
+    direction_candidate: POSITIVE_DETERIORATION
+    status: CONTEXT_ONLY
+    source_research: Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-02.md
+    reason: Reported revenue/compute ratio ~2.08 to 1.72 not realized incremental project ROI; rapid revenue growth is material counterevidence
+  - id: SPACEX-PAYBACK-CFO
+    factor: R3
+    direction_candidate: NEGATIVE_COUNTEREVIDENCE
+    status: MANAGEMENT_CLAIM_NOT_QUALIFIED
+    source_research: Docs/research/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md
+    reason: Sub-one-year forecasted GPU payback is not independent realized cash return
+  - id: ANTHROPIC-FUTURE-COMMITMENTS
+    factor: R5
+    direction_candidate: POSITIVE_DETERIORATION
+    status: CONTEXT_ONLY
+    source_research: Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-02.md
+    reason: Estimated $895.4bn long-term compute and lease commitments are not a verified counterparty default, renegotiation or collection shortfall
+  - id: AWS-RPO
+    factor: R5
+    direction_candidate: NEGATIVE_COUNTEREVIDENCE
+    status: CONTEXT_ONLY
+    source_research: Docs/research/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md
+    reason: Long-term bookings/RPO not realized counterparty collections
+  - id: AI-ISSUER-FINANCING-2026-11-03
+    factor: R5
+    direction_candidate: NEGATIVE_COUNTEREVIDENCE
+    status: DUPLICATE_CORE_R4
+    source_research: data/research/challenger/challenger_v2_r4_platform_reassessment_2026-11-04.yaml
+    reason: Amazon/Oracle/Meta debt or equity financing and credit access affect R4; not independent evidence of contract performance
+  - id: NSCALE-UK-GRID-DELAY
+    factor: R6
+    direction_candidate: POSITIVE_DETERIORATION
+    status: CONTEXT_ONLY
+    source_research: Docs/research/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md
+    reason: Power deadline slipped; no funded-to-utilized economically failed project yield established; site still planned
+  - id: ARES-1GW-NOV2026
+    factor: R6
+    direction_candidate: POSITIVE_DETERIORATION
+    status: CONTEXT_ONLY
+    source_original: https://www.reuters.com/world/australian-outback-data-centre-pulls-timeline-after-regulator-stalls-2026-11-01/
+    reason: Proposed project target withdrawn for permitting; developer reports funding and continuation; no confirmed incremental economic failure
+  - id: CBRE-H1-2026-ABSORPTION
+    factor: R6
+    direction_candidate: NEGATIVE_COUNTEREVIDENCE
+    status: PHYSICAL_OVERLAY_ONLY
+    source_original: https://www.cbre.de/en-gb/insights/books/north-america-data-center-trends-h1-2026
+    reason: H1 2026 vacancy 1.4% and absorption indicate aggregate demand; asking rents are not project cash collections or utilization-specific repricing
+  - id: JUPITER-FORCE-MAJEURE
+    factor: R7
+    direction_candidate: POSITIVE_DETERIORATION
+    status: CONTEXT_ONLY_DUPLICATE_R4_ROOT
+    source_research: Docs/research/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md
+    reason: Power delay and project finance issues; lender commitment reaffirmed, no verified financially caused cancellation, do not transfer SPV to Oracle
+  - id: SYDNEY-REGULATORY-WITHDRAWAL
+    factor: R7
+    direction_candidate: POSITIVE_DETERIORATION
+    status: NON_ECONOMIC_EARLY_STAGE
+    source_research: Docs/research/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md
+    reason: Regulatory/community site withdrawal not demonstrated funded project economic abandonment
+  - id: FIRMUS-FUNDING-ROUTE
+    factor: R7
+    direction_candidate: POSITIVE_DETERIORATION
+    status: NO_VERIFIED_SITE_CANCELLATION
+    source_research: Docs/research/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md
+    reason: Abandoning public listing in favor of private financing is not an operating facility cancellation
+physical_confirmation:
+  P1_GPU: UNKNOWN_CURRENT_MEASUREMENT
+  P2_MEMORY: UNKNOWN_CURRENT_MEASUREMENT
+  P3_SEMICONDUCTOR_NETWORKING: UNKNOWN_CURRENT_MEASUREMENT
+  P4_TECHNICAL_MARKET: UNKNOWN_CURRENT_CANONICAL_MEASUREMENT
+  note: >
+    Prior supportive supplier orders and tight datacenter vacancy, as well
+    as equity volatility, are contextual; never silently carry dated P
+    categories forward as new direct observations.

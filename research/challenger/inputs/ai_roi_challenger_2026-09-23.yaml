@@ -1,0 +1,150 @@
+schema: ai-capex.roi-challenger-shadow.v1
+as_of: 2026-09-23
+status: RESEARCH_SHADOW
+trading_authority: NONE
+model_contract: Docs/AI_ROI_CHALLENGER_MODEL_v1.md
+context_contract: Docs/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md
+champion_strategy: Docs/AI_CapEx_Reversal_Strategy_v1.2.md
+source_research:
+  - Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-23.md
+prior_observation:
+  - data/research/challenger/ai_roi_challenger_2026-09-16_vendor_supported_demand.yaml
+
+champion_reference:
+  decision_state: WATCH
+  reversal_state: NOT_CONFIRMED
+  trade_candidate: NO_CANDIDATE
+  numeric_combined_score: UNKNOWN_NOT_RECOMPUTED_HERE
+  changed_by_this_observation: false
+
+challenger:
+  score: 60.0
+  state: ALERT
+  causal_stage: STAGE_4_FINANCING_STRESS_LENDER_TIGHTENING
+  divergence_class: CHALLENGER_EARLY_WARNING
+  trading_signal: false
+
+components:
+  R1_monetization_vs_capex:
+    level: 1
+    weight: 20
+    contribution: 10.0
+    rationale: >-
+      AI/cloud demand and monetization remain strong, but Oracle's scale of future
+      data-center commitments relative to cash generation reinforces the gap between
+      gross monetization growth and the capital required to deliver it.
+  R2_cash_conversion_fcf:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: >-
+      Oracle remains a clean high-growth/negative-FCF case while other hyperscalers
+      are heterogeneous. Evidence is material but not broad enough for level 2.
+  R3_payback_duration_project_economics:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: >-
+      Project debt discounts and return-visibility concerns are stronger indirect
+      payback evidence, but direct realized project payback deterioration remains
+      insufficient for level 2.
+  R4_financing_refinancing_dependence:
+    level: 2
+    weight: 20
+    contribution: 20.0
+    rationale: >-
+      Oracle Project Jupiter debt is quoted materially below par with syndication
+      difficulty, AI-linked corporate spreads have widened versus the broader market,
+      and CoreWeave completed another large financing. Funding remains available but
+      is increasingly selective and costly at the margin.
+  R5_backlog_contract_quality:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Large RPO/backlog remains, but prepayments, long payment structures, guarantees
+      and vendor-supported financing mean headline commitments are not equivalent to
+      independently funded profitable end demand.
+  R6_capacity_funnel_ghost_demand:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Announced/contracted capacity remains much larger than independently observed
+      utilized/economically profitable capacity. No broad ghost-demand confirmation.
+  R7_project_attrition:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Project Jupiter now provides a material project-delay/execution-risk example,
+      but causes include permitting, power and local opposition. This is a WATCH
+      level, not evidence of a broad economically driven cancellation wave.
+
+physical_confirmation:
+  P1_gpu_compute:
+    state: WATCH
+    rationale: >-
+      Broad availability and normalized older-GPU pricing persist, but fresh pricing
+      does not show a decisive weekly collapse and utilization/renewal weakness is
+      not broadly confirmed.
+  P2_memory:
+    state: ANTI_REVERSAL
+    rationale: >-
+      Micron's latest guidance remains extremely strong and HBM/server memory remains
+      tight. Q4 results are due 30-Sep; no memory downcycle is confirmed.
+  P3_semiconductor_networking:
+    state: ANTI_REVERSAL
+    rationale: >-
+      No broad accelerator or networking order collapse is confirmed.
+  P4_market_technical:
+    state: UNKNOWN
+    rationale: >-
+      No canonical technical-v1 / leadership snapshot was recomputed in this
+      research-only weekly observation.
+
+weekly_delta:
+  prior_as_of: 2026-09-16
+  prior_score: 55.0
+  score_change: 5.0
+  prior_state: ELEVATED
+  new_state: ALERT
+  prior_stage: STAGE_3_FUNDING_DEPENDENCE_RISING
+  stage_change: STAGE_4_FINANCING_STRESS_LENDER_TIGHTENING
+  changed_components:
+    R7_project_attrition: "0 -> 1"
+  evidence_change: >-
+    The key new information is observable credit/project stress: Oracle-linked
+    Project Jupiter loans below par and difficult to distribute, plus broader
+    investor selectivity and spread widening for AI-linked debt. Physical-cycle
+    confirmation remains absent.
+
+cisco_warning:
+  state: EARLY_FINANCIAL_MECHANICS_STRENGTHENING_PHYSICAL_COLLAPSE_ABSENT
+  present:
+    - orders_and_capacity_acceleration
+    - financing_dependence
+    - vendor_project_guarantees_and_backstops
+    - credit_spread_widening
+    - isolated_project_debt_below_par
+  absent_or_unconfirmed:
+    - broad_bookings_collapse
+    - broad_economic_cancellations
+    - gpu_utilization_collapse
+    - memory_inventory_glut
+    - memory_contract_price_collapse
+    - networking_order_collapse
+    - hyperscaler_capex_cuts
+
+interpretation: >-
+  Challenger advances to ALERT / Stage 4 on financial evidence only. Champion remains
+  WATCH / NO_CANDIDATE and is the sole trading authority. The divergence remains an
+  early warning because memory, semiconductors/networking and physical AI deployment
+  do not confirm a reversal.
+
+forward_outcomes:
+  two_weeks: PENDING
+  four_weeks: PENDING
+  eight_weeks: PENDING
+  twelve_weeks: PENDING
+  next_hyperscaler_earnings_cycle: PENDING
