@@ -1,79 +1,95 @@
-# WTF Viewer — реестр приёмки v1.2: A01–A18 и D01–D06
+# WTF Viewer — приёмка v1.2: первая версия, редизайн и backlog
+Редакция назначения: 21 ноября 2026, Asia/Jerusalem.  
+Требования: [ТЗ RU/EN](SPEC_RU_EN.md), [решения 1.1–1.4](PHASE1_SCOPE_DECISIONS_RU.md), [единый план](UPDATE_PLAN_RU.md).
 
-Исходная редакция: 11 ноября 2026. Дополнение редизайна: 21 ноября 2026. Требования: [ТЗ v1.2 RU/EN](SPEC_RU_EN.md). План: [единый выпуск, этапы 0–7 и D0–D3](UPDATE_PLAN_RU.md). Дизайн: [приложение](design/WTF_viewer_design_plan_RU.md). Исходное доказательство: [IMPLEMENTATION_BASELINE.md](IMPLEMENTATION_BASELINE.md), develop@a1a43736d44110179ef73ea2009c74ea19534074.
+## Правило текущего выпуска
 
-Это статусы проверки целевой версии, а не оценка полезности прототипа. Кодовая реализация и старый тест сами по себе не дают VERIFIED всему пользовательскому сценарию.
+Первый reader/calculator выпуск требует **B01–B10 и D01–D06**. Исходные A01–A18 сохраняют свои значения и прежние статусы evidence; их применимость уточнена, deferred не означает VERIFIED. Готовность будущего редактора/новой D1-миграции не является условием выпуска viewer.
 
-## Правила статусов
+Исторические проверки baseline относятся к конкретному коду/дате, не новому порту расчёта или переносу. Документальное согласование 0R завершено; данные/код ещё не изменены.
 
-- NOT_STARTED: полная проверка критерия целевой версии ещё не начата.
-- IN_PROGRESS: есть часть доказательств, но не все условия выполнены.
-- VERIFIED: все условия критерия проверены; указаны среда, exact commit SHA и воспроизводимое evidence.
-- BLOCKED: названы конкретный недостающий факт/доступ/дефект, ответственный и условие возобновления. Повторная дата сама по себе не снимает блокер.
+Статусы: NOT_STARTED — новый полный прогон не начат; IN_PROGRESS — частичные evidence; VERIFIED — все условия проверены на exact SHA с environment/evidence; BLOCKED — конкретная причина и условие продолжения. При смене затронутого кода/данных/version сохранять старые evidence и перепроверять релевантные критерии. Зелёная сборка сама не доказывает user flow, source truth или human approval.
 
-При изменении затронутого кода или head SHA перепроверить соответствующее evidence; старую запись сохранять как историческую. Автоматический PASS из зелёной сборки не заменяет human PASS или hosted-проверку.
+## B01–B10 — обязательная приёмка первой версии
 
-## Исходные записи
-
-| ID | Критерий | Статус | Этап | Что проверить | Исходное evidence / что осталось |
-| --- | --- | --- | --- | --- | --- |
-| A01 | RU/EN без потери контекста | NOT_STARTED | 6 | Язык с фильтрами, карточкой и draft; reload не теряет записи | Только чтение UI; новый браузерный прогон не выполнен |
-| A02 | ID и повторный импорт | NOT_STARTED | 2 | Повтор идентичного импорта добавляет 0; конфликт identity/reviews отклоняется сервером | Seed/уникальность проверены скриптом; end-to-end импорт не проверен |
-| A03 | Публикация/public-by/факт/регистрация | NOT_STARTED | 3 | Даты и precision различаются; неизвестная дата не подставляется и не ломает экран | Сверены исходные availability-пути; runtime-сценарий ещё не выполнен |
-| A04 | Canonical и MANUAL истории отдельно | NOT_STARTED | 2–3 | Новый review не переписывает старый; явная provenance после reload/export | Есть append-only unit assertions, полной проверки UI/API нет |
-| A05 | QUALIFIED/withdrawal → решение о пересчёте | NOT_STARTED | 3 | Переходы и прямой POST соблюдают REQUIRED, не создают фиктивный JSON | Нужно проверить и усилить серверные правила |
-| A06 | Новый/повторный отчёт | NOT_STARTED | 4 | Пустые checkpoints/no score; существующий период открывается для продолжения | Новый пользовательский сценарий не проверен |
-| A07 | COMPLETE и 10 checkpoints | NOT_STARTED | 4 | Сервер отвергает неполный checklist; исходный PARTIAL не меняется | reportReady unit assertions проходят; полный API-сценарий не проверен |
-| A08 | Продолжение проверки после reload | NOT_STARTED | 4 | Источники/сделанное/blocker/reopening_trigger/next_action сохраняются | Нужно добавить структурированные поля и проверить сохранение |
-| A09 | Собственные компоненты артефакта | NOT_STARTED | 3 | Partial/null/строковые числа без подстановки старого результата и midpoint | Контрактные проверки проходят; полный UI/import сценарий не проверен |
-| A10 | Историческое QUALIFIED и stale review_by | NOT_STARTED | 3 | Expiry меняет актуальность вклада, не исторический статус | Новый runtime-прогон не выполнен |
-| A11 | Proposed/main и актуальный SHA | NOT_STARTED | 5 | Новый head делает прежние CI/PASS неактуальными; NO_REVIEW не PASS | Нужны поля inspected/reviewed/merge SHA и смена ревизии |
-| A12 | Отдельный и совместный макроанализ | NOT_STARTED | 5 | PR provenance, сравнимость/overlap/каналы; ранги не суммируются | PR origin/SHA в seed установлены; UI-приёмка не выполнена |
-| A13 | Фильтры/CSV/empty/reset | NOT_STARTED | 6 | CSV равен видимым строкам; неприменимый фильтр не скрывает отсутствие metadata | Новый браузерный и CSV-прогон не выполнен |
-| A14 | Save/recovery/revisions/conflicts | NOT_STARTED | 1–2, 7 | Миграция/export/restore/две вкладки/ошибка сети без потери контекста | Hosted persistence/backup не проверялись; локальная сборка их не доказывает |
-| A15 | Нет GitHub write/merge из приложения | NOT_STARTED | 5, 7 | Ревью API/интеграции и сетевой trace подтверждают read-only границу | В текущем коде таких controls не найдено; итоговая проверка на релизном SHA впереди |
-| A16 | TypeScript/build/UI/hosted | IN_PROGRESS | 6–7 | Все технические и пользовательские проверки на релизном SHA с evidence | Baseline: npm run check, tsc и build PASS; UI/hosted остаются непроверенными |
-| A17 | WTF Viewer / AI CapEx Signals / Challenger | IN_PROGRESS | 0, 6 | Документы и постоянная шапка разделяют три уровня без потери навигации | ТЗ v1.2 согласовано; hosted title остаётся прежним, целевой UI ещё не принят |
-| A18 | Изоляция owner/workspace | NOT_STARTED | 1 | Миграция сохраняет IDs/revisions; нет доступа к другому owner/workspace | В исходной схеме workspace_id отсутствует |
-
-Ни один критерий ещё не имеет VERIFIED. Для базовых команд из A16 проверенный code/config SHA соответствует develop@a1a43736d44110179ef73ea2009c74ea19534074; документальные изменения этого этапа не меняют эти 120 файлов. Для остальных строк exact tested SHA, среда и evidence полного сценария ещё отсутствуют; поэтому они не отмечены как пройденные.
-
-## Приёмка редизайна D01–D06
-
-Это обязательное уточнение A-критериев для выпуска v1.2. Формулировки требований заданы в §2.1 общего плана. Согласование документации завершено, но ни один D-критерий не проверен в реализованном интерфейсе. Сохранённый макет не является evidence работающего UI или текущих данных.
-
-| ID | Критерий | Статус | Этап | Что проверить / доказательство |
+| ID | Критерий | Статус | Этап | Что проверить |
 | --- | --- | --- | --- | --- |
-| D01 | Общая тема и бренд | NOT_STARTED | D0, 3–6; итог 7 | Общие токены, нейтральные поверхности, фиолетовый выбор; WTF Viewer → AI CapEx Signals → Challenger 2.1 на всех экранах |
-| D02 | Контраст и типографика | NOT_STARTED | D0, 6–7 | Таблица фактических foreground/background/state; текст 4.5:1, крупный 3:1, необходимые визуальные признаки 3:1 в применимых случаях; размеры/rem и 200% zoom |
-| D03 | Раздельные значения статусов | NOT_STARTED | 3–7 | Подписи/значки для приоритета, квалификации, направления, полноты/freshness, пересчёта и CI/review/merge; UNKNOWN/null/interval сохранены |
-| D04 | RU/EN, клавиатура и состояния | NOT_STARTED | 6–7 | Focus/modal/формы/reduced motion; loading/empty/error/success; переключение языка с фильтрами, карточкой и draft |
-| D05 | Адаптивность и доступ к данным | NOT_STARTED | 6–7 | 1440/1280/768/390px, 200% zoom, длинный текст, внутренний scroll таблиц, отсутствие перекрытий; ID/даты/статусы/действия доступны |
-| D06 | Обзор и отсутствие регрессий данных | NOT_STARTED | 3–7 | Канонический артефакт и его даты/полнота, отдельные proposed/manual, следующие проверки из источника; DEMO-строки не импортируются; ссылки/история/контекст сохранены |
+| B01 | Полный перенос и переключение основного источника | NOT_STARTED | 1 | Manifest по зафиксированным source/target SHA; полные файлы/приложения, hashes, ID/reviews и ссылки сверены; записан cutover в WTF-Viewer |
+| B02 | Просмотр исследований и полных daily/weekly | NOT_STARTED | 2, 4 | Список строится из manifest; Markdown/вложения/источники открываются, GitHub target file/version и даты доступны; отсутствующие части явно обозначены |
+| B03 | Ручная синхронизация с GitHub WTF-Viewer | NOT_STARTED | 2 | Пакеты из двух target commits обновляют данные без дублей; source SHA/даты различимы; локальный preview не выдаётся за опубликованное или live |
+| B04 | Надёжный версионированный импорт | NOT_STARTED | 2 | Проверки schema/hash/ID/key/history/versions; no-op повтор; ошибочный пакет сохраняет предыдущий; seed не подмешивается без метки |
+| B05 | Пересчёт по кнопке | NOT_STARTED | 3 | Reviewed structured input → чистое вычисление; LOCAL/UNPUBLISHED отдельно от published; as_of/hash/versions/exclusions/UNKNOWN и export JSON |
+| B06 | Пересчёт/reload без побочных записей | NOT_STARTED | 3, 7 | Input+versions+as_of ключ; reload/cache воспроизводимы; нет дубликатов/commits/новых отчётов; новая дата явная, freshness не подменяется |
+| B07 | Численная совместимость с Python | NOT_STARTED | 3, 7 | Golden vectors и отрицательные случаи: decimal/rounding, weights/caps/decay, qualification, PIT/expiry и неполнота; расхождение блокирует выпуск |
+| B08 | Честная полнота, статусы и происхождение | NOT_STARTED | 4, 5 | Четыре даты, core/event factors каждого артефакта, main/proposed/local, metadata и macro отдельно; чисел из прошлого/PNG вместо пробела нет |
+| B09 | Сохранность доступа и старых данных | NOT_STARTED | 0R, 7 | Audience/identity/D1/история не удалены; никаких write credentials в клиенте; reviewer функции первой версии не выполняют серверную запись |
+| B10 | Рабочий двуязычный reader | NOT_STARTED | 6, 7 | RU/EN, фильтры/поиск/CSV, GitHub links, полные тексты, loading/empty/error, desktop/mobile, отсутствие ошибок рендера и безопасное отображение Markdown |
 
-Цель 7:1 для основного текста желательна, не отдельный блокер. Для каждого D-критерия указывать exact commit SHA, среду, сценарий, expected/actual и ссылку на evidence по общему формату ниже. A16 не закрывается только по новой палитре или сборке; D01–D06 проверяются вместе с исходными рабочими сценариями.
+## D01–D06 — обязательная приёмка редизайна
 
-## Формат записи новой проверки
+| ID | Критерий | Статус | Этап | Evidence |
+| --- | --- | --- | --- | --- |
+| D01 | Общие токены и WTF Viewer → AI CapEx Signals → Challenger 2.1 | NOT_STARTED | D0, 3–6; итог 7 | Нейтральные тёмные поверхности, читаемый текст, фиолетовые actions/selection и правильный бренд |
+| D02 | Контраст и типографика | NOT_STARTED | D0, 6–7 | CSS foreground/background/state: 4.5:1 ordinary, 3:1 large и необходимые non-text cues в применимых случаях; 16/14px, rem, 200% zoom |
+| D03 | Раздельная семантика | NOT_STARTED | 3–7 | Severity/qualification/direction/coverage/freshness/recalc и импортированные CI/review/merge; UNKNOWN/interval без подстановок |
+| D04 | RU/EN, клавиатура и состояния reader | NOT_STARTED | 6–7 | Focus/modal/Markdown/import/calculation, reduced motion, loading/empty/error/success; контекст чтения/фильтров сохраняется |
+| D05 | Responsive и доступ к данным | NOT_STARTED | 6–7 | 1440/1280/768/390px, 200% zoom, длинные тексты, внутренний scroll таблиц, отсутствие перекрытий |
+| D06 | Достоверный обзор и сохранность материала | NOT_STARTED | 3–7 | Published vs LOCAL/UNPUBLISHED, input hash/as_of/cutoff, полноценные файлы/ссылки/история и реальные импортированные статусы; DEMO не в рабочем наборе |
 
-Для каждого прогона дописать: criterion ID (A или D); дата/проверяющий; environment (local, CI, hosted URL/version); exact commit SHA; версия snapshot/model/policy; команда или пошаговый сценарий; expected/actual; ссылка на лог/артефакт; unresolved и next action. Отдельно указывать human reviewer/PASS, если этого требует сценарий. Не записывать результат модели вместо доказательства работы интерфейса.
+Крупный текст: от 24 CSS px regular либо 18.67 bold. Цель 7:1 primary text желательна, не дополнительный blocker. PNG не является evidence runtime или численной точности. Кнопка «Новый отчёт», сохранение заметок и редакторский draft не требуются для D04 текущего выпуска.
 
-## Журнал
+## A01–A18 — исходные критерии полной панели
 
-| Проверка | SHA | Результат | Доказательство |
-| --- | --- | --- | --- |
-| Этап 0, исходная точка | a1a43736d44110179ef73ea2009c74ea19534074 | Техническая часть PASS; продуктовая приёмка PENDING | Baseline §6: contract script, TypeScript, build; runtime blobs совпали; browser/hosted не запускались |
-| Согласование документов RU/EN | Документальный коммит, содержащий эту запись; кодовая база a1a43736d44110179ef73ea2009c74ea19534074 | Завершено | ТЗ v1.2; сохранены A01–A18 и методология; исследования открыты |
+Значения критериев и статусы сохранены из предыдущей редакции; ниже изменено планирование/применимость. Подсценарии чтения проверяются через B; завершение B не закрывает целиком A со write-сценарием. Датированное evidence baseline не обновляется задним числом.
 
-Документальное дополнение 21.11.2026: редизайн согласован с общим планом и RU/EN-ТЗ, добавлены D01–D06. Статусы A01–A18 сохранены; внедрение и runtime-проверки не выполнялись, новых VERIFIED нет.
+| ID | Исходный критерий | Статус (историческое evidence) | Применимость | Новый этап | Что осталось / evidence |
+| --- | --- | --- | --- | --- | --- |
+| A01 | RU/EN без потери контекста | NOT_STARTED | Reader — первая версия; сохранение редакторской работы — позже | 6–7 / позже | Язык с фильтрами, карточкой и draft; reload не теряет записи; Только чтение UI; новый браузерный прогон не выполнен |
+| A02 | ID и повторный импорт | NOT_STARTED | Первая версия (B01/B03/B04) | 1–2 | Повтор идентичного импорта добавляет 0; конфликт identity/reviews отклоняется сервером; Seed/уникальность проверены скриптом; end-to-end импорт не проверен |
+| A03 | Публикация/public-by/факт/регистрация | NOT_STARTED | Первая версия (B02/B08) | 4 | Даты и precision различаются; неизвестная дата не подставляется и не ломает экран; Сверены исходные availability-пути; runtime-сценарий ещё не выполнен |
+| A04 | Canonical и MANUAL истории отдельно | NOT_STARTED | Просмотр исходной истории — сейчас; новые manual writes — позже | 4–5 / позже | Новый review не переписывает старый; явная provenance после reload/export; Есть append-only unit assertions, полной проверки UI/API нет |
+| A05 | QUALIFIED/withdrawal → решение о пересчёте | NOT_STARTED | Позже: ручная квалификация/withdrawal из сайта | Редакторский этап | Переходы и прямой POST соблюдают REQUIRED, не создают фиктивный JSON; Нужно проверить и усилить серверные правила |
+| A06 | Новый/повторный отчёт | NOT_STARTED | Позже: создание/продолжение отчёта в сайте | Редакторский этап | Пустые checkpoints/no score; существующий период открывается для продолжения; Новый пользовательский сценарий не проверен |
+| A07 | COMPLETE и 10 checkpoints | NOT_STARTED | Позже: редактируемый checklist/COMPLETE | Редакторский этап | Сервер отвергает неполный checklist; исходный PARTIAL не меняется; reportReady unit assertions проходят; полный API-сценарий не проверен |
+| A08 | Продолжение проверки после reload | NOT_STARTED | Чтение контекста — сейчас; редактирование/сохранение — позже | 4–5 / позже | Источники/сделанное/blocker/reopening_trigger/next_action сохраняются; Нужно добавить структурированные поля и проверить сохранение |
+| A09 | Собственные компоненты артефакта | NOT_STARTED | Первая версия (B05/B07/B08) | 3–4 | Partial/null/строковые числа без подстановки старого результата и midpoint; Контрактные проверки проходят; полный UI/import сценарий не проверен |
+| A10 | Историческое QUALIFIED и stale review_by | NOT_STARTED | Первая версия (B07/B08) | 3–5 | Expiry меняет актуальность вклада, не исторический статус; Новый runtime-прогон не выполнен |
+| A11 | Proposed/main и актуальный SHA | NOT_STARTED | Импортированная provenance — сейчас; полный tracking workflow — позже | 5 / позже | Новый head делает прежние CI/PASS неактуальными; NO_REVIEW не PASS; Нужны поля inspected/reviewed/merge SHA и смена ревизии |
+| A12 | Отдельный и совместный макроанализ | NOT_STARTED | Первая версия, отображение имеющихся материалов (B08) | 5 | PR provenance, сравнимость/overlap/каналы; ранги не суммируются; PR origin/SHA в seed установлены; UI-приёмка не выполнена |
+| A13 | Фильтры/CSV/empty/reset | NOT_STARTED | Первая версия (B10) | 6–7 | CSV равен видимым строкам; неприменимый фильтр не скрывает отсутствие metadata; Новый браузерный и CSV-прогон не выполнен |
+| A14 | Save/recovery/revisions/conflicts | NOT_STARTED | Позже: новая save/recovery/D1 migration; старые записи сохранить (B09) | Редакторский этап | Миграция/export/restore/две вкладки/ошибка сети без потери контекста; Hosted persistence/backup не проверялись; локальная сборка их не доказывает |
+| A15 | Нет GitHub write/merge из приложения | NOT_STARTED | Первая версия read-only remote boundary (B09) | 2–7 | Ревью API/интеграции и сетевой trace подтверждают read-only границу; В текущем коде таких controls не найдено; итоговая проверка на релизном SHA впереди |
+| A16 | TypeScript/build/UI/hosted | IN_PROGRESS | Первая версия reader/calculator; hosted write flows — позже | 3, 6–7 | Все технические и пользовательские проверки на релизном SHA с evidence; Baseline: npm run check, tsc и build PASS; UI/hosted остаются непроверенными |
+| A17 | WTF Viewer / AI CapEx Signals / Challenger | IN_PROGRESS | Первая версия (D01) | D0, 6–7 | Документы и постоянная шапка разделяют три уровня без потери навигации; ТЗ v1.2 согласовано; hosted title остаётся прежним, целевой UI ещё не принят |
+| A18 | Изоляция owner/workspace | NOT_STARTED | Позже: persistent owner/workspace migration; package IDs — сейчас | 2 / редакторский этап | Миграция сохраняет IDs/revisions; нет доступа к другому owner/workspace; В исходной схеме workspace_id отсутствует |
 
-## Незавершённые проверки и продолжение
+Ни один A-критерий не имеет VERIFIED. A16/A17 сохраняют IN_PROGRESS как прежнее частичное evidence, не утверждение о новом reader/calculator. B и D ещё не проверялись.
 
-| ID | Что уже установлено | Что ещё нужно | Условие продолжения |
-| --- | --- | --- | --- |
-| CHECK-WORKSPACE-MIGRATION | Существуют owner-only keys и immutable revisions | Проект owner/workspace и повторяемая миграция на копии | Этап 1; доступна тестовая копия legacy payload/versions |
-| CHECK-SNAPSHOT-API | Прочитаны registry/weekly/recalculation schemas и source SHA | Единый валидатор и прямые отрицательные API-тесты | Этап 2; без нового ресерча и изменения исторических JSON |
-| CHECK-HOSTED-PERSISTENCE | Site active/version 2; authenticated browser flow не проверен | Вход, save/reload, конфликт вкладок, backup/restore | Реализован релизный кандидат, сохранённая сессия владельца и отдельное поручение на публикацию при её необходимости |
-| CHECK-UI-ACCESSIBILITY | Проверена структура исходников; дизайн включён в план, runtime не принят | D01–D06: контраст, бренд, RU/EN, 1440/1280/768/390px, 200% zoom, keyboard/focus, формы, состояния и CSV | Этапы 6–7 на собранной версии; фиксировать конкретный SHA и evidence |
-| CHECK-SOURCE-FRESHNESS | Встроенный снимок датирован и provenance PR отделена | Проверять freshness при новом cutoff, не повторять прежний экономический аудит | Новый импорт или конкретное новое существенное первичное раскрытие/доказанная ошибка |
+## Формат evidence
 
-Эти записи — журнал работ приложения. Они не создают повторные исследовательские события или новые проверки тех же экономических фактов.
+Criterion ID; дата/проверяющий; environment (reference Python/local/CI/hosted URL/version); exact product commit SHA; source/target dataset commits и manifest hash; input/model/policy/code versions и evaluation_as_of; команда/сценарий; expected/actual; ссылка на лог/артефакт; unresolved/next action.
+
+Для migration дополнительно source→target manifest/hash reconciliation и cutover target commit. Для parity — оба engine versions, golden input hash и полный diff результата/ошибок. Для reload — ключ кэша, сохранность локального/опубликованного различия и отсутствие remote writes.
+
+## Исторический журнал
+
+| Проверка | SHA/период | Результат / предел |
+| --- | --- | --- |
+| Этап 0, исходный baseline | a1a43736d44110179ef73ea2009c74ea19534074, 11.11.2026 | check/TypeScript/build PASS; продуктовая/hosted приёмка PENDING |
+| Согласование RU/EN и дизайна | develop@3463946f72dae1ad0b55f105f0242e34710a8520 | Документы связаны; runtime/data не менялись |
+| 0R: назначение/источник/пересчёт | Документальная редакция 21.11.2026 | Первая версия пересогласована; перенос/вычислительный порт/приёмка не выполнены |
+
+## Продолжение
+
+| Проверка | Что установлено | Следующее действие |
+| --- | --- | --- |
+| CHECK-MIGRATION-CUTOVER | Источник ещё AI_CapEx_Reversal; target canonical после сверки согласован | Этап 1: полный manifest, перенос, hashes/ссылки/ID, запись cutover |
+| CHECK-REPORT-CONTENT | Seed содержит metadata; это не полный архив | Этапы 1–2, 4: текст/вложения/index и reader |
+| CHECK-CALCULATOR-PARITY | Python имеет чистый reviewed-input evaluator; dated one-off не универсален | Этап 3: pin reference/dependencies, browser port/golden vectors |
+| CHECK-MANUAL-GITHUB-SYNC | Ручной GitHub commit→package→import процесс определён | Этап 2: два revisions, no-op/invalid/partial/reload |
+| CHECK-READER-ACCESS | Site custom access/identity/D1 существуют | Этап 7: прежний доступ/записи не потеряны; reader/calculator hosted scenario |
+| CHECK-UI-ACCESSIBILITY | Концепция обзора есть, другие макеты и внедрение pending | D0/D1/D2/D3 и D01–D06 |
+| CHECK-WORKSPACE-MIGRATION | Owner-only legacy keys без workspace_id известны | Отложено до редакторской версии; сейчас не удалять records |
+| CHECK-SOURCE-FRESHNESS | Источники и cutoff датированы | Новый принятый пакет/as_of, без нового ресерча по одному refresh |
+
+Эти записи относятся к разработке приложения; они не создают новых экономических событий или новых выводов Challenger.

@@ -1,6 +1,8 @@
-# WTF Viewer — исходное состояние реализации
+# WTF Viewer — исходное состояние реализации (исторический baseline)
 
 Дата проверки: 11 ноября 2026, Asia/Jerusalem. Этап 0: COMPLETE. Функциональная приёмка: PENDING.
+
+**Дополнение 21.11.2026:** этот документ сохраняет факты проверки 11 ноября. Требования и прежний следующий шаг заменены [решениями 1.1–1.4](PHASE1_SCOPE_DECISIONS_RU.md) и новым [планом v1.2](UPDATE_PLAN_RU.md); кодовые evidence не пересозданы. См. §8.
 
 ## 1. Область фиксации
 
@@ -33,7 +35,7 @@ Production D1 не выгружалась и не изменялась. Коли
 
 ## 3. Снимок исследования и происхождение
 
-Канонический источник: HelsingN/AI_CapEx_Reversal. Main прочитан на 6101a36bab3657fd0fcfc1cb8be06e17f36e938d; он совпадает с исходным SHA встроенного снимка. Это совпадение на момент проверки, не постоянная live-синхронизация.
+Канонический источник на момент baseline 11.11.2026: HelsingN/AI_CapEx_Reversal. Main прочитан на 6101a36bab3657fd0fcfc1cb8be06e17f36e938d; он совпадает с исходным SHA встроенного снимка. Это совпадение на момент проверки, не постоянная live-синхронизация.
 
 В lib/seed.json захват отмечен 2026-11-11T15:26:36.242Z. Он содержит 38 событий, 4 артефакта расчёта, 24 записи отчётов и 13 PR-снимков. Это состав исходного среза, не константы приложения и не проверка истинности каждой первичной публикации.
 
@@ -96,8 +98,25 @@ Build предупреждает о неполной статической кл
 
 Не завершено: функциональные этапы 1–7 и пользовательская приёмка. Этап 0 закрывает исходную точку, не соответствие всего приложения ТЗ. Приложение, D1, Sites audience и исследовательский репозиторий не менялись.
 
-Следующее действие: этап 1 — проект owner/workspace keys, schema-version envelope и миграции существующего payload/history с проверкой на копии. Перед production-изменением нужен проверенный backup/restore; отсутствие такого backup сейчас записано явно, а не скрыто как выполненная проверка.
+Следующее действие по прежнему scope (заменено редакцией 21.11.2026, см. §8): этап 1 — проект owner/workspace keys, schema-version envelope и миграции существующего payload/history с проверкой на копии. Перед production-изменением нужен проверенный backup/restore; отсутствие такого backup сейчас записано явно, а не скрыто как выполненная проверка.
 
 ## English summary
 
 Stage 0 is complete: specification v1.2 matches the imported prototype and the owner's open-research instruction; source contracts and exact versions are recorded; A01–A18 acceptance remains pending. Runtime/config files matched the baseline commit and existing contract, TypeScript and build checks passed. UI label Challenger 2.1 must not overwrite the source artifact's model/cohort identifiers. This was a documentation-only stage: no application change, database migration, research recalculation, merge or Sites deployment occurred.
+
+
+## 8. Дополнение 21 ноября 2026: новая область первой версии
+
+Согласованы [решения 1.1–1.4](PHASE1_SCOPE_DECISIONS_RU.md). Первая версия — полный reader исследований/daily/weekly и импортированных статусов, ручная GitHub WTF-Viewer→package→Viewer синхронизация и детерминированный пересчёт по запросу/reload. Редактор заметок/отчётов, решения и новая D1 owner/workspace миграция отложены.
+
+Основным источником после проверенной миграции становится WTF-Viewer; AI_CapEx_Reversal сохраняет исходную историю. На момент этой документальной сверки перенос не выполнен, поэтому §3 описывает действительное прежнее происхождение, а не вечное ограничение.
+
+Прочитаны product develop@3463946f72dae1ad0b55f105f0242e34710a8520 и source main@1aa948be4c9c76844e9b407b981caacea94b24b3. В lib/seed.json 24 report-карточки имеют metadata/path/status, а не полные тексты. Source tree содержит 19 daily и 8 weekly по указанным в решениях шаблонам; это не законченная инвентаризация приложений/архивов.
+
+Python src/scoring/challenger_v2.py (blob 98b01d34e77a163b5409f48ab3edd78a88aad48f) предоставляет evaluate_challenger_v2(reviewed snapshot), read-only CLI — 619e56cf7495d870d14936cf3dec33ec115a42d6. One-off full-recalculation (d122dafd2c344eedefbd2cede7bd2ceecae5bbc6) привязан к датам/файлам. Ядро и policy/input parity ещё не портированы/не запускались в этой сверке.
+
+Прежнее правило §5 «панель не исполняет evaluate» описывает старую область прототипа. Новое требование — браузерная реализация той же модели с parity к Python; это будущая реализация, не уже существующая возможность Worker и не автоматическая квалификация текстов.
+
+Site по прочитанным метаданным: active, version 2, custom access. Аудитория/identity/D1 сохраняются; «будущая авторизация» относится к редакторским операциям. Новые backup/migration/editing сценарии не принимаются за готовые.
+
+Статусы новых B01–B10 и D01–D06 — NOT_STARTED, прежние A evidence сохранены. Документальное 0R завершено; следующий функциональный шаг — migration manifest/перенос. Runtime-код, данные, источники, расписания и Sites не изменены; тесты/новый пересчёт/deploy не запускались.
