@@ -8,3 +8,81 @@
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 
 @media(max-width:760px){.sidebar{visibility:hidden}.sidebar.show{visibility:visible}}
+
+.research-shell {
+  --reader-surface: #151522;
+  --reader-border: #45445c;
+  --reader-text: #f4f2fc;
+  --reader-secondary: #c5c1d6;
+  --reader-accent: #d2baff;
+  min-height: 100vh;
+  color: var(--reader-text);
+  font-size: 1rem;
+}
+.research-shell a { color: var(--reader-accent); }
+.research-shell :focus-visible { outline: 2px solid var(--reader-accent); outline-offset: 3px; }
+.research-header, .research-header-actions, .research-actions, .research-nav, .research-source {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .75rem 1rem;
+}
+.research-header, .research-source { justify-content: space-between; }
+.research-header { padding: .8rem clamp(1rem, 4vw, 4rem); border-bottom: 1px solid var(--reader-border); }
+.research-header .brand { padding: 0; border: 0; color: var(--reader-text); }
+.research-main { width: min(100%, 80rem); margin: auto; padding: 2rem clamp(1rem, 4vw, 3rem) 4rem; }
+.research-main .page-intro { align-items: end; gap: 1rem; flex-wrap: wrap; }
+.research-main .eyebrow { color: var(--reader-secondary); }
+.research-main button { min-height: 2.75rem; font-size: .875rem; }
+.research-main button:disabled { opacity: .55; cursor: default; }
+.research-source, .research-main .research-preview {
+  border: 1px solid var(--reader-border);
+  background: var(--reader-surface);
+  border-radius: .6rem;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.research-main .research-preview h2 { margin: 0 0 .75rem; font-size: 1.25rem; }
+.research-main .research-preview p { overflow-wrap: anywhere; }
+.research-source small, .research-list small, .research-facts small { display: block; color: var(--reader-secondary); font-size: .875rem; }
+.research-source, .research-facts, .research-list, .research-path { overflow-wrap: anywhere; }
+.research-nav { margin: 1rem 0; border-bottom: 1px solid var(--reader-border); }
+.research-nav a { color: var(--reader-secondary); padding: .65rem .25rem; }
+.research-nav a[aria-current] { color: var(--reader-text); border-bottom: 2px solid var(--reader-accent); }
+.research-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem 1.25rem; margin: 1rem 0; }
+.research-facts dt { color: var(--reader-secondary); font-size: .875rem; }
+.research-facts dd { margin: 0; }
+.research-search { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem; }
+.research-search input { min-height: 2.75rem; max-width: 100%; font-size: 1rem; }
+.research-list { list-style: none; padding: 0; }
+.research-list li { padding: .8rem 0; border-bottom: 1px solid var(--reader-border); }
+.research-list .research-file { text-align: left; white-space: normal; border: 0; background: transparent; color: var(--reader-text); font-size: 1rem; padding: 0; }
+.research-list .research-file svg { flex-shrink: 0; }
+.research-status, .research-attachments { margin-top: .5rem; }
+.research-message, .research-path { color: var(--reader-secondary); }
+.research-text { white-space: pre-wrap; overflow-wrap: anywhere; font-size: .9rem; line-height: 1.65; }
+.research-attachments li { margin: .4rem 0; }
+.research-attachments button { max-width: 100%; white-space: normal; overflow-wrap: anywhere; }
+@media (max-width: 40rem) {
+  .research-facts { grid-template-columns: 1fr; }
+  .research-header { align-items: flex-start; }
+}
+.research-shell { background: #0e0e17; }
+.research-shell .brandmark { background: #d2baff; color: #221337; }
+.research-shell .brand-sub { color: var(--reader-secondary); }
+.research-shell code { color: inherit; font-size: .875rem; }
+.research-main button, .research-main input {
+  color: var(--reader-text);
+  background: #222135;
+  border-color: var(--reader-border);
+}
+.research-main button:hover:not(:disabled) { background: #312748; }
+.research-main .page-intro .research-actions button:first-child,
+.research-main .research-preview > .research-actions button:first-child {
+  color: #211533;
+  background: #d2baff;
+}
+.research-main .page-intro .research-actions button:first-child:hover:not(:disabled),
+.research-main .research-preview > .research-actions button:first-child:hover:not(:disabled) { background: #e4d4ff; }
+.research-main .alert { font-size: .9rem; overflow-wrap: anywhere; }
+.research-main .alert small { font-size: .875rem; }
