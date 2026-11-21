@@ -86,3 +86,10 @@
 .research-main .research-preview > .research-actions button:first-child:hover:not(:disabled) { background: #e4d4ff; }
 .research-main .alert { font-size: .9rem; overflow-wrap: anywhere; }
 .research-main .alert small { font-size: .875rem; }
+
+.challenger-form {
+  display: grid;
+  gap: 0.75rem;
+}
+.challenger-form p { margin-block: 0; }
+.challenger-form input { width: min(100%, 22rem); font-family: ui-monospace, monospace; }

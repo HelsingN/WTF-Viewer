@@ -2,6 +2,7 @@ import { execFileSync } from "node:child_process";
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { gzipSync } from "node:zlib";
+import { evaluateAt, prepareChallengerInput } from "../lib/challenger-calculation.ts";
 import {
   codePath, fileDigest, maxPackageBytes, modelVersion, packageHash, packageSchema, policyVersion,
   readPackage, refSchema, repository, workspace,
@@ -59,6 +60,9 @@ const manifest = {
 const hash = await packageHash(manifest);
 const text = JSON.stringify({ schema: packageSchema, hash, manifest, files }) + "\n";
 const verified = await readPackage(text);
+const calculatorInput = prepareChallengerInput(verified);
+if (calculatorInput.state === "invalid") throw Error("Challenger snapshot cutoff requires an identical valid as_of");
+if (calculatorInput.state === "ready") evaluateAt(calculatorInput, calculatorInput.cutoff);
 mkdirSync(dirname(output), { recursive: true });
 writeFileSync(output, output.endsWith(".gz") ? gzipSync(text, { level: 9 }) : text);
 console.log(`${commit} · ${verified.manifest.files.length} files · ${verified.reports.length} reports · ${verified.events.length} events · SHA-256 ${hash}`);

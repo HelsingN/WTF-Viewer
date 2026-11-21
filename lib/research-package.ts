@@ -112,9 +112,9 @@ const snapshotSchema = z.object({
     as_of: time,
     cohort_frozen_at: time,
     cohort_version: z.literal(modelVersion),
-    core: z.object({ R1: z.object({}).passthrough(), R2: z.object({}).passthrough(), R4: z.object({}).passthrough() }),
+    core: z.object({ R1: z.object({}).passthrough(), R2: z.object({}).passthrough(), R4: z.object({}).passthrough() }).strict(),
     events: z.array(z.object({}).passthrough()),
-  }),
+  }).passthrough(),
   published_result: z.object({ calibration: z.literal("UNCALIBRATED"), trading_signal: z.literal(false) }).passthrough(),
   unresolved: z.record(z.object({}).passthrough()),
 });
@@ -154,7 +154,7 @@ function unique<T>(items: readonly T[], key: (item: T) => string, context: strin
   }
 }
 
-function canonical(value: unknown, depth = 0): string {
+export function canonical(value: unknown, depth = 0): string {
   if (depth > 64) throw new PackageError("schema", "excessive nesting");
   if (Array.isArray(value)) return `[${value.map(item => canonical(item, depth + 1)).join(",")}]`;
   if (value && typeof value === "object") {

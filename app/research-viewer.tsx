@@ -6,6 +6,7 @@ import {
   bundledPackageUrl, comparePackages, decodeBase64, indexPath, maxPackageBytes, migrationPath, PackageError, readPackage, targetLink,
 } from "@/lib/research-package";
 import type { ResearchPackage } from "@/lib/research-package";
+import { ChallengerPanel } from "./challenger-panel";
 import { LocalPackageConflict, readLocalPackage, writeLocalPackage } from "@/lib/research-package-cache";
 
 type Lang = "ru" | "en";
@@ -13,6 +14,7 @@ type Active = { text: string; data: ResearchPackage; selectedAt?: string };
 type Preview = Active & { name: string; same: boolean };
 const sections = [
   ["overview", "Обзор", "Overview"],
+  ["challenger", "Challenger", "Challenger"],
   ["daily", "Ежедневные", "Daily reports"],
   ["weekly", "Еженедельные", "Weekly reports"],
   ["research", "Исследования", "Research"],
@@ -347,7 +349,9 @@ export default function ResearchViewer() {
           {facts(data)}
           <p><a href={targetLink(data.manifest.target.commit, indexPath)} target="_blank" rel="noreferrer">{t("Индекс отчётов", "Report index")} <ArrowUpRight size={14}/></a>
             {" · "}<a href={targetLink(data.manifest.target.commit, migrationPath)} target="_blank" rel="noreferrer">{t("Происхождение перенесённых файлов", "Provenance of migrated files")} <ArrowUpRight size={14}/></a></p>
-        </section> : <section className="panel research-preview" id={section}>
+        </section> : section === "challenger"
+          ? <ChallengerPanel key={data.hash} pack={data} lang={lang} local={Boolean(selected)} download={download} />
+          : <section className="panel research-preview" id={section}>
           <h2>{sections.find(([key]) => key === section)?.[lang === "ru" ? 1 : 2]}</h2>
           <label className="research-search"><span>{t("Поиск", "Search")}</span><input value={query} onChange={e => setQuery(e.target.value)}/></label>
           {(section === "daily" || section === "weekly") && (reports.length ? <ul className="research-list">{reports.map(report =>
