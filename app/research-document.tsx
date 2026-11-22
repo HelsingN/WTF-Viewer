@@ -42,6 +42,6 @@ export function ResearchDocument({ pack, path, open, unavailable, text }: {
         return destination ? <a href={destination} target="_blank" rel="noreferrer">{children}</a>
           : <span title={unavailable}>{children} <small>({unavailable})</small></span>;
       },
-      table: ({ children }) => <div className="research-table-scroll" tabIndex={0}><table>{children}</table></div>,
+      table: ({ children }) => <div className="research-table-scroll" tabIndex={0} role="region" aria-label="Markdown"><table>{children}</table></div>,
     }}>{text}</Markdown></div>;
 }

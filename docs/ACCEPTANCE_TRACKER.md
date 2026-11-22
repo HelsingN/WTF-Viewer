@@ -23,18 +23,18 @@
 | B07 | Численная совместимость с Python | VERIFIED (local) | 3, 7 | 39 полных результатов/ошибок совпали с Python, включая пять исторических артефактов. Повторить на релизном SHA. [Проверка](CHALLENGER_CALCULATION.md#проверка-этапа-3) |
 | B08 | Честная полнота, статусы и происхождение | VERIFIED (local) | 4, 5 | Проверены четыре даты, локальный и исторические расчёты, покрытие и источники, provenance PR, макроранги и совокупный эффект. [Проверка](RESEARCH_CONTEXT.md) |
 | B09 | Сохранность доступа и старых данных | NOT_STARTED | 0R, 7 | Audience/identity/D1/история не удалены; никаких write credentials в клиенте; reviewer функции первой версии не выполняют серверную запись |
-| B10 | Рабочий двуязычный reader | NOT_STARTED | 6, 7 | RU/EN, фильтры/поиск/CSV, GitHub links, полные тексты, loading/empty/error, desktop/mobile, отсутствие ошибок рендера и безопасное отображение Markdown |
+| B10 | Рабочий двуязычный reader | VERIFIED (local) | 6, 7 | RU/EN, фильтры/поиск/CSV, GitHub links, полные тексты, loading/empty/error, desktop/mobile, отсутствие ошибок рендера и безопасное отображение Markdown [Проверка этапа 6](design/STAGE6_D2.md) |
 
 ## D01–D06 — обязательная приёмка редизайна
 
 | ID | Критерий | Статус | Этап | Evidence |
 | --- | --- | --- | --- | --- |
-| D01 | Общие токены и WTF Viewer → AI CapEx Signals → Challenger 2.1 | NOT_STARTED | D0, 3–6; итог 7 | Нейтральные тёмные поверхности, читаемый текст, фиолетовые actions/selection и правильный бренд |
-| D02 | Контраст и типографика | NOT_STARTED | D0, 6–7 | CSS foreground/background/state: 4.5:1 ordinary, 3:1 large и необходимые non-text cues в применимых случаях; 16/14px, rem, 200% zoom |
-| D03 | Раздельная семантика | NOT_STARTED | 3–7 | Severity/qualification/direction/coverage/freshness/recalc и импортированные CI/review/merge; UNKNOWN/interval без подстановок |
-| D04 | RU/EN, клавиатура и состояния reader | NOT_STARTED | 6–7 | Focus/modal/Markdown/import/calculation, reduced motion, loading/empty/error/success; контекст чтения/фильтров сохраняется |
-| D05 | Responsive и доступ к данным | NOT_STARTED | 6–7 | 1440/1280/768/390px, 200% zoom, длинные тексты, внутренний scroll таблиц, отсутствие перекрытий |
-| D06 | Достоверный обзор и сохранность материала | NOT_STARTED | 3–7 | Published vs LOCAL/UNPUBLISHED, input hash/as_of/cutoff, полноценные файлы/ссылки/история и реальные импортированные статусы; DEMO не в рабочем наборе |
+| D01 | Общие токены и WTF Viewer → AI CapEx Signals → Challenger 2.1 | VERIFIED (local) | D0, 3–6; итог 7 | Нейтральные тёмные поверхности, читаемый текст, фиолетовые actions/selection и правильный бренд [Проверка этапа 6](design/STAGE6_D2.md) |
+| D02 | Контраст и типографика | VERIFIED (local) | D0, 6–7 | CSS foreground/background/state: 4.5:1 ordinary, 3:1 large и необходимые non-text cues в применимых случаях; 16/14px, rem, 200% zoom [Проверка этапа 6](design/STAGE6_D2.md) |
+| D03 | Раздельная семантика | VERIFIED (local) | 3–7 | Severity/qualification/direction/coverage/freshness/recalc и импортированные CI/review/merge; UNKNOWN/interval без подстановок [Проверка этапа 6](design/STAGE6_D2.md) |
+| D04 | RU/EN, клавиатура и состояния reader | VERIFIED (local) | 6–7 | Focus/modal/Markdown/import/calculation, reduced motion, loading/empty/error/success; контекст чтения/фильтров сохраняется [Проверка этапа 6](design/STAGE6_D2.md) |
+| D05 | Responsive и доступ к данным | VERIFIED (local) | 6–7 | 1440/1280/768/390px, 200% zoom, длинные тексты, внутренний scroll таблиц, отсутствие перекрытий [Проверка этапа 6](design/STAGE6_D2.md) |
+| D06 | Достоверный обзор и сохранность материала | VERIFIED (local) | 3–7 | Published vs LOCAL/UNPUBLISHED, input hash/as_of/cutoff, полноценные файлы/ссылки/история и реальные импортированные статусы; DEMO не в рабочем наборе [Проверка этапа 6](design/STAGE6_D2.md) |
 
 Крупный текст: от 24 CSS px regular либо 18.67 bold. Цель 7:1 primary text желательна, не дополнительный blocker. PNG не является evidence runtime или численной точности. Кнопка «Новый отчёт», сохранение заметок и редакторский draft не требуются для D04 текущего выпуска.
 
