@@ -156,7 +156,7 @@ for case in json.load(sys.stdin):
         results.append({"error": str(exc)})
 print(json.dumps(results, ensure_ascii=False))
 `, reference], { input: JSON.stringify(vectors), encoding: "utf8", maxBuffer: 4_000_000 });
-assert.equal(python.status, 0, python.error?.message ?? python.stderr);
+assert.equal(python.status, 0, python.stderr?.trim() || python.error?.message || "Python reference did not complete");
 const expected = JSON.parse(python.stdout);
 assert.equal(expected.length, vectors.length);
 for (const [i, vector] of vectors.entries()) {
