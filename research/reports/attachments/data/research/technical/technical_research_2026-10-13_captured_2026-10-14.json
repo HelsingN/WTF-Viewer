@@ -1,0 +1,118 @@
+{
+  "schema": "ai-capex.technical-research.v1",
+  "scope": "RESEARCH_ONLY_PROVIDER_RECONSTRUCTION",
+  "technical_version": "technical-v1",
+  "bar_date": "2026-10-13",
+  "canonical_tradingview_signal": false,
+  "runtime_ingested": false,
+  "source": {
+    "provider": "Massive",
+    "adjusted": true,
+    "requested_from": "2025-06-01",
+    "requested_to": "2026-10-13",
+    "retrieved_on": "2026-10-14",
+    "csv_columns": [
+      "t",
+      "c",
+      "h"
+    ],
+    "endpoint_template": "/v2/aggs/ticker/{ticker}/range/1/day/2025-06-01/2026-10-13",
+    "query_params": {
+      "adjusted": true,
+      "sort": "asc",
+      "limit": 5000
+    },
+    "series": {
+      "SMH": {
+        "rows_used": 344,
+        "first_date": "2025-06-02",
+        "last_date": "2026-10-13",
+        "csv_sha256": "6437d6d1bc41265ca91b1e6f98b12a7c20db2dd1a1d5b22bbcdb9a6567d94a64"
+      },
+      "SPY": {
+        "rows_used": 344,
+        "first_date": "2025-06-02",
+        "last_date": "2026-10-13",
+        "csv_sha256": "8f84545f90d44329d0a186754504193bb9293b2797f106b7200bddd0a15a6126"
+      },
+      "NVDA": {
+        "rows_used": 344,
+        "first_date": "2025-06-02",
+        "last_date": "2026-10-13",
+        "csv_sha256": "0f9c1cd31e618474e4c35a220f650ff6b974816aa555807e3cb28080e48e68ca"
+      },
+      "AMD": {
+        "rows_used": 344,
+        "first_date": "2025-06-02",
+        "last_date": "2026-10-13",
+        "csv_sha256": "bef2a3bf5574143c154c105168196709ff1d07b68c5357b87fde2d5fe668e79e"
+      },
+      "AVGO": {
+        "rows_used": 344,
+        "first_date": "2025-06-02",
+        "last_date": "2026-10-13",
+        "csv_sha256": "617c3dc75f51bae75800682fe33ecf11d34ab2f3f79ed62283215d8b3866859a"
+      },
+      "MU": {
+        "rows_used": 344,
+        "first_date": "2025-06-02",
+        "last_date": "2026-10-13",
+        "csv_sha256": "1101883293682880d4b702920ff7227eb77d58ce6cf17b51c4d7db2fa88c38db"
+      }
+    }
+  },
+  "all_dates_aligned": true,
+  "warmup_required": 252,
+  "close": 588.12,
+  "ma50": 580.1004,
+  "ma200": 508.49550000000005,
+  "smh_below_ma50": false,
+  "smh_below_ma200": false,
+  "ma50_slope_20d_pct": 2.338596743161525,
+  "ma200_slope_20d_pct": 5.0214428421677,
+  "high_252": 671.83,
+  "drawdown_pct": -12.459997320750793,
+  "rs": 0.7559285870361564,
+  "rs_ma50": 0.7546525432810217,
+  "rs_ma50_slope_20d_pct": 1.044139104844155,
+  "relative_strength_state": "UP",
+  "breadth": [
+    {
+      "ticker": "NVDA",
+      "close": 228.52,
+      "ma50": 223.0264,
+      "weak": false
+    },
+    {
+      "ticker": "AMD",
+      "close": 605.53,
+      "ma50": 533.7003,
+      "weak": false
+    },
+    {
+      "ticker": "AVGO",
+      "close": 357.31,
+      "ma50": 370.47900000000004,
+      "weak": true
+    },
+    {
+      "ticker": "MU",
+      "close": 953.19,
+      "ma50": 981.9801,
+      "weak": true
+    }
+  ],
+  "breadth_weak_count": 2,
+  "points": {
+    "ma50": 0,
+    "ma200": 0,
+    "ma50_slope": 0,
+    "ma200_slope": 0,
+    "drawdown": 5,
+    "rs": 0,
+    "breadth": 10
+  },
+  "technical_score": 15,
+  "technical_regime": "NORMAL",
+  "captured_at": "2026-10-14T05:52:22.620484+00:00"
+}

@@ -1,0 +1,76 @@
+{
+  "blocks": {
+    "challenger_v2": {
+      "freshness": "2026-11-18T08:28:44+02:00",
+      "status": "PARTIAL",
+      "unknowns": [
+        "R4/MSFT",
+        "R4/GOOGL"
+      ]
+    },
+    "champion": {
+      "freshness": "2026-11-17 US close",
+      "status": "PARTIAL",
+      "unknowns": [
+        "Combined Score",
+        "canonical F2 utilization/renewals",
+        "full Asia leadership panel"
+      ]
+    },
+    "event_registry": {
+      "freshness": "47 canonical events through 2026-11-13; 2026-11-17 draft checked",
+      "status": "PARTIAL",
+      "unknowns": [
+        "2026-11-17 NVIDIA HIGH remains REGISTRATION_PENDING in PR #229"
+      ]
+    },
+    "gpu_compute": {
+      "freshness": "2026-11-17",
+      "status": "PARTIAL",
+      "unknowns": [
+        "utilization",
+        "renewals",
+        "comparable contract duration"
+      ]
+    },
+    "hyperscaler_cash_capex": {
+      "freshness": "latest five issuer quarters rechecked 2026-11-18",
+      "status": "CARRIED_RECHECKED",
+      "unknowns": []
+    },
+    "institutional": {
+      "freshness": "CFTC 2026-11-10; market 2026-11-17",
+      "status": "PARTIAL",
+      "unknowns": [
+        "prime broker full panel",
+        "lending/shorts"
+      ]
+    },
+    "macro_pain": {
+      "freshness": "rates 2026-11-17; OAS 2026-11-13",
+      "status": "PARTIAL",
+      "unknowns": [
+        "CPI YoY",
+        "CRB same-variant history",
+        "AI-sector OAS"
+      ]
+    },
+    "memory_semis_networking": {
+      "freshness": "2026-11-18 01:36 UTC",
+      "status": "PARTIAL",
+      "unknowns": [
+        "sell-through outside enterprise SSD",
+        "double ordering"
+      ]
+    }
+  },
+  "captured_at": "2026-11-18T08:52:00+02:00",
+  "change_vs_previous": "Physical cycle remains resilient overall, but enterprise SSD order cuts create the first confirmed segment-level memory weakness; financial dependence and macro rates worsen while current signed-event adjustment resets to zero after expiry without new evidence.",
+  "cutoff": "2026-11-18T08:28:44+02:00",
+  "data_status": "PARTIAL",
+  "legacy_v1_validator_applicable": false,
+  "report_date": "2026-11-18",
+  "schema": "ai-capex.weekly-coverage-manifest.v1",
+  "unresolved_count": 14,
+  "validator": "python scripts/research/validate_weekly_challenger_v2.py --latest"
+}

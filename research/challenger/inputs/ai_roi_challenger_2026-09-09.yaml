@@ -1,0 +1,126 @@
+schema: ai-capex.roi-challenger-shadow.v1
+as_of: 2026-09-09
+status: RESEARCH_SHADOW
+trading_authority: NONE
+model_contract: Docs/AI_ROI_CHALLENGER_MODEL_v1.md
+context_contract: Docs/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md
+champion_strategy: Docs/AI_CapEx_Reversal_Strategy_v1.2.md
+source_research:
+  - Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-09.md
+
+champion_reference:
+  decision_state: WATCH
+  reversal_state: NOT_CONFIRMED
+  trade_candidate: NO_CANDIDATE
+  numeric_combined_score: UNKNOWN_NOT_RECOMPUTED_HERE
+
+challenger:
+  score: 45.0
+  state: ELEVATED
+  causal_stage: STAGE_3_FUNDING_DEPENDENCE_RISING
+  divergence_class: CHALLENGER_EARLY_WARNING
+
+components:
+  R1_monetization_vs_capex:
+    level: 1
+    weight: 20
+    contribution: 10.0
+    rationale: >-
+      AI/cloud demand remains strong, but CapEx is expanding faster than near-term
+      cash generation at several hyperscalers. This is a partial warning, not a
+      confirmed monetization failure.
+
+  R2_cash_conversion_fcf:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: >-
+      Amazon TTM FCF is negative, Meta quarterly FCF is near zero, and Alphabet
+      quarterly CapEx exceeded OCF, while Microsoft remains materially healthier.
+      Pressure is confirmed in parts of the group but not broad enough for level 2.
+
+  R3_payback_duration_project_economics:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: >-
+      Direct public evidence that expected AI payback periods are lengthening is
+      still limited. Increasing ROI sensitivity, financing burden and cash pressure
+      justify WATCH only.
+
+  R4_financing_refinancing_dependence:
+    level: 1
+    weight: 20
+    contribution: 10.0
+    rationale: >-
+      Financing dependence is high and CoreWeave credit-market indicators have
+      deteriorated, while large AI borrowers continue to access capital. Funding is
+      more important and selective, but there is no broad financing shutdown.
+
+  R5_backlog_contract_quality:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Customer concentration, long-duration commitments and backlog-quality concerns
+      are material, but broad cancellations or deterioration are not confirmed.
+
+  R6_capacity_funnel_ghost_demand:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: >-
+      Very large grid-requested data-center pipelines and project attrition after
+      stronger deposit/verification requirements create a real capacity-quality
+      warning. This is not equivalent to energized or profitable demand.
+
+  R7_project_attrition:
+    level: 0
+    weight: 10
+    contribution: 0.0
+    rationale: >-
+      No broad, independently confirmed wave of marginal AI data-center project
+      cancellations, restructurings or capacity release is present.
+
+physical_confirmation:
+  P1_gpu_compute:
+    state: WATCH
+    rationale: >-
+      Some rental-price normalization is visible, especially for older GPUs, but the
+      required combination of price down + availability up + utilization/renewals
+      down is not broadly confirmed.
+  P2_memory:
+    state: ANTI_REVERSAL
+    rationale: >-
+      HBM/server memory remains tight, supplier inventories are low and contract
+      pricing remains positive despite slower rate of increase.
+  P3_semiconductor_networking:
+    state: ANTI_REVERSAL
+    rationale: >-
+      NVIDIA/Cisco/HPE evidence remains consistent with strong physical demand and
+      expanding infrastructure orders rather than a bookings collapse.
+  P4_market_technical:
+    state: UNKNOWN
+    rationale: >-
+      No new canonical technical-v1 / leadership snapshot is recomputed in this
+      challenger baseline.
+
+interpretation: >-
+  The challenger is intentionally more cautious than the champion because it is
+  designed to detect a financial-first deterioration before physical overcapacity.
+  Current divergence is early and research-only: strong physical demand coexists
+  with weaker cash conversion, high financing dependence, neocloud credit stress
+  and capacity-quality concerns. There is no trade authority and no change to
+  F1..F5 or Combined Score.
+
+forward_outcomes:
+  two_weeks: PENDING
+  four_weeks: PENDING
+  eight_weeks: PENDING
+  twelve_weeks: PENDING
+  next_hyperscaler_earnings_cycle: PENDING
+
+notes: >-
+  Provisional R1..R7 levels follow AI_ROI_CHALLENGER_MODEL_v1. Challenger score
+  thresholds are frozen for shadow evaluation. Historical outcomes must be filled
+  later without rewriting this point-in-time observation.

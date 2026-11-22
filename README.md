@@ -4,11 +4,21 @@ Research and monitoring workspace for events, evidence, analytical models, repor
 
 **First workspace:** AI CapEx Signals. **Model:** Challenger 2.1.
 
-## Status
+## Status and phase-one scope
 
-This repository contains the source of the existing Sites prototype, imported on 11 November 2026, and the [RU/EN product specification](docs/SPEC_RU_EN.md). The specification describes the target product; importing the prototype does not mean all acceptance criteria are implemented.
+The working `develop` branch contains the verified migration of Challenger research and complete report files. The Sites prototype still serves its original snapshot.
 
-The source includes the original **dated research snapshot** from the existing Site. It is a historical import, not a live GitHub synchronization. Missing calculations and coverage remain UNKNOWN. Research remains canonical in [HelsingN/AI_CapEx_Reversal](https://github.com/HelsingN/AI_CapEx_Reversal); access may require authorization. User notes and the hosted database are not stored in this repository.
+Phase one v1.2 is a **reader for complete Challenger research, daily/weekly reports and imported workflow statuses**, with **deterministic on-demand/reload Challenger calculation from accepted structured inputs**. Site notes, report drafting, research decisions, persistent manual editing and GitHub write actions follow later editorial authorization.
+
+**Working source: HelsingN/WTF-Viewer, branch `develop`.** AI_CapEx_Reversal retains source history. [Research files and reports](research/README.md) · [Migration record](docs/RESEARCH_MIGRATION.md).
+
+First synchronization is manual: pinned GitHub WTF-Viewer commit → validated full-content package → user import. Local calculation/download is not publication. Automated package delivery and supported read-only Refresh come later. Existing private Site access, identity and D1 records are preserved.
+
+## Release plan
+
+[Решения 1.1–1.4](docs/PHASE1_SCOPE_DECISIONS_RU.md), [RU/EN specification v1.2](docs/SPEC_RU_EN.md) and [единый план выпуска](docs/UPDATE_PLAN_RU.md) define the revised delivery sequence: migration/cutover → packages/manual sync → Python-compatible browser calculation → complete research/report reader → coverage/context → bilingual adaptive UI → release checks.
+
+The integrated [design appendix/mockup](docs/design/README.md) remains part of v1.2; preserve WTF Viewer → AI CapEx Signals → Challenger 2.1. [Acceptance](docs/ACCEPTANCE_TRACKER.md) requires B01–B10 and D01–D06 for this phase; original A01–A18 retain their full-workspace backlog meanings. The original [baseline](docs/IMPLEMENTATION_BASELINE.md) remains historical; documentation rescoping 0R and the stage 1 migration to `develop` are complete. Package import and application implementation remain pending.
 
 ## Run locally
 
@@ -43,6 +53,7 @@ See [development details](docs/DEVELOPMENT.md) for the supplied Sites runtime he
 | `worker/`, `vite.config.ts` | Worker entry point and Vinext build |
 | `.openai/hosting.json` | Existing Sites project identity and storage binding; no credentials |
 | `docs/SPEC_RU_EN.md` | Product and technical specification |
+| `docs/PHASE1_SCOPE_DECISIONS_RU.md` | Revised reader/calculator scope, canonical migration and manual synchronization decisions |
 | `docs/SOURCE_IMPORT.md` | Import provenance, scope and verification |
 
 ## GitHub and Sites
@@ -51,10 +62,10 @@ GitHub is the development source: review changes and run checks here. Publishing
 
 Source code does not include a backup of D1 data, credentials or sharing settings. Keep secrets in runtime settings. Export and back up user records separately. Research data is intentionally public, as directed by the owner. Authentication credentials and runtime secrets must never be committed. User workspace exports and hosted database backups require a separate export operation.
 
-## Prototype limits
+## Current prototype limits (before the planned upgrade)
 
 - No live GitHub synchronization or repository mutations; statuses and links are manual.
-- Challenger is not executed here. Completed calculation artifacts can be imported; previous values cannot fill missing factors.
+- The current prototype imports completed calculation artifacts. On-demand/reload browser calculation is planned and requires parity with the pinned Python reference; it is not implemented yet. Previous values cannot fill missing factors.
 - Macro analysis, coverage and PR states are dated snapshots. Live updates are not implemented; freshness and current commit status require verification.
 - Per-user workspaces are persisted in D1 with revision checks and audit records.
 - Existing authorization headers depend on the Sites gateway. Another hosting provider needs its own trusted authentication layer.
@@ -67,3 +78,6 @@ Source code does not include a backup of D1 data, credentials or sharing setting
 В GitHub перенесены исходники существующего прототипа, схема БД и инструкции запуска. Включены исходный датированный снимок исследований и контекст незавершённых проверок. Данные исследований публикуются по указанию владельца. Пользовательские заметки и база опубликованного приложения не экспортировались. Перенос исходников не меняет действующий сайт и не включает автоматический деплой.
 
 Двуязычное [ТЗ](docs/SPEC_RU_EN.md) остаётся описанием целевого продукта. Работы по его полной реализации продолжаются только по отдельному поручению владельца.
+
+
+Актуальное назначение первой версии: просмотр полных исследований/ежедневных/еженедельных отчётов и импортированных статусов; ручное обновление из GitHub WTF-Viewer; пересчёт Challenger по проверенным входам по кнопке/reload. Текущий рабочий источник перенесённых материалов — WTF-Viewer `develop`. AI_CapEx_Reversal хранит исходную историю. Заметки, подготовка отчётов и редакторские решения — последующие версии с правами. Материалы доступны в [разделе исследований](research/README.md). Сайт пока использует встроенный исторический снимок.

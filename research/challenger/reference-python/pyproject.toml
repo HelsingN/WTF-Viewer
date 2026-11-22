@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-capex-reversal"
+version = "0.1.0"
+description = "AI CapEx Reversal — broker-independent, fail-closed Core SIM trading research system"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pydantic>=2.7",
+    "pydantic-settings>=2.4",
+    "python-dotenv>=1.0",
+    "fastapi>=0.115",
+    "tzdata>=2024.1",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2",
+    "httpx>=0.27",
+    "uvicorn>=0.30",
+]
+
+[project.scripts]
+ai-capex = "main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["main", "settings", "pipeline"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = [
+    "api*",
+    "data*",
+    "fundamentals*",
+    "leadership*",
+    "decision*",
+    "drivers*",
+    "proposals*",
+    "signals*",
+    "scoring*",
+    "strategies*",
+    "risk*",
+    "brokers*",
+    "execution*",
+    "reconciliation*",
+    "runtime*",
+    "notifications*",
+    "storage*",
+    "observability*",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+addopts = "-q"

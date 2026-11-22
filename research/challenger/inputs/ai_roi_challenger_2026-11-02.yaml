@@ -1,0 +1,126 @@
+# Post-hoc research reconstruction captured 2026-11-03; source availability strictly capped at 2026-11-02T16:00:00-05:00.
+# PARTIAL classification; not a canonical trade-time data bundle, no trading authority.
+schema: ai-capex.roi-challenger-shadow.v1
+as_of: '2026-11-02'
+status: PARTIAL_RESEARCH_SHADOW_REASSESSMENT
+trading_authority: NONE
+model_contract: Docs/AI_ROI_CHALLENGER_MODEL_v1.md
+context_contract: Docs/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md
+champion_strategy: Docs/AI_CapEx_Reversal_Strategy_v1.3.md
+source_research:
+  - Docs/research/AI_ROI_CHALLENGER_PIT_REASSESSMENT_2026-11-02.md
+  - Docs/research/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md
+  - Docs/research/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md
+  - Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-28.md
+  - Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-29.md
+  - Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-30.md
+  - https://github.com/HelsingN/AI_CapEx_Reversal/pull/110
+prior_observation:
+  - data/research/challenger/ai_roi_challenger_2026-10-14.yaml
+champion_reference:
+  decision_state: UNKNOWN
+  carried_research_state: WATCH
+  carried_as_of: '2026-10-14'
+  trade_candidate: NO_CANDIDATE
+  numeric_combined_score: null
+  fresh_canonical_decision: false
+  changed_by_this_observation: false
+challenger:
+  score: 67.5
+  state: ALERT
+  causal_stage: STAGE_5_PROJECT_ATTRITION
+  divergence_class: UNKNOWN
+  trading_signal: false
+  completeness: PARTIAL
+  score_sensitivity_if_R2_not_confirmed: [60.0, 67.5]
+components:
+  R1_monetization_vs_capex:
+    level: 1
+    weight: 20
+    contribution: 10.0
+    rationale: 'Strong Azure, Google Cloud, AWS and Anthropic revenue growth versus extreme capex; no broad monetization deceleration or normalized AI-only ROI.'
+    assessment_date: '2026-11-02'
+    confidence: MEDIUM
+  R2_cash_conversion_fcf:
+    level: 2
+    weight: 15
+    contribution: 15.0
+    rationale: 'New Q3 cash OCF minus cash PPE proxies: MSFT +18.633bn, GOOGL approximately -9.06bn, AMZN -33.456bn; Meta Q3 SEC-reconciled lease-inclusive FCF -2.120bn (OCF 32.786bn minus cash PPE 33.942bn minus finance-lease principal 0.964bn). AMZN TTM -42.357bn is a distinct window. Material cross-buyer deterioration, but leases and AI attribution incomplete.'
+    assessment_date: '2026-11-02'
+    confidence: LOW_TO_MEDIUM
+    data_quality: PARTIAL
+    reproducibility_check: scripts/research/check_challenger_r2_2026_11_02.py
+    cash_flow_panel: Docs/research/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md
+    primary_meta_reconciliation: Docs/research/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md
+    independently_reviewer_validated: false
+    conservative_level_if_strictly_normalized_required: 1
+  R3_payback_duration_project_economics:
+    level: 1
+    weight: 15
+    contribution: 7.5
+    rationale: 'Anthropic compute cost and contractual duration increase concern; no independent realized project-level IRR/payback or profitable MW panel.'
+    assessment_date: '2026-11-02'
+    confidence: LOW_TO_MEDIUM
+  R4_financing_refinancing_dependence:
+    level: 2
+    weight: 20
+    contribution: 20.0
+    rationale: 'Previously maxed at 2; Nvidia vendor guarantees, Amazon optional secured facility, Meta negative rating outlook, Oracle/Alphabet proposed offerings and Anthropic counterparty dependence reinforce, not additional points. Credit access remains open.'
+    assessment_date: '2026-11-02'
+    confidence: MEDIUM
+  R5_backlog_contract_quality:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: 'Anthropic 895.4bn future compute/lease obligations and AWS obligations are not debt, cash paid or profitable utilization; broad renegotiations unconfirmed.'
+    assessment_date: '2026-11-02'
+    confidence: LOW_TO_MEDIUM
+  R6_capacity_funnel_ghost_demand:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: 'Announced/contracted/financed/energized/utilized/monetized/profitable MW remain unlinked; no verified broad ghost demand.'
+    assessment_date: '2026-11-02'
+    confidence: LOW
+  R7_project_attrition:
+    level: 1
+    weight: 10
+    contribution: 5.0
+    rationale: 'Prior Jupiter/Nscale/Sydney execution delays remain; no fresh broad ROI-driven project cancellations or hardware-order collapse.'
+    assessment_date: '2026-11-02'
+    confidence: LOW_TO_MEDIUM
+physical_confirmation:
+  P1_gpu_compute:
+    state: WATCH
+    rationale: 'Older GPU price normalization, utilization/renewals missing.'
+  P2_memory:
+    state: ANTI_REVERSAL
+    rationale: 'Micron, Samsung, SK hynix realized sales and HBM contracting oppose inventory-glut thesis.'
+  P3_semiconductor_networking:
+    state: ANTI_REVERSAL
+    rationale: 'Vertiv and KLA positive order/guide evidence; Intel company-specific weakness not a sector bookings collapse.'
+  P4_market_technical:
+    state: WATCH
+    rationale: 'Oct30 SOX -7.2%, NVDA -4.2%; Nov2 broad Nasdaq weaker; synchronized Nov2 Massive ETF OHLCV and canonical technical inputs unavailable.'
+weekly_delta:
+  prior_as_of: '2026-10-14'
+  prior_score: 60.0
+  score_change: 7.5
+  prior_state: ALERT
+  new_state: ALERT
+  prior_stage: STAGE_5_PROJECT_ATTRITION
+  stage_change: UNCHANGED_LOCALIZED_ONLY
+  changed_components:
+    R2_cash_conversion_fcf: '1 -> 2 (provisional / partial normalization)'
+  evidence_change: 'New buyer Q3 cash conversion and Anthropic S-1/A; stronger R4 evidence without new R4 points. No confirmed physical propagation.'
+interpretation: 'Partial post-hoc PIT shadow reassessment; 67.5 ALERT is a defensible but noncanonical classification. Strict normalization sensitivity is 60.0-67.5. Champion unknown, no trade authority.'
+forward_outcomes:
+  two_weeks: 2026-11-16 PENDING
+  four_weeks: 2026-11-30 PENDING
+  eight_weeks: 2026-12-28 PENDING
+  twelve_weeks: 2027-01-25 PENDING
+  next_hyperscaler_earnings_cycle: PENDING
+cutoff: '2026-11-02T16:00:00-05:00'
+last_completed_us_session: '2026-11-02'
+reconstruction_date: '2026-11-03'
+historical_mutation: false

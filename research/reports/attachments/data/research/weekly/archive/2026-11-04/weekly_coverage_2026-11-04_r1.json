@@ -1,0 +1,74 @@
+{
+  "blocks": {
+    "challenger_v2": {
+      "freshness": "2026-11-04T08:23:00+02:00",
+      "status": "PARTIAL",
+      "unknowns": [
+        "R4/MSFT",
+        "R4/GOOGL"
+      ]
+    },
+    "champion": {
+      "freshness": "2026-11-03 US close",
+      "status": "PARTIAL",
+      "unknowns": [
+        "Combined Score",
+        "F2 utilization/renewals",
+        "Asia completed close"
+      ]
+    },
+    "event_registry": {
+      "freshness": "saved Daily Close through 2026-11-02",
+      "status": "PARTIAL",
+      "unknowns": [
+        "no saved 2026-11-03 Daily Close in main at cutoff"
+      ]
+    },
+    "gpu_compute": {
+      "freshness": "2026-11-02",
+      "status": "PARTIAL",
+      "unknowns": [
+        "utilization",
+        "renewals",
+        "comparable contract duration"
+      ]
+    },
+    "hyperscaler_cash_capex": {
+      "freshness": "latest five issuer quarters",
+      "status": "COMPLETE"
+    },
+    "institutional": {
+      "freshness": "CFTC 2026-10-27; market 2026-11-03",
+      "status": "PARTIAL",
+      "unknowns": [
+        "prime broker",
+        "lending shorts"
+      ]
+    },
+    "macro_pain": {
+      "freshness": "2026-11-03",
+      "status": "PARTIAL",
+      "unknowns": [
+        "CRB 260d same-variant mean",
+        "AI-sector OAS premium"
+      ]
+    },
+    "memory_semis_networking": {
+      "freshness": "latest Q3/Q4 issuer releases",
+      "status": "PARTIAL",
+      "unknowns": [
+        "sell-through",
+        "double ordering"
+      ]
+    }
+  },
+  "captured_at": "2026-11-04T08:40:00+02:00",
+  "change_vs_previous": "First prospective Challenger v2 weekly; financial/technical warning materially worse, physical supply chain still anti-reversal.",
+  "cutoff": "2026-11-04T08:23:00+02:00",
+  "data_status": "PARTIAL",
+  "legacy_v1_validator_applicable": false,
+  "report_date": "2026-11-04",
+  "schema": "ai-capex.weekly-coverage-manifest.v1",
+  "unresolved_count": 15,
+  "validator": "scripts/research/validate_weekly_challenger_v2.py --latest"
+}

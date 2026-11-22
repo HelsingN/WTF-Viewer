@@ -1,0 +1,70 @@
+# Machine-readable RESULT SUMMARY. Source-level full snapshot is emitted
+# deterministically by scripts/research/one_off_challenger_v2_full_recalculation.py.
+# Not a trade signal and NOT a single calibrated Challenger score.
+schema: ai-capex.challenger-v2.recalculation-summary.v1
+status: BOUNDED_RESEARCH_WITH_UNCERTAINTY
+as_of: '2026-11-04T00:00:00+00:00'
+cohort_version: CHALLENGER_V2_RESEARCH_APPROVED_2026-11-04
+cohort_frozen_at: '2026-11-03T22:28:54+00:00'
+reused_r1_r2_source_cutoff: '2026-11-02T16:00:00-05:00'
+new_r4_source_cutoff: '2026-11-04T00:00:00+00:00'
+r1_issuer_levels:
+  MSFT: 1
+  GOOGL: 1
+  AMZN: 1
+  META: 1
+  ORCL: 1
+r2_issuer_levels:
+  MSFT: 1
+  GOOGL: 1
+  AMZN: 1
+  META: 1
+  ORCL: 1
+r4_issuer_levels:
+  MSFT: null
+  GOOGL: null
+  AMZN: 1
+  META: 1
+  ORCL: 1
+  CRWV: 1
+  IREN: 1
+factor_results:
+  R1:
+    level_bounds: ['1.00', '1.00']
+    coverage_pct: '100.00'
+  R2:
+    level_bounds: ['1.00', '1.00']
+    coverage_pct: '100.00'
+  R4:
+    level_bounds: ['0.80', '1.20']
+    coverage_pct: '80.00'
+    platform_stratum_pct: '60.00'
+    project_neocloud_stratum_pct: '100.00'
+    coverage_ok_for_research: true
+core_coverage_pct: '92.73'
+core_interval: ['46.36', '53.64']
+event_review:
+  candidates_reviewed: 12
+  accepted_positive: 0
+  accepted_negative: 0
+  incremental_adjustment: '0.00'
+  absence_of_qualified_effects_is_not_absence_of_risk: true
+physical_overlay:
+  P1: UNKNOWN_CURRENT_MEASUREMENT
+  P2: UNKNOWN_CURRENT_MEASUREMENT
+  P3: UNKNOWN_CURRENT_MEASUREMENT
+  P4: UNKNOWN_CURRENT_CANONICAL_MEASUREMENT
+final_interval: ['46.36', '53.64']
+final_exact_score: null
+category: null
+calibration: UNCALIBRATED
+trading_signal: false
+research_only: true
+independent_reviewer_approved: false
+sources:
+  base_register: data/research/challenger/challenger_v2_source_eligibility_register_2026-11-04.yaml
+  reused_financials: data/research/challenger/challenger_v2_recovered_observables_2026-11-02.yaml
+  r4_review: data/research/challenger/challenger_v2_r4_platform_reassessment_2026-11-04.yaml
+  two_sided_events: data/research/challenger/challenger_v2_event_review_2026-11-04.yaml
+  full_explanation: Docs/research/CHALLENGER_V2_FULL_RECALCULATION_2026-11-04.md
+  calculator: scripts/research/one_off_challenger_v2_full_recalculation.py

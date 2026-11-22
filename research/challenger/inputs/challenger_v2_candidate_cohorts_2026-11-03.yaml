@@ -1,0 +1,103 @@
+# Design-only roster proposal, NOT an approved PIT-frozen cohort.
+# This artifact MUST NOT be supplied to the v2 production/research evaluator directly.
+schema: ai-capex.challenger-v2.candidate-cohorts.v1
+status: PROPOSED_FROM_EXISTING_RESEARCH_NOT_APPROVED
+date_proposed: '2026-11-03'
+cohort_frozen_at: null
+cutover_authorized: false
+selection_rule: >
+  Predeclare the five hyperscaler/large AI buyers already followed by weekly
+  reports for R1/R2, and a balanced parent-vs-project borrowing panel for R4.
+  Keep financially healthy issuers as explicit counterexamples.
+warnings:
+  - 'No company-level v2 levels are populated or inherited from historic v1.'
+  - 'An as-of date from September/October MUST NOT be assigned a November frozen roster.'
+  - 'Weights are engineering starting values, NOT validated risk exposure or market capitalization.'
+  - 'Legal borrower and project SPV ownership require validation for R4 before scoring.'
+  - 'Private Lambda remains a documentary R4 counterexample, NOT a mandatory recurring core issuer.'
+  - 'If a company lacks eligible source data it stays in the roster with UNKNOWN, not dropped.'
+core:
+  R1:
+    weight_in_core_relative: 20
+    universe: hyperscalers_and_cloud_anchor_buyers
+    roster:
+      MSFT: '0.20'
+      GOOGL: '0.20'
+      AMZN: '0.20'
+      META: '0.20'
+      ORCL: '0.20'
+    sources:
+      - 'Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-09.md'
+      - 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-28.md'
+      - 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-29.md'
+      - 'Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md'
+    measurement_policy: >
+      Within-issuer cloud/AI monetization growth versus appropriately matched
+      investment, with independently documented capital intensity and strong
+      revenue counterevidence. Cross-segment revenue and total-firm capex are
+      tagged as proxies, not AI-only marginal return.
+  R2:
+    weight_in_core_relative: 15
+    universe: hyperscalers_and_cloud_anchor_buyers
+    roster:
+      MSFT: '0.20'
+      GOOGL: '0.20'
+      AMZN: '0.20'
+      META: '0.20'
+      ORCL: '0.20'
+    sources:
+      - 'Docs/research/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md'
+      - 'Docs/research/CHALLENGER_R2_PRIMARY_FILINGS_2026-11-03.md'
+      - 'Docs/research/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md'
+    measurement_policy: >
+      Within-issuer matching periods and comparable cash-ppe/lease accounting.
+      Unknown finance lease principal is not zero; preserve proxy versus
+      lease-inclusive issuer FCF as separate metric types.
+  R4:
+    weight_in_core_relative: 20
+    universe: balanced_financing_structures
+    weight_policy: >
+      50pct allocated evenly to five large platform anchors, 50pct allocated
+      evenly to TWO publicly filing project-financed/neocloud borrowers. Equal within stratum;
+      NOT a total-sector debt-volume or default-loss weighting.
+    roster:
+      MSFT: '0.10'
+      GOOGL: '0.10'
+      AMZN: '0.10'
+      META: '0.10'
+      ORCL: '0.10'
+      CRWV: '0.25'
+      IREN: '0.25'
+    roles:
+      MSFT: large_platform_bond_borrower
+      GOOGL: large_platform_bond_borrower
+      AMZN: large_platform_optional_secured_financing
+      META: large_platform_credit_outlook_and_project_support
+      ORCL: large_platform_cloud_lease_and_project_exposure
+      CRWV: publicly_filing_neocloud_secured_and_convertible_borrower
+      IREN: publicly_filing_project_financed_operator
+    sources:
+      - 'Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-23.md'
+      - 'Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md'
+      - 'Docs/research/AI_CAPEX_FINANCIAL_CONTAGION_PHASE4_GATE_REVIEW_2026-10-18.md'
+      - 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-29.md'
+      - 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-30.md'
+      - 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-02.md'
+    measurement_policy: >
+      Credit access, instrument-specific terms, secured guarantees/covenants
+      and documented refinancing dependence. An option or proposed raise is not
+      drawn proceeds, a negative rating outlook is not a downgrade, and
+      different credit structures are not a comparable spread time series.
+  R4_DOCUMENTARY_CONTEXT:
+    role: 'additional nonscored credit counterevidence; NOT a required core issuer'
+    cases:
+      - LAMBDA_PRIVATE
+    note: 'Record closed IG-backed financing and contract terms when public; no compulsory private-statement audit.'
+  R3_R5_R6_R7:
+    role: event_overlays_only
+    initial_signed_events: []
+    source_policy: >
+      No automatic backfill of historical v1 level=1 as a positive event;
+      manually review distinct outcomes, counterevidence and first-public time.
+physical:
+  P1_P4: independent_non_numeric_overlay

@@ -1,0 +1,165 @@
+{
+  "schema": "ai-capex.institutional-derisking.recovery.v1",
+  "as_of": "2026-10-07T23:59:59-04:00",
+  "captured_at": "2026-10-09T03:58:00.599Z",
+  "contract": "Docs/INSTITUTIONAL_DERISKING_OVERLAY_v1.md",
+  "source_research": "Docs/research/AI_CAPEX_WEEKLY_COMPLETENESS_2026-10-07_RECOVERED_2026-10-09.md",
+  "trading_authority": "NONE",
+  "status": "PARTIAL",
+  "institutional_state": "UNKNOWN",
+  "confidence": "LOW",
+  "prior_context": {
+    "as_of": "2026-09-23",
+    "state": "H1_QUIET_HEDGING",
+    "not_current": true
+  },
+  "cftc": {
+    "variant": "TFF_FUTURES_ONLY",
+    "category": "Leveraged Funds",
+    "positions_as_of": "2026-09-29",
+    "published_on": "2026-10-02",
+    "nasdaq": {
+      "code": "20974+",
+      "long": 44814,
+      "short": 78596,
+      "spreading": 10218,
+      "net": -33782,
+      "wow_long": -8111,
+      "wow_short": -9999,
+      "wow_net": 1888,
+      "prior_4w_net": -18034,
+      "prior_13w_net": -79944,
+      "change_4w": -15748,
+      "change_13w": 46162
+    },
+    "sp500": {
+      "code": "13874+",
+      "long": 126466,
+      "short": 500473,
+      "spreading": 48341,
+      "net": -374007,
+      "wow_long": 7000,
+      "wow_short": 5391,
+      "wow_net": 1609,
+      "prior_4w_net": -334436,
+      "prior_13w_net": -362599,
+      "change_4w": -39571,
+      "change_13w": -11408
+    },
+    "prior_4w_date": "2026-09-01",
+    "prior_13w_date": "2026-06-30",
+    "sources": [
+      "https://www.cftc.gov/dea/futures/financial_lf.htm",
+      "https://www.cftc.gov/sites/default/files/files/dea/cotarchives/2026/futures/financial_lf090126.htm",
+      "https://www.cftc.gov/sites/default/files/files/dea/cotarchives/2026/futures/financial_lf063026.htm"
+    ],
+    "note": "Consolidated rows already aggregate relevant contracts; do not add mini/micro rows. Regulatory category not whole hedge-fund book."
+  },
+  "options_hedging": "UNKNOWN",
+  "put_call": {
+    "total": null,
+    "index": null,
+    "equity": null
+  },
+  "skew": null,
+  "vix": {
+    "value": 15.62,
+    "as_of": "2026-10-07T16:15:01-04:00",
+    "source": "https://www.cboe.com/delayed_quotes/_vix/quote_table/"
+  },
+  "vix_term_structure": "UNKNOWN",
+  "vix_curve": [],
+  "prime_broker_positioning": "UNKNOWN",
+  "securities_lending_state": "WATCH_CONTEXT_ONLY",
+  "lending": {
+    "period": "2026-09",
+    "published_on": "2026-10-02",
+    "average_daily_loan_value_B": 230.948833428,
+    "yoy_pct": 16.8,
+    "mom_pct": 1.967,
+    "source": "https://www.theocc.com/newsroom/views/2026/10-02-september-2026-monthly-volume-report"
+  },
+  "security_shorting_state": "MIXED",
+  "short_interest": {
+    "settlement_date": "2026-09-15",
+    "publication_date": "2026-09-24",
+    "comparison_settlement_date": "2026-08-31",
+    "comparison_publication_date": "2026-09-10",
+    "next_settlement_date_excluded": "2026-09-30",
+    "next_publication_date": "2026-10-09",
+    "provider": "Massive FINRA-derived /stocks/v1/short-interest",
+    "derived_analysis": [
+      {
+        "ticker": "AMD",
+        "change_pct": -4.164,
+        "days_to_cover": 2.13
+      },
+      {
+        "ticker": "AMZN",
+        "change_pct": -11.543,
+        "days_to_cover": 2.77
+      },
+      {
+        "ticker": "AVGO",
+        "change_pct": 2.914,
+        "days_to_cover": 1.7
+      },
+      {
+        "ticker": "CRWV",
+        "change_pct": -1.133,
+        "days_to_cover": 2.43
+      },
+      {
+        "ticker": "GOOGL",
+        "change_pct": 12.477,
+        "days_to_cover": 3.5
+      },
+      {
+        "ticker": "META",
+        "change_pct": 7.578,
+        "days_to_cover": 1.57
+      },
+      {
+        "ticker": "MSFT",
+        "change_pct": -9.543,
+        "days_to_cover": 3.73
+      },
+      {
+        "ticker": "MU",
+        "change_pct": -6.974,
+        "days_to_cover": 1.1
+      },
+      {
+        "ticker": "NVDA",
+        "change_pct": -1.366,
+        "days_to_cover": 2.55
+      },
+      {
+        "ticker": "ORCL",
+        "change_pct": 13.997,
+        "days_to_cover": 1.36
+      },
+      {
+        "ticker": "QQQ",
+        "change_pct": 0.124,
+        "days_to_cover": 2.24
+      },
+      {
+        "ticker": "SMH",
+        "change_pct": -7.053,
+        "days_to_cover": 1.88
+      }
+    ],
+    "source": [
+      "https://massive.com/docs/rest/stocks/short-interest",
+      "https://www.finra.org/filing-reporting/regulatory-filing-systems/short-interest"
+    ],
+    "note": "Raw provider tables not committed; derived percent changes/DTC research only; short volume is not short interest; no borrow utilization/fees or float denominator."
+  },
+  "forced_deleveraging": "UNKNOWN",
+  "price_positioning_divergence": "UNKNOWN",
+  "weekly_delta": "MIXED: latest CFTC WoW less short, 4W more short, 13W mixed; latest monthly lending higher; no current H3/H4 proof",
+  "escalation_allowed": false,
+  "changes_champion": false,
+  "changes_challenger": false
+}

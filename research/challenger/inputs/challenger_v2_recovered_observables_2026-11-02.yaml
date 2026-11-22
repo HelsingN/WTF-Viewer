@@ -1,0 +1,234 @@
+# Hand-transcribed from the existing repository's sourced research.
+# NOT a canonical PIT v2 score, NOT a reviewed approved issuer-level roster.
+schema: ai-capex.challenger-v2.recovered-observables.v1
+status: RESEARCH_DATA_RECOVERY_NOT_REVIEWED_MODEL_INPUT
+evidence_cutoff: '2026-11-02T16:00:00-05:00'
+assembled_on: '2026-11-03'
+unit: USD_BILLIONS
+rounding_note: 'Alphabet and older cash numbers are approximate; see source panels.'
+scope: 'Extract the already documented inputs; do not refetch private project data.'
+r1:
+  # Same-company total revenue and CASH capital spending, matching YoY quarter.
+  # Not AI-only ROIC and not interchangeable with Azure/AWS/Cloud segment rev.
+  MSFT:
+    source_research: 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-28.md'
+    source_original: 'https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast'
+    reported_period: 'FY27Q1 versus FY26Q1, September quarter'
+    period_basis: YOY_QUARTER
+    scope_relation: MATCHED_SCOPE
+    monetization_description: 'Microsoft consolidated revenue'
+    revenue_current: '92.279'
+    revenue_previous: '77.673'
+    capex_description: 'Consolidated cash additions to property and equipment'
+    capex_current: '39.367'
+    capex_previous: '19.394'
+    counterevidence: 'Azure +48% YoY, cloud +30%, cash PPE proxy remains positive; not AI-only ROI'
+    primary_line_reconciliation: VERIFIED_ISSUER_TABLE
+  GOOGL:
+    source_research: 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-28.md'
+    source_original: 'https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm'
+    reported_period: 'CY2026Q3 versus CY2025Q3'
+    period_basis: YOY_QUARTER
+    scope_relation: MATCHED_SCOPE
+    monetization_description: 'Alphabet consolidated revenue growth rounded as reported'
+    monetization_growth_pct: '25'
+    capex_description: 'Alphabet consolidated cash CapEx, NOT Google Cloud investment'
+    capex_current: '51.36'
+    capex_previous: '23.95'
+    counterevidence: 'Google Cloud segment +103% YoY and ~$11.1bn operating income'
+    primary_line_reconciliation: PARTIAL_APPROX_RESEARCH_ROUNDED
+  AMZN:
+    source_research: 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-29.md'
+    source_original: 'https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx'
+    reported_period: 'CY2026Q3 versus CY2025Q3'
+    period_basis: YOY_QUARTER
+    scope_relation: MATCHED_SCOPE
+    monetization_description: 'Amazon consolidated net sales'
+    revenue_current: '201.944'
+    revenue_previous: '180.169'
+    capex_description: 'Consolidated purchases of property and equipment, gross CASH basis'
+    capex_current: '77.259'
+    capex_previous: '35.095'
+    counterevidence: 'AWS +39.3% YoY and ~38.7% operating margin; other company businesses included'
+    primary_line_reconciliation: VERIFIED_ISSUER_TABLE
+  META:
+    source_research: 'Docs/research/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md'
+    source_original: 'https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/'
+    reported_period: 'CY2026Q3 versus CY2025Q3'
+    period_basis: YOY_QUARTER
+    scope_relation: MATCHED_SCOPE
+    monetization_description: 'Meta consolidated revenue'
+    revenue_current: '64.601'
+    revenue_previous: '51.242'
+    capex_description: 'Consolidated cash purchases of PP&E; both quarters excluding finance lease principal'
+    capex_current: '33.942'
+    capex_previous: '18.829'
+    counterevidence: 'Advertiser pricing and revenue rise; FCF pressure separately counted in R2, not independent second cash shock'
+    primary_line_reconciliation: VERIFIED_ISSUER_TABLE
+  ORCL:
+    source_research: 'Docs/research/CHALLENGER_R2_PRIMARY_FILINGS_2026-11-03.md'
+    source_original: 'https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm'
+    reported_period: 'FY27Q1 versus FY26Q1, August quarter'
+    period_basis: YOY_QUARTER
+    scope_relation: MATCHED_SCOPE
+    monetization_description: 'Oracle consolidated total revenue'
+    revenue_current: '19.345'
+    revenue_previous: '14.926'
+    capex_description: 'Issuer cash capital expenditures; 10-Q same-quarter comparative'
+    capex_current: '28.499'
+    capex_previous: '8.502'
+    counterevidence: 'Oracle cloud infrastructure +121% YoY; new 850MW reported delivered; customer prepayments include a financing component'
+    primary_line_reconciliation: VERIFIED_SEC_10Q
+
+r2:
+  MSFT:
+    source_research: 'Docs/research/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md'
+    original_source: 'https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast'
+    period_family: QUARTER
+    earlier_period: FY26Q1
+    later_period: FY27Q1
+    basis_for_comparison: GROSS_PPE_PROXY
+    earlier:
+      operating_cash_flow: '45.057'
+      cash_ppe: '19.394'
+      ppe_incentives: null
+      finance_lease_principal: null
+    later:
+      operating_cash_flow: '58.0'
+      cash_ppe: '39.367'
+      ppe_incentives: null
+      finance_lease_principal: null
+  GOOGL:
+    source_research: 'Docs/research/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md'
+    original_source: 'https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm'
+    period_family: QUARTER
+    earlier_period: CY2026Q2
+    later_period: CY2026Q3
+    basis_for_comparison: GROSS_PPE_PROXY
+    earlier:
+      operating_cash_flow: '39.1'
+      cash_ppe: '44.9'
+      ppe_incentives: null
+      finance_lease_principal: null
+    later:
+      operating_cash_flow: '42.3'
+      cash_ppe: '51.36'
+      ppe_incentives: null
+      finance_lease_principal: null
+  AMZN:
+    source_research: 'Docs/research/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md'
+    original_source: 'https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx'
+    period_family: QUARTER
+    earlier_period: CY2025Q3
+    later_period: CY2026Q3
+    basis_for_comparison: NET_PPE_PROXY
+    earlier:
+      operating_cash_flow: '35.525'
+      cash_ppe: '35.095'
+      ppe_incentives: '0.867'
+      finance_lease_principal: null
+    later:
+      operating_cash_flow: '42.422'
+      cash_ppe: '77.259'
+      ppe_incentives: '1.381'
+      finance_lease_principal: null
+    separate_ttm_issuer_fcf:
+      prior_ttm: '-7.600'
+      current_ttm: '-42.357'
+      status: 'REQUIRES_SAME_DEFINITION_RECONCILIATION; not compared to Q3'
+  META:
+    source_research: 'Docs/research/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md'
+    original_source: 'https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm'
+    period_family: QUARTER
+    earlier_period: CY2026Q2
+    later_period: CY2026Q3
+    basis_for_comparison: LEASE_INCLUSIVE_FCF
+    earlier:
+      operating_cash_flow: '31.862'
+      cash_ppe: '30.116'
+      ppe_incentives: '0'
+      finance_lease_principal: '0.962'
+    later:
+      operating_cash_flow: '32.786'
+      cash_ppe: '33.942'
+      ppe_incentives: '0'
+      finance_lease_principal: '0.964'
+  ORCL:
+    source_research: 'Docs/research/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md'
+    original_source: 'https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm'
+    period_family: QUARTER
+    earlier_period: FY26Q1
+    later_period: FY27Q1
+    basis_for_comparison: GROSS_PPE_PROXY
+    earlier:
+      operating_cash_flow: '8.140'
+      cash_ppe: '8.502'
+      ppe_incentives: null
+      finance_lease_principal: null
+    later:
+      operating_cash_flow: '23.103'
+      cash_ppe: '28.499'
+      ppe_incentives: null
+      finance_lease_principal: null
+    note: 'OCF contains 11.363 significant-financing-component customer prepayments; do not pretend it is recurring cash yield.'
+r4:
+  MSFT:
+    source_research: 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-29.md'
+    event_type: PROPOSED_FINANCING
+    legal_borrower_verified: true
+    evidence_class: PRIMARY_FACT
+    counterevidence_reviewed: true
+    note: '29-Oct preliminary 424B2 amounts/coupons blank; ~$25bn media estimate, not received funds; strong reported bond demand.'
+  GOOGL:
+    source_research: 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-02.md'
+    event_type: CREDIT_ACCESS_CONFIRMED
+    legal_borrower_verified: true
+    evidence_class: INDEPENDENT_CONFIRMATION
+    counterevidence_reviewed: true
+    note: '2-Nov seven-tranche €6bn issuance, >€17bn order book; final terms unverified. Healthy access is counterevidence, not automatic R4=0.'
+  AMZN:
+    source_research: 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-30.md'
+    event_type: UNDRAWN_OPTION
+    legal_borrower_verified: true
+    evidence_class: PRIMARY_FACT
+    counterevidence_reviewed: true
+    note: 'Up-to-$80bn future optional technology facility, no evidence that entire amount was drawn.'
+  META:
+    source_research: 'Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-30.md'
+    event_type: NEGATIVE_OUTLOOK
+    legal_borrower_verified: true
+    evidence_class: INDEPENDENT_CONFIRMATION
+    counterevidence_reviewed: true
+    note: 'S&P negative outlook secondary reporting; not a credit rating downgrade or financing failure.'
+  ORCL:
+    source_research: 'Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-23.md'
+    event_type: SYNDICATION_DIFFICULTY
+    legal_borrower_verified: false
+    evidence_class: INDEPENDENT_CONFIRMATION
+    counterevidence_reviewed: true
+    note: 'Project Jupiter/Blue Owl/STACK SPV loans reported 89–91 cents; mapping to Oracle parent not established.'
+  CRWV:
+    source_research: 'Docs/research/AI_CAPEX_FINANCIAL_CONTAGION_PHASE4_GATE_REVIEW_2026-10-18.md'
+    event_type: GUARANTEE_OR_COLLATERAL
+    incremental_material_dependence_verified: true
+    incremental_material_dependence_basis: 'Aug 11 2026 SEC 10-Q validates new subsidiary CCAC VIII $8.5bn non-recourse DDTL 4.0 (not $2.6bn DDTL 3.0), with $2.837bn outstanding at Jun 30; material 2026 GPU financing alongside successful credit placements.'
+    legal_borrower_verified: true
+    evidence_class: PRIMARY_FACT
+    counterevidence_reviewed: true
+    note: 'Legal borrower CCAC VIII (not the unrestricted CoreWeave parent); parent guarantee limited to non-recourse bad-acts. SEC Aug11 10-Q confirms borrowings and covenant terms; financing availability and converts are opposing evidence.'
+  IREN:
+    source_research: 'Docs/research/AI_CAPEX_FINANCIAL_CONTAGION_PHASE4_GATE_REVIEW_2026-10-18.md'
+    event_type: GUARANTEE_OR_COLLATERAL
+    incremental_material_dependence_verified: true
+    incremental_material_dependence_basis: 'Aug 27 SEC 10-K validates SPV IE US Hardware 3 LLC $3.645bn new financing commitments ($1.545bn delayed loan + $2.1bn notes); only $0.938bn funded by Jun 30, with limited IREN parent guarantees and covenant compliance.'
+    legal_borrower_verified: true
+    evidence_class: PRIMARY_FACT
+    counterevidence_reviewed: true
+    note: 'Borrower is IE US Hardware 3 LLC, SPV consolidated by IREN, limited hedge/remarketing guarantees (no general full-debt recourse). Financing successful, customer contract with MSFT; no proven financial distress.'
+  LAMBDA_PRIVATE:
+    source_research: 'Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md'
+    event_type: CREDIT_ACCESS_CONFIRMED
+    legal_borrower_verified: true
+    evidence_class: PRIMARY_FACT
+    counterevidence_reviewed: true
+    note: '1-Oct closed $1.008bn at fixed 6.78% per issuer; project secured IG offtakers are strong anti-freeze evidence.'

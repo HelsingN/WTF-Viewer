@@ -1,0 +1,30 @@
+{
+  "schema": "ai-capex.challenger-outcome-review.v1",
+  "review_date": "2026-10-14",
+  "cutoff": "2026-10-14T08:25:13+03:00",
+  "captured_at": "2026-10-14T05:52:22.620484+00:00",
+  "trading_authority": "NONE",
+  "source_research": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+  "reviews": [
+    {
+      "observation": "data/research/challenger/ai_roi_challenger_2026-09-30.yaml",
+      "window_weeks": 2,
+      "original_score": 60,
+      "original_stage": "STAGE_5_PROJECT_ATTRITION",
+      "result": "FINANCING_WARNING_PERSISTS_PHYSICAL_PROPAGATION_UNCONFIRMED",
+      "evidence": "Firmus funding-route withdrawal and price/leadership weakness; memory and GPU index counterevidence. No strategy-PnL or false-positive retirement conclusion."
+    },
+    {
+      "observation": "data/research/challenger/ai_roi_challenger_2026-09-16.yaml",
+      "window_weeks": 4,
+      "original_score": 45,
+      "original_stage": "STAGE_3_FUNDING_DEPENDENCE_RISING",
+      "current_score": 60,
+      "result": "QUALITATIVE_FINANCING_PROGRESS_NO_COMPLETE_LEAD_TIME_VALIDATION",
+      "evidence": "Later financing dependence/localized delays and new IPO attrition coexist with strong realized supplier sales. Provider price window/physical utilization incomplete."
+    }
+  ],
+  "eight_twelve_week_reviews": "NOT_YET_DUE_FOR_SEPTEMBER_MODEL_OBSERVATIONS",
+  "next_earnings": "TSMC15Oct and Samsung29Oct are future to cutoff; hyperscaler cycle dates require primary calendar confirmation before evaluation",
+  "historical_mutation": false
+}

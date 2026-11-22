@@ -1,0 +1,124 @@
+# SEC EDGAR filing metadata review — 2026-11-04, source cutoff 2026-11-02.
+# Not a live score or proof of original first-public dissemination minute.
+schema: ai-capex.challenger-v2.source-eligibility.v1
+status: SOURCE_ACCEPTANCE_VERIFIED_PUBLIC_BY_CONSERVATIVE_POLICY
+reviewed_on: '2026-11-04'
+assessment_cutoff: '2026-11-02T16:00:00-05:00'
+newly_scored_observations_approved: false
+calendar_policy: >
+  accepted_at is an SEC acceptance time, not first_public_at. known_public_by_at
+  uses the next full US business day at 12:00 America/New_York after acceptance,
+  a deliberately conservative convention. This is an operational availability
+  assumption grounded in the SEC index, NOT an independently observed release
+  to market at that exact moment. Each observation must retain this caveat.
+  Any source disseminated materially later is excluded or becomes UNKNOWN.
+no_trading: true
+issuer_documents:
+  MSFT:
+    issuer: 'Microsoft Corporation'
+    role: [R1, R2]
+    accession: '0001193125-26-436133'
+    document_form: '10-Q'
+    period_end: '2026-09-30'
+    accepted_at_et: '2026-10-28T16:07:39-04:00'
+    known_public_by_at: '2026-10-29T12:00:00-04:00'
+    availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+    source_index: 'https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/0001193125-26-436133-index.htm'
+    status: SOURCE_TIME_PASS_WITH_CONSERVATIVE_POLICY
+  GOOGL:
+    issuer: 'Alphabet Inc.'
+    role: [R1, R2]
+    accession: '0001652044-26-000084'
+    document_form: '10-Q'
+    period_end: '2026-09-30'
+    accepted_at_et: '2026-10-28T20:29:06-04:00'
+    known_public_by_at: '2026-10-29T12:00:00-04:00'
+    availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+    source_index: 'https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/0001652044-26-000084-index.htm'
+    status: SOURCE_TIME_PASS_WITH_CONSERVATIVE_POLICY
+    measurement_caveat: 'R1 rounded revenue growth +25%; capital spending ~51.36/23.95 requires original figure precision if level threshold changes.'
+  AMZN:
+    issuer: 'Amazon.com, Inc.'
+    role: [R1, R2]
+    accession: '0001018724-26-000040'
+    corroborating_earnings_accession: '0001018724-26-000038'
+    document_form: '10-Q with earlier 8-K earnings exhibit'
+    period_end: '2026-09-30'
+    accepted_at_et: '2026-10-29T18:20:46-04:00'
+    earnings_accepted_at_et: '2026-10-29T16:05:27-04:00'
+    known_public_by_at: '2026-10-30T12:00:00-04:00'
+    availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+    source_index: 'https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/0001018724-26-000040-index.htm'
+    earnings_source_index: 'https://www.sec.gov/Archives/edgar/data/1018724/000101872426000038/0001018724-26-000038-index.htm'
+    status: SOURCE_TIME_PASS_WITH_CONSERVATIVE_POLICY
+    measurement_caveat: 'Gross PPE cash purchase, separate incentives and unknown lease principal.'
+  META:
+    issuer: 'Meta Platforms, Inc.'
+    role: [R1, R2]
+    accession: '0001628280-26-066700'
+    document_form: '8-K earnings exhibit 99.1'
+    period_end: '2026-09-30'
+    accepted_at_et: '2026-10-21T16:03:35-04:00'
+    known_public_by_at: '2026-10-22T12:00:00-04:00'
+    availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+    source_index: 'https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/0001628280-26-066700-index.htm'
+    status: SOURCE_TIME_PASS_WITH_CONSERVATIVE_POLICY
+    measurement_caveat: 'Lease-inclusive issuer FCF reconciled in prior dedicated audit.'
+  ORCL:
+    issuer: 'Oracle Corporation'
+    role: [R1, R2]
+    accession: '0001193125-26-389274'
+    document_form: '10-Q'
+    period_end: '2026-08-31'
+    accepted_at_et: '2026-09-11T16:10:12-04:00'
+    known_public_by_at: '2026-09-14T12:00:00-04:00'
+    availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+    source_index: 'https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/0001193125-26-389274-index.htm'
+    status: SOURCE_TIME_PASS_WITH_CONSERVATIVE_POLICY
+    measurement_caveat: 'OCF financing-component prepayment 11.363 USD bn is not recurring profit.'
+  CRWV:
+    issuer: 'CoreWeave, Inc., parent of CCAC VIII'
+    role: [R4]
+    accession: '0001769628-26-000366'
+    corroborating_agreement_accession: '0001769628-26-000129'
+    document_form: '10-Q reaffirming outstanding financing; earlier 8-K original agreement'
+    period_end: '2026-06-30'
+    accepted_at_et: '2026-08-11T19:24:42-04:00'
+    original_agreement_accepted_et: '2026-03-31T08:59:24-04:00'
+    known_public_by_at: '2026-08-12T12:00:00-04:00'
+    availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+    source_index: 'https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/0001769628-26-000366-index.htm'
+    original_agreement_source_index: 'https://www.sec.gov/Archives/edgar/data/1769628/000176962826000129/0001769628-26-000129-index.htm'
+    borrower_legal_name: 'CoreWeave Compute Acquisition Co. VIII, LLC'
+    borrower_relationship: 'indirect wholly owned subsidiary / non-recourse DDTL 4.0'
+    facility_committed_usd_bn: '8.5'
+    drawn_as_of_2026_06_30_usd_bn: '2.837'
+    note: 'Prior $2.6bn figure described a different DDTL 3.0 facility. DDTL 4.0 is 8.5bn, NOT 2.6bn.'
+    parent_exposure: 'limited bad-acts recourse only for DDTL 4.0; other DDTL facilities have different guarantees'
+    accounting: 'Borrowings consolidated, not a direct unconditional 8.5bn CoreWeave parent guarantee.'
+    materiality_status: 'DOCUMENTARY_MATERIAL_INCREMENTAL_FINANCING_WITH_SUCCESSFUL_ACCESS_COUNTEREVIDENCE'
+    rating: 'R4=1 candidate for consolidated credit dependence; not evidence parent covenant breach/default.'
+    status: SOURCE_AND_BORROWER_PASS_CONDITIONAL_ISSUER_WATCH
+  IREN:
+    issuer: 'IREN Limited, consolidated parent of IE US Hardware 3 LLC'
+    role: [R4]
+    accession: '0001878848-26-000052'
+    document_form: '10-K plus EX-10.35/10.36/10.37/10.38/10.54'
+    period_end: '2026-06-30'
+    accepted_at_et: '2026-08-27T16:18:57-04:00'
+    known_public_by_at: '2026-08-28T12:00:00-04:00'
+    availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+    source_index: 'https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/0001878848-26-000052-index.htm'
+    borrower_legal_name: 'IE US Hardware 3 LLC'
+    borrower_relationship: 'wholly owned non-recourse consolidated financing SPV supporting Microsoft'
+    facility_committed_usd_bn: '3.645'
+    ddlt_committed_usd_bn: '1.545'
+    note_committed_usd_bn: '2.100'
+    ddlt_drawn_as_of_2026_06_30_usd_bn: '0.413'
+    note_funded_as_of_2026_06_30_usd_bn: '0.525'
+    total_funded_as_of_2026_06_30_usd_bn: '0.938'
+    parent_exposure: 'limited hedges/remarketing guarantees; managed-services performance guarantee; no general full-debt guarantee'
+    accounting: 'Consolidated financing SPV; financial covenants complied with as of June 30.'
+    materiality_status: 'DOCUMENTARY_MATERIAL_INCREMENTAL_PROJECT_FINANCING_WITH_CUSTOMER_ACCESS_COUNTEREVIDENCE'
+    rating: 'R4=1 candidate for consolidated financing reliance; not parent default or full recourse.'
+    status: SOURCE_AND_BORROWER_PASS_CONDITIONAL_ISSUER_WATCH

@@ -1,0 +1,182 @@
+{
+  "schema": "AI_CAPEX_EVENT_STRENGTH_CURRENT_COVERAGE_V1",
+  "as_of": "2026-11-14",
+  "historical_baseline": "data/research/events/event_strength_audit_2026-11-11.json",
+  "historical_scored_count": 38,
+  "current_registry_count": 47,
+  "unique_event_id_count": 47,
+  "current_decision_counts": {
+    "QUALIFIED": 2,
+    "CORE_ONLY": 8,
+    "MACRO_ONLY": 14,
+    "PHYSICAL_ONLY": 9,
+    "CONTEXT_ONLY": 9,
+    "EARLY_WARNING": 4,
+    "NOT_QUALIFIED_CLOSED": 1
+  },
+  "new_events_not_independently_rescored": [
+    {
+      "id": "EVT-20261111-BFF3973B9E78",
+      "event_date": "2026-11-11",
+      "entity": "Quantum DC",
+      "priority": "HIGH",
+      "decision": "NOT_QUALIFIED_CLOSED",
+      "source_refs": [
+        "https://quantumdc.com.au/tungkillo",
+        "https://www.abc.net.au/news/2026-11-12/quantum-dc-pauses-tungkillo-ai-data-centre/107376052"
+      ],
+      "relative_signal_index": null,
+      "relative_rank": null,
+      "relative_signal_tier": null,
+      "materiality": "UNKNOWN_NOT_NORMALIZED"
+    },
+    {
+      "id": "EVT-20261111-D4570B4103FA",
+      "event_date": "2026-11-11",
+      "entity": "Talen Energy",
+      "priority": "HIGH",
+      "decision": "CONTEXT_ONLY",
+      "source_refs": [
+        "https://ir.talenenergy.com/news-releases/news-release-details/talen-signs-750-mw-long-term-capacity-agreement",
+        "https://www.globenewswire.com/news-release/2026/11/11/3400549/0/en/talen-signs-750-mw-long-term-capacity-agreement.html"
+      ],
+      "relative_signal_index": null,
+      "relative_rank": null,
+      "relative_signal_tier": null,
+      "materiality": "UNKNOWN_NOT_NORMALIZED"
+    },
+    {
+      "id": "EVT-20261112-596801136B58",
+      "event_date": "2026-11-12",
+      "entity": "Cisco Systems, Inc.",
+      "priority": "HIGH",
+      "decision": "CONTEXT_ONLY",
+      "source_refs": [
+        "https://www.prnewswire.com/news-releases/cisco-reports-first-quarter-earnings-302938394.html",
+        "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-reports-first-quarter-earnings.html"
+      ],
+      "relative_signal_index": null,
+      "relative_rank": null,
+      "relative_signal_tier": null,
+      "materiality": "UNKNOWN_NOT_NORMALIZED"
+    },
+    {
+      "id": "EVT-20261112-8078B5459010",
+      "event_date": "2026-11-12",
+      "entity": "Cerebras Systems",
+      "priority": "CRITICAL",
+      "decision": "EARLY_WARNING",
+      "source_refs": [
+        "https://investors.cerebras.ai/news-releases/news-release-details/cerebras-systems-delivers-record-revenue-third-quarter-2026",
+        "https://www.stocktitan.net/news/CBRS/cerebras-systems-delivers-record-revenue-in-third-quarter-2026-fd6b2a0s6dj0.html"
+      ],
+      "relative_signal_index": null,
+      "relative_rank": null,
+      "relative_signal_tier": null,
+      "materiality": "UNKNOWN_NOT_NORMALIZED"
+    },
+    {
+      "id": "EVT-20261112-9753CB400B21",
+      "event_date": "2026-11-12",
+      "entity": "Nebius Group N.V.",
+      "priority": "CRITICAL",
+      "decision": "CONTEXT_ONLY",
+      "source_refs": [
+        "https://assets.nebius.com/assets/508584f1-b73d-484f-b64f-f96a5bc3b515/Nebius%20Q3%202026%20Financial%20Results%20Press%20Release.pdf",
+        "https://nebius.com/newsroom/nebius-reports-third-quarter-2026-financial-results"
+      ],
+      "relative_signal_index": null,
+      "relative_rank": null,
+      "relative_signal_tier": null,
+      "materiality": "UNKNOWN_NOT_NORMALIZED"
+    },
+    {
+      "id": "EVT-20261112-ABB2390AE170",
+      "event_date": "2026-11-12",
+      "entity": "Applied Materials",
+      "priority": "CRITICAL",
+      "decision": "CONTEXT_ONLY",
+      "source_refs": [
+        "https://www.stocktitan.net/news/AMAT/applied-materials-announces-fourth-quarter-and-fiscal-year-2026-7z5nei8eafpd.html",
+        "https://ir.appliedmaterials.com/static-files/14fd85ae-ff29-4756-879c-c899da301ae6"
+      ],
+      "relative_signal_index": null,
+      "relative_rank": null,
+      "relative_signal_tier": null,
+      "materiality": "UNKNOWN_NOT_NORMALIZED"
+    },
+    {
+      "id": "EVT-20261112-EE567E3A09CE",
+      "event_date": "2026-11-12",
+      "entity": "NVIDIA Corporation",
+      "priority": "CRITICAL",
+      "decision": "CONTEXT_ONLY",
+      "source_refs": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+        "https://www.stocktitan.net/articles/jensen-huang-resigns-nvidia-ceo-2026"
+      ],
+      "relative_signal_index": null,
+      "relative_rank": null,
+      "relative_signal_tier": null,
+      "materiality": "UNKNOWN_NOT_NORMALIZED"
+    },
+    {
+      "id": "EVT-20261113-08259782CC5E",
+      "event_date": "2026-11-13",
+      "entity": "Federal Reserve Board",
+      "priority": "HIGH",
+      "decision": "MACRO_ONLY",
+      "source_refs": [
+        "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
+      ],
+      "relative_signal_index": null,
+      "relative_rank": null,
+      "relative_signal_tier": null,
+      "materiality": "UNKNOWN_NOT_NORMALIZED"
+    },
+    {
+      "id": "EVT-20261113-1D70E4821EC3",
+      "event_date": "2026-11-13",
+      "entity": "U.S. Bureau of Labor Statistics",
+      "priority": "HIGH",
+      "decision": "MACRO_ONLY",
+      "source_refs": [
+        "https://www.bls.gov/news.release/ppi.nr0.htm"
+      ],
+      "relative_signal_index": null,
+      "relative_rank": null,
+      "relative_signal_tier": null,
+      "materiality": "UNKNOWN_NOT_NORMALIZED"
+    }
+  ],
+  "macro_baseline_count": 12,
+  "macro_current_count": 14,
+  "macro_added_unranked": [
+    {
+      "id": "EVT-20261113-08259782CC5E",
+      "entity": "Federal Reserve Board",
+      "event_date": "2026-11-13",
+      "source_refs": [
+        "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
+      ],
+      "relative_macro_rank": null,
+      "priority_index": null,
+      "model_numeric_effect": null
+    },
+    {
+      "id": "EVT-20261113-1D70E4821EC3",
+      "entity": "U.S. Bureau of Labor Statistics",
+      "event_date": "2026-11-13",
+      "source_refs": [
+        "https://www.bls.gov/news.release/ppi.nr0.htm"
+      ],
+      "relative_macro_rank": null,
+      "priority_index": null,
+      "model_numeric_effect": null
+    }
+  ],
+  "qualification_rule": "Only separately validated observed signed R3/R5/R6/R7 economic effects can trigger recalculation; event count and heuristic rank are not triggers.",
+  "recalculation_decision": "NO_NEW_QUALIFIED_FROM_THE_NINE_ADDITIONS; NO_AUTOMATIC_RECALCULATION",
+  "macro_joint_effect": "MIXED_UNQUANTIFIED; credit/rates/inflation overlapping channels must not be summed; Fed report is a risk inventory and PPI an inflation observation, not independent additive AI project cash losses",
+  "limits": "Historical ranks remain fixed 2026-11-11 snapshot; new 9 entries unscored until source-by-source independent verification; do not imply 47-way quantitative ranking."
+}

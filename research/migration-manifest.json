@@ -1,0 +1,3740 @@
+{
+  "schema": "wtf-viewer.research-migration.v1",
+  "migration_id": "challenger-reports-2026-11-21",
+  "source": {
+    "repository": "HelsingN/AI_CapEx_Reversal",
+    "ref": "refs/heads/main",
+    "commit": "1aa948be4c9c76844e9b407b981caacea94b24b3"
+  },
+  "target": {
+    "repository": "HelsingN/WTF-Viewer",
+    "branch": "develop",
+    "parent_commit": "b902e190806e87f74f1a75ac7c241b1f1219c428"
+  },
+  "scope": "Challenger research, report series and their selected evidence files",
+  "files": [
+    {
+      "sha256": "0649e9cf6cf6db3db0672ce99ee41a7e489bbf6ae0458271cf22cab9ba38a80a",
+      "bytes": 11563,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md",
+      "links": [
+        {
+          "link": "../../AI_ROI_CHALLENGER_MODEL_v2.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v2.md",
+          "fragment": null
+        },
+        {
+          "link": "research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+          "resolution": "unavailable_in_snapshot",
+          "source_path": "Docs/archive/legacy/research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md"
+        }
+      ],
+      "source_path": "Docs/archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "a965c45a5b1db9d545b3d7cd6b78fc641cd646fd",
+      "target_path": "research/archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md"
+    },
+    {
+      "sha256": "1abfc0198239396b666ae4832e50d223383095986fad463dc6995304f06f1da7",
+      "bytes": 12657,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/Docs/AI_ROI_CHALLENGER_MODEL_v2.md",
+      "source_path": "Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/Docs/AI_ROI_CHALLENGER_MODEL_v2.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "519fdd57237b02f566c4b0b7aecb7b9cf6e37a68",
+      "target_path": "research/archive/legacy/challenger_v2_event_qualification_pre_v2_1/Docs/AI_ROI_CHALLENGER_MODEL_v2.md"
+    },
+    {
+      "sha256": "2ceb0824633c77a3c08e9e764d5b2c0b8005cf56e3cf3d282d5dba401ea24a85",
+      "bytes": 11009,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/Docs/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+      "source_path": "Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/Docs/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "db0a810e7735b90fa2ec3c4dd2be1e61b481aa00",
+      "target_path": "research/archive/legacy/challenger_v2_event_qualification_pre_v2_1/Docs/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md"
+    },
+    {
+      "sha256": "a0626ebaebb5853132f5ad73c9ccf4829e62aee9d690dc450fd37d38d4b67c20",
+      "bytes": 3149,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/README.md",
+      "links": [
+        {
+          "link": "../../../AI_ROI_CHALLENGER_MODEL_v2.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v2.md",
+          "fragment": null
+        },
+        {
+          "link": "../../../CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/policy/CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/README.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "dd5f8e9b6f487f058e2abb5506a05333962f599e",
+      "target_path": "research/archive/legacy/challenger_v2_event_qualification_pre_v2_1/README.md"
+    },
+    {
+      "sha256": "c76952c6b5111ba93301bc1b0c434cddc1bf238ed802bf465b7e034c15274fc2",
+      "bytes": 30002,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/scripts/research/challenger_v2_event_register.py.txt",
+      "source_path": "Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/scripts/research/challenger_v2_event_register.py.txt",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "491472915d9c5fc6a318089dd8ef74adbf66a090",
+      "target_path": "research/archive/legacy/challenger_v2_event_qualification_pre_v2_1/scripts/research/challenger_v2_event_register.py.txt"
+    },
+    {
+      "sha256": "ef1f49f8d1f5a06a594d93938715805b2d638a05849b4afeb4c9302cfe6b8ce3",
+      "bytes": 18204,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/src/scoring/challenger_v2.py.txt",
+      "source_path": "Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/src/scoring/challenger_v2.py.txt",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "10eebe3ead220f682e6c202cc9a45a3665d3a0b5",
+      "target_path": "research/archive/legacy/challenger_v2_event_qualification_pre_v2_1/src/scoring/challenger_v2.py.txt"
+    },
+    {
+      "sha256": "93da336ffe9b3938e93afe94de8674125161316ba566100c0c256c9c8ad142c3",
+      "bytes": 13451,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/tests/test_challenger_v2_event_register.py.txt",
+      "source_path": "Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/tests/test_challenger_v2_event_register.py.txt",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "dfcd650688eee8a77ea428d57487481fb81d0aad",
+      "target_path": "research/archive/legacy/challenger_v2_event_qualification_pre_v2_1/tests/test_challenger_v2_event_register.py.txt"
+    },
+    {
+      "sha256": "2bc1044d4e02151d875da614cd5155be342bf36fac5bfd64752f68dc01b872f3",
+      "bytes": 10376,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/tests/test_challenger_v2.py.txt",
+      "source_path": "Docs/archive/legacy/challenger_v2_event_qualification_pre_v2_1/tests/test_challenger_v2.py.txt",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "8802ccd19fb0c1d2ed0d9965a28e05dbbce895ec",
+      "target_path": "research/archive/legacy/challenger_v2_event_qualification_pre_v2_1/tests/test_challenger_v2.py.txt"
+    },
+    {
+      "sha256": "a6b0f1acfef7332ff507f80a0b89586fad2133e87df7b8ea6d293242c32dd7aa",
+      "bytes": 5920,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/README.md",
+      "links": [
+        {
+          "link": "../../AI_ROI_CHALLENGER_MODEL_v2.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v2.md",
+          "fragment": null
+        },
+        {
+          "link": "challenger_v2_event_qualification_pre_v2_1/README.md",
+          "resolution": "target",
+          "target_path": "research/archive/legacy/challenger_v2_event_qualification_pre_v2_1/README.md",
+          "fragment": null
+        },
+        {
+          "link": "../../CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/policy/CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/archive/legacy/README.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "218ba7a3b45ec9e1be0f7469e0ab15f92cb44123",
+      "target_path": "research/archive/legacy/README.md"
+    },
+    {
+      "sha256": "a5c363b63a002e3182d6d88679405cce8f32382f670c3a86f983d29b2d3c3586",
+      "bytes": 18052,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "weekly_report",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/weekly_2026_11_04/AI_CAPEX_WEEKLY_WATCH_2026-11-04.md",
+      "source_path": "Docs/archive/legacy/weekly_2026_11_04/AI_CAPEX_WEEKLY_WATCH_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "f4b0278a5a2f7a26d15509f68a25688bd334688e",
+      "target_path": "research/archive/legacy/weekly_2026_11_04/AI_CAPEX_WEEKLY_WATCH_2026-11-04.md"
+    },
+    {
+      "sha256": "7abb8f2e10b0561e8dba8c9c2f9973a236441320a5c4846c72867086cc2eeb10",
+      "bytes": 1706,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/archive/legacy/weekly_2026_11_04/README.md",
+      "links": [
+        {
+          "link": "AI_CAPEX_WEEKLY_WATCH_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/archive/legacy/weekly_2026_11_04/AI_CAPEX_WEEKLY_WATCH_2026-11-04.md",
+          "fragment": null
+        },
+        {
+          "link": "../../../../data/research/weekly/archive/2026-11-04/weekly_challenger_v2_2026-11-04_r1.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/weekly/archive/2026-11-04/weekly_challenger_v2_2026-11-04_r1.json",
+          "fragment": null
+        },
+        {
+          "link": "../../../../data/research/weekly/archive/2026-11-04/weekly_coverage_2026-11-04_r1.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/weekly/archive/2026-11-04/weekly_coverage_2026-11-04_r1.json",
+          "fragment": null
+        },
+        {
+          "link": "../../../../data/research/weekly/archive/2026-11-04/weekly_institutional_2026-11-04_r1.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/weekly/archive/2026-11-04/weekly_institutional_2026-11-04_r1.json",
+          "fragment": null
+        },
+        {
+          "link": "../../../../data/research/weekly/archive/2026-11-04/weekly_macro_pain_2026-11-04_r1.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/weekly/archive/2026-11-04/weekly_macro_pain_2026-11-04_r1.json",
+          "fragment": null
+        },
+        {
+          "link": "../../../research/AI_CAPEX_CHALLENGER_V2_1_NEW_REPORT_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_CAPEX_CHALLENGER_V2_1_NEW_REPORT_2026-11-04.md",
+          "fragment": null
+        },
+        {
+          "link": "../../../research/AI_CAPEX_DAILY_CLOSE_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-03.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/archive/legacy/weekly_2026_11_04/README.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "d8567f4ed4119b0212f02e391251fac35416fa5a",
+      "target_path": "research/archive/legacy/weekly_2026_11_04/README.md"
+    },
+    {
+      "sha256": "ebc0fcb9a1a51191a30d6aed70f8be47c29590b7261ac28f81c19831dbc80c5d",
+      "bytes": 1029,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": "2026-11-09",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_2026-11-09_ARCHIVE_DISPOSITION.md",
+      "source_path": "Docs/research/AI_CAPEX_2026-11-09_ARCHIVE_DISPOSITION.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "0ed3200ea8b9cfc3f4570553e2c7e7b4896b05c2",
+      "target_path": "research/archive/partial-daily/AI_CAPEX_2026-11-09_ARCHIVE_DISPOSITION.md"
+    },
+    {
+      "sha256": "f0fe61ae8b761d6a48e20806fff0000b49756a54d250650b576045195404504a",
+      "bytes": 7541,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "historical",
+      "date_in_filename": "2026-11-09",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_2026-11-09_PARTIAL_EVIDENCE_UNRECONCILED.md",
+      "source_path": "Docs/research/AI_CAPEX_2026-11-09_PARTIAL_EVIDENCE_UNRECONCILED.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "e7a87d1de5b54e6963abe8802545424f6650831a",
+      "target_path": "research/archive/partial-daily/AI_CAPEX_2026-11-09_PARTIAL_EVIDENCE_UNRECONCILED.md"
+    },
+    {
+      "sha256": "7b8b5faf8e49c27ecb24b1348e458fc94ae20f33718411ab0851694cd13d8e3d",
+      "bytes": 23320,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/events/recalculations/EVT-20261027-1C51396E8F19_20261104T072100Z_ca79ec08.json",
+      "source_path": "data/research/events/recalculations/EVT-20261027-1C51396E8F19_20261104T072100Z_ca79ec08.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "e7062fec9473ef3dea57b759d610fde98ca4972f",
+      "target_path": "research/challenger/calculations/EVT-20261027-1C51396E8F19_20261104T072100Z_ca79ec08.json"
+    },
+    {
+      "sha256": "6c5706d752810d997ce1650f4da517739a4676fcfde573ac87acd4a52c0d30ec",
+      "bytes": 25336,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/events/recalculations/EVT-20261102-6DFE079F76A6_20261104T072101Z_9287efcb.json",
+      "source_path": "data/research/events/recalculations/EVT-20261102-6DFE079F76A6_20261104T072101Z_9287efcb.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "a9b02c5e96c67ada823a86d6c2d54ead239ae947",
+      "target_path": "research/challenger/calculations/EVT-20261102-6DFE079F76A6_20261104T072101Z_9287efcb.json"
+    },
+    {
+      "sha256": "2debe9ae1dee47a725881c5e727b4b6984f5b7233a88655fa2fda1fec00df6e4",
+      "bytes": 12675,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/AI_FINANCING_CREDIT_STRESS_CONTRACT_v1.md",
+      "source_path": "Docs/AI_FINANCING_CREDIT_STRESS_CONTRACT_v1.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "659d2efc4ca626d496d312560f3c43a40085cc48",
+      "target_path": "research/challenger/contracts/AI_FINANCING_CREDIT_STRESS_CONTRACT_v1.md"
+    },
+    {
+      "sha256": "9afdca87944172c6b7021e3e677757d7363a3d8cfef05c338467fc2b66d8f546",
+      "bytes": 9709,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/AI_MARKET_LEADERSHIP_CONTRACT_v1.md",
+      "source_path": "Docs/AI_MARKET_LEADERSHIP_CONTRACT_v1.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "0302fa4372470255480f43d255da69fc459416ee",
+      "target_path": "research/challenger/contracts/AI_MARKET_LEADERSHIP_CONTRACT_v1.md"
+    },
+    {
+      "sha256": "79b018ce7709affdaa820d2a870d6566ebef0ccfbc27bce657982d53cad06d39",
+      "bytes": 11799,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md",
+      "links": [
+        {
+          "link": "research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "792676f6d0dc0a3719f74e1316ff76d05af68cec",
+      "target_path": "research/challenger/contracts/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md"
+    },
+    {
+      "sha256": "188f5fdfb3b3e4ca56952011bea91295c72f1dda9cd80e6bc9bf0c1a059d95cb",
+      "bytes": 12105,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+      "links": [
+        {
+          "link": "CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/policy/CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7319c4a61d10ddd55920785ebc89c1218a9482c4",
+      "target_path": "research/challenger/contracts/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md"
+    },
+    {
+      "sha256": "50b3e056862b458ef52aa4219d5d3fee846da1b04435868e7c3060e89aeb26b2",
+      "bytes": 13667,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/FUNDAMENTAL_SNAPSHOT_CONTRACT_v2.md",
+      "source_path": "Docs/FUNDAMENTAL_SNAPSHOT_CONTRACT_v2.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "1a5e870746f93490199dede83a2b0cf89e243b96",
+      "target_path": "research/challenger/contracts/FUNDAMENTAL_SNAPSHOT_CONTRACT_v2.md"
+    },
+    {
+      "sha256": "84b02b62c9ad5d92346d0644204e3de094ed801d33afb17cae721cf019882ac4",
+      "bytes": 22038,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/TECHNICAL_SIGNAL_CONTRACT_v1.md",
+      "source_path": "Docs/TECHNICAL_SIGNAL_CONTRACT_v1.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "eed3567f1f3152a652f0b46f349c737b82f6ffb7",
+      "target_path": "research/challenger/contracts/TECHNICAL_SIGNAL_CONTRACT_v1.md"
+    },
+    {
+      "sha256": "50c9623f16178939c0e1feab53bee85a7fc8e72be9f5ff0a891b639c8b76c9f0",
+      "bytes": 7824,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/WEEKLY_CHALLENGER_V2_CAPTURE_CONTRACT.md",
+      "links": [
+        {
+          "link": "CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/policy/CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_ROI_CHALLENGER_MODEL_v2.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v2.md",
+          "fragment": null
+        },
+        {
+          "link": "research/CHALLENGER_V2_FULL_RECALCULATION_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_FULL_RECALCULATION_2026-11-04.md",
+          "fragment": null
+        },
+        {
+          "link": "WEEKLY_RESEARCH_CAPTURE_CONTRACT_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/WEEKLY_RESEARCH_CAPTURE_CONTRACT_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/WEEKLY_CHALLENGER_V2_CAPTURE_CONTRACT.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "196615a34bdb13607c0ffe0d39bf7685d58a8cf9",
+      "target_path": "research/challenger/contracts/WEEKLY_CHALLENGER_V2_CAPTURE_CONTRACT.md"
+    },
+    {
+      "sha256": "c73e1f7e799fa70c68d3e3cb9fd2746370e1eed09d651946041a040e5fe4b064",
+      "bytes": 6647,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/WEEKLY_RESEARCH_CAPTURE_CONTRACT_v1.md",
+      "links": [
+        {
+          "link": "AI_ROI_CHALLENGER_MODEL_v2.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v2.md",
+          "fragment": null
+        },
+        {
+          "link": "WEEKLY_CHALLENGER_V2_CAPTURE_CONTRACT.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/WEEKLY_CHALLENGER_V2_CAPTURE_CONTRACT.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_CapEx_Reversal_Strategy_v1.3.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/AI_CapEx_Reversal_Strategy_v1.3.md"
+        },
+        {
+          "link": "archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "resolution": "target",
+          "target_path": "research/archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "MACRO_INPUT_COST_PAIN_OVERLAY_v1.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/MACRO_INPUT_COST_PAIN_OVERLAY_v1.md"
+        },
+        {
+          "link": "INSTITUTIONAL_DERISKING_OVERLAY_v1.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/INSTITUTIONAL_DERISKING_OVERLAY_v1.md"
+        },
+        {
+          "link": "research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "REPOSITORY_GOVERNANCE.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/REPOSITORY_GOVERNANCE.md"
+        }
+      ],
+      "source_path": "Docs/WEEKLY_RESEARCH_CAPTURE_CONTRACT_v1.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7609f68bce6deed9a54de6019edfc183c2dc08be",
+      "target_path": "research/challenger/contracts/WEEKLY_RESEARCH_CAPTURE_CONTRACT_v1.md"
+    },
+    {
+      "sha256": "37691900d5eee1606e02a5692c18076a975bb8676cfae654713869815f53dfd4",
+      "bytes": 73714,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/events/challenger_v2_event_registry.json",
+      "source_path": "data/research/events/challenger_v2_event_registry.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7999007c7ca2b32dd1e5c523891bd68a587e9ccd",
+      "target_path": "research/challenger/events/challenger_v2_event_registry.json"
+    },
+    {
+      "sha256": "55200a731071626690bd0af18a1b47ccb63aed8b477dff0d333358bd8e86ccfb",
+      "bytes": 20381,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/events/daily_high_critical_index.json",
+      "source_path": "data/research/events/daily_high_critical_index.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "2cc852deb55659bf386010ddb42eb73e2e771e69",
+      "target_path": "research/challenger/events/daily_high_critical_index.json"
+    },
+    {
+      "sha256": "69c634dc0ab32c996b0a41989e6725a02b83c6123e7ee68ed39856da121d782f",
+      "bytes": 50684,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-11",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/events/event_strength_audit_2026-11-11.json",
+      "source_path": "data/research/events/event_strength_audit_2026-11-11.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "e5ddda2d6efc38eb86e4ffb301556f31469e9839",
+      "target_path": "research/challenger/events/event_strength_audit_2026-11-11.json"
+    },
+    {
+      "sha256": "e85d1c0c927ae8484cc02c6d5e9c95aaac2f0efba21a7b8eb6649fda25655e5d",
+      "bytes": 6936,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/events/event_strength_coverage_2026-11-14.json",
+      "source_path": "data/research/events/event_strength_coverage_2026-11-14.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "0ebcba7696a2edf5c91c889934dccb4179df74dd",
+      "target_path": "research/challenger/events/event_strength_coverage_2026-11-14.json"
+    },
+    {
+      "sha256": "8edb31a84b6b7aba48a9ff793a65c9a5f46d96d7f7f85049742b853a877cf29a",
+      "bytes": 22772,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-11",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/events/macro_event_comparison_2026-11-11.json",
+      "source_path": "data/research/events/macro_event_comparison_2026-11-11.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "19f072c708a8613c64bd536e15457edc43042a94",
+      "target_path": "research/challenger/events/macro_event_comparison_2026-11-11.json"
+    },
+    {
+      "sha256": "b6e13a7236a50ccd6c8d4e334f94d6bb91aca41a94e23798a0d657d132a31fb4",
+      "bytes": 4509,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-09-09",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/ai_roi_challenger_2026-09-09.yaml",
+      "source_path": "data/research/challenger/ai_roi_challenger_2026-09-09.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7f1f694e65270f306eb5572a2b7f959a144acf7d",
+      "target_path": "research/challenger/inputs/ai_roi_challenger_2026-09-09.yaml"
+    },
+    {
+      "sha256": "f425e91c7ba659252d4454a6cb2ba12b88bccfb26e17d792fb114e0263f73989",
+      "bytes": 6678,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-09-16",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/ai_roi_challenger_2026-09-16_vendor_supported_demand.yaml",
+      "source_path": "data/research/challenger/ai_roi_challenger_2026-09-16_vendor_supported_demand.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "e23ff63ce9d6f4a6a645e26c36bb1959f4240da0",
+      "target_path": "research/challenger/inputs/ai_roi_challenger_2026-09-16_vendor_supported_demand.yaml"
+    },
+    {
+      "sha256": "3d1bf66e6e5ad5b7cba6ed6cb5de69ca8a9dbebefedc824d1c56e1b229a5b6c5",
+      "bytes": 5060,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-09-16",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/ai_roi_challenger_2026-09-16.yaml",
+      "source_path": "data/research/challenger/ai_roi_challenger_2026-09-16.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7f61cef751e4d8193a84af3e4e1623665f12aae0",
+      "target_path": "research/challenger/inputs/ai_roi_challenger_2026-09-16.yaml"
+    },
+    {
+      "sha256": "881c81eb1bbb6c8a23a7b3357bee7436c6a05ab1b29853a070f0d66af8734488",
+      "bytes": 5455,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-09-23",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/ai_roi_challenger_2026-09-23.yaml",
+      "source_path": "data/research/challenger/ai_roi_challenger_2026-09-23.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "35f3adc25e6d1999f3c5dfc0a80ecd0d048d1bc3",
+      "target_path": "research/challenger/inputs/ai_roi_challenger_2026-09-23.yaml"
+    },
+    {
+      "sha256": "71028ce64afbb860626c89d49c6104b66aa2c6113b300922db97ce7863775234",
+      "bytes": 5661,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-09-30",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/ai_roi_challenger_2026-09-30.yaml",
+      "source_path": "data/research/challenger/ai_roi_challenger_2026-09-30.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "0911902d0c86273d42fc89cdda9dedde10b7b867",
+      "target_path": "research/challenger/inputs/ai_roi_challenger_2026-09-30.yaml"
+    },
+    {
+      "sha256": "3ad8d724ec6271b66ed483f05ad8defe7c85e2f2cba51278cb262bb38ca4405e",
+      "bytes": 6273,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-10-07",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/ai_roi_challenger_2026-10-07.yaml",
+      "source_path": "data/research/challenger/ai_roi_challenger_2026-10-07.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "592ed2e8605425b508602cb6c73619ce22fa8113",
+      "target_path": "research/challenger/inputs/ai_roi_challenger_2026-10-07.yaml"
+    },
+    {
+      "sha256": "4ab0e140f0f8f57e683931040760111615cc705415e3749ce3eedb37a2ce67ec",
+      "bytes": 5410,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-10-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/ai_roi_challenger_2026-10-14.yaml",
+      "source_path": "data/research/challenger/ai_roi_challenger_2026-10-14.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "575a3be24325e3b1771121c84cb5a8b69019e887",
+      "target_path": "research/challenger/inputs/ai_roi_challenger_2026-10-14.yaml"
+    },
+    {
+      "sha256": "091a9c2c506fd87a7e8f472dac077b2be3d3a146e38b6cb6a61e555142c51350",
+      "bytes": 5931,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-02",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/ai_roi_challenger_2026-11-02.yaml",
+      "source_path": "data/research/challenger/ai_roi_challenger_2026-11-02.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "9adc19dac21b5a7fbf8359699ed7eb72e72fadd5",
+      "target_path": "research/challenger/inputs/ai_roi_challenger_2026-11-02.yaml"
+    },
+    {
+      "sha256": "5713e279cec50b91dd373c0f4640a80433c63993d7ad013ae30426b9ee3a7f4c",
+      "bytes": 4730,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/challenger_v2_candidate_cohorts_2026-11-03.yaml",
+      "source_path": "data/research/challenger/challenger_v2_candidate_cohorts_2026-11-03.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "c3abbef6c507eea96ce8fb03909db34162b83d5d",
+      "target_path": "research/challenger/inputs/challenger_v2_candidate_cohorts_2026-11-03.yaml"
+    },
+    {
+      "sha256": "f4465b5f7bfa543335c182f0d9275ac3d34a3229c94de4d305d682115465bbac",
+      "bytes": 5186,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/challenger_v2_event_review_2026-11-04.yaml",
+      "source_path": "data/research/challenger/challenger_v2_event_review_2026-11-04.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "6e72d0a4a6f42e4d5a89d2d2f2bfcec4700601bf",
+      "target_path": "research/challenger/inputs/challenger_v2_event_review_2026-11-04.yaml"
+    },
+    {
+      "sha256": "22c307691227675b0e8f6ee0c95b91900712430a0ac2f3a9a6532ee53312156f",
+      "bytes": 1967,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/challenger_v2_input_template.yaml",
+      "source_path": "data/research/challenger/challenger_v2_input_template.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "3984220c330dd16f26574b34cc3910ab0a63550d",
+      "target_path": "research/challenger/inputs/challenger_v2_input_template.yaml"
+    },
+    {
+      "sha256": "db7487f1824f6225e23a71b3c5a05cced57d90c39a9056a384f42c71afdd8509",
+      "bytes": 7603,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/challenger_v2_r4_platform_reassessment_2026-11-04.yaml",
+      "source_path": "data/research/challenger/challenger_v2_r4_platform_reassessment_2026-11-04.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "8e92b224bcb4ce93575424e65a05f940d1f7116c",
+      "target_path": "research/challenger/inputs/challenger_v2_r4_platform_reassessment_2026-11-04.yaml"
+    },
+    {
+      "sha256": "31fca67309ccc5f6774383098c4315e5ccc340a8613db020f95a726594ba03f0",
+      "bytes": 2260,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/challenger_v2_recalculation_summary_2026-11-04.yaml",
+      "source_path": "data/research/challenger/challenger_v2_recalculation_summary_2026-11-04.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "91fce86cf6f701ed64efd6e6a68a33155b4c644d",
+      "target_path": "research/challenger/inputs/challenger_v2_recalculation_summary_2026-11-04.yaml"
+    },
+    {
+      "sha256": "9b95383df04a9f9537e3fd6ae4c537311c9ed21b15e0af8ab2f7a99ebffd7de1",
+      "bytes": 11489,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-02",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/challenger_v2_recovered_observables_2026-11-02.yaml",
+      "source_path": "data/research/challenger/challenger_v2_recovered_observables_2026-11-02.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "434b49d10e817dde9d5018bcd75381e5b361e397",
+      "target_path": "research/challenger/inputs/challenger_v2_recovered_observables_2026-11-02.yaml"
+    },
+    {
+      "sha256": "5403186ae7c890ab28325508613759c0fa77a3d53e1081e4d166fc7291ecef94",
+      "bytes": 2964,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/challenger_v2_research_approved_cohort_2026-11-04.yaml",
+      "source_path": "data/research/challenger/challenger_v2_research_approved_cohort_2026-11-04.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "6e97a22c76ee0fca38553c911e252a6e4df9b64a",
+      "target_path": "research/challenger/inputs/challenger_v2_research_approved_cohort_2026-11-04.yaml"
+    },
+    {
+      "sha256": "53bddad404211e375c85d3d3220e06b5f48f56d7b18843583f09022ce6b3c573",
+      "bytes": 1480,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-10-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/outcome_review_2026-10-14_2w_asof_2026-10-28.json",
+      "source_path": "data/research/challenger/outcome_review_2026-10-14_2w_asof_2026-10-28.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "6ea5fdc5e35580bac001d4d13677a04076d0f304",
+      "target_path": "research/challenger/inputs/outcome_review_2026-10-14_2w_asof_2026-10-28.json"
+    },
+    {
+      "sha256": "a304313a4db539bb967e515e525f81550bf634f222e3ef4e1052fd751890bd17",
+      "bytes": 1532,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-10-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/outcome_review_2026-10-14.json",
+      "source_path": "data/research/challenger/outcome_review_2026-10-14.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "e5ca67b7c1f885da91c649f7b964cb4e9055f2ed",
+      "target_path": "research/challenger/inputs/outcome_review_2026-10-14.json"
+    },
+    {
+      "sha256": "ec95d30f80253e854f8d3a6ec5134583fa157ac21e3c188c2f2f96557f5746b1",
+      "bytes": 932,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/AI_ROI_CHALLENGER_MODEL_v1.md",
+      "links": [
+        {
+          "link": "archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "resolution": "target",
+          "target_path": "research/archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_ROI_CHALLENGER_MODEL_v2.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v2.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/AI_ROI_CHALLENGER_MODEL_v1.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "49c3a6d3b1c4537126c07f030bca8e41c9c59702",
+      "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v1.md"
+    },
+    {
+      "sha256": "aa98fd815e1111e4b9cf2be160b438530271d8395a5fa4716dd86641423e53f6",
+      "bytes": 13761,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/AI_ROI_CHALLENGER_MODEL_v2.md",
+      "links": [
+        {
+          "link": "CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/policy/CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/AI_ROI_CHALLENGER_MODEL_v2.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "c30b9dc8ecf95ff783de4815fcdc2a62ed83a3a6",
+      "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v2.md"
+    },
+    {
+      "sha256": "4919ded7bcf949164b6fb00e1e918fb35b359cbe3a999ea9e468f484dc5b6ae0",
+      "bytes": 5317,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+      "links": [
+        {
+          "link": "archive/legacy/challenger_v2_event_qualification_pre_v2_1/README.md",
+          "resolution": "target",
+          "target_path": "research/archive/legacy/challenger_v2_event_qualification_pre_v2_1/README.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "d055a05fabea757ba1aa456778a07a45784bcac6",
+      "target_path": "research/challenger/policy/CHALLENGER_V2_EVENT_POLICY_V2_1.md"
+    },
+    {
+      "sha256": "5729fb4c5438683d3c618949c64fcb9789b7d8061a93f4a5da0110ee367b1da3",
+      "bytes": 245,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/config/environment.json",
+      "source_path": "config/environment.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "f051173ff024ea1144fc83219e83361d05ccbfd9",
+      "target_path": "research/challenger/reference-python/config/environment.json"
+    },
+    {
+      "sha256": "4af7a7e8431669bc11f8dcce12b583fdb2694938e640f76e3f84d91a44290814",
+      "bytes": 2687,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/config/strategy.json",
+      "source_path": "config/strategy.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "8fffcd7d69f9ab4b2ce4bd653252df72e2388dd3",
+      "target_path": "research/challenger/reference-python/config/strategy.json"
+    },
+    {
+      "sha256": "6c9e890cc3370e86c213add46216826e72d772091559d1e7fe94664793677af8",
+      "bytes": 1166,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/pyproject.toml",
+      "source_path": "pyproject.toml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "492aeac9744054e7721452eabeb8d590fc421ca9",
+      "target_path": "research/challenger/reference-python/pyproject.toml"
+    },
+    {
+      "sha256": "96919c8b3322b3e40298f7813961eb3bac428cb86b8a7f7d3abed90d1cd68784",
+      "bytes": 33176,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/challenger_v2_event_register.py",
+      "source_path": "scripts/research/challenger_v2_event_register.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "90a55f571a8242737ef278a5a9752e18645dc8a7",
+      "target_path": "research/challenger/reference-python/scripts/research/challenger_v2_event_register.py"
+    },
+    {
+      "sha256": "01846d8e1d3d0af3e9dad06c8eead41ea9603de0b9449753c7b7333ef875cac2",
+      "bytes": 1804,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/check_challenger_r2_2026_11_02.py",
+      "source_path": "scripts/research/check_challenger_r2_2026_11_02.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "a60506a29b82f4464d080717dc41988d369035d6",
+      "target_path": "research/challenger/reference-python/scripts/research/check_challenger_r2_2026_11_02.py"
+    },
+    {
+      "sha256": "79072a2badc4f86406f50f98b71dbbc8a94c1e0cecf2cc73f07c13024b020584",
+      "bytes": 1153,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/evaluate_challenger_v2.py",
+      "source_path": "scripts/research/evaluate_challenger_v2.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "619e56cf7495d870d14936cf3dec33ec115a42d6",
+      "target_path": "research/challenger/reference-python/scripts/research/evaluate_challenger_v2.py"
+    },
+    {
+      "sha256": "ba5cc7b9348eab6173a24458fa7d709b73a9eed72d2def848c5078d4bf5f71a1",
+      "bytes": 1329,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/measure_challenger_v2_observables.py",
+      "source_path": "scripts/research/measure_challenger_v2_observables.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "6bc4291d82a6a10a55acf85b784aa23fad33a5de",
+      "target_path": "research/challenger/reference-python/scripts/research/measure_challenger_v2_observables.py"
+    },
+    {
+      "sha256": "a01d703f1cd800ac213cba949ce547e51060936f0191ba8a9eec718d249e266b",
+      "bytes": 8447,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/one_off_challenger_v2_full_recalculation.py",
+      "source_path": "scripts/research/one_off_challenger_v2_full_recalculation.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "d122dafd2c344eedefbd2cede7bd2ceecae5bbc6",
+      "target_path": "research/challenger/reference-python/scripts/research/one_off_challenger_v2_full_recalculation.py"
+    },
+    {
+      "sha256": "6cf3a61f41867cf792ca30030143307f83cf95d411d43e09951c895ea3c85cdf",
+      "bytes": 8462,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/one_off_challenger_v2_replay.py",
+      "source_path": "scripts/research/one_off_challenger_v2_replay.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "27e45ab1050a06d47f495c2d4af765275b543e0f",
+      "target_path": "research/challenger/reference-python/scripts/research/one_off_challenger_v2_replay.py"
+    },
+    {
+      "sha256": "e733a69d1b140e6582bca3bd5932241ed8417785970daba84664cdb1bbb15c3e",
+      "bytes": 5059,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/validate_macro_event_comparison.py",
+      "source_path": "scripts/research/validate_macro_event_comparison.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "21caa35b0c40560356c842c023fd157a2efc8f03",
+      "target_path": "research/challenger/reference-python/scripts/research/validate_macro_event_comparison.py"
+    },
+    {
+      "sha256": "9c015793e5a096a4573a09a1baf5c80f959af24d9f2467f15d61940c5ae7cef4",
+      "bytes": 6008,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/validate_relative_event_strength.py",
+      "source_path": "scripts/research/validate_relative_event_strength.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "9372c015ab93dd9f5a9b98e2ec1f670de7af9434",
+      "target_path": "research/challenger/reference-python/scripts/research/validate_relative_event_strength.py"
+    },
+    {
+      "sha256": "55f9c3dded942dbb486b6fed0e7092ad54f031c981b01741bace773faf4db347",
+      "bytes": 18179,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/validate_weekly_capture.py",
+      "source_path": "scripts/research/validate_weekly_capture.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "1a2e3963a213f8456de76a6adb03b39c7e196225",
+      "target_path": "research/challenger/reference-python/scripts/research/validate_weekly_capture.py"
+    },
+    {
+      "sha256": "75535a52b2a79f51b884fa4527ab9a2f11ef2f08a4eb0338c4da31187b8685bb",
+      "bytes": 15057,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/validate_weekly_challenger_v2.py",
+      "source_path": "scripts/research/validate_weekly_challenger_v2.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "c79e996170850ef52146babe04f847b68cc12e51",
+      "target_path": "research/challenger/reference-python/scripts/research/validate_weekly_challenger_v2.py"
+    },
+    {
+      "sha256": "d37a1bb4bad941403161ae0a4a178e4a0d6ee4f2918eaf112d46cecbb29c3fdd",
+      "bytes": 319,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/src/scoring/__init__.py",
+      "source_path": "src/scoring/__init__.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "b5f3579eddced58bf593c4bc21b21f585a783ce8",
+      "target_path": "research/challenger/reference-python/src/scoring/__init__.py"
+    },
+    {
+      "sha256": "a5917c846a0ed022a403dc2e62a417b2be86a620900378b6fe7c209a81be2dd6",
+      "bytes": 2954,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/src/scoring/challenger_v2_event_policy.py",
+      "source_path": "src/scoring/challenger_v2_event_policy.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "f9ebc0f8d79aff57165b5bc75ca4ba96cb8251e4",
+      "target_path": "research/challenger/reference-python/src/scoring/challenger_v2_event_policy.py"
+    },
+    {
+      "sha256": "c355eca7e2f980fd56f61aeee78e01aad1d4e904682ca2863f1771030db416d7",
+      "bytes": 16658,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/src/scoring/challenger_v2_metrics.py",
+      "source_path": "src/scoring/challenger_v2_metrics.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "bdbe50d2545da3bcfef5f71fe6b1577d74efab3a",
+      "target_path": "research/challenger/reference-python/src/scoring/challenger_v2_metrics.py"
+    },
+    {
+      "sha256": "56a6667fca94ab3df18380bf49af72311930285aaf6a2017345f3bda57336722",
+      "bytes": 19193,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/src/scoring/challenger_v2.py",
+      "source_path": "src/scoring/challenger_v2.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "98b01d34e77a163b5409f48ab3edd78a88aad48f",
+      "target_path": "research/challenger/reference-python/src/scoring/challenger_v2.py"
+    },
+    {
+      "sha256": "5c3338ae51d3529c3dca953ab9896264b6ede9a1bd31766e45b979e40337ceab",
+      "bytes": 2135,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/src/scoring/combined.py",
+      "source_path": "src/scoring/combined.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "a691303ff1347d24ba41e844ebe81e35078eb1a2",
+      "target_path": "research/challenger/reference-python/src/scoring/combined.py"
+    },
+    {
+      "sha256": "490d167d34bfa6b24c81e368ba7dfedc0bb6e03f58b62302ea4c200db096f84a",
+      "bytes": 6580,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/src/settings.py",
+      "source_path": "src/settings.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "b28d44c48f09db916153840b5ff51a312620cbe6",
+      "target_path": "research/challenger/reference-python/src/settings.py"
+    },
+    {
+      "sha256": "9890be6d1c2367ac8d82708697f990e5873722427383759620aa70d65981206f",
+      "bytes": 446,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/test_challenger_r2_2026_11_02.py",
+      "source_path": "tests/test_challenger_r2_2026_11_02.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7ea09f741a70a937a329e8c77beaacfa5632981a",
+      "target_path": "research/challenger/reference-python/tests/test_challenger_r2_2026_11_02.py"
+    },
+    {
+      "sha256": "e3f782d48a601fba8df000756cff615fc243f6e2aa21205c21761f79fc538000",
+      "bytes": 6174,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/test_challenger_v2_approved_cohort.py",
+      "source_path": "tests/test_challenger_v2_approved_cohort.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "bf48077844ee43742e89ede2c2ef271ecb6b3f79",
+      "target_path": "research/challenger/reference-python/tests/test_challenger_v2_approved_cohort.py"
+    },
+    {
+      "sha256": "576591137fe7ac7ba93d3521bd97b70afa497099096a0549fe9d7955c7cd8eef",
+      "bytes": 18128,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/test_challenger_v2_event_register.py",
+      "source_path": "tests/test_challenger_v2_event_register.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "2b183f7756152e1deb8604787994c651de138395",
+      "target_path": "research/challenger/reference-python/tests/test_challenger_v2_event_register.py"
+    },
+    {
+      "sha256": "1913bd30ee08b4288f7a76663e53701abbbf5c5288451da7f46e1d3f4fd96367",
+      "bytes": 5582,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/test_challenger_v2_full_recalculation.py",
+      "source_path": "tests/test_challenger_v2_full_recalculation.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "bc39a839ee0ac962f37ac33d43162e14100947a7",
+      "target_path": "research/challenger/reference-python/tests/test_challenger_v2_full_recalculation.py"
+    },
+    {
+      "sha256": "9673f3552168c5a5c57e117df88bac130976903319283b35bb6c3bc4e3948a6e",
+      "bytes": 11389,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/test_challenger_v2_metrics.py",
+      "source_path": "tests/test_challenger_v2_metrics.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "bdf47e6d21ae711413e4b548cf0a7f36116acb56",
+      "target_path": "research/challenger/reference-python/tests/test_challenger_v2_metrics.py"
+    },
+    {
+      "sha256": "c92a386f7de11d2e25fba57fc3cfb234621e6b792b64cbb90639ec4527e4c090",
+      "bytes": 4902,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/test_challenger_v2_posthoc_replay.py",
+      "source_path": "tests/test_challenger_v2_posthoc_replay.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "796809d37c7d0c6a27c8f3e83f3b1d8ab31ad30e",
+      "target_path": "research/challenger/reference-python/tests/test_challenger_v2_posthoc_replay.py"
+    },
+    {
+      "sha256": "0d461aa667b66d9034c8cc9809649ebf4cdb0e58dad9b90c82b5d4938b450e00",
+      "bytes": 3092,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/test_challenger_v2_source_register.py",
+      "source_path": "tests/test_challenger_v2_source_register.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "d58b66fffb997a4c2ca57824f76404dba248ad78",
+      "target_path": "research/challenger/reference-python/tests/test_challenger_v2_source_register.py"
+    },
+    {
+      "sha256": "4f2c28a678adfa841677325917f26da349f2b71da3233da82fd158ed959bee42",
+      "bytes": 9437,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/test_challenger_v2_two_real_events_dry_run.py",
+      "source_path": "tests/test_challenger_v2_two_real_events_dry_run.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "18c056af7009ba07ef0fde67b206d84f47c6edca",
+      "target_path": "research/challenger/reference-python/tests/test_challenger_v2_two_real_events_dry_run.py"
+    },
+    {
+      "sha256": "4d2ea9e17be24293e7f9424a787f0eb9288920f1440d478786eb331d52e1344a",
+      "bytes": 11430,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/test_challenger_v2.py",
+      "source_path": "tests/test_challenger_v2.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "485caa23d9d1ecefcd99d0cfcf7c83d12a042418",
+      "target_path": "research/challenger/reference-python/tests/test_challenger_v2.py"
+    },
+    {
+      "sha256": "27b402970d3bd591018ba789d5440841d522b56d6c13b93845efdf7d3f3cf58a",
+      "bytes": 9102,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/test_weekly_challenger_v2.py",
+      "source_path": "tests/test_weekly_challenger_v2.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "4f08d6032f9469213c2359995ab303ad027b3050",
+      "target_path": "research/challenger/reference-python/tests/test_weekly_challenger_v2.py"
+    },
+    {
+      "sha256": "ec859f864965546ed83307b2b3dfac109763539c2f45062dc4ca121d4ccc020f",
+      "bytes": 1110,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/tests/unit/test_challenger_v2_1_links.py",
+      "source_path": "tests/unit/test_challenger_v2_1_links.py",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "928b5d1bb7c737c284afc9d6ee427da5e4dc38f6",
+      "target_path": "research/challenger/reference-python/tests/unit/test_challenger_v2_1_links.py"
+    },
+    {
+      "sha256": "e9e8ac25503cac248d476035390e0f94a4d6758ee5714958a25981466302aef1",
+      "bytes": 7055,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/challenger/challenger_v2_source_eligibility_register_2026-11-04.yaml",
+      "source_path": "data/research/challenger/challenger_v2_source_eligibility_register_2026-11-04.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "1b8c7228d3610d553e22e5773b211a5ce7bf3304",
+      "target_path": "research/challenger/sources/challenger_v2_source_eligibility_register_2026-11-04.yaml"
+    },
+    {
+      "sha256": "d506a96d6483fbd81de715210c202374d71cab2c9df0c5e01656d0f98ce2dd4b",
+      "bytes": 11904,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_CHALLENGER_V2_1_NEW_REPORT_2026-11-04.md",
+      "links": [
+        {
+          "link": "../../data/research/events/recalculations/EVT-20261102-6DFE079F76A6_20261104T072101Z_9287efcb.json",
+          "resolution": "target",
+          "target_path": "research/challenger/calculations/EVT-20261102-6DFE079F76A6_20261104T072101Z_9287efcb.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/events/recalculations/EVT-20261027-1C51396E8F19_20261104T072100Z_ca79ec08.json",
+          "resolution": "target",
+          "target_path": "research/challenger/calculations/EVT-20261027-1C51396E8F19_20261104T072100Z_ca79ec08.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/events/challenger_v2_event_registry.json",
+          "resolution": "target",
+          "target_path": "research/challenger/events/challenger_v2_event_registry.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/events/daily_high_critical_index.json",
+          "resolution": "target",
+          "target_path": "research/challenger/events/daily_high_critical_index.json",
+          "fragment": null
+        },
+        {
+          "link": "../archive/legacy/weekly_2026_11_04/AI_CAPEX_WEEKLY_WATCH_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/archive/legacy/weekly_2026_11_04/AI_CAPEX_WEEKLY_WATCH_2026-11-04.md",
+          "fragment": null
+        },
+        {
+          "link": "../archive/legacy/weekly_2026_11_04/README.md",
+          "resolution": "target",
+          "target_path": "research/archive/legacy/weekly_2026_11_04/README.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_CHALLENGER_V2_1_NEW_REPORT_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "167318859306062258bba1b6c99feb1f9c58a896",
+      "target_path": "research/challenger/studies/AI_CAPEX_CHALLENGER_V2_1_NEW_REPORT_2026-11-04.md"
+    },
+    {
+      "sha256": "683ae57ad46871985439aa0ccea613b6da5b9d802f8b52f98f0ec4c7357d11e0",
+      "bytes": 2032,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-12",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_EVENT_ALERT_2026-11-12_NVIDIA_CEO_TRANSITION.md",
+      "source_path": "Docs/research/AI_CAPEX_EVENT_ALERT_2026-11-12_NVIDIA_CEO_TRANSITION.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "f81227a297b84319ac624c76cdb049e7ff8bd7af",
+      "target_path": "research/challenger/studies/AI_CAPEX_EVENT_ALERT_2026-11-12_NVIDIA_CEO_TRANSITION.md"
+    },
+    {
+      "sha256": "fc6d7839f58d046c435280ce6f4bcbcbf012a09f620d773b10c2c9ed3563eeee",
+      "bytes": 2280,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-13",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_EVENT_ALERT_PPI_2026-11-13.md",
+      "source_path": "Docs/research/AI_CAPEX_EVENT_ALERT_PPI_2026-11-13.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "9e25760dce38e533e47966a1d7a12b67625f9537",
+      "target_path": "research/challenger/studies/AI_CAPEX_EVENT_ALERT_PPI_2026-11-13.md"
+    },
+    {
+      "sha256": "3f6eab2c4dcdc82a5fb1e9cc8151b8d1d6048374c313981b8940e27df58f34ae",
+      "bytes": 22255,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-11",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_EVENT_STRENGTH_AUDIT_2026-11-11.md",
+      "links": [
+        {
+          "link": "AI_CAPEX_MACRO_EVENT_COMPARISON_2026-11-11.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_CAPEX_MACRO_EVENT_COMPARISON_2026-11-11.md",
+          "fragment": null
+        },
+        {
+          "link": "../AI_ROI_CHALLENGER_MODEL_v2.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v2.md",
+          "fragment": null
+        },
+        {
+          "link": "../CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/policy/CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "fragment": null
+        },
+        {
+          "link": "../CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_EVENT_STRENGTH_AUDIT_2026-11-11.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "8e1952ff416f37a3bd6e2d84008a8d9d942b0a61",
+      "target_path": "research/challenger/studies/AI_CAPEX_EVENT_STRENGTH_AUDIT_2026-11-11.md"
+    },
+    {
+      "sha256": "1c6c5a25a98b80191eba60fd98a1a44a4cd520771e765fd4d6c7fdd1f93b0e64",
+      "bytes": 3298,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_EVENT_STRENGTH_RECONCILIATION_2026-11-14.md",
+      "source_path": "Docs/research/AI_CAPEX_EVENT_STRENGTH_RECONCILIATION_2026-11-14.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "9478656145fce33ff8ac4ede907f846d95817f37",
+      "target_path": "research/challenger/studies/AI_CAPEX_EVENT_STRENGTH_RECONCILIATION_2026-11-14.md"
+    },
+    {
+      "sha256": "4a2666973c56257fd5a7e289b2e44d88350ccd548fb897fef76f53b484bfff5e",
+      "bytes": 9999,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-10-18",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_FINANCIAL_CONTAGION_PHASE4_GATE_REVIEW_2026-10-18.md",
+      "links": [
+        {
+          "link": "AI_CAPEX_FINANCIAL_CONTAGION_PHASE3_METHOD_SELECTION_2026-10-18.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_FINANCIAL_CONTAGION_PHASE3_METHOD_SELECTION_2026-10-18.md"
+        },
+        {
+          "link": "../AI_FINANCING_CREDIT_STRESS_CONTRACT_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/AI_FINANCING_CREDIT_STRESS_CONTRACT_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_FINANCING_CREDIT_STRESS_MONITOR_TEMPLATE.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_FINANCING_CREDIT_STRESS_MONITOR_TEMPLATE.md"
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_FINANCIAL_CONTAGION_PHASE4_GATE_REVIEW_2026-10-18.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "9a34d1ec401e072ee4792aaa9de01481762920ec",
+      "target_path": "research/challenger/studies/AI_CAPEX_FINANCIAL_CONTAGION_PHASE4_GATE_REVIEW_2026-10-18.md"
+    },
+    {
+      "sha256": "e1131fb24bc18634d66549a66342672876c1c8c7e49efa849191584338992f52",
+      "bytes": 11386,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-11",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_MACRO_EVENT_COMPARISON_2026-11-11.md",
+      "source_path": "Docs/research/AI_CAPEX_MACRO_EVENT_COMPARISON_2026-11-11.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "b5ef663b1693b9843aa43362ad04b6e1e26c90a0",
+      "target_path": "research/challenger/studies/AI_CAPEX_MACRO_EVENT_COMPARISON_2026-11-11.md"
+    },
+    {
+      "sha256": "9199b482b281697a2f3dfc05a803cb2d1915c0f07237f5814507290b8b68f19e",
+      "bytes": 15361,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-07",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_POST_MIDTERM_RECOVERY_COUNTERHYPOTHESIS_2026-11-07.md",
+      "links": [
+        {
+          "link": "../CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/policy/CHALLENGER_V2_EVENT_POLICY_V2_1.md",
+          "fragment": null
+        },
+        {
+          "link": "../CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_CAPEX_CHALLENGER_V2_1_NEW_REPORT_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_CAPEX_CHALLENGER_V2_1_NEW_REPORT_2026-11-04.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_CAPEX_DAILY_CLOSE_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-04.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/events/challenger_v2_event_registry.json",
+          "resolution": "target",
+          "target_path": "research/challenger/events/challenger_v2_event_registry.json",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_POST_MIDTERM_RECOVERY_COUNTERHYPOTHESIS_2026-11-07.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7d219ed1ae6a2acd393bfe725cffb3a0baa07141",
+      "target_path": "research/challenger/studies/AI_CAPEX_POST_MIDTERM_RECOVERY_COUNTERHYPOTHESIS_2026-11-07.md"
+    },
+    {
+      "sha256": "557f14ea6d79f5e7b5d7a645d9bb09d0e41da663b41d14bd9791cf0d83e29b81",
+      "bytes": 8027,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-09-16",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_RESEARCH_UPDATE_2026-09-16_VENDOR_SUPPORTED_DEMAND.md",
+      "source_path": "Docs/research/AI_CAPEX_RESEARCH_UPDATE_2026-09-16_VENDOR_SUPPORTED_DEMAND.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "31ae7028aa82b06a1138aef6ac8119578af531b1",
+      "target_path": "research/challenger/studies/AI_CAPEX_RESEARCH_UPDATE_2026-09-16_VENDOR_SUPPORTED_DEMAND.md"
+    },
+    {
+      "sha256": "04ce3dc67a5d31d2ce50ab543cd12a97691c739eafd24ee2fed43d62a779f614",
+      "bytes": 5945,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-10",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_SOFTBANK_PROCUREMENT_2026-11-10.md",
+      "source_path": "Docs/research/AI_CAPEX_SOFTBANK_PROCUREMENT_2026-11-10.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "20bf9a2becee7638039f27e6bd50029804e655f2",
+      "target_path": "research/challenger/studies/AI_CAPEX_SOFTBANK_PROCUREMENT_2026-11-10.md"
+    },
+    {
+      "sha256": "973b928e6d88f0164d76898a05d8901fe45ee48ce8d4a0ab8caa1d102a3c8633",
+      "bytes": 14551,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-10-31",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_SPACEX_ANTHROPIC_IPO_COMPARISON_2026-10-31.md",
+      "links": [
+        {
+          "link": "../AI_FINANCING_CREDIT_STRESS_CONTRACT_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/AI_FINANCING_CREDIT_STRESS_CONTRACT_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "../AI_ROI_PAYBACK_RISK_CONTRACT_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "../AI_ROI_CHALLENGER_MODEL_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_SPACEX_ANTHROPIC_IPO_COMPARISON_2026-10-31.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7f6f56ffc7d720330c55ba7ba2cc208bdf81a486",
+      "target_path": "research/challenger/studies/AI_CAPEX_SPACEX_ANTHROPIC_IPO_COMPARISON_2026-10-31.md"
+    },
+    {
+      "sha256": "553e21b34f5fcaa17a7e500494a057fdba475d663f22f8dcf012a8f24b759681",
+      "bytes": 5501,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+      "links": [
+        {
+          "link": "../AI_ROI_CHALLENGER_MODEL_v2.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v2.md",
+          "fragment": null
+        },
+        {
+          "link": "../archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "resolution": "target",
+          "target_path": "research/archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "../AI_ROI_PAYBACK_RISK_CONTRACT_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "../AI_CapEx_Reversal_Strategy_v1.3.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/AI_CapEx_Reversal_Strategy_v1.3.md"
+        }
+      ],
+      "source_path": "Docs/research/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "34eba5a0206759cf1506272203c001eecf7113a3",
+      "target_path": "research/challenger/studies/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md"
+    },
+    {
+      "sha256": "33f8fa4bde8133f4fe56ae0469369cc0e550a9d16195bdedc00f7974ba38eda5",
+      "bytes": 16333,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-02",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_ROI_CHALLENGER_PIT_REASSESSMENT_2026-11-02.md",
+      "links": [
+        {
+          "link": "../AI_ROI_CHALLENGER_MODEL_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/ai_roi_challenger_2026-09-09.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/ai_roi_challenger_2026-09-09.yaml",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/ai_roi_challenger_2026-10-14.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/ai_roi_challenger_2026-10-14.yaml",
+          "fragment": null
+        },
+        {
+          "link": "AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+          "resolution": "target",
+          "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_CAPEX_DAILY_CLOSE_2026-10-28.md",
+          "resolution": "target",
+          "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-28.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_CAPEX_DAILY_CLOSE_2026-10-29.md",
+          "resolution": "target",
+          "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-29.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_CAPEX_DAILY_CLOSE_2026-10-30.md",
+          "resolution": "target",
+          "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-30.md",
+          "fragment": null
+        },
+        {
+          "link": "NVIDIA_Q2_10Q_FORENSIC_REVIEW_2026-08-27.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/NVIDIA_Q2_10Q_FORENSIC_REVIEW_2026-08-27.md"
+        },
+        {
+          "link": "NVIDIA_FORENSIC_FINANCING_ADDENDUM_2026-08-27.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/NVIDIA_FORENSIC_FINANCING_ADDENDUM_2026-08-27.md"
+        },
+        {
+          "link": "AI_CAPEX_FINANCIAL_CONTAGION_PHASE4_GATE_REVIEW_2026-10-18.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_CAPEX_FINANCIAL_CONTAGION_PHASE4_GATE_REVIEW_2026-10-18.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_CAPEX_SPACEX_ANTHROPIC_IPO_COMPARISON_2026-10-31.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_CAPEX_SPACEX_ANTHROPIC_IPO_COMPARISON_2026-10-31.md",
+          "fragment": null
+        },
+        {
+          "link": "../audits/2026-10-09_weekly_capture_completeness_audit.md",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/Docs/audits/2026-10-09_weekly_capture_completeness_audit.md",
+          "fragment": null
+        },
+        {
+          "link": "../REPOSITORY_GOVERNANCE.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/REPOSITORY_GOVERNANCE.md"
+        }
+      ],
+      "source_path": "Docs/research/AI_ROI_CHALLENGER_PIT_REASSESSMENT_2026-11-02.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "d3a5c283044b64b4982574702ead25ac89af4e07",
+      "target_path": "research/challenger/studies/AI_ROI_CHALLENGER_PIT_REASSESSMENT_2026-11-02.md"
+    },
+    {
+      "sha256": "77d57fe9a53956705d1f6b7f4b385fd1d78f8f30935dd4cf9463427acdfb6497",
+      "bytes": 5145,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_EVIDENCE_SUFFICIENCY_PROTOCOL_2026-11-03.md",
+      "source_path": "Docs/research/CHALLENGER_EVIDENCE_SUFFICIENCY_PROTOCOL_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "0135b3ae780fd8a7886c387951eb0d343f294ae8",
+      "target_path": "research/challenger/studies/CHALLENGER_EVIDENCE_SUFFICIENCY_PROTOCOL_2026-11-03.md"
+    },
+    {
+      "sha256": "03e2b3a0d680ebbf67986622ba7fff417be125c897a4bfb1d0e61513106b78f4",
+      "bytes": 1678,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_R2_AUDIT_2026-11-03.md",
+      "links": [
+        {
+          "link": "CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/CHALLENGER_R2_AUDIT_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "fbd3253a3caf14bf3f0ea4f938f1252ac4893967",
+      "target_path": "research/challenger/studies/CHALLENGER_R2_AUDIT_2026-11-03.md"
+    },
+    {
+      "sha256": "ebdbd4543f6214acc15d2ccc6fa0e871912b64c8af4dbb16890904c691852d88",
+      "bytes": 3910,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-02",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md",
+      "links": [
+        {
+          "link": "AI_CAPEX_DAILY_CLOSE_2026-10-28.md",
+          "resolution": "target",
+          "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-28.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+          "resolution": "target",
+          "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "03e2375cc057600926fb46cf318eb243f69480e5",
+      "target_path": "research/challenger/studies/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md"
+    },
+    {
+      "sha256": "cd62c3192493992dbd0ef05311cc7c05a7045d2bd76bc8d94eab7572a17dcf00",
+      "bytes": 2447,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_R2_CROSS_PR_AUDIT_2026-11-03.md",
+      "source_path": "Docs/research/CHALLENGER_R2_CROSS_PR_AUDIT_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "3714f3ca7632fffdafe0134c696435fc00f7fa40",
+      "target_path": "research/challenger/studies/CHALLENGER_R2_CROSS_PR_AUDIT_2026-11-03.md"
+    },
+    {
+      "sha256": "fb89cec311d3793121a2143a33535929ce491a1eeebabead20714b5cb6d3df5b",
+      "bytes": 3599,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md",
+      "source_path": "Docs/research/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7ad7753deb6778f3de45f5c101a88300c8a8bfdb",
+      "target_path": "research/challenger/studies/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md"
+    },
+    {
+      "sha256": "1c90672198acb494ed81ea32b7cc40a40f1bd597c5e728948019fb15c7bd58b3",
+      "bytes": 3435,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_R2_PRIMARY_FILINGS_2026-11-03.md",
+      "source_path": "Docs/research/CHALLENGER_R2_PRIMARY_FILINGS_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "4e06875327906eb5579a049c9472a94ef309a5e1",
+      "target_path": "research/challenger/studies/CHALLENGER_R2_PRIMARY_FILINGS_2026-11-03.md"
+    },
+    {
+      "sha256": "15e065223b75e61ffc617d28b84a895ec28a678e1e67a263ce8ba7fc5426f512",
+      "bytes": 3925,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_R2_REVIEW_GATE_2026-11-03.md",
+      "links": [
+        {
+          "link": "../AI_ROI_CHALLENGER_MODEL_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/ai_roi_challenger_2026-10-14.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/ai_roi_challenger_2026-10-14.yaml",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/ai_roi_challenger_2026-11-02.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/ai_roi_challenger_2026-11-02.yaml",
+          "fragment": null
+        },
+        {
+          "link": "../../scripts/research/check_challenger_r2_2026_11_02.py",
+          "resolution": "target",
+          "target_path": "research/challenger/reference-python/scripts/research/check_challenger_r2_2026_11_02.py",
+          "fragment": null
+        },
+        {
+          "link": "AI_ROI_CHALLENGER_PIT_REASSESSMENT_2026-11-02.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_ROI_CHALLENGER_PIT_REASSESSMENT_2026-11-02.md",
+          "fragment": null
+        },
+        {
+          "link": "../audits/2026-10-09_weekly_capture_completeness_audit.md",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/Docs/audits/2026-10-09_weekly_capture_completeness_audit.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_R2_PRIMARY_FILINGS_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_R2_PRIMARY_FILINGS_2026-11-03.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/CHALLENGER_R2_REVIEW_GATE_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "d788e9fb52f3d346902f6ae0dc4ad5dfcc8e8767",
+      "target_path": "research/challenger/studies/CHALLENGER_R2_REVIEW_GATE_2026-11-03.md"
+    },
+    {
+      "sha256": "cf9cf9b2a70532e18a3263ca4c93e7efd6fdf3bff1dd2f806bdc0a8a68cf75b1",
+      "bytes": 4772,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-10",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_1_BOUNDED_REASSESSMENT_2026-11-10.md",
+      "source_path": "Docs/research/CHALLENGER_V2_1_BOUNDED_REASSESSMENT_2026-11-10.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "8f7519c51351373a347373b426c135c09e15c445",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_1_BOUNDED_REASSESSMENT_2026-11-10.md"
+    },
+    {
+      "sha256": "be7b70076a62b87b369e26e52e3e07c98710945a408d62ec98bfbb4fbbf29bd3",
+      "bytes": 2060,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-10",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_1_CONTROL_REPLAY_2026-11-10.md",
+      "source_path": "Docs/research/CHALLENGER_V2_1_CONTROL_REPLAY_2026-11-10.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7c0aedf26a29bc63986c2d81ac4b43eab17946c3",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_1_CONTROL_REPLAY_2026-11-10.md"
+    },
+    {
+      "sha256": "b0e37f9abcc2f2983620e563949a048f4274850e82abde5809b7daf2a6e4e090",
+      "bytes": 5226,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_1_DRY_RUN_GALAXY_ANTHROPIC_2026-11-04.md",
+      "source_path": "Docs/research/CHALLENGER_V2_1_DRY_RUN_GALAXY_ANTHROPIC_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "d4346e19e7083cffb1d71ef8e4e7e9c6fb7ee9b8",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_1_DRY_RUN_GALAXY_ANTHROPIC_2026-11-04.md"
+    },
+    {
+      "sha256": "2c22cdeee51f39a72a53cacfe7b1a6f069a527a50bbcfb54559751fceffc90fa",
+      "bytes": 4806,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_ARCHIVE_AND_REFERENCE_AUDIT_2026-11-04.md",
+      "links": [
+        {
+          "link": "../AI_ROI_CHALLENGER_MODEL_v2.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v2.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/challenger_v2_research_approved_cohort_2026-11-04.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/challenger_v2_research_approved_cohort_2026-11-04.yaml",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/challenger_v2_source_eligibility_register_2026-11-04.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/sources/challenger_v2_source_eligibility_register_2026-11-04.yaml",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_CUTOVER_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_CUTOVER_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "../archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "resolution": "target",
+          "target_path": "research/archive/legacy/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/CHALLENGER_V2_ARCHIVE_AND_REFERENCE_AUDIT_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "915e1032fdefdf4a856481aae12ee31edfc30b6b",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_ARCHIVE_AND_REFERENCE_AUDIT_2026-11-04.md"
+    },
+    {
+      "sha256": "496c92036de5cc1d75a9e006e8318f00b422807513622953b8359c476091b194",
+      "bytes": 9382,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_COHORT_LEVEL_THRESHOLD_REVIEW_2026-11-04.md",
+      "source_path": "Docs/research/CHALLENGER_V2_COHORT_LEVEL_THRESHOLD_REVIEW_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "1f12c7622044c290f2d33e93cecb01f3c4c53ac3",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_COHORT_LEVEL_THRESHOLD_REVIEW_2026-11-04.md"
+    },
+    {
+      "sha256": "5800d39ad216c47581f8463c51342d9d20ed19a7bd88ac8afa4758375b449c96",
+      "bytes": 7203,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_CUTOVER_2026-11-03.md",
+      "links": [
+        {
+          "link": "CHALLENGER_V2_MIGRATION_EXECUTION_PLAN_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_MIGRATION_EXECUTION_PLAN_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/challenger_v2_research_approved_cohort_2026-11-04.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/challenger_v2_research_approved_cohort_2026-11-04.yaml",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_COHORT_LEVEL_THRESHOLD_REVIEW_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_COHORT_LEVEL_THRESHOLD_REVIEW_2026-11-04.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_PHASE_D_ONE_OFF_REPLAY_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_D_ONE_OFF_REPLAY_2026-11-04.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/CHALLENGER_V2_CUTOVER_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "67db761bcdfaaff930693a39055236055b9290e7",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_CUTOVER_2026-11-03.md"
+    },
+    {
+      "sha256": "28ccf14b98a9afc101e4f53e5a156f40d3c099e69314d05303944eb7a5f6e04f",
+      "bytes": 12035,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_FULL_RECALCULATION_2026-11-04.md",
+      "source_path": "Docs/research/CHALLENGER_V2_FULL_RECALCULATION_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "fba65da92529b01d83a6e49d3f78ba26ef7766c7",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_FULL_RECALCULATION_2026-11-04.md"
+    },
+    {
+      "sha256": "d23e159947d93447ea0eb9b88850d5b97b3b43bfb4ccc5973c5e28362adeb6ed",
+      "bytes": 16448,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_MIGRATION_EXECUTION_PLAN_2026-11-03.md",
+      "links": [
+        {
+          "link": "CHALLENGER_V2_COHORT_LEVEL_THRESHOLD_REVIEW_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_COHORT_LEVEL_THRESHOLD_REVIEW_2026-11-04.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/challenger_v2_research_approved_cohort_2026-11-04.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/challenger_v2_research_approved_cohort_2026-11-04.yaml",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_PHASE_A_INVENTORY_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_A_INVENTORY_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_PHASE_B_QUANTITATIVE_DECISIONS_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_B_QUANTITATIVE_DECISIONS_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_PHASE_B_SOURCE_REUSE_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_B_SOURCE_REUSE_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/challenger_v2_candidate_cohorts_2026-11-03.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/challenger_v2_candidate_cohorts_2026-11-03.yaml",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_PHASE_D_ONE_OFF_REPLAY_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_D_ONE_OFF_REPLAY_2026-11-04.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_PHASE_B_R2_R4_DECISION_RULES_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_B_R2_R4_DECISION_RULES_2026-11-04.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/CHALLENGER_V2_MIGRATION_EXECUTION_PLAN_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "92cdc673fabd2e3919f4788fc953fda64803d11a",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_MIGRATION_EXECUTION_PLAN_2026-11-03.md"
+    },
+    {
+      "sha256": "16867afd6a385ce26595920b3492cbec78b2364448191207e7af4269feedd9b4",
+      "bytes": 8772,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_PHASE_A_INVENTORY_2026-11-03.md",
+      "source_path": "Docs/research/CHALLENGER_V2_PHASE_A_INVENTORY_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7a8fd17ce799d0a7e3b70a3d555861aad981ff31",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_A_INVENTORY_2026-11-03.md"
+    },
+    {
+      "sha256": "6fd107974b4d09e774f3e9bdeb0e412ab5454312832d8546b72d7e0635ff635d",
+      "bytes": 12342,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_PHASE_B_QUANTITATIVE_DECISIONS_2026-11-03.md",
+      "source_path": "Docs/research/CHALLENGER_V2_PHASE_B_QUANTITATIVE_DECISIONS_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "2be223b906cd6b2bf3d10a4ef002138d854f2308",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_B_QUANTITATIVE_DECISIONS_2026-11-03.md"
+    },
+    {
+      "sha256": "77d91bd19afbac564a14e185df4429df5480be3844614d01f91578c35b3fdb4c",
+      "bytes": 8485,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_PHASE_B_R2_R4_DECISION_RULES_2026-11-04.md",
+      "source_path": "Docs/research/CHALLENGER_V2_PHASE_B_R2_R4_DECISION_RULES_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "dcea1dcc3801614d41dc04225c94862350457028",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_B_R2_R4_DECISION_RULES_2026-11-04.md"
+    },
+    {
+      "sha256": "dba370be37b67d28335028b15735e3a13f716dcdc56258c77289eab6011024fc",
+      "bytes": 13048,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_PHASE_B_SOURCE_REUSE_2026-11-03.md",
+      "links": [
+        {
+          "link": "CHALLENGER_V2_PHASE_B_QUANTITATIVE_DECISIONS_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_B_QUANTITATIVE_DECISIONS_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/challenger_v2_candidate_cohorts_2026-11-03.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/challenger_v2_candidate_cohorts_2026-11-03.yaml",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_R2_PRIMARY_FILINGS_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_R2_PRIMARY_FILINGS_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_CAPEX_FINANCIAL_CONTAGION_PHASE4_GATE_REVIEW_2026-10-18.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_CAPEX_FINANCIAL_CONTAGION_PHASE4_GATE_REVIEW_2026-10-18.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/CHALLENGER_V2_PHASE_B_SOURCE_REUSE_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "d41639d90caa90e85a58d6033a5e975b89e93de5",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_B_SOURCE_REUSE_2026-11-03.md"
+    },
+    {
+      "sha256": "65209d2c8fb6cab0b5b4f61a1fa9a9871628cede39ac50775ffba9bde8bcd409",
+      "bytes": 5517,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md",
+      "source_path": "Docs/research/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "ceaa39303ef32552d618171b72f7ba43f082c2ca",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_C_EVENT_TRIAGE_2026-11-03.md"
+    },
+    {
+      "sha256": "2c8798c28aa5c2798eb443f72fd7985aa885a0a63edf95d1df753b711fb707e7",
+      "bytes": 6417,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_PHASE_D_ONE_OFF_REPLAY_2026-11-04.md",
+      "links": [
+        {
+          "link": "../../data/research/challenger/challenger_v2_source_eligibility_register_2026-11-04.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/sources/challenger_v2_source_eligibility_register_2026-11-04.yaml",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/CHALLENGER_V2_PHASE_D_ONE_OFF_REPLAY_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "03479c67365d344937f26bf30f6d32f04080831a",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_D_ONE_OFF_REPLAY_2026-11-04.md"
+    },
+    {
+      "sha256": "3205b62e7cbfb51af4f6c44b06ee14c72b3c7b98dad2ab9c73e6b43365c8eb73",
+      "bytes": 4706,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_PHASE_D_REPLAY_PREFLIGHT_2026-11-03.md",
+      "source_path": "Docs/research/CHALLENGER_V2_PHASE_D_REPLAY_PREFLIGHT_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "5bf14abdac51dbef17eb3fc950724d171ca6df59",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_D_REPLAY_PREFLIGHT_2026-11-03.md"
+    },
+    {
+      "sha256": "84c8df4864d4c5ea6ba29b3fa81ecee4d0072ba79db498f14da9dc978616bc8c",
+      "bytes": 7378,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_PR132_TECHNICAL_REVIEW_2026-11-04.md",
+      "source_path": "Docs/research/CHALLENGER_V2_PR132_TECHNICAL_REVIEW_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "0e93a2540f24ff1f93080f683e7007d9678f866c",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_PR132_TECHNICAL_REVIEW_2026-11-04.md"
+    },
+    {
+      "sha256": "3cafef58a504e0038e29f7c6916d836dbddae821a96685a94ed5d07dfcc3e276",
+      "bytes": 7075,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_SOURCE_AND_R4_FINAL_FINITE_REVIEW_2026-11-04.md",
+      "source_path": "Docs/research/CHALLENGER_V2_SOURCE_AND_R4_FINAL_FINITE_REVIEW_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7909b79243062823e6e96b327055d7afe8906df8",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_SOURCE_AND_R4_FINAL_FINITE_REVIEW_2026-11-04.md"
+    },
+    {
+      "sha256": "7c67d51780e89c2def97d1381c68f53cae8ce67e6fa1374ed4b2e9a51c07d0b1",
+      "bytes": 9569,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHALLENGER_V2_SOURCE_PIT_AND_R4_FINAL_REVIEW_2026-11-04.md",
+      "links": [
+        {
+          "link": "../../data/research/challenger/challenger_v2_source_eligibility_register_2026-11-04.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/sources/challenger_v2_source_eligibility_register_2026-11-04.yaml",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_PHASE_D_ONE_OFF_REPLAY_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_D_ONE_OFF_REPLAY_2026-11-04.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/CHALLENGER_V2_SOURCE_PIT_AND_R4_FINAL_REVIEW_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "0b0210e667209aebad99aabaa4af46290d9ce7e3",
+      "target_path": "research/challenger/studies/CHALLENGER_V2_SOURCE_PIT_AND_R4_FINAL_REVIEW_2026-11-04.md"
+    },
+    {
+      "sha256": "231338f14b5a301ebab3315b6bec0a5f1b9a43b841fa471308bc95c38bd43873",
+      "bytes": 4621,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-09-09",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHAMPION_CHALLENGER_BASELINE_2026-09-09.md",
+      "source_path": "Docs/research/CHAMPION_CHALLENGER_BASELINE_2026-09-09.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "5d0556907e83475ec8543e8633b61209ca4550f7",
+      "target_path": "research/challenger/studies/CHAMPION_CHALLENGER_BASELINE_2026-09-09.md"
+    },
+    {
+      "sha256": "7cbd3c7f73a9c4959e08cafd3404914f72c06caf3694b4fa91f258ca8908bed8",
+      "bytes": 28306,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-10-07",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+      "links": [
+        {
+          "link": "AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+          "resolution": "target",
+          "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/champion/champion_observation_2026-10-07.yaml",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/champion/champion_observation_2026-10-07.yaml",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/champion/technical_snapshot_2026-10-07.json",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/champion/technical_snapshot_2026-10-07.json"
+        },
+        {
+          "link": "../TECHNICAL_SIGNAL_CONTRACT_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/TECHNICAL_SIGNAL_CONTRACT_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+          "fragment": null
+        },
+        {
+          "link": "../../scripts/research/calculate_champion_technical_snapshot.py",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/scripts/research/calculate_champion_technical_snapshot.py"
+        },
+        {
+          "link": "../AI_CapEx_Reversal_Strategy_v1.3.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/AI_CapEx_Reversal_Strategy_v1.3.md"
+        },
+        {
+          "link": "../FUNDAMENTAL_SNAPSHOT_CONTRACT_v2.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/FUNDAMENTAL_SNAPSHOT_CONTRACT_v2.md",
+          "fragment": null
+        },
+        {
+          "link": "../REPOSITORY_GOVERNANCE.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/REPOSITORY_GOVERNANCE.md"
+        }
+      ],
+      "source_path": "Docs/research/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "d476a2d990f20e23f80663572df3e3f4f7a9925d",
+      "target_path": "research/challenger/studies/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md"
+    },
+    {
+      "sha256": "8620b1bad29e8c7ace85ac5c68b5a95e01dab85428cea93eb20c7f5a29c8d0cd",
+      "bytes": 2384,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-11-13",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/FED_FINANCIAL_STABILITY_AI_FINANCING_2026-11-13.md",
+      "source_path": "Docs/research/FED_FINANCIAL_STABILITY_AI_FINANCING_2026-11-13.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "c21c020afee3b5143e26dd9323d37a33a265720d",
+      "target_path": "research/challenger/studies/FED_FINANCIAL_STABILITY_AI_FINANCING_2026-11-13.md"
+    },
+    {
+      "sha256": "1891f60fd930817eb8a7bd5592e0c3240d73f980a38f9fef624dbf4d406ff94c",
+      "bytes": 6759,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-09-23",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/INSTITUTIONAL_DERISKING_BASELINE_2026-09-23.md",
+      "source_path": "Docs/research/INSTITUTIONAL_DERISKING_BASELINE_2026-09-23.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "d839bcf5309afaf411f4d40fc2320ccfe78dda8d",
+      "target_path": "research/challenger/studies/INSTITUTIONAL_DERISKING_BASELINE_2026-09-23.md"
+    },
+    {
+      "sha256": "12be6061f8e58f30f9d2b3411628da2cdd90bb99e03dbdd14d9a0408bc60698e",
+      "bytes": 12005,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "challenger",
+      "date_in_filename": "2026-09-23",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/MACRO_INPUT_COST_PAIN_BASELINE_2026-09-23.md",
+      "source_path": "Docs/research/MACRO_INPUT_COST_PAIN_BASELINE_2026-09-23.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "3bf1b6261f9871e4f7151c6bcd6bc368ae1745ea",
+      "target_path": "research/challenger/studies/MACRO_INPUT_COST_PAIN_BASELINE_2026-09-23.md"
+    },
+    {
+      "pr": 130,
+      "sha256": "0ee2e953dea4bd9e13074fefd9b51036ccaea1f10de865806f89440b4e881103",
+      "bytes": 9259,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/130/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/a8dc7c9c4f28c6ad6103ffe6be7a6e4f08b4319f/Docs/research/CHALLENGER_ALL_FACTORS_SUFFICIENCY_REVIEW_2026-11-03.md",
+      "source_path": "Docs/research/CHALLENGER_ALL_FACTORS_SUFFICIENCY_REVIEW_2026-11-03.md",
+      "source_commit": "a8dc7c9c4f28c6ad6103ffe6be7a6e4f08b4319f",
+      "git_blob_sha": "f1b95dee9d5d97faef726036a647dc11ee571576",
+      "target_path": "research/proposed/pr-130/Docs/research/CHALLENGER_ALL_FACTORS_SUFFICIENCY_REVIEW_2026-11-03.md"
+    },
+    {
+      "pr": 130,
+      "sha256": "d7ec3269a4c6c17194b1a5fd76075aef7fd488326851e8bb2561bd42df5506c1",
+      "bytes": 2935,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/130/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/a8dc7c9c4f28c6ad6103ffe6be7a6e4f08b4319f/Docs/research/CHALLENGER_FACTOR_EVIDENCE_CLOSURE_PLAN_2026-11-03.md",
+      "source_path": "Docs/research/CHALLENGER_FACTOR_EVIDENCE_CLOSURE_PLAN_2026-11-03.md",
+      "source_commit": "a8dc7c9c4f28c6ad6103ffe6be7a6e4f08b4319f",
+      "git_blob_sha": "a0c6ad9033e3879573c07b6b8ea5ab272e963cd8",
+      "target_path": "research/proposed/pr-130/Docs/research/CHALLENGER_FACTOR_EVIDENCE_CLOSURE_PLAN_2026-11-03.md"
+    },
+    {
+      "pr": 138,
+      "sha256": "ef875df66792de1bd9f9cfd546b1630d2b060fb19c9d077624be3f58b3001ddf",
+      "bytes": 13261,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/138/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/b14b6012097a9b8cda84f52f5f471050343b2860/data/research/challenger/challenger_v2_prospective_snapshot_2026-11-04T0000Z.yaml",
+      "source_path": "data/research/challenger/challenger_v2_prospective_snapshot_2026-11-04T0000Z.yaml",
+      "source_commit": "b14b6012097a9b8cda84f52f5f471050343b2860",
+      "git_blob_sha": "406a381aeaf2d8004a7d3b219cb8d88a9a289f84",
+      "target_path": "research/proposed/pr-138/data/research/challenger/challenger_v2_prospective_snapshot_2026-11-04T0000Z.yaml"
+    },
+    {
+      "pr": 138,
+      "sha256": "2aaab738183d62e38da39e249cd6e8dbf7358ae1de8c03f9cab3c952b0bb2fc0",
+      "bytes": 19723,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/138/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/b14b6012097a9b8cda84f52f5f471050343b2860/Docs/research/CHALLENGER_V2_PROSPECTIVE_FULL_RECALC_2026-11-04.md",
+      "links": [
+        {
+          "link": "../../data/research/challenger/challenger_v2_prospective_snapshot_2026-11-04T0000Z.yaml",
+          "resolution": "target",
+          "target_path": "research/proposed/pr-138/data/research/challenger/challenger_v2_prospective_snapshot_2026-11-04T0000Z.yaml",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_PHASE_B_QUANTITATIVE_DECISIONS_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_PHASE_B_QUANTITATIVE_DECISIONS_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_R2_CASH_FLOW_PANEL_2026-11-02.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_R2_META_SEC_RECONCILIATION_2026-11-03.md",
+          "fragment": null
+        },
+        {
+          "link": "CHALLENGER_V2_SOURCE_PIT_AND_R4_FINAL_REVIEW_2026-11-04.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHALLENGER_V2_SOURCE_PIT_AND_R4_FINAL_REVIEW_2026-11-04.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/challenger_v2_source_eligibility_register_2026-11-04.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/sources/challenger_v2_source_eligibility_register_2026-11-04.yaml",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/CHALLENGER_V2_PROSPECTIVE_FULL_RECALC_2026-11-04.md",
+      "source_commit": "b14b6012097a9b8cda84f52f5f471050343b2860",
+      "git_blob_sha": "d9d548de2188dd1ac47f950f78f2477281ee96f7",
+      "target_path": "research/proposed/pr-138/Docs/research/CHALLENGER_V2_PROSPECTIVE_FULL_RECALC_2026-11-04.md"
+    },
+    {
+      "pr": 149,
+      "sha256": "6c74aa5756660a850ff071d98cb64339c8a76eac2a741783009659ac307f1e36",
+      "bytes": 32471,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/149/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/4f57d0397f7a146443e3f8f77b6f8719dcfecd64/data/research/events/challenger_v2_event_registry.json",
+      "source_path": "data/research/events/challenger_v2_event_registry.json",
+      "source_commit": "4f57d0397f7a146443e3f8f77b6f8719dcfecd64",
+      "git_blob_sha": "380475ac8ea3f568e4a9b0827dfa19b6501954f5",
+      "target_path": "research/proposed/pr-149/data/research/events/challenger_v2_event_registry.json"
+    },
+    {
+      "pr": 149,
+      "sha256": "bc6b7c9e39018539d4209ddf7a77d0a0bb8e48cdca2805ad4c4f0ce4e885b497",
+      "bytes": 10408,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/149/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/4f57d0397f7a146443e3f8f77b6f8719dcfecd64/data/research/events/daily_high_critical_index.json",
+      "source_path": "data/research/events/daily_high_critical_index.json",
+      "source_commit": "4f57d0397f7a146443e3f8f77b6f8719dcfecd64",
+      "git_blob_sha": "3709bc45ac21b5d7a23aeb704ca29e73e16c1be0",
+      "target_path": "research/proposed/pr-149/data/research/events/daily_high_critical_index.json"
+    },
+    {
+      "pr": 149,
+      "sha256": "b852ac6eeb9dcd1407d8d8eeca116971b0d2b6ac902dc6ed594c599da8b5e0f6",
+      "bytes": 13095,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/149/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/4f57d0397f7a146443e3f8f77b6f8719dcfecd64/Docs/AI_ROI_CHALLENGER_MODEL_v2.md",
+      "source_path": "Docs/AI_ROI_CHALLENGER_MODEL_v2.md",
+      "source_commit": "4f57d0397f7a146443e3f8f77b6f8719dcfecd64",
+      "git_blob_sha": "67d061f64d7486bee3e85a2dee770f3a7dc1038e",
+      "target_path": "research/proposed/pr-149/Docs/AI_ROI_CHALLENGER_MODEL_v2.md"
+    },
+    {
+      "pr": 149,
+      "sha256": "4f6edb4dbcc297e2d5971b543079acfb2b08c082334b6e46a52d19896b8aa616",
+      "bytes": 12503,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/149/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/4f57d0397f7a146443e3f8f77b6f8719dcfecd64/Docs/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+      "source_path": "Docs/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md",
+      "source_commit": "4f57d0397f7a146443e3f8f77b6f8719dcfecd64",
+      "git_blob_sha": "2e6232ad6752bde451ea9447f9b551c7cfcd6900",
+      "target_path": "research/proposed/pr-149/Docs/CHALLENGER_V2_EVENT_REGISTRY_CONTRACT.md"
+    },
+    {
+      "pr": 225,
+      "sha256": "49c5ee3aa7419e214c95d94b52ee40e85480d6e51e69a841d156ad6c8d4ea2c7",
+      "bytes": 1731,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/225/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "draft",
+      "type": "proposed",
+      "date_in_filename": "2026-11-16",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/6a0bc40220f6183623d7d5d526e2c36bac47f249/Docs/research/BIS_REMOTE_AI_COMPUTE_EXPORT_RULE_2026-11-16.md",
+      "source_path": "Docs/research/BIS_REMOTE_AI_COMPUTE_EXPORT_RULE_2026-11-16.md",
+      "source_commit": "6a0bc40220f6183623d7d5d526e2c36bac47f249",
+      "git_blob_sha": "a62ef49f3901071333ae665ac3c5461cb28ceea0",
+      "target_path": "research/proposed/pr-225/Docs/research/BIS_REMOTE_AI_COMPUTE_EXPORT_RULE_2026-11-16.md"
+    },
+    {
+      "pr": 227,
+      "sha256": "626532c23d6e8f0478c6a07a5929a014bdf7d35328b7c8b9ff92b4b06b5fb52e",
+      "bytes": 4668,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/227/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "draft",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-16",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/bb1ff5c055568c91f5d038a79644c5b8d9ff9d2f/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-16.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-16.md",
+      "source_commit": "bb1ff5c055568c91f5d038a79644c5b8d9ff9d2f",
+      "git_blob_sha": "239b1eef3f565f7b242b0554c89be5d211a1d322",
+      "target_path": "research/proposed/pr-227/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-16.md"
+    },
+    {
+      "pr": 229,
+      "sha256": "e8af4467ec9aa06a018424ca73f8a843b55fb5eceea2ba7579ee3cb9c75356af",
+      "bytes": 4772,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/229/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "draft",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-17",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/f1b46acf78a008fa7422acf9fcd3da7bf96a4ecd/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-17.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-17.md",
+      "source_commit": "f1b46acf78a008fa7422acf9fcd3da7bf96a4ecd",
+      "git_blob_sha": "a83a4874b00c218ded37b7b70da14bd4f5639f2b",
+      "target_path": "research/proposed/pr-229/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-17.md"
+    },
+    {
+      "pr": 231,
+      "sha256": "45bdb5e95d5471d927080a786c14055a9a498b84343999bff6a88d05abf28444",
+      "bytes": 27498,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/231/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": "2026-11-18",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/d25614d0703c16c8da04d6d6a8ff75947cdce5ad/data/research/weekly/weekly_challenger_v2_2026-11-18_r1.json",
+      "source_path": "data/research/weekly/weekly_challenger_v2_2026-11-18_r1.json",
+      "source_commit": "d25614d0703c16c8da04d6d6a8ff75947cdce5ad",
+      "git_blob_sha": "415ef2e56d93bfc0006c13f4c62650e845cdf8f0",
+      "target_path": "research/proposed/pr-231/data/research/weekly/weekly_challenger_v2_2026-11-18_r1.json"
+    },
+    {
+      "pr": 231,
+      "sha256": "4a65712eb4d4b007b55c3504f59c859150b71a159c48cc6c3cceb0c5307456b3",
+      "bytes": 2303,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/231/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": "2026-11-18",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/d25614d0703c16c8da04d6d6a8ff75947cdce5ad/data/research/weekly/weekly_coverage_2026-11-18_r1.json",
+      "source_path": "data/research/weekly/weekly_coverage_2026-11-18_r1.json",
+      "source_commit": "d25614d0703c16c8da04d6d6a8ff75947cdce5ad",
+      "git_blob_sha": "4f56edfaeeb45e24c793711b36e1ac3f3060b6c9",
+      "target_path": "research/proposed/pr-231/data/research/weekly/weekly_coverage_2026-11-18_r1.json"
+    },
+    {
+      "pr": 231,
+      "sha256": "9499833d51bde821cd251777f46d05ee4ae6312143bd822a6593b8baa2584682",
+      "bytes": 2767,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/231/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": "2026-11-18",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/d25614d0703c16c8da04d6d6a8ff75947cdce5ad/data/research/weekly/weekly_institutional_2026-11-18_r1.json",
+      "source_path": "data/research/weekly/weekly_institutional_2026-11-18_r1.json",
+      "source_commit": "d25614d0703c16c8da04d6d6a8ff75947cdce5ad",
+      "git_blob_sha": "4a16ed2f8a703be6164a26bb813017030802b8c1",
+      "target_path": "research/proposed/pr-231/data/research/weekly/weekly_institutional_2026-11-18_r1.json"
+    },
+    {
+      "pr": 231,
+      "sha256": "3bb228f9d867858f3b7711558a163234bbe5344365eb9abacba8979f9d2df64f",
+      "bytes": 3150,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/231/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": "2026-11-18",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/d25614d0703c16c8da04d6d6a8ff75947cdce5ad/data/research/weekly/weekly_macro_pain_2026-11-18_r1.json",
+      "source_path": "data/research/weekly/weekly_macro_pain_2026-11-18_r1.json",
+      "source_commit": "d25614d0703c16c8da04d6d6a8ff75947cdce5ad",
+      "git_blob_sha": "dec93efd2ed636918c1a78101e1eb117b7161a70",
+      "target_path": "research/proposed/pr-231/data/research/weekly/weekly_macro_pain_2026-11-18_r1.json"
+    },
+    {
+      "pr": 231,
+      "sha256": "c8c6e431db143caecf8635d34f51002c1c645e82e1c3aeabdab7328efab47cb4",
+      "bytes": 17660,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/231/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "weekly_report",
+      "date_in_filename": "2026-11-18",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/d25614d0703c16c8da04d6d6a8ff75947cdce5ad/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-18.md",
+      "source_path": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-18.md",
+      "source_commit": "d25614d0703c16c8da04d6d6a8ff75947cdce5ad",
+      "git_blob_sha": "db3dc0044144baa327cc277434907aaa9b38f5b0",
+      "target_path": "research/proposed/pr-231/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-18.md"
+    },
+    {
+      "pr": 79,
+      "sha256": "677b577379b4544753e60eb285373d1df85edab9d005689f5e12fc4b7088dfff",
+      "bytes": 7931,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/pull/79/head",
+      "origin": "PROPOSED",
+      "source_pr_state": "open",
+      "type": "proposed",
+      "date_in_filename": "2026-10-17",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/536cf55ddd14b7d39f839829a3ddb9c3a9ff3f9a/Docs/research/AI_CAPEX_EVENT_WATCH_PLAN_2026-10-17.md",
+      "links": [
+        {
+          "link": "AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+          "resolution": "target",
+          "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_EVENT_WATCH_PLAN_2026-10-17.md",
+      "source_commit": "536cf55ddd14b7d39f839829a3ddb9c3a9ff3f9a",
+      "git_blob_sha": "40be0278eb43f1ca4586addfb161cc66b0fe4d83",
+      "target_path": "research/proposed/pr-79/Docs/research/AI_CAPEX_EVENT_WATCH_PLAN_2026-10-17.md"
+    },
+    {
+      "sha256": "0a70262ceac1993ded2b85561d82e98c6f86b83ad9304ae5306d0e751ad46352",
+      "bytes": 8473,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-09-02",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+      "source_path": "data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "ed1a0b49315af2f8f774b991233ac91ea45d3cf1",
+      "target_path": "research/reports/attachments/data/fundamentals/current/fundamental_snapshot_2026-09-02-v2.yaml"
+    },
+    {
+      "sha256": "f16c3460dac29a22d944499719e918a5977c35b18ba6873a5bce3193e8301146",
+      "bytes": 5833,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-07",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/champion/champion_observation_2026-10-07.yaml",
+      "source_path": "data/research/champion/champion_observation_2026-10-07.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "cfdcb10822a9ceb45232be648851ccca33564dce",
+      "target_path": "research/reports/attachments/data/research/champion/champion_observation_2026-10-07.yaml"
+    },
+    {
+      "sha256": "77adf34960959bd28bd146957df91203f58f78cabaafbc657101042f3e267a64",
+      "bytes": 1751,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/champion/champion_observation_2026-10-14.json",
+      "source_path": "data/research/champion/champion_observation_2026-10-14.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7073fbeb1b85089792178ca41161f54512cadf38",
+      "target_path": "research/reports/attachments/data/research/champion/champion_observation_2026-10-14.json"
+    },
+    {
+      "sha256": "b57b7f98ab253236f8ef5d0b0053df3f45e2cfca947d2764588fb6a3e9cd911d",
+      "bytes": 3725,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-09-23",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/institutional_derisking_2026-09-23.yaml",
+      "source_path": "data/research/institutional_derisking_2026-09-23.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "24f50cadab11d1e893d2e88c517167df886188d2",
+      "target_path": "research/reports/attachments/data/research/institutional_derisking_2026-09-23.yaml"
+    },
+    {
+      "sha256": "743dff1435bab278ab4675798d0ca28cb228b4fcc20d1860c11ce4455cd5ae34",
+      "bytes": 4866,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-07",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/institutional_derisking_2026-10-07_recovered_2026-10-09.json",
+      "source_path": "data/research/institutional_derisking_2026-10-07_recovered_2026-10-09.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "55850e35ae7723d18ac0203bae3c7eafc6db93bf",
+      "target_path": "research/reports/attachments/data/research/institutional_derisking_2026-10-07_recovered_2026-10-09.json"
+    },
+    {
+      "sha256": "158f20aed1b0dad76327194bb16f482aa9b1bb6f6d2d5a1f95c624b184411b6b",
+      "bytes": 6828,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/institutional_derisking_2026-10-14.json",
+      "source_path": "data/research/institutional_derisking_2026-10-14.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "ba977da6c32caa24f446479829b78a1c4a405c34",
+      "target_path": "research/reports/attachments/data/research/institutional_derisking_2026-10-14.json"
+    },
+    {
+      "sha256": "66128838833853847a3e824b906a4ddba0a377aeba303760400eb44cd3b7b7d8",
+      "bytes": 3709,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-07",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/leadership/leadership_numeric_panel_2026-10-07_recovered_2026-10-09.json",
+      "source_path": "data/research/leadership/leadership_numeric_panel_2026-10-07_recovered_2026-10-09.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "a37905f719dadb3342adb87548c50471e5186518",
+      "target_path": "research/reports/attachments/data/research/leadership/leadership_numeric_panel_2026-10-07_recovered_2026-10-09.json"
+    },
+    {
+      "sha256": "7821858866d2ba79fff9df3c278d3d1c50f5e3aa13a3c572a48ef22f4c6c787d",
+      "bytes": 6932,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-13",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json",
+      "source_path": "data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "c5cb4913202e777e1f2ba4a06038e4f7bd932300",
+      "target_path": "research/reports/attachments/data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json"
+    },
+    {
+      "sha256": "fa038385bccc86d0a8a7df733d79c8a304900aba4d02eeacd92dafb3567783cf",
+      "bytes": 3516,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-09-23",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/macro_input_cost_pain_2026-09-23.yaml",
+      "source_path": "data/research/macro_input_cost_pain_2026-09-23.yaml",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "c59cf6db1a18a41e5b12ec2886cc76c53a574ef4",
+      "target_path": "research/reports/attachments/data/research/macro_input_cost_pain_2026-09-23.yaml"
+    },
+    {
+      "sha256": "84064bd15138ad6416cc998face513fc91a12e565d5241d71dccadacfb0645b3",
+      "bytes": 3253,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-07",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/macro_input_cost_pain_2026-10-07_recovered_2026-10-09.json",
+      "source_path": "data/research/macro_input_cost_pain_2026-10-07_recovered_2026-10-09.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "98ccb8641200f7c48fe6e869b140e9a616a597db",
+      "target_path": "research/reports/attachments/data/research/macro_input_cost_pain_2026-10-07_recovered_2026-10-09.json"
+    },
+    {
+      "sha256": "f8bf7a12a1f66decb6cebfc8313178b655660a8782f694274dae92472a56bfcf",
+      "bytes": 2872,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/macro_input_cost_pain_2026-10-14.json",
+      "source_path": "data/research/macro_input_cost_pain_2026-10-14.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "23b2e91eb6a2b805559d713c68455ed551c96a9a",
+      "target_path": "research/reports/attachments/data/research/macro_input_cost_pain_2026-10-14.json"
+    },
+    {
+      "sha256": "3733fa1718fc20cb62b6d39040aab102354291087a393cf28cbf3be0e3d58796",
+      "bytes": 3121,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-13",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/technical/technical_research_2026-10-13_captured_2026-10-14.json",
+      "source_path": "data/research/technical/technical_research_2026-10-13_captured_2026-10-14.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "7851cc6debe250666e6687aebbc7d8f13a32d34f",
+      "target_path": "research/reports/attachments/data/research/technical/technical_research_2026-10-13_captured_2026-10-14.json"
+    },
+    {
+      "sha256": "43abd1f7103425465e487754d63d459cfffe31bd9b735cfaa2b54809548a1994",
+      "bytes": 26953,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/archive/2026-11-04/weekly_challenger_v2_2026-11-04_r1.json",
+      "source_path": "data/research/weekly/archive/2026-11-04/weekly_challenger_v2_2026-11-04_r1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "5e1edf33790dec99374e35e4ea7370402b685834",
+      "target_path": "research/reports/attachments/data/research/weekly/archive/2026-11-04/weekly_challenger_v2_2026-11-04_r1.json"
+    },
+    {
+      "sha256": "81026fe0ab06d2216b824165a0e7c1209ec94b308e80681d7faed03d77bfbdec",
+      "bytes": 1997,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/archive/2026-11-04/weekly_coverage_2026-11-04_r1.json",
+      "source_path": "data/research/weekly/archive/2026-11-04/weekly_coverage_2026-11-04_r1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "01762e19196e106af28ff9a4f5046d6d4559a407",
+      "target_path": "research/reports/attachments/data/research/weekly/archive/2026-11-04/weekly_coverage_2026-11-04_r1.json"
+    },
+    {
+      "sha256": "9daa5cb525d2f8bd9871f5574bb20b0d030dba9844278f11c0487c90f2fe72b0",
+      "bytes": 2471,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/archive/2026-11-04/weekly_institutional_2026-11-04_r1.json",
+      "source_path": "data/research/weekly/archive/2026-11-04/weekly_institutional_2026-11-04_r1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "11bfb0bc6fb010b9a2c1bed79e2864e159871bcf",
+      "target_path": "research/reports/attachments/data/research/weekly/archive/2026-11-04/weekly_institutional_2026-11-04_r1.json"
+    },
+    {
+      "sha256": "30d656992408e8e973cb255c7b4a3ef948aba18bd2699fc52233c10910006490",
+      "bytes": 2310,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/archive/2026-11-04/weekly_macro_pain_2026-11-04_r1.json",
+      "source_path": "data/research/weekly/archive/2026-11-04/weekly_macro_pain_2026-11-04_r1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "cfeb567aac4a4980f0f85f20f46131b6d4ba63c8",
+      "target_path": "research/reports/attachments/data/research/weekly/archive/2026-11-04/weekly_macro_pain_2026-11-04_r1.json"
+    },
+    {
+      "sha256": "360a81c8fb51d14999ff8f0723c5e9460e2d1ece9353f6bb4b78b433b9103733",
+      "bytes": 3016,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": null,
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/requirements_v1.json",
+      "source_path": "data/research/weekly/requirements_v1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "b0e7f8f1bb5fa08ffb8f086ca8a5a901ecc4175c",
+      "target_path": "research/reports/attachments/data/research/weekly/requirements_v1.json"
+    },
+    {
+      "sha256": "d19ca3d5ff01f8df620c6e142e598226dc2a37af9637783dfcdb5c8ca3a0206f",
+      "bytes": 34272,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/source_register_2026-10-14.json",
+      "source_path": "data/research/weekly/source_register_2026-10-14.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "807d195163b840dcb79e9dd0aea9ba40038eac94",
+      "target_path": "research/reports/attachments/data/research/weekly/source_register_2026-10-14.json"
+    },
+    {
+      "sha256": "c451e8fd6035f1aedb50c4dbbe32e27a6b8d0e083df6e083fb6efbdecfbc1456",
+      "bytes": 75096,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-07",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/weekly_capture_2026-10-07_r1.json",
+      "source_path": "data/research/weekly/weekly_capture_2026-10-07_r1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "5d90536e7444dfc73989d54bdb3657d890664f10",
+      "target_path": "research/reports/attachments/data/research/weekly/weekly_capture_2026-10-07_r1.json"
+    },
+    {
+      "sha256": "3436c0fd8ecc4403d1fce15708c2632dc676d202991919c42e8af109f3bca739",
+      "bytes": 113129,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/weekly_capture_2026-10-14_r1.json",
+      "source_path": "data/research/weekly/weekly_capture_2026-10-14_r1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "1de86cc8f7d48950ba68a70c8203e74f3d8cf6af",
+      "target_path": "research/reports/attachments/data/research/weekly/weekly_capture_2026-10-14_r1.json"
+    },
+    {
+      "sha256": "c12ad012a2b118338303c3307f4b6cec9f69c9bc2d08170e993622e4ec1ea0c1",
+      "bytes": 30751,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-11-11",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/weekly_challenger_v2_2026-11-11_r1.json",
+      "source_path": "data/research/weekly/weekly_challenger_v2_2026-11-11_r1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "2219d11a7ba6b72f7b498cc8f8a94008c6d18dc1",
+      "target_path": "research/reports/attachments/data/research/weekly/weekly_challenger_v2_2026-11-11_r1.json"
+    },
+    {
+      "sha256": "c4525d60a9944f77fdb834fc96efcb92f6b414db98f47075b1748dbc725a9eaa",
+      "bytes": 2189,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-11-11",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/weekly_coverage_2026-11-11_r1.json",
+      "source_path": "data/research/weekly/weekly_coverage_2026-11-11_r1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "a56df01fd0a97b88ebe53a5116db8765f5bf8edb",
+      "target_path": "research/reports/attachments/data/research/weekly/weekly_coverage_2026-11-11_r1.json"
+    },
+    {
+      "sha256": "11fcfc8b07ea3fa8ee16fc4184cbe6f1092d773e5f0dcb4e24b955f841f79715",
+      "bytes": 2671,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-11-11",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/weekly_institutional_2026-11-11_r1.json",
+      "source_path": "data/research/weekly/weekly_institutional_2026-11-11_r1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "f50fd1e45cf3229170e476ae019f4fdc514e5c1b",
+      "target_path": "research/reports/attachments/data/research/weekly/weekly_institutional_2026-11-11_r1.json"
+    },
+    {
+      "sha256": "6d05b62f9e7ba9176887d3b18a9e235991fc259fadfd1ec02dd4fa315286775d",
+      "bytes": 2927,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-11-11",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/data/research/weekly/weekly_macro_pain_2026-11-11_r1.json",
+      "source_path": "data/research/weekly/weekly_macro_pain_2026-11-11_r1.json",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "4555ec837b4ccbb10d8f87fb113bc6d36df5ebef",
+      "target_path": "research/reports/attachments/data/research/weekly/weekly_macro_pain_2026-11-11_r1.json"
+    },
+    {
+      "sha256": "c2708cf2474b9245456f95fe6fae7b5ab78ef7d64c3177cfd1316d266cb2dba8",
+      "bytes": 5871,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-09",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/audits/2026-10-09_weekly_capture_completeness_audit.md",
+      "source_path": "Docs/audits/2026-10-09_weekly_capture_completeness_audit.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "9307410fddfb8bfb3893cb1bc6551cdeac75d953",
+      "target_path": "research/reports/attachments/Docs/audits/2026-10-09_weekly_capture_completeness_audit.md"
+    },
+    {
+      "sha256": "4f61085d1b93e22577e541d8abe59b6c9c52e90319273b046f8398a20f27ef38",
+      "bytes": 23774,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "report_support",
+      "date_in_filename": "2026-10-07",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_WEEKLY_COMPLETENESS_2026-10-07_RECOVERED_2026-10-09.md",
+      "links": [
+        {
+          "link": "AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+          "resolution": "target",
+          "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/weekly/weekly_capture_2026-10-07_r1.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/weekly/weekly_capture_2026-10-07_r1.json",
+          "fragment": null
+        },
+        {
+          "link": "../audits/2026-10-09_weekly_capture_completeness_audit.md",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/Docs/audits/2026-10-09_weekly_capture_completeness_audit.md",
+          "fragment": null
+        },
+        {
+          "link": "CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/CHAMPION_WEEKLY_COMPLETION_2026-10-07.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/leadership/leadership_numeric_panel_2026-10-07_recovered_2026-10-09.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/leadership/leadership_numeric_panel_2026-10-07_recovered_2026-10-09.json",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_WEEKLY_COMPLETENESS_2026-10-07_RECOVERED_2026-10-09.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "e02e0220bc243c616c108e9449e6034e551d109a",
+      "target_path": "research/reports/attachments/Docs/research/AI_CAPEX_WEEKLY_COMPLETENESS_2026-10-07_RECOVERED_2026-10-09.md"
+    },
+    {
+      "sha256": "76a58d79f2b5a7029f8095d8c24384425ef8bd16f78b9eb4ec1ee6ec497c6875",
+      "bytes": 19434,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-10-19",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-19.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-19.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "8c21069ac812232266174b7738341aea7677fac4",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-19.md"
+    },
+    {
+      "sha256": "53c8d2bc456c46a70c296e9b126c5f04c67ab56bd56bc042c5390b1ca2ef29d6",
+      "bytes": 23665,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-10-20",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-20.md",
+      "links": [
+        {
+          "link": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/main/Docs/REPOSITORY_GOVERNANCE.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/REPOSITORY_GOVERNANCE.md"
+        },
+        {
+          "link": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/main/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+          "resolution": "target",
+          "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-20.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "c2fdb30b66e4206d6c1e90858697a840d1bfbc46",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-20.md"
+    },
+    {
+      "sha256": "d3214500751066e4231f88045e3892e732de9903309457fe329b35b2f9c2a862",
+      "bytes": 9590,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-10-21",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-21.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-21.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "3e4864de6f04db936f772a6bb77fd9b854e7c6db",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-21.md"
+    },
+    {
+      "sha256": "538eef66a0dc04d81a9be20161978aa203b40b0f2c7b19ddb936e610caca1825",
+      "bytes": 18413,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-10-22",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-22.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-22.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "e1d4bd00f22f35b33f553955ed17534fe696b265",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-22.md"
+    },
+    {
+      "sha256": "e54050bf015f9eb0cf7e908c4d5e469a1701e05ce8ed0f732c18fe700c63ac78",
+      "bytes": 18180,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-10-23",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-23.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-23.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "149fb8deed50777604438392204f443d4cac8f9d",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-23.md"
+    },
+    {
+      "sha256": "a0acc35c9e7f62f2fd702a7850580330daa43118ac6ecd54cd71936a40bd4c0a",
+      "bytes": 26466,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-10-26",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-26.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-26.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "81592568ee1794171d9714cc728ddaf911ed8a58",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-26.md"
+    },
+    {
+      "sha256": "3075bbd94df65668d6c2975531ac66d612c106257f5b629b250af16eb47a9d4d",
+      "bytes": 22163,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-10-27",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-27.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-27.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "6e66d7030e1953d7dc5c553a425d8b3845d57847",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-27.md"
+    },
+    {
+      "sha256": "63b554147729fd016af982f6f3ae1d6d4d3a43a0ec2bd0d9b08c276c01c85734",
+      "bytes": 20840,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-10-28",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-28.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-28.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "40b4fe42d82d86e66c3d4efdb6e0350cfc1343e2",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-28.md"
+    },
+    {
+      "sha256": "3031aace5e8c0348fc826a0d8bd408bd24c29d03b792c2d9a80346156ec9ef71",
+      "bytes": 20606,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-10-29",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-29.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-29.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "e0a27f3883e36213fd4f034ce8da3fcaeb2febeb",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-29.md"
+    },
+    {
+      "sha256": "12d3163d0e3798b302c21f5c1c7f12412dd24b82c4c4d1599f5f7d6fe3b2442b",
+      "bytes": 18418,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-10-30",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-30.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-10-30.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "8ccaadce58893f38710c5ae725f3a8c93d780a87",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-10-30.md"
+    },
+    {
+      "sha256": "498b39e98ae10103f2954c3c9c6c9d2428abc95cd5b0fdcf88646d25ea0c73ca",
+      "bytes": 17442,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-02",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-02.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-02.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "9a7642fdea616b6668b38412c183dff34e9900d1",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-02.md"
+    },
+    {
+      "sha256": "b26101f1ebee981c6080194412d202d3030ee95172cbf7414cdee9e5afc06cbe",
+      "bytes": 8136,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-03",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-03.md",
+      "links": [
+        {
+          "link": "../../data/research/events/challenger_v2_event_registry.json",
+          "resolution": "target",
+          "target_path": "research/challenger/events/challenger_v2_event_registry.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/events/daily_high_critical_index.json",
+          "resolution": "target",
+          "target_path": "research/challenger/events/daily_high_critical_index.json",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-03.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "f65cb0ec4bc954d095b29771ba07888c055b7aad",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-03.md"
+    },
+    {
+      "sha256": "78d64f8bc496d7663d08932251197620a897b7b15de75513e037745a594c6131",
+      "bytes": 7960,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-04",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-04.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-04.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "9768d729633184bbd877a29ebb0851acf4a95fe8",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-04.md"
+    },
+    {
+      "sha256": "579cbf10f67f45af2c1dbd7d3af1d9949298bc34bbea20779035429e789a6988",
+      "bytes": 8730,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-05",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-05.md",
+      "links": [
+        {
+          "link": "../../.agents/skills/ai-capex-report-audit/SKILL.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/.agents/skills/ai-capex-report-audit/SKILL.md"
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-05.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "55894532e0eec5237ec064ae229884db6ac9c6eb",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-05.md"
+    },
+    {
+      "sha256": "cf03fbd97d932ccd742a0e2726c10391cfea6559a7db7d256d49c0314f77bccd",
+      "bytes": 7063,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-06",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-06.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-06.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "a79b4f6012f203fd02a622490f0352737df9f98d",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-06.md"
+    },
+    {
+      "sha256": "ad0b48c956b862ee771dd970436a2d52212b5cbf0fff0a2206d53e49b33a5790",
+      "bytes": 5331,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-10",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-10.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-10.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "5049ccad2ef000c388d72808892f322ddd5995f9",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-10.md"
+    },
+    {
+      "sha256": "6134f6ff6ba76dcd6b113bac8edaf077e0b65e3b73ff5ead741a0929b8530afa",
+      "bytes": 7778,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-11",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-11.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-11.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "0b37a6d776cece05570b29afd89f249a98078d1b",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-11.md"
+    },
+    {
+      "sha256": "18bef45bc7951f6a690abb8e0fbe999aba1a8a9775c4b841aec6315888ee4d09",
+      "bytes": 6097,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-12",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-12.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-12.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "86e4bc7a69199a2e9117174b46c8b56d13265ad8",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-12.md"
+    },
+    {
+      "sha256": "704b743a09e10319dcd981368b8869e6a4cb27ba2b75b51351622f1371664efc",
+      "bytes": 4787,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "daily_report",
+      "date_in_filename": "2026-11-13",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-13.md",
+      "source_path": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-13.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "eb64825fff74633a1bdc92b9a2da25778bbecb31",
+      "target_path": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-13.md"
+    },
+    {
+      "sha256": "7b44b4e5f8073fb220275ea8a646302ab71fd5fb7beba54b22195bbb02fa9a83",
+      "bytes": 11346,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "weekly_report",
+      "date_in_filename": "2026-09-02",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-02.md",
+      "source_path": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-02.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "ccdbbbbb27e15c9562e008a10736a68e63e81a61",
+      "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-09-02.md"
+    },
+    {
+      "sha256": "b91998b0f64f771dd660b9138dc0d2c94fa4f9561070c43a13ce67db282aea7e",
+      "bytes": 19888,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "weekly_report",
+      "date_in_filename": "2026-09-09",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-09.md",
+      "source_path": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-09.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "524c119caf88e084d8d8326b2816c56e5e188f0b",
+      "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-09-09.md"
+    },
+    {
+      "sha256": "54f7f654ebcd50dc9edf7316d6338bc90a08d6fd7f44dbb7a733d0d5674a4bfc",
+      "bytes": 14925,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "weekly_report",
+      "date_in_filename": "2026-09-16",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-16.md",
+      "links": [
+        {
+          "link": "./AI_CAPEX_RESEARCH_UPDATE_2026-09-16_VENDOR_SUPPORTED_DEMAND.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_CAPEX_RESEARCH_UPDATE_2026-09-16_VENDOR_SUPPORTED_DEMAND.md",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/ai_roi_challenger_2026-09-16_vendor_supported_demand.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/ai_roi_challenger_2026-09-16_vendor_supported_demand.yaml",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-16.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "fceacb6a4d0a33bea19f9d56069dc6d3bc029097",
+      "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-09-16.md"
+    },
+    {
+      "sha256": "a4e72bf551f07d5869d9a0ded0d78ed5049b32ed8e6c3e104a734eb52da8ea19",
+      "bytes": 11887,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "weekly_report",
+      "date_in_filename": "2026-09-23",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-23.md",
+      "source_path": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-23.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "86ea65417b834c332c505c6791c878e5285fa9ea",
+      "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-09-23.md"
+    },
+    {
+      "sha256": "ea7f06cec6f34fab692810062237870b8089b0c0e39dd1816ab4567aeebd7974",
+      "bytes": 14024,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "weekly_report",
+      "date_in_filename": "2026-09-30",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-30.md",
+      "source_path": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-09-30.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "c04b30ea97d493bcc4bf3827a9233916c6f284fd",
+      "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-09-30.md"
+    },
+    {
+      "sha256": "c06ef3fbf988838ddbc803dc26e02d1a9e718890cb1e3db1486984f80f2fa7a0",
+      "bytes": 13029,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "weekly_report",
+      "date_in_filename": "2026-10-07",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+      "links": [
+        {
+          "link": "../../data/research/challenger/ai_roi_challenger_2026-10-07.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/ai_roi_challenger_2026-10-07.yaml",
+          "fragment": null
+        },
+        {
+          "link": "AI_CAPEX_WEEKLY_WATCH_2026-09-30.md",
+          "resolution": "target",
+          "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-09-30.md",
+          "fragment": null
+        },
+        {
+          "link": "AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/studies/AI_COMPUTE_ECONOMICS_EFFICIENCY_FRAMEWORK_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "../AI_ROI_CHALLENGER_MODEL_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/model/AI_ROI_CHALLENGER_MODEL_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "../AI_ROI_PAYBACK_RISK_CONTRACT_v1.md",
+          "resolution": "target",
+          "target_path": "research/challenger/contracts/AI_ROI_PAYBACK_RISK_CONTRACT_v1.md",
+          "fragment": null
+        },
+        {
+          "link": "../AI_CapEx_Reversal_Strategy_v1.3.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/AI_CapEx_Reversal_Strategy_v1.3.md"
+        },
+        {
+          "link": "../REPOSITORY_GOVERNANCE.md",
+          "resolution": "source_archive",
+          "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/REPOSITORY_GOVERNANCE.md"
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "ea3ceaa90de00ca711d8ab30a30d30bc0fed78c4",
+      "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-10-07.md"
+    },
+    {
+      "sha256": "33540574a3ec8f082cef5dd60289137411ed765b04091a51d1c8e57e040af19b",
+      "bytes": 43997,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "weekly_report",
+      "date_in_filename": "2026-10-14",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+      "links": [
+        {
+          "link": "../../data/research/challenger/ai_roi_challenger_2026-10-14.yaml",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/ai_roi_challenger_2026-10-14.yaml",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/champion/champion_observation_2026-10-14.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/champion/champion_observation_2026-10-14.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/macro_input_cost_pain_2026-10-14.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/macro_input_cost_pain_2026-10-14.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/institutional_derisking_2026-10-14.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/institutional_derisking_2026-10-14.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/challenger/outcome_review_2026-10-14.json",
+          "resolution": "target",
+          "target_path": "research/challenger/inputs/outcome_review_2026-10-14.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/technical/technical_research_2026-10-13_captured_2026-10-14.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/technical/technical_research_2026-10-13_captured_2026-10-14.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/leadership/market_numeric_panel_2026-10-13_captured_2026-10-14.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/weekly/source_register_2026-10-14.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/weekly/source_register_2026-10-14.json",
+          "fragment": null
+        },
+        {
+          "link": "../../data/research/weekly/weekly_capture_2026-10-14_r1.json",
+          "resolution": "target",
+          "target_path": "research/reports/attachments/data/research/weekly/weekly_capture_2026-10-14_r1.json",
+          "fragment": null
+        }
+      ],
+      "source_path": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "57e148217506c58727d9ea88d50a42c5cc96b603",
+      "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-10-14.md"
+    },
+    {
+      "sha256": "fa9cd409c87753ebeec6bc530ad382da6a7d0cee0267a3a108554a91f42907e6",
+      "bytes": 19191,
+      "source_repository": "HelsingN/AI_CapEx_Reversal",
+      "source_ref": "refs/heads/main",
+      "origin": "MAIN",
+      "type": "weekly_report",
+      "date_in_filename": "2026-11-11",
+      "source_url": "https://github.com/HelsingN/AI_CapEx_Reversal/blob/1aa948be4c9c76844e9b407b981caacea94b24b3/Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-11.md",
+      "source_path": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-11.md",
+      "source_commit": "1aa948be4c9c76844e9b407b981caacea94b24b3",
+      "git_blob_sha": "38ab1553f87f18dbe46ec2fe57cc8e41671c84a8",
+      "target_path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-11-11.md"
+    }
+  ],
+  "validation": {
+    "files": 192,
+    "reports": {
+      "ARCHIVED/weekly_report": 1,
+      "MAIN/daily_report": 19,
+      "MAIN/weekly_report": 8,
+      "PROPOSED/daily_report": 2,
+      "PROPOSED/weekly_report": 1
+    },
+    "links": {
+      "target": 136,
+      "unavailable_in_snapshot": 1,
+      "source_archive": 18
+    },
+    "registry_events": 47
+  }
+}

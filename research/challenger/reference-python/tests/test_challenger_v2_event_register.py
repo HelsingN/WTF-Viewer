@@ -1,0 +1,376 @@
+"""Event registry IDs, PIT/qualification, completeness and triggered v2 scoring."""
+from __future__ import annotations
+
+from copy import deepcopy
+from datetime import datetime
+import json
+from pathlib import Path
+import sys
+
+import pytest
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts/research"))
+from challenger_v2_event_register import (  # noqa: E402
+    REGISTRY, RECALCS, _artifact_name, _read_json, _write_json, assess,
+    event_id, recalculate, register, registry_empty, sync,
+    update_daily_index, validate_daily_index, validate_registry, verify_append_only,
+)
+from one_off_challenger_v2_full_recalculation import calculate  # noqa: E402
+
+AT = "2026-11-04T00:20:00Z"
+REG = "2026-11-04T00:30:00Z"
+REVIEW = "2026-11-04T00:40:00Z"
+
+
+def event(tmp_path, *, exact=True):
+    (tmp_path / "Docs/research").mkdir(parents=True, exist_ok=True)
+    (tmp_path / "Docs/research/test-source.md").write_text(
+        "Synthetic controlled fixture — not actual issuer evidence",
+        encoding="utf-8")
+    obj = {
+        "event_key": "SYNTHETIC-VERIFIED-CAPACITY-OUTCOME",
+        "event_date": "2026-11-04",
+        "priority": "HIGH", "entity": "TEST-ISSUER",
+        "title": "Controlled R6 qualified event",
+        "source_refs": ["Docs/research/test-source.md"],
+        "source_precision": "FIRST_PUBLIC_VERIFIED" if exact else "CONSERVATIVE_KNOWN_PUBLIC_BY",
+        "registered_at": REG,
+    }
+    if exact:
+        obj["first_public_at"] = AT
+    else:
+        obj["known_public_by_at"] = REG
+        obj["registered_at"] = "2026-11-04T00:35:00Z"
+    return obj
+
+
+def review(eid, *, time=REVIEW, impact="-0.5", root="independent-test-capacity"):
+    return {
+        "id": eid, "reviewed_at": time,
+        "decision": "QUALIFIED", "factor": "R6",
+        "reviewer": "synthetic-unit-test",
+        "reason": "Confirmed paid, revenue-generating utilization distinct from CapEx or financing",
+        "scored_event": {
+            "id": eid, "factor": "R6",
+            "source_class": "PRIMARY_FACT", "confidence": "HIGH",
+            "first_public_at": AT, "source_url": "https://example.org/synthetic-primary",
+            "impact": impact, "kind": "EVENT",
+            "expires_at": "2026-11-15T00:00:00Z",
+            "causal_root_id": root, "effect_id": "independent-delivery-and-utilization",
+            "rationale": "Independently verified economic utilization, controlled test only",
+            "counterevidence": "Actual unit margin still uncertain; test assumes qualified",
+            "qualification_policy": "OBSERVABLE_EVENT_QUALIFICATION_V2_1",
+            "observable_outcome": {
+                "kind": "REVENUE_GENERATING_CAPACITY",
+                "scope": "Synthetic project delivered paid MW",
+                "observed_change": "Synthetic 133 MW operating and billed",
+                "comparison_basis": "Prior period no paid MW, current period paid operation",
+                "independent_effect_reason": "Capacity payment observed distinct from credit availability",
+                "uncertainties": "Private GPU ROI and tenant occupancy remain unknown",
+                "impact_basis": "SINGLE_VERIFIED_CHANGE" if abs(float(impact)) == 0.5 else "REPEATED_OR_TERMINAL_CONFIRMED",
+                "direction": "IMPROVEMENT" if float(impact)<0 else "DETERIORATION",
+                "corroboration_url": "https://example.org/separate-confirmation"
+            },
+        },
+    }
+
+
+def base():
+    return calculate()["snapshot"]
+
+
+def test_registered_source_events_have_stable_ids_and_date_coverage():
+    registry = _read_json(ROOT / REGISTRY)
+    assert len(registry["events"]) >= 35  # append-only registry grows with new events
+    validate_registry(registry)
+    validate_daily_index(registry)
+    qualified = [e for e in registry["events"]
+                 if e["reviews"][-1]["decision"] == "QUALIFIED"]
+    assert {e["id"] for e in qualified} == {
+        "EVT-20261027-1C51396E8F19", "EVT-20261102-6DFE079F76A6"}
+    assert all(e["reviews"][-1]["scored_event"]["qualification_policy"] ==
+               "OBSERVABLE_EVENT_QUALIFICATION_V2_1" for e in qualified)
+    assert len([e for e in registry["events"]
+                if e["reviews"][-1]["decision"] == "EARLY_WARNING"]) >= 2
+    for entry in registry["events"]:
+        assert entry["id"] == event_id(entry["event_date"], entry["event_key"])
+    # Issue #163: genuine Nov 4 issuer / macro releases are all registered
+    # with conservative provenance and no fabricated R3/R5/R6/R7 effects.
+    day = [e for e in registry["events"] if e["event_date"] == "2026-11-04"]
+    assert {e["id"] for e in day} == {
+        "EVT-20261104-01B78A7859FE", "EVT-20261104-0A094097F23D",
+        "EVT-20261104-1DD90E723871", "EVT-20261104-FBF1ADCE4DE8",
+    }
+    assert {e["reviews"][-1]["decision"] for e in day} == {
+        "MACRO_ONLY", "CONTEXT_ONLY"
+    }
+    assert all(e.get("registration_mode") == "BACKFILL" and
+               e["source_precision"] == "CONSERVATIVE_KNOWN_PUBLIC_BY" and
+               "scored_event" not in e["reviews"][-1] for e in day)
+
+
+
+def test_early_warning_is_research_only_and_requires_both_sides(tmp_path):
+    from challenger_v2_event_register import current_early_warnings
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    eid = reg["events"][0]["id"]
+    warning = {
+        "id": eid, "decision": "EARLY_WARNING", "factor": "R6",
+        "direction": "IMPROVEMENT", "confidence": "MEDIUM",
+        "counterevidence": "Project ROI and tenant GPU utilization are not verified",
+        "evidence_refs": ["Docs/research/test-source.md"],
+        "reason": "Some real billable capacity; financial yield remains unverified",
+        "reviewed_at": REVIEW, "reviewer": "synthetic-unit-test",
+        "next_review_at": "2026-11-11T00:00:00Z",
+        "qualification_triggers": ["Verified tenant use and independent project-level cash return"],
+    }
+    with pytest.raises(ValueError, match="counterevidence"):
+        assess(reg, {k:v for k,v in warning.items() if k != "counterevidence"},tmp_path)
+    reviewed = assess(reg, warning, tmp_path)
+    assert sync(reviewed, tmp_path, base_snapshot=base()) == []
+    assert current_early_warnings(reviewed, datetime.fromisoformat("2026-11-04T01:00:00+00:00"))[0]["id"] == eid
+    assert current_early_warnings(reviewed, datetime.fromisoformat("2026-11-12T01:00:00+00:00"))[0]["review_due"] is True
+    bad = deepcopy(warning)
+    bad["scored_event"] = review(eid)["scored_event"]
+    with pytest.raises(ValueError, match="may not change numeric"):
+        assess(reg, bad, tmp_path)
+
+
+def test_qualified_registration_generates_saved_event_recalculation(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    eid = reg["events"][0]["id"]
+    qualified = assess(reg, review(eid), tmp_path)
+    paths = sync(qualified, tmp_path, base_snapshot=base())
+    assert len(paths) == 1
+    saved = _read_json(tmp_path / paths[0])
+    assert saved["trigger_event_id"] == eid
+    assert saved["trigger_decision"] == "QUALIFIED"
+    assert saved["evaluation"]["used_event_ids"] == [eid]
+    assert saved["evaluation"]["event_adjustments"]["R6"] != "0.00"
+    assert saved["evaluation"]["final_interval"] != saved["evaluation"]["core_interval"]
+    assert saved["evaluation"]["final_exact_score"] is None
+    assert saved["evaluation"]["calibration"] == "UNCALIBRATED"
+    assert saved["trading_signal"] is False
+    assert sync(qualified, tmp_path, check=True) == []
+
+
+def test_missing_qualified_recalculation_fails_closed_with_ci_emission(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    eid = reg["events"][0]["id"]
+    reg = assess(reg, review(eid), tmp_path)
+    emit = tmp_path / "CI-artifacts"
+    # Missing committed result makes CI fail, while still producing a
+    # calculated file in the runner's downloadable Actions artifacts.
+    with pytest.raises(ValueError, match="requires saved recalculation"):
+        sync(reg, tmp_path, check=True, emit_dir=emit, base_snapshot=base())
+    assert list(emit.glob("*.json"))
+
+
+def test_unqualified_context_does_not_create_or_erase_numeric_adjustment(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    eid = reg["events"][0]["id"]
+    entry = {"id": eid, "decision": "CONTEXT_ONLY", "factor": "R6",
+             "reason": "Cash returns not independently verified",
+             "reviewer": "reviewer-test", "reviewed_at": REVIEW}
+    reg = assess(reg, entry, tmp_path)
+    assert sync(reg, tmp_path, base_snapshot=base()) == []
+
+
+def test_qualification_with_overlapping_core_cause_is_rejected(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    eid = reg["events"][0]["id"]
+    reg = assess(reg, review(eid, root="R4-META-2026Q3-source-panel"), tmp_path)
+    with pytest.raises(ValueError, match="excluded"):
+        sync(reg, tmp_path, base_snapshot=base())
+
+
+def test_revised_review_removes_stale_event_and_recalculates_again(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    eid = reg["events"][0]["id"]
+    reg = assess(reg, review(eid), tmp_path)
+    reg = assess(reg, {
+        "id": eid, "decision": "CONTEXT_ONLY", "factor": "R6",
+        "reason": "Independent correction: underlying deployment not economically qualified",
+        "reviewed_at": "2026-11-04T00:50:00Z", "reviewer": "reviewer-test",
+    }, tmp_path)
+    paths = sync(reg, tmp_path, base_snapshot=base())
+    assert len(paths) == 2
+    exit_path = next(p for p in paths if "005000Z" in p)
+    changed = _read_json(tmp_path / exit_path)
+    assert changed["evaluation"]["used_event_ids"] == []
+    assert changed["evaluation"]["event_total_adjustment"] == "0.00"
+
+
+def test_verified_first_public_can_be_promoted_after_original_public_by(tmp_path):
+    reg = register(registry_empty(), event(tmp_path, exact=False), tmp_path)
+    eid = reg["events"][0]["id"]
+    q = review(eid)
+    q["first_public_at_verified"] = AT
+    q["publication_proof_url"] = "https://example.org/verified-sec-acceptance"
+    reg = assess(reg, q, tmp_path)
+    assert len(sync(reg, tmp_path, base_snapshot=base())) == 1
+
+
+def test_qualifying_from_uncertified_public_by_timestamp_is_prohibited(tmp_path):
+    reg = register(registry_empty(), event(tmp_path, exact=False), tmp_path)
+    eid = reg["events"][0]["id"]
+    with pytest.raises(ValueError, match="independently verified"):
+        assess(reg, review(eid), tmp_path)
+
+
+def test_duplicate_canonical_occurrence_is_rejected(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    with pytest.raises(ValueError, match="duplicate"):
+        register(reg, event(tmp_path), tmp_path)
+
+
+def test_append_only_refuses_change_to_immutable_event_identity(tmp_path):
+    old = register(registry_empty(), event(tmp_path), tmp_path)
+    modified = deepcopy(old)
+    modified["events"][0]["title"] = "silently rewritten source"
+    with pytest.raises(ValueError, match="overwriting"):
+        verify_append_only(old, modified)
+    modified = deepcopy(old)
+    modified["events"][0]["reviews"][0]["reason"] = "silently rewritten decision"
+    with pytest.raises(ValueError, match="only be appended"):
+        verify_append_only(old, modified)
+
+
+def test_registering_future_or_overprecise_source_is_rejected(tmp_path):
+    e = event(tmp_path)
+    e["first_public_at"] = "2026-11-04T02:00:00Z"
+    with pytest.raises(ValueError, match="registered before"):
+        register(registry_empty(), e, tmp_path)
+    e = event(tmp_path)
+    e["source_precision"] = "CONSERVATIVE_KNOWN_PUBLIC_BY"
+    with pytest.raises(ValueError, match="exact first-public"):
+        register(registry_empty(), e, tmp_path)
+
+
+def test_cannot_use_future_core_for_new_event_calculation(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    eid = reg["events"][0]["id"]
+    reg = assess(reg, review(eid), tmp_path)
+    future = base()
+    future["as_of"] = "2026-11-04T01:00:00Z"
+    with pytest.raises(ValueError, match="future core snapshot"):
+        recalculate(reg, eid, reg["events"][0]["reviews"][-1],
+                    tmp_path, base_snapshot=future)
+
+
+def test_qualified_artifact_mutation_detected_on_next_ci_pass(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    eid = reg["events"][0]["id"]
+    reg = assess(reg, review(eid), tmp_path)
+    outputs = sync(reg, tmp_path, base_snapshot=base())
+    artifact_file = tmp_path / outputs[0]
+    x = _read_json(artifact_file)
+    x["evaluation"]["final_interval"] = ["99.00", "99.00"]
+    _write_json(artifact_file, x)
+    with pytest.raises(ValueError, match="stale/corrupt"):
+        sync(reg, tmp_path, check=True)
+
+
+def test_no_qualified_source_at_bootstrap_cannot_claim_recalculation():
+    reg = _read_json(ROOT / REGISTRY)
+    assert sync(reg, ROOT, check=True) == []
+
+
+def test_event_registered_before_evening_daily_close_has_pending_index(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    index = update_daily_index(reg, tmp_path)
+    record = index["records"][0]
+    assert record["date"] == "2026-11-04"
+    assert record["high_critical_count"] == 1
+    assert record["event_ids"] == [reg["events"][0]["id"]]
+    assert record["source_report_status"] == "PENDING_DAILY_REPORT"
+
+
+def test_daily_close_reconciliation_requires_matching_registry_ids(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    report = tmp_path / "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-04.md"
+    report.write_text("## 1. Event ledger\n| Priority | Item |\n|---|---|\n| HIGH | Test event |\n\n## 2. Follow-up\n", encoding="utf-8")
+    index = update_daily_index(reg, tmp_path)
+    assert index["records"][0]["source_report_status"] == "RECONCILED_TO_DAILY_LEDGER"
+    _write_json(tmp_path / "data/research/events/daily_high_critical_index.json", index)
+    validate_daily_index(reg, tmp_path)
+    index["records"][0]["event_ids"] = []
+    _write_json(tmp_path / "data/research/events/daily_high_critical_index.json", index)
+    with pytest.raises(ValueError, match="count mismatches"):
+        validate_daily_index(reg, tmp_path)
+
+
+def test_backfilled_public_by_timestamp_is_not_an_exact_qualifying_source(tmp_path):
+    reg = register(registry_empty(), event(tmp_path, exact=False), tmp_path)
+    eid = reg["events"][0]["id"]
+    q = review(eid)
+    q["first_public_at_verified"] = "2026-11-04T00:40:00Z"
+    q["publication_proof_url"] = "https://example.org/proof"
+    q["scored_event"]["first_public_at"] = "2026-11-04T00:40:00Z"
+    with pytest.raises(ValueError, match="exceeds original known-public bound"):
+        assess(reg, q, tmp_path)
+
+
+def test_ci_rejects_unregistered_extra_high_priority_row(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    report = tmp_path / "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-04.md"
+    report.write_text("## Event ledger\n| Priority | Item |\n|---|---|\n| HIGH | Event A |\n| CRITICAL | Event B |\n\n## Analysis\n",
+                      encoding="utf-8")
+    idx = update_daily_index(reg, tmp_path)
+    assert idx["records"][0]["source_report_status"] == "RECONCILIATION_PENDING"
+    _write_json(tmp_path / "data/research/events/daily_high_critical_index.json", idx)
+    with pytest.raises(ValueError, match="count differs"):
+        validate_daily_index(reg, tmp_path)
+
+def test_qualified_from_conservatively_proven_public_by_without_fabricated_minute(tmp_path):
+    reg = register(registry_empty(), event(tmp_path, exact=False), tmp_path)
+    eid = reg["events"][0]["id"]
+    q = review(eid)
+    q["scored_event"].pop("first_public_at")
+    q["scored_event"]["known_public_by_at"] = REG
+    q["scored_event"]["availability_basis"] = "CONSERVATIVE_KNOWN_PUBLIC_BY"
+    q["scored_event"]["publication_proof_url"] = "https://example.org/dated-original-disclosure"
+    q["scored_event"]["kind"] = "STATE"
+    q["scored_event"]["review_by"] = "2026-11-15T00:00:00Z"
+    q["public_by_verified_at"] = REG
+    q["publication_proof_url"] = "https://example.org/dated-original-disclosure"
+    reg = assess(reg, q, tmp_path)
+    results = sync(reg, tmp_path, base_snapshot=base())
+    saved = _read_json(tmp_path / results[0])
+    assert saved["evaluation"]["used_event_ids"] == [eid]
+    assert saved["evaluation"]["event_adjustments"]["R6"] == "-2.00"
+
+
+def test_qualifying_event_rejects_missing_observable_measurement(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    q = review(reg["events"][0]["id"])
+    del q["scored_event"]["observable_outcome"]["comparison_basis"]
+    with pytest.raises(ValueError, match="observable outcome lacks"):
+        assess(reg, q, tmp_path)
+
+
+def test_final_disposition_cannot_reopen_on_calendar_deadline_alone(tmp_path):
+    reg = register(registry_empty(), event(tmp_path), tmp_path)
+    eid = reg["events"][0]["id"]
+    finished = {
+        "id": eid, "decision": "NOT_QUALIFIED_CLOSED", "factor": "R6",
+        "reviewed_at": REVIEW, "reviewer": "bounded-evidence-review",
+        "reason": "Paid capacity not substantiated in available documents; pass concluded",
+        "counterevidence": "Source reports are plans only, neither billed nor online",
+        "evidence_refs": ["Docs/research/test-source.md"],
+        "reopen_only_on": ["New original source with revenue-generating MW", "Proven source error"],
+    }
+    reg = assess(reg, finished, tmp_path)
+    next_review = {"id": eid, "decision": "CONTEXT_ONLY", "factor": "R6",
+                   "reviewer": "test", "reviewed_at": "2026-11-04T00:50:00Z",
+                   "reason": "Reconsideration without any fresh material fact"}
+    with pytest.raises(ValueError, match="cannot reopen"):
+        assess(reg, next_review, tmp_path)
+    next_review.update(reopen_source_public_at="2026-11-04T00:45:00Z",
+                       reopen_source_url="https://example.org/new-primary")
+    reopened = assess(reg, next_review, tmp_path)
+    assert [x["decision"] for x in reopened["events"][0]["reviews"][-2:]] == [
+        "NOT_QUALIFIED_CLOSED", "CONTEXT_ONLY"
+    ]
+    verify_append_only(reg, reopened)

@@ -1,0 +1,85 @@
+{
+  "captured_at": "2026-11-11T08:24:18+02:00",
+  "cftc": {
+    "category": "LEVERAGED_FUNDS",
+    "nasdaq_20974+": {
+      "four_week_net": 32852,
+      "horizons": "DERIVED_SAME_CODE_CATEGORY_VARIANT",
+      "long": 59930,
+      "net": 6114,
+      "short": 53816,
+      "spreading": 9583,
+      "thirteen_week_net": 106754,
+      "wow_net": 11733
+    },
+    "positions_as_of": "2026-11-03",
+    "published": "2026-11-06",
+    "report": "TFF_FUTURES_ONLY_CONSOLIDATED",
+    "sp_13874+": {
+      "four_week_net": 49039,
+      "horizons": "DERIVED_SAME_CODE_CATEGORY_VARIANT",
+      "long": 122566,
+      "net": -366870,
+      "short": 489436,
+      "spreading": 58930,
+      "thirteen_week_net": -33771,
+      "wow_net": 33008
+    }
+  },
+  "confidence": "MEDIUM",
+  "cutoff": "2026-11-11T08:17:14+02:00",
+  "forced_deleveraging": {
+    "confidence": "MEDIUM",
+    "state": "ACTIVE_RISK_CUTTING_NO_VERIFIED_MARGIN_CALL_CASCADE"
+  },
+  "h_state": "H3_ACTIVE_DERISK",
+  "lending_security_shorts": "UNKNOWN_NO_COMPARABLE_PUBLIC_AI_BASKET",
+  "price_positioning_divergence": "ADVERSE_TIMING_CFTC_POSITIONING_IMPROVED_BEFORE_NOV5_CRASH",
+  "prime_broker": {
+    "limitation": "Full comparable subscription panel unavailable",
+    "source_class": "INDEPENDENT_CONFIRMATION",
+    "state": "ACTIVE_TECH_RISK_REDUCTION"
+  },
+  "put_call_2026-11-10": {
+    "equity": 0.81,
+    "index": 1.04,
+    "time_basis": "CBOE_PUBLISHED_15_15_ET_NEAR_CLOSE",
+    "total": 0.89
+  },
+  "report_date": "2026-11-11",
+  "schema": "ai-capex.institutional-derisking-observation.v1",
+  "skew_2026-11-10": {
+    "source_class": "INDEPENDENT_SECONDARY",
+    "value": 150.34
+  },
+  "sources": [
+    "https://www.cftc.gov/dea/futures/financial_lf.htm",
+    "https://www.cboe.com/markets/us/options/market-statistics",
+    "https://www.cboe.com/markets/us/futures/market-statistics/settlement/futures/daily"
+  ],
+  "unknowns": [
+    {
+      "field": "prime_broker.full_panel",
+      "next_action": "Retain public independent confirmation without false precision",
+      "next_review": "2026-11-18",
+      "owner": "weekly-research",
+      "reason": "Subscription/private dataset; public reports lack stable full panel"
+    },
+    {
+      "field": "lending_security_shorts",
+      "next_action": "Check exchange/provider release",
+      "next_review": "2026-11-18",
+      "owner": "weekly-research",
+      "reason": "No current same-method public AI basket"
+    }
+  ],
+  "vix_2026-11-10": 19.46,
+  "vix_futures_2026-11-10": {
+    "DEC16": 19.5125,
+    "FEB17": 20.3507,
+    "JAN20": 20.0385,
+    "NOV18": 19.9067,
+    "shape": "MILD_CONTANGO_WITH_DECEMBER_DIP"
+  },
+  "weekly_delta": "H1_TO_H3_WORSENING"
+}

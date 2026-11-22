@@ -1,0 +1,92 @@
+{
+  "M1": {
+    "max": 30,
+    "policy": "RESTRICTIVE_HOLD_CPI_3_4",
+    "score": 15,
+    "ten_year_pct": 4.95,
+    "three_month_change_bp": 20
+  },
+  "M2": {
+    "cpi_yoy_pct": 3.7,
+    "energy_yoy_pct": 20.4,
+    "max": 20,
+    "reacceleration": "CLEAR",
+    "score": 15
+  },
+  "M3": {
+    "level": 518.89,
+    "max": 20,
+    "mean_distance": "UNKNOWN_COMPARABLE_VARIANT_NOT_RETRIEVED",
+    "score_interval": [
+      12,
+      20
+    ],
+    "variant": "FTSE/CoreCommodity CRB Total Return",
+    "yoy_pct": 36.05
+  },
+  "M4": {
+    "broad_ig_oas_3m_bp": 78,
+    "broad_ig_oas_bp": 94,
+    "max": 30,
+    "score_interval": [
+      2,
+      7
+    ],
+    "sector_premium": "UNKNOWN_NOT_SCORED",
+    "widening_bp": 16
+  },
+  "captured_at": "2026-11-04T08:40:00+02:00",
+  "cutoff": "2026-11-04T08:23:00+02:00",
+  "evidence_class": "MIXED_PRIMARY_AND_INDEPENDENT",
+  "overrides": {
+    "EASING_FAILURE_FLAG": "NO",
+    "FUNDING_BREAK_FLAG": "UNKNOWN",
+    "STAGFLATION_TRAP_FLAG": "YES"
+  },
+  "report_date": "2026-11-04",
+  "schema": "ai-capex.macro-pain-observation.v1",
+  "score_interval": [
+    44,
+    57
+  ],
+  "sources": [
+    {
+      "class": "PRIMARY_FACT",
+      "observation_date": "2026-11-03",
+      "publication_by": "2026-11-04T08:23:00+02:00",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates"
+    },
+    {
+      "class": "PRIMARY_FACT",
+      "observation_date": "2026-09",
+      "publication_by": "2026-11-04T08:23:00+02:00",
+      "url": "https://www.bls.gov/cpi/"
+    },
+    {
+      "class": "INDEPENDENT_CONFIRMATION",
+      "observation_date": "2026-11-02",
+      "publication_by": "2026-11-04T08:23:00+02:00",
+      "url": "https://fred.stlouisfed.org/series/BAMLC0A0CM"
+    }
+  ],
+  "state_interval": [
+    "HIGH_STRESS",
+    "BREAK_ZONE"
+  ],
+  "unknowns": [
+    {
+      "field": "M3.mean_distance",
+      "next_action": "retrieve comparable variant history",
+      "next_review": "2026-11-11",
+      "owner": "weekly-research",
+      "reason": "same total-return 260-day series unavailable"
+    },
+    {
+      "field": "M4.sector_premium",
+      "next_action": "check public bond index/issuer basket",
+      "next_review": "2026-11-11",
+      "owner": "weekly-research",
+      "reason": "no stable public comparable AI-sector OAS panel"
+    }
+  ]
+}

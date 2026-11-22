@@ -1,0 +1,56 @@
+# Challenger v2 EXAMPLE INPUT SHAPE, not an approved real-issuer roster.
+# Replace the fictional entries and assign reviewed weights before analysis.
+# Intentionally empty observations yield 0..100 bounds, not fabricated scores.
+schema: ai-capex.challenger-observable.v2-draft
+as_of: '2026-11-02T16:00:00-05:00'
+cohort_version: 'TEMPLATE-NOT-APPROVED'
+cohort_frozen_at: '2026-10-01T00:00:00+00:00'
+core:
+  R1:
+    roster:
+      ISSUER_A: '0.5'
+      ISSUER_B: '0.5'
+    observations: {}
+  R2:
+    roster:
+      ISSUER_C: '0.5'
+      ISSUER_D: '0.5'
+    observations: {}
+  R4:
+    roster:
+      IG_BORROWER: '0.5'
+      PROJECT_BORROWER: '0.5'
+    observations: {}
+events: []
+
+# Reviewed issuer observation example (for schema documentation ONLY):
+# observations:
+#   ISSUER_A:
+#     level: 1
+#     first_public_at: '2026-10-28T16:15:00-04:00'
+#     availability_basis: FIRST_PUBLIC_VERIFIED
+#     # Alternative: remove first_public_at and use
+#     # known_public_by_at: '2026-10-29T09:30:00-04:00'
+#     # availability_basis: CONSERVATIVE_KNOWN_PUBLIC_BY
+#     valid_until: '2027-01-31T23:59:59-05:00'
+#     source_class: PRIMARY_FACT
+#     source_url: 'https://issuer.example/filing'
+#     measurement: 'matched FY quarter revenue growth / capex growth'
+#     rationale: 'describe threshold and decisive numbers'
+#     counterevidence: 'include strong contrary evidence or explicit no qualifying source'
+#     causal_root_id: 'issuer-A-2026Q3-economics'
+#
+# Qualifying event example (for schema documentation ONLY):
+# - id: 'project-delivery-recovered-001'
+#   factor: R7
+#   impact: '-1'
+#   kind: STATE
+#   first_public_at: '2026-11-02T08:00:00-05:00'
+#   review_by: '2027-01-31T23:59:59-05:00'
+#   source_class: PRIMARY_FACT
+#   confidence: HIGH
+#   source_url: 'https://issuer.example/release'
+#   causal_root_id: 'project-001'
+#   effect_id: 'physical-restart-confirmed'
+#   rationale: 'grounded site restart evidence'
+#   counterevidence: 'known limitations'

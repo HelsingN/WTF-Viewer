@@ -1,0 +1,110 @@
+schema: ai-capex.macro-input-cost-pain.v1
+as_of: 2026-09-23
+status: RESEARCH_OVERLAY
+trading_authority: NONE
+model_contract: Docs/MACRO_INPUT_COST_PAIN_OVERLAY_v1.md
+source_research:
+  - Docs/research/MACRO_INPUT_COST_PAIN_BASELINE_2026-09-23.md
+
+score:
+  lower_bound: 52
+  upper_bound: 62
+  canonical_point_estimate: null
+  state_range:
+    - HIGH_STRESS
+    - BREAK_ZONE
+  interpretation: ENTRY_TO_BREAK_ZONE_DUE_TO_FUNDING_BREAK_FLAG
+  precision_note: >-
+    Exact point score is intentionally not pinned because the project does not yet
+    store a clean 3-month time series for the same AI spread definition and exact
+    same-variant CRB 12-month return. Do not impute missing values.
+
+components:
+  M1_long_term_funding_pressure:
+    approximate_score: 16
+    max_score: 30
+    inputs:
+      us_10y_pct: 4.96
+      us_10y_as_of: 2026-09-21
+      approx_change_since_early_july_bp: 48
+      fed_target_range_pct: "3.75-4.00"
+      fed_last_action: HIKE_25BP
+    state: HIGH
+  M2_inflation_input_persistence:
+    approximate_score: 11
+    max_score: 20
+    inputs:
+      cpi_yoy_pct: 3.4
+      cpi_monthly_pct: 0.4
+      energy_cpi_yoy_pct: 16.3
+    state: ELEVATED
+  M3_commodity_input_pressure:
+    approximate_score: 17
+    max_score: 20
+    inputs:
+      crb_variant: FTSE_CORECOMMODITY_CRB_MATCHING_TRADINGVIEW_STOCKQ
+      crb_level_approx: 418.7
+      crb_ytd_pct: 38.73
+      crb_ma260_approx: 344.27
+      crb_distance_above_ma260_pct_approx: 21.6
+      exact_12m_return: UNKNOWN_NOT_STORED
+    state: VERY_HIGH
+  M4_credit_transmission:
+    approximate_score_range: "8-18"
+    max_score: 30
+    inputs:
+      ai_related_spread_bp_approx: 115
+      broad_corporate_spread_bp_approx: 78
+      ai_premium_vs_broad_bp_approx: 37
+      exact_3m_ai_spread_widening_bp: UNKNOWN_NOT_STORED
+      project_jupiter_price_cents: "89-91"
+      project_jupiter_syndication_difficulty: true
+    state: TIGHTENING_SELECTIVE
+
+flags:
+  FUNDING_BREAK_FLAG: true
+  STAGFLATION_TRAP_FLAG: false
+  STAGFLATION_TRAP_NEAR_MISS: "CPI 3.4% is 0.1pp below 3.5% threshold"
+  EASING_FAILURE_FLAG: false
+
+interaction_with_challenger:
+  challenger_as_of: 2026-09-23
+  challenger_score: 60
+  challenger_state: ALERT
+  challenger_stage: STAGE_4_FINANCING_STRESS_LENDER_TIGHTENING
+  macro_overlay_changes_challenger_score: false
+  macro_overlay_changes_champion: false
+  conclusion: >-
+    Macro/input-cost conditions now amplify the financial-first warning. They do
+    not confirm physical reversal because memory and semiconductor/networking
+    remain anti-reversal and GPU compute is only WATCH.
+
+historical_calibration_summary:
+  dotcom_2000:
+    score_range_approx: "49-58"
+    state: HIGH_STRESS_TO_BREAK_ZONE
+  housing_credit_2006:
+    score_range_approx: "45-52"
+    state: HIGH_STRESS
+  pre_gfc_2007:
+    score_range_approx: "50-60"
+    state: HIGH_STRESS_TO_BREAK_ZONE
+  commodity_credit_peak_2008_pre_lehman:
+    score_range_approx: "60-70"
+    state: BREAK_ZONE_APPROACHING_CRISIS_TRANSMISSION
+  q4_2018_negative_control:
+    score_range_approx: "20-35"
+    state: NORMAL_TO_WATCH
+  inflation_shock_2022:
+    score_range_approx: "60-70"
+    state: BREAK_ZONE_TO_LOWER_CRISIS_TRANSMISSION
+
+forward_monitoring:
+  exact_same_variant_crb_12m_return: REQUIRED
+  ai_spread_3m_change: REQUIRED
+  us_10y_5_25_persistence: WATCH
+  cpi_4_percent: WATCH
+  ai_spread_150bp: WATCH
+  repeated_project_debt_below_95: WATCH
+  economically_driven_project_deferrals: WATCH
+  physical_confirmation_p1_p2_p3: REQUIRED_FOR_CONFIRMED_REVERSAL

@@ -1,0 +1,11 @@
+# HIGH — BLS October 2026 Producer Price Index (released 2026-11-13)
+
+- Canonical event: `BLS-PPI-OCT2026`, `EVT-20261113-1D70E4821EC3`.
+- Primary source: https://www.bls.gov/news.release/ppi.nr0.htm (USDL 26-1687). Embargo until **2026-11-13 08:30 EST = 13:30 UTC**. Verified accessible by **2026-11-13 14:54:56 UTC**, which is `known_public_by_at`, **not** proof of actual first-public minute.
+- Headline PPI final demand October: **+0.3% MoM**, vs **+0.4% consensus** (−0.1 pp surprise). **+6.5% YoY** vs reported **+6.6% expectation** (−0.1 pp); September revised **+1.4% MoM**. BLS less foods, energy, and trade services **+0.5% MoM**, **+4.9% YoY**. Note this definition differs from the common 'core ex-food-and-energy' series.
+- Market context: Barron's contemporaneous futures snapshot (exact quote timestamp UNKNOWN) S&P 500 futures +0.6%, Nasdaq 100 +0.5%; WSJ observed 2Y UST ~4.836%, 10Y ~5.127%, but neither establishes event-causal move absent pre/post matched quotes. Sources: https://www.barrons.com/livecoverage/stock-market-news-today-111326/card/stock-futures-still-rising-after-ppi-M6kyBabOI2JvgPyDlXYq ; https://www.wsj.com/finance/jgb-yields-rise-after-selloff-in-u-s-treasurys-overnight-1eeb83e2
+- **Macro relative direction: MIXED**. Lower-than-consensus monthly PPI may ease marginal rate expectations, while +6.5% annual inflation and elevated funding costs weigh on debt-financed AI capex. Compare with CPI 2026-11-10, NFP 2026-11-06 and FOMC 2026-10-28; do not sum independent score impacts for shared inflation/rate channels.
+- Champion F1-F5: F3 financing channel potentially adverse at annual inflation level, F1/F2/F4/F5 no direct new issuer-level outcome. Challenger frozen R1/R2/R4 unchanged, R3/R5/R6/R7 none QUALIFIED, P1-P4 no measured new physical conversion. `MACRO_ONLY`; no score recomputation; calibration UNCALIBRATED, category null, trading_signal false.
+- Counterevidence: monthly release below consensus, lower yields in secondary coverage, sustained demand indicators. Neither direction proves realized AI-project cash return or cancellations.
+- News: https://www.reuters.com/business/us-producer-prices-rise-further-october-2026-11-13/
+- Cutoff 2026-11-13 14:54:56 UTC. Review issue #212. No automatic trading or main merge.

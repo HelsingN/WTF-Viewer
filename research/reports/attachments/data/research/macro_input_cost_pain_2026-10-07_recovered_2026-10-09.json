@@ -1,0 +1,103 @@
+{
+  "schema": "ai-capex.macro-input-cost-pain.recovery.v1",
+  "as_of": "2026-10-07T23:59:59-04:00",
+  "captured_at": "2026-10-09T03:58:00.599Z",
+  "trading_authority": "NONE",
+  "contract": "Docs/MACRO_INPUT_COST_PAIN_OVERLAY_v1.md",
+  "source_research": "Docs/research/AI_CAPEX_WEEKLY_COMPLETENESS_2026-10-07_RECOVERED_2026-10-09.md",
+  "status": "PARTIAL",
+  "original_cutoff": null,
+  "components": {
+    "M1": {
+      "lower": 22,
+      "upper": 22,
+      "max": 30,
+      "us10y_pct": 5.28,
+      "us10y_3m_prior_pct": 4.55,
+      "prior_date": "2026-07-07",
+      "change_bp": 73,
+      "subscores": {
+        "level": 14,
+        "change": 4,
+        "policy": 4
+      },
+      "source": [
+        "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+        "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+      ]
+    },
+    "M2": {
+      "lower": 11,
+      "upper": 11,
+      "max": 20,
+      "cpi_yoy_pct": 3.4,
+      "monthly_pct": 0.4,
+      "energy_yoy_pct": 16.3,
+      "period": "2026-08",
+      "published_on": "2026-09-11",
+      "subscores": {
+        "cpi": 3,
+        "energy": 4,
+        "reacceleration": 4
+      },
+      "note": "Latest monthly CPI >=.3 and YoY3.4 unchanged vsJuly satisfies v1's last reacceleration rule; June-.4/July.1/Aug.4 is not a monotone three-month inflation trend.",
+      "source": "https://www.bls.gov/news.release/archives/cpi_09112026.htm"
+    },
+    "M3": {
+      "lower": 0,
+      "upper": 20,
+      "max": 20,
+      "variant_status": "UNKNOWN",
+      "momentum_12m": null,
+      "distance_ma260_pct": null,
+      "note": "Oct8 StockQ current metrics excluded; Oct7 values unavailable and primary return variant unpinned. TE CFD level530.70 cannot be substituted for StockQ~414."
+    },
+    "M4": {
+      "lower": 0,
+      "upper": 15,
+      "max": 30,
+      "mode": "BROAD_IG_FALLBACK",
+      "spread_level_points": 0,
+      "three_month_widening_points": [
+        0,
+        10
+      ],
+      "sector_premium_points": [
+        0,
+        5
+      ],
+      "ai_spread_bp": null,
+      "ai_spread_3m_change_bp": null,
+      "note": "Broad IG latest available Oct6 via FRED publicationOct7 maps to <100bp bucket. Oct7 FRED observation publishedOct8 is excluded. No same-basket AI spread; missing premium not zero.",
+      "source": "https://fred.stlouisfed.org/series/BAMLC0A0CM"
+    }
+  },
+  "score": {
+    "lower_bound": 33,
+    "upper_bound": 68,
+    "canonical_point_estimate": null,
+    "state_range": [
+      "WATCH",
+      "HIGH_STRESS",
+      "BREAK_ZONE"
+    ],
+    "precision": "LOGICAL_MISSING_INPUT_BOUNDS_NOT_PROBABILITY_OR_CONFIDENCE_INTERVAL"
+  },
+  "flags": {
+    "FUNDING_BREAK_FLAG": "UNKNOWN",
+    "STAGFLATION_TRAP_FLAG": "NO",
+    "EASING_FAILURE_FLAG": "NO"
+  },
+  "delta": {
+    "prior_as_of": "2026-09-23",
+    "prior_reported_range": [
+      52,
+      62
+    ],
+    "ten_year_change_from_sept21_bp": 32,
+    "score_change": null,
+    "note": "Prior approximate range is not mechanically comparable to new full missing-input bounds; funding flag prior YES not fresh Oct7 debt proof."
+  },
+  "changes_champion": false,
+  "changes_challenger": false
+}
