@@ -66,12 +66,17 @@ const migrationSchema = z.object({
   })).max(2000),
 });
 const kind = z.enum(["daily_report", "weekly_report"]);
+const workflowEvidence = z.object({ status: label, observed_at: time, inspected_sha: sha });
 const reportSchema = z.object({
   kind, date: day, title: label, path, origin,
   source_path_id: label.nullish(), source_commit: sha.nullish(),
   source_pr: z.number().int().positive().nullish(), source_pr_state: label.nullish(),
   cutoff_text_from_source: label.nullish(), status_text_from_source: label.nullish(),
   attachments: z.array(path).max(200).default([]),
+  workflow: z.object({
+    ci: workflowEvidence.nullish().catch(undefined), review: workflowEvidence.nullish().catch(undefined),
+    merge: workflowEvidence.nullish().catch(undefined),
+  }).optional().catch(undefined),
 });
 const reportIndexSchema = z.object({
   schema: z.literal("wtf-viewer.report-index.v1"),

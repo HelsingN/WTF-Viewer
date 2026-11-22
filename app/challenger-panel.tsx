@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { calculateChallenger, prepareChallengerInput } from "@/lib/challenger-calculation";
 import type { CalculationCache, LocalCalculation } from "@/lib/challenger-calculation";
+import { CalculationContext } from "./calculation-context";
+import { display, interval, readCalculation } from "@/lib/research-context";
 import { targetLink } from "@/lib/research-package";
 import type { ResearchPackage } from "@/lib/research-package";
 
@@ -45,31 +47,35 @@ function remember(result: LocalCalculation, earlier: CalculationCache[]) {
 function Published({ pack, lang, local }: { pack: ResearchPackage; lang: "ru" | "en"; local: boolean }) {
   const t = (ru: string, en: string) => lang === "ru" ? ru : en;
   const capture = pack.snapshot;
-  const interval = capture?.data.published_result.final_interval;
-  const intervalText = Array.isArray(interval) && interval.length === 2 && interval.every(value => typeof value === "string")
-    ? interval.join(" – ") : "UNKNOWN";
+  const calculation = capture && readCalculation(pack, capture.path);
+  const published = capture?.data.published_result;
+  const score = published?.final_exact_score == null ? interval(published?.final_interval) : display(published.final_exact_score);
   return <section className="panel research-preview" aria-labelledby="challenger-published">
     <h2 id="challenger-published">{local
       ? t("Артефакт в импортированном пакете", "Artifact in imported package")
       : t("Опубликованный артефакт в пакете", "Published artifact in package")}</h2>
     {capture ? <>
-      <p><strong>{intervalText}</strong> · {capture.data.data_status} · {capture.data.review_status}</p>
+      <p><strong>{score}</strong> · {capture.data.data_status} · {capture.data.review_status}</p>
       <p>{t("Срез", "Cutoff")} <time dateTime={capture.data.cutoff}>{capture.data.cutoff}</time>{" · "}
         <a href={targetLink(pack.manifest.target.commit, capture.path)} target="_blank" rel="noreferrer">
           {t("Исходный артефакт", "Source artifact")}</a></p>
+      {calculation && <details className="research-attachments">
+        <summary>{t("Факторы и источники артефакта", "Artifact factors and sources")}</summary>
+        <CalculationContext pack={pack} path={capture.path} {...calculation} t={t}/>
+      </details>}
     </> : <p>{t("В пакете нет опубликованного артефакта Challenger.", "The package has no published Challenger artifact.")}</p>}
   </section>;
 }
 
-function LocalResult({ value, lang, download }: {
+function LocalResult({ value, pack, lang, download }: {
+  pack: ResearchPackage;
   value: LocalCalculation;
   lang: "ru" | "en";
   download: (name: string, body: string) => void;
 }) {
   const t = (ru: string, en: string) => lang === "ru" ? ru : en;
   const result = value.result;
-  const missing = Object.entries(result.core_factors).flatMap(([factor, core]) =>
-    Object.entries(core.missing_or_stale).map(([issuer, reason]) => `${factor}/${issuer}: ${reason}`));
+  const input = readCalculation(pack, value.source.path);
   return <section className="panel research-preview" aria-labelledby="challenger-local">
     <h2 id="challenger-local">LOCAL / UNPUBLISHED</h2>
     <p><strong>{result.final_exact_score ?? result.final_interval.join(" – ")}</strong>{" · "}
@@ -82,15 +88,9 @@ function LocalResult({ value, lang, download }: {
     </dl>
     <details className="research-attachments">
       <summary>{t("Факторы, исключения и происхождение", "Factors, exclusions and provenance")}</summary>
+      {input && <CalculationContext pack={pack} path={value.source.path} artifact={input.artifact}
+        snapshot={input.snapshot} result={result} asOf={value.evaluation_as_of} t={t} local/>}
       <dl className="research-facts">
-        {Object.entries(result.core_factors).map(([factor, core]) => <div key={factor}><dt>{factor}</dt>
-          <dd>{core.level_bounds.join(" – ")} · {core.coverage_pct}%</dd></div>)}
-        {Object.entries(result.event_adjustments).map(([factor, adjustment]) => <div key={factor}><dt>{factor}</dt><dd>{adjustment}</dd></div>)}
-        <div><dt>{t("Пробелы и устаревшие наблюдения", "Missing or stale observations")}</dt>
-          <dd>{missing.length ? missing.join(" · ") : "—"}</dd></div>
-        <div><dt>{t("Учтённые события", "Included events")}</dt><dd>{result.used_event_ids.join(", ") || "—"}</dd></div>
-        <div><dt>{t("Исключённые события", "Excluded events")}</dt>
-          <dd>{result.excluded_events.map(event => `${event.id}: ${event.reason}`).join(" · ") || "—"}</dd></div>
         <div><dt>{t("Версия расчёта", "Calculator version")}</dt><dd>{value.versions.calculator}</dd></div>
         <div><dt>{t("Модель и политика", "Model and policy")}</dt><dd>{value.versions.model} · {value.versions.policy}</dd></div>
         <div><dt>{t("Хеш входа SHA-256", "Input SHA-256")}</dt><dd><code>{value.input_hash}</code></dd></div>
@@ -182,6 +182,6 @@ export function ChallengerPanel({ pack, lang, local, download }: {
         {error && <p id="challenger-error" className="alert error" role="alert">{t("Расчёт отклонён.", "Calculation rejected.")} {error}</p>}
       </form> : <p role="status">{unavailableText[prepared.state][lang === "ru" ? 0 : 1]}</p>}
     </section>
-    {result && <LocalResult value={result} lang={lang} download={download} />}
+    {result && <LocalResult value={result} pack={pack} lang={lang} download={download} />}
   </>;
 }

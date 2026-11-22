@@ -113,3 +113,14 @@
 .research-markdown td, .research-markdown td > a { font-size: inherit; }
 .research-markdown code { color: var(--reader-secondary); font-size: .9em; }
 .research-markdown pre { color: var(--reader-text); background: var(--reader-surface); }
+
+.context-origin, .context-sources { overflow-wrap: anywhere; }
+.context-sources { padding-inline-start: 1.1rem; }
+.context-sources a { display: inline; text-decoration: underline; }
+.context-table { margin-block: .75rem 1rem; scrollbar-color: var(--reader-secondary) var(--reader-surface); }
+.context-table table { min-inline-size: 54rem; }
+.context-table th, .context-table td { padding: .7rem; border: 1px solid var(--reader-border); font-size: .875rem; }
+.context-table th { background: var(--reader-surface); color: var(--reader-text); }
+.context-table td p { margin-block: .4em; }
+.research-main .context-event-link { display: inline; padding: 0; border: 0; background: transparent; text-decoration: underline; }
+.calculation-context h4 { margin-block: 1rem .5rem; overflow-wrap: anywhere; }

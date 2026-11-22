@@ -6,6 +6,8 @@ import { join } from "node:path";
 import { gunzipSync } from "node:zlib";
 import { comparePackages, fileDigest, indexPath, maxPackageBytes, packageHash, readPackage, registryPath } from "../../lib/research-package.ts";
 
+import { readCalculation, readWorkflowEvidence } from "../../lib/research-context.ts";
+
 const bundledBytes = readFileSync("public/research-package.json.gz");
 const bundledText = gunzipSync(bundledBytes).toString();
 const base = await readPackage(bundledText);
@@ -105,6 +107,29 @@ const changed = await readPackage(await mutate(async pack => {
 assert.equal(comparePackages(base, changed), "update");
 assert.equal(changed.events.length, base.events.length + 1);
 assert.equal(changed.events[0].reviews.length, base.events[0].reviews.length + 1);
+
+const historicalPath = base.manifest.files.find(item => item.path.includes("EVT-20261027-1C51396E8F19_")).path;
+assert.equal(readCalculation(base, historicalPath).result.final_interval[0], "44.36");
+assert.equal(readCalculation(base, base.snapshot.path).result.final_interval[0], "46.36");
+
+const observedAt = "2026-11-18T10:04:00Z";
+const differentRevision = "2".repeat(40);
+const evidencePack = await readPackage(await mutate(pack => changeDocument(pack, indexPath, doc => {
+  const report = doc.reports.find(item => item.source_pr === 231);
+  report.workflow = {
+    ci: { status: "SUCCESS", observed_at: observedAt, inspected_sha: report.source_commit },
+    review: { status: "APPROVED", observed_at: observedAt, inspected_sha: differentRevision },
+    merge: { status: "MERGED", inspected_sha: report.source_commit },
+  };
+})));
+const evidence = evidencePack.reports.find(item => item.source_pr === 231);
+assert.deepEqual(readWorkflowEvidence(evidence, "ci"), {
+  status: "SUCCESS", priorStatus: undefined, observed_at: observedAt, inspected_sha: evidence.source_commit,
+});
+assert.deepEqual(readWorkflowEvidence(evidence, "review"), {
+  status: "UNKNOWN", priorStatus: "APPROVED", observed_at: observedAt, inspected_sha: differentRevision,
+});
+assert.equal(readWorkflowEvidence(evidence, "merge").status, "UNKNOWN");
 
 const rewritten = await readPackage(await mutate(async pack => {
   nextCommit(pack);
