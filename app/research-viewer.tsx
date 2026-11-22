@@ -6,6 +6,10 @@ import {
   bundledPackageUrl, comparePackages, decodeBase64, indexPath, maxPackageBytes, migrationPath, PackageError, readPackage, registryPath, targetLink,
 } from "@/lib/research-package";
 import type { ResearchPackage } from "@/lib/research-package";
+import { ReviewEvidence, OpenResearchChecks, WorkflowEvidence, WeeklyCoverage } from "./research-context";
+import { CalculationContext } from "./calculation-context";
+import { MacroContext } from "./macro-context";
+import { isCalculation, readCalculation } from "@/lib/research-context";
 import { publicUrl, ResearchDocument } from "./research-document";
 import { ChallengerPanel } from "./challenger-panel";
 import { LocalPackageConflict, readLocalPackage, writeLocalPackage } from "@/lib/research-package-cache";
@@ -22,6 +26,7 @@ const sections = [
   ["events", "Реестр событий", "Event registry"],
   ["calendar", "Календарь событий", "Event calendar"],
   ["history", "История расчётов", "Calculation history"],
+  ["macro", "Макроанализ", "Macro analysis"],
 ] as const;
 type Section = typeof sections[number][0];
 const errorLabels = {
@@ -271,6 +276,7 @@ export default function ResearchViewer() {
   }[origin] ?? origin);
   const openedEvent = data?.events.find(event => event.id === eventId);
   const openReport = indexedReports.find(report => report.target === openPath);
+  const sourceReport = data?.reports.find(report => report.path === openPath);
   const openText = data?.files[openPath];
   const metadata = (label: RegExp) => openText?.split("\n").slice(0, 24)
     .map(line => line.replaceAll("**", "").trim()).find(line => label.test(line));
@@ -279,10 +285,9 @@ export default function ResearchViewer() {
   const session = metadata(/^(?:Last completed |Last )?(?:US|NYSE\/Nasdaq|New York|NY) (?:regular |equity )?session:/i);
   const completeness = metadata(/^(?:Data |Report )?Completeness:/i) ?? openReport?.status;
   const openArtifactEvent = data?.events.find(event => openPath.startsWith("research/challenger/calculations/" + event.id + "_"));
-  const artifactFiles = data?.manifest.files.filter(({ path }) =>
-    (/^research\/challenger\/calculations\//.test(path) || /\/weekly_challenger_v2_.*\.json$/.test(path))
-    && matches(path)).toSorted((a, b) => b.path.localeCompare(a.path)) ?? [];
-  const checks = Object.entries(data?.snapshot?.data.unresolved ?? {});
+  const artifactFiles = data?.manifest.files.filter(({ path }) => isCalculation(path) && matches(path))
+    .toSorted((a, b) => b.path.localeCompare(a.path)) ?? [];
+  const openedCalculation = data && isCalculation(openPath) ? readCalculation(data, openPath) : undefined;
   const unavailable = t("Недоступно в пакете", "Unavailable in package");
   const savedOrigin = data?.original.get(openPath);
   const openBinary = data?.entries.get(openPath)?.encoding === "base64";
@@ -378,21 +383,16 @@ export default function ResearchViewer() {
       </nav>
       {data && <>
         {section === "overview" && <ChallengerPanel key={data.hash} pack={data} lang={lang} local={Boolean(selected)} download={download} />}
+        {section === "overview" && <OpenResearchChecks pack={data} t={t} open={setOpenPath} openEvent={setEventId}/>}
         {section === "overview" ? <section className="panel research-preview" aria-labelledby="dataset-title">
           <h2 id="dataset-title">{t("Пакет исследований", "Research package")}</h2>
           <p>{t("Обновление вручную из GitHub WTF-Viewer.", "Updated manually from GitHub WTF-Viewer.")}</p>
           {facts(data)}
           <p><a href={targetLink(data.manifest.target.commit, indexPath)} target="_blank" rel="noreferrer">{t("Индекс отчётов", "Report index")} <ArrowUpRight size={14}/></a>
             {" · "}<a href={targetLink(data.manifest.target.commit, migrationPath)} target="_blank" rel="noreferrer">{t("Происхождение перенесённых файлов", "Provenance of migrated files")} <ArrowUpRight size={14}/></a></p>
-          <h3>{t("Открытые проверки Challenger", "Open Challenger checks")}</h3>
-          {checks.length ? <ul className="research-list">{checks.map(([factor, check]) => <li key={factor}>
-            <strong>{factor}</strong>
-            {typeof check.reason === "string" && <small>{check.reason}</small>}
-            <p>{t("Следующее действие", "Next action")} · {typeof check.next_action === "string" ? check.next_action : "UNKNOWN"}</p>
-            <button onClick={() => setOpenPath(data.snapshot!.path)}>{t("Исходный артефакт", "Source artifact")}</button>
-          </li>)}</ul> : <p>{t("В выбранном пакете нет записей об открытых проверках.", "The selected package contains no open-check records.")}</p>}
         </section> : section === "challenger"
           ? <ChallengerPanel key={data.hash} pack={data} lang={lang} local={Boolean(selected)} download={download} />
+          : section === "macro" ? <MacroContext pack={data} t={t} openEvent={setEventId}/>
           : <section className="panel research-preview" id={section}>
           <h2>{sections.find(([key]) => key === section)?.[lang === "ru" ? 1 : 2]}</h2>
           <label className="research-search"><span>{t("Поиск", "Search")}</span><input value={query} onChange={e => setQuery(e.target.value)}/></label>
@@ -433,9 +433,8 @@ export default function ResearchViewer() {
           <h3>{t("Источники", "Sources")}</h3>
           <ul>{openedEvent.source_refs.map(ref => <li key={ref}>{publicUrl(ref) ? <a href={publicUrl(ref)} target="_blank" rel="noreferrer">{ref}</a> : ref}</li>)}</ul>
           <h3>{t("История проверок", "Review history")}</h3>
-          <ul>{openedEvent.reviews.map((review, index) => <li key={review.id ?? index}>
-            <time dateTime={review.reviewed_at}>{review.reviewed_at}</time> · {review.decision} · {review.factor ?? "UNKNOWN"}<p>{review.reason}</p>
-          </li>)}</ul>
+          <ol className="research-list">{openedEvent.reviews.map((review, index) =>
+            <ReviewEvidence key={index} review={review} pack={data} t={t}/>)}</ol>
           {data.manifest.files.filter(({ path }) => path.startsWith("research/challenger/calculations/") && path.split("/").at(-1)?.startsWith(openedEvent.id + "_")).map(({ path }) =>
             <p key={path}><button onClick={() => setOpenPath(path)}>{path.split("/").at(-1)}</button></p>)}
           <button onClick={() => setEventId("")}>{t("Закрыть событие", "Close event")}</button>
@@ -451,6 +450,7 @@ export default function ResearchViewer() {
             <div><dt>{t("Срез по источнику", "Source cutoff")}</dt><dd>{cutoff ?? "UNKNOWN"}</dd></div>
             <div><dt>{t("Торговая сессия Нью-Йорка", "New York trading session")}</dt><dd>{session ?? (cutoff && /session|regular (?:close|hours)/i.test(cutoff) ? cutoff : "UNKNOWN")}</dd></div>
           </dl>}
+          {sourceReport?.source_pr && <WorkflowEvidence report={sourceReport} pack={data} t={t}/>}
           <div className="research-actions">
             <a href={targetLink(commit!, openPath)} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={14}/></a>
             <button disabled={openText === undefined} onClick={() => download(openPath.split("/").at(-1)!, openBinary ? decodeBase64(data.files[openPath]) : data.files[openPath],
@@ -466,6 +466,8 @@ export default function ResearchViewer() {
           {attachments.length > 0 && <details className="research-attachments"><summary>{t("Связанные файлы", "Related files")} ({attachments.length})</summary>
             <ul>{attachments.map(path => <li key={path}><button onClick={() => setOpenPath(path)}>{path.split("/").at(-1)}</button></li>)}</ul>
           </details>}
+          {openedCalculation && <CalculationContext pack={data} path={openPath} {...openedCalculation} t={t}/>}
+          {/\/weekly_coverage_[\d-]+_r\d+\.json$/.test(openPath) && <WeeklyCoverage pack={data} path={openPath} t={t}/>}
           {openText === undefined ? <p role="alert">{unavailable}</p>
             : openPath.endsWith(".md") && !openBinary ? <ResearchDocument pack={data} path={openPath} open={setOpenPath} unavailable={unavailable} text={openText} />
               : !openBinary && <pre className="research-text">{openText}</pre>}
