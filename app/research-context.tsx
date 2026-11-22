@@ -3,6 +3,7 @@ import { indexPath, registryPath, targetLink } from "@/lib/research-package";
 import type { Report, ResearchPackage } from "@/lib/research-package";
 import { artifactOrigin, display, fields, researchJson, readWorkflowEvidence, strings } from "@/lib/research-context";
 import type { ResearchFields } from "@/lib/research-context";
+import { ResearchStatus, coverageTone } from "./research-status";
 import { publicUrl } from "./research-document";
 
 export type Translate = (ru: string, en: string) => string;
@@ -70,7 +71,7 @@ export function WorkflowEvidence({ report, pack, t }: { report: Report; pack: Re
       return <section key={key}>
         <h4>{{ ci: "CI", review: t("Ревью", "Review"), merge: t("Слияние", "Merge") }[key]}</h4>
         <Facts rows={[
-          [t("Статус для ревизии отчёта", "Status for report revision"), evidence.status],
+          [t("Статус для ревизии отчёта", "Status for report revision"), <ResearchStatus key={key} value={evidence.status}/>],
           [t("Когда наблюдался", "Observed at"), display(evidence.observed_at)],
           [t("Проверенный SHA", "Inspected SHA"), display(evidence.inspected_sha)],
           ...(evidence.priorStatus ? [[t("Наблюдение для другой ревизии", "Observation for another revision"), evidence.priorStatus] as [string, ReactNode]] : []),
@@ -140,7 +141,7 @@ export function WeeklyCoverage({ pack, path, t }: { pack: ResearchPackage; path:
     <h3>{t("Покрытие исследований", "Research coverage")}</h3>
     <ArtifactSource pack={pack} path={path}/>
     <Facts rows={[
-      [t("Комплектность", "Completeness"), display(data.data_status)],
+      [t("Комплектность", "Completeness"), <ResearchStatus key="coverage" value={data.data_status} tone={coverageTone(data.data_status)}/>],
       [t("Срез", "Cutoff"), display(data.cutoff)],
       [t("Изменения к предыдущему срезу", "Change from previous cutoff"), display(data.change_vs_previous)],
     ]}/>
