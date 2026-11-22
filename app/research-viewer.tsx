@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 import { Activity, ArrowUpRight, Download, FileText, Upload } from "lucide-react";
 import {
-  bundledPackageUrl, comparePackages, decodeBase64, indexPath, maxPackageBytes, migrationPath, PackageError, readPackage, targetLink,
+  bundledPackageUrl, comparePackages, decodeBase64, indexPath, maxPackageBytes, migrationPath, PackageError, readPackage, registryPath, targetLink,
 } from "@/lib/research-package";
 import type { ResearchPackage } from "@/lib/research-package";
+import { publicUrl, ResearchDocument } from "./research-document";
 import { ChallengerPanel } from "./challenger-panel";
 import { LocalPackageConflict, readLocalPackage, writeLocalPackage } from "@/lib/research-package-cache";
 
@@ -19,6 +20,8 @@ const sections = [
   ["weekly", "Еженедельные", "Weekly reports"],
   ["research", "Исследования", "Research"],
   ["events", "Реестр событий", "Event registry"],
+  ["calendar", "Календарь событий", "Event calendar"],
+  ["history", "История расчётов", "Calculation history"],
 ] as const;
 type Section = typeof sections[number][0];
 const errorLabels = {
@@ -88,6 +91,8 @@ export default function ResearchViewer() {
   const [notice, setNotice] = useState<"selected" | "reset">();
   const [query, setQuery] = useState("");
   const [openPath, setOpenPath] = useState("");
+  const [eventId, setEventId] = useState("");
+  const eventTitle = useRef<HTMLHeadingElement>(null);
   const input = useRef<HTMLInputElement>(null);
   const main = useRef<HTMLElement>(null);
   const previewTitle = useRef<HTMLHeadingElement>(null);
@@ -100,6 +105,7 @@ export default function ResearchViewer() {
     const updateSection = () => {
       setSection(sectionFromHash());
       setOpenPath("");
+      setEventId("");
       setQuery("");
     };
     let cancelled = false;
@@ -148,6 +154,9 @@ export default function ResearchViewer() {
   useEffect(() => {
     if (openPath) openFileTitle.current?.focus();
   }, [openPath]);
+  useEffect(() => {
+    if (eventId) eventTitle.current?.focus();
+  }, [eventId]);
 
   async function stage(file: File) {
     setPhase("busy");
@@ -243,15 +252,16 @@ export default function ResearchViewer() {
 
   const matches = (...parts: string[]) => parts.join(" ").toLowerCase().includes(query.trim().toLowerCase());
   const commit = data?.manifest.target.commit;
-  const reports = data ? [
+  const indexedReports = data ? [
     ...data.reports.map(report => ({ ...report, status: report.status_text_from_source, target: report.path })),
     ...data.archiveNotes.map(note => ({ ...note, date: note.period, target: note.path, origin: "ARCHIVED" as const,
       title: t("Архивная запись за неполный день", "Archived partial daily record"), source_pr: null })),
-  ].filter(report => report.kind === (section === "daily" ? "daily_report" : "weekly_report")
-    && matches(report.title, report.date, report.origin, report.status ?? ""))
-    .sort((a, b) => b.date.localeCompare(a.date) || a.origin.localeCompare(b.origin)) : [];
+  ] : [];
+  const reports = indexedReports.filter(report => report.kind === (section === "daily" ? "daily_report" : "weekly_report")
+    && matches(report.title, report.date, report.origin, report.status ?? "", data?.files[report.target] ?? ""))
+    .sort((a, b) => b.date.localeCompare(a.date) || a.origin.localeCompare(b.origin));
   const research = data?.manifest.files.filter(file => /\.md$/.test(file.path) && !data.reports.some(report => report.path === file.path)
-    && !data.archiveNotes.some(note => note.path === file.path) && matches(file.path)) ?? [];
+    && !data.archiveNotes.some(note => note.path === file.path) && matches(file.path, data.files[file.path] ?? "")) ?? [];
   const events = data?.events.filter(event => matches(event.id, event.entity, event.title, event.event_date, event.reviews.at(-1)?.decision ?? ""))
     .toSorted((a, b) => b.event_date.localeCompare(a.event_date)) ?? [];
   const originLabel = (origin: string) => ({
@@ -259,9 +269,33 @@ export default function ResearchViewer() {
     PROPOSED: t("Предложено в PR", "Proposed in PR"),
     ARCHIVED: t("Архив", "Archive"),
   }[origin] ?? origin);
+  const openedEvent = data?.events.find(event => event.id === eventId);
+  const openReport = indexedReports.find(report => report.target === openPath);
+  const openText = data?.files[openPath];
+  const metadata = (label: RegExp) => openText?.split("\n").slice(0, 24)
+    .map(line => line.replaceAll("**", "").trim()).find(line => label.test(line));
+  const cutoff = metadata(/^(?:Economic |Evidence |Observation |Research )?Cutoff:/i)
+    ?? (openReport && "cutoff_text_from_source" in openReport ? openReport.cutoff_text_from_source?.replaceAll("**", "") : undefined);
+  const session = metadata(/^(?:Last completed |Last )?(?:US|NYSE\/Nasdaq|New York|NY) (?:regular |equity )?session:/i);
+  const completeness = metadata(/^(?:Data |Report )?Completeness:/i) ?? openReport?.status;
+  const openArtifactEvent = data?.events.find(event => openPath.startsWith("research/challenger/calculations/" + event.id + "_"));
+  const artifactFiles = data?.manifest.files.filter(({ path }) =>
+    (/^research\/challenger\/calculations\//.test(path) || /\/weekly_challenger_v2_.*\.json$/.test(path))
+    && matches(path)).toSorted((a, b) => b.path.localeCompare(a.path)) ?? [];
+  const checks = Object.entries(data?.snapshot?.data.unresolved ?? {});
+  const unavailable = t("Недоступно в пакете", "Unavailable in package");
   const savedOrigin = data?.original.get(openPath);
   const openBinary = data?.entries.get(openPath)?.encoding === "base64";
+  const weeklyAttachments = openReport?.kind === "weekly_report" ? data?.manifest.files.filter(({ path }) => {
+    const base = path.split("/").at(-1) ?? "";
+    const match = /^weekly_(?:capture|challenger_v2|coverage|institutional|macro_pain)_([\d-]+)_r\d+\.json$/.exec(base);
+    if (match?.[1] !== openReport.date) return false;
+    if (openReport.origin === "PROPOSED") return path.startsWith(`research/proposed/pr-${openReport.source_pr}/`);
+    if (openReport.origin === "ARCHIVED") return path.startsWith("research/reports/attachments/") && path.includes("/archive/");
+    return path.startsWith("research/reports/attachments/") && !path.includes("/archive/");
+  }).map(({ path }) => path) : undefined;
   const attachments = data && openPath ? [...new Set([
+    ...(weeklyAttachments ?? []),
     ...(data.reports.find(report => report.path === openPath)?.attachments ?? []),
     ...(savedOrigin?.links.flatMap(edge => edge.resolution === "target" && edge.target_path !== openPath
       && Object.hasOwn(data.files, edge.target_path) ? [edge.target_path] : []) ?? []),
@@ -343,12 +377,20 @@ export default function ResearchViewer() {
         {sections.map(([key, ru, en]) => <a key={key} href={`#${key}`} aria-current={section === key ? "page" : undefined}>{t(ru, en)}</a>)}
       </nav>
       {data && <>
+        {section === "overview" && <ChallengerPanel key={data.hash} pack={data} lang={lang} local={Boolean(selected)} download={download} />}
         {section === "overview" ? <section className="panel research-preview" aria-labelledby="dataset-title">
           <h2 id="dataset-title">{t("Пакет исследований", "Research package")}</h2>
           <p>{t("Обновление вручную из GitHub WTF-Viewer.", "Updated manually from GitHub WTF-Viewer.")}</p>
           {facts(data)}
           <p><a href={targetLink(data.manifest.target.commit, indexPath)} target="_blank" rel="noreferrer">{t("Индекс отчётов", "Report index")} <ArrowUpRight size={14}/></a>
             {" · "}<a href={targetLink(data.manifest.target.commit, migrationPath)} target="_blank" rel="noreferrer">{t("Происхождение перенесённых файлов", "Provenance of migrated files")} <ArrowUpRight size={14}/></a></p>
+          <h3>{t("Открытые проверки Challenger", "Open Challenger checks")}</h3>
+          {checks.length ? <ul className="research-list">{checks.map(([factor, check]) => <li key={factor}>
+            <strong>{factor}</strong>
+            {typeof check.reason === "string" && <small>{check.reason}</small>}
+            <p>{t("Следующее действие", "Next action")} · {typeof check.next_action === "string" ? check.next_action : "UNKNOWN"}</p>
+            <button onClick={() => setOpenPath(data.snapshot!.path)}>{t("Исходный артефакт", "Source artifact")}</button>
+          </li>)}</ul> : <p>{t("В выбранном пакете нет записей об открытых проверках.", "The selected package contains no open-check records.")}</p>}
         </section> : section === "challenger"
           ? <ChallengerPanel key={data.hash} pack={data} lang={lang} local={Boolean(selected)} download={download} />
           : <section className="panel research-preview" id={section}>
@@ -365,20 +407,57 @@ export default function ResearchViewer() {
               <button className="research-file" onClick={() => setOpenPath(file.path)}><FileText size={18}/>{file.path.split("/").at(-1)}</button>
               <small>{originLabel(file.path.startsWith("research/proposed/") ? "PROPOSED" : file.path.startsWith("research/archive/") ? "ARCHIVED" : "MAIN")} · <a href={targetLink(commit!, file.path)} target="_blank" rel="noreferrer">GitHub</a></small>
             </li>)}</ul> : noResults)}
-          {section === "events" && (events.length ? <ul className="research-list">{events.map(event =>
+          {(section === "events" || section === "calendar") && (events.length ? <ul className="research-list">{events.map((event, i) =>
             <li key={event.id}>
-              <strong>{event.entity} · {event.title}</strong>
-              <small><code>{event.id}</code> · {event.event_date} · {event.priority} · {event.reviews.at(-1)?.decision}</small>
+              {section === "calendar" && events[i - 1]?.event_date !== event.event_date && <h3><time dateTime={event.event_date}>{event.event_date}</time></h3>}
+              <button className="research-file" onClick={() => setEventId(event.id)}>{event.entity} · {event.title}</button>
+              <small><code>{event.id}</code> · {event.event_date}</small>
+              <small>{t("Важность", "Severity")} {event.priority} · {t("Квалификация", "Qualification")} {event.reviews.at(-1)?.decision ?? "UNKNOWN"}</small>
+            </li>)}</ul> : noResults)}
+          {section === "history" && (artifactFiles.length ? <ul className="research-list">{artifactFiles.map(({ path }) =>
+            <li key={path}><button className="research-file" onClick={() => setOpenPath(path)}>{path.split("/").at(-1)}</button>
+              <small>{originLabel(path.includes("/proposed/") ? "PROPOSED" : path.includes("/archive/") ? "ARCHIVED" : "MAIN")} · <a href={targetLink(commit!, path)} target="_blank" rel="noreferrer">GitHub</a></small>
             </li>)}</ul> : noResults)}
         </section>}
-        {openPath && Object.hasOwn(data.files, openPath) && <section className="panel research-preview" aria-labelledby="research-file-title">
-          <h2 id="research-file-title" tabIndex={-1} ref={openFileTitle}>{openPath.split("/").at(-1)}</h2>
+        {openedEvent && <section className="panel research-preview" aria-labelledby="event-title">
+          <h2 id="event-title" tabIndex={-1} ref={eventTitle}>{openedEvent.title}</h2>
+          <p><code>{openedEvent.id}</code> · {openedEvent.source_precision} · <a href={targetLink(commit!, registryPath)} target="_blank" rel="noreferrer">GitHub</a></p>
+          <dl className="research-facts">
+            {[
+              [t("Дата события", "Event date"), openedEvent.event_date],
+              [t("Первая публикация", "First published"), openedEvent.first_public_at],
+              [t("Публично не позднее", "Known public by"), openedEvent.known_public_by_at],
+              [t("Дата регистрации", "Registered"), openedEvent.registered_at],
+            ].map(([label, date]) => <div key={label}><dt>{label}</dt><dd>{date ? <time dateTime={date}>{date}</time> : "UNKNOWN"}</dd></div>)}
+          </dl>
+          <h3>{t("Источники", "Sources")}</h3>
+          <ul>{openedEvent.source_refs.map(ref => <li key={ref}>{publicUrl(ref) ? <a href={publicUrl(ref)} target="_blank" rel="noreferrer">{ref}</a> : ref}</li>)}</ul>
+          <h3>{t("История проверок", "Review history")}</h3>
+          <ul>{openedEvent.reviews.map((review, index) => <li key={review.id ?? index}>
+            <time dateTime={review.reviewed_at}>{review.reviewed_at}</time> · {review.decision} · {review.factor ?? "UNKNOWN"}<p>{review.reason}</p>
+          </li>)}</ul>
+          {data.manifest.files.filter(({ path }) => path.startsWith("research/challenger/calculations/") && path.split("/").at(-1)?.startsWith(openedEvent.id + "_")).map(({ path }) =>
+            <p key={path}><button onClick={() => setOpenPath(path)}>{path.split("/").at(-1)}</button></p>)}
+          <button onClick={() => setEventId("")}>{t("Закрыть событие", "Close event")}</button>
+        </section>}
+        {openPath && <section className="panel research-preview" aria-labelledby="research-file-title">
+          <h2 id="research-file-title" tabIndex={-1} ref={openFileTitle}>{openReport?.title ?? openPath.split("/").at(-1)}</h2>
+          {openReport && <dl className="research-facts">
+            <div><dt>{t("Дата отчёта", "Report date")}</dt><dd><time dateTime={openReport.date}>{openReport.date}</time></dd></div>
+            <div><dt>{t("Происхождение", "Origin")}</dt><dd>{originLabel(openReport.origin)}{openReport.source_pr ? ` #${openReport.source_pr}` : ""}</dd></div>
+            <div><dt>{t("Файл", "File")}</dt><dd>{openText ? t("В пакете", "In package") : unavailable}</dd></div>
+            <div><dt>{t("Комплектность", "Completeness")}</dt><dd>{completeness?.match(/\b(ARCHIVED_PARTIAL|PARTIAL|INCOMPLETE|COMPLETE)\b/)?.[0] ?? "UNKNOWN"}</dd></div>
+            <div><dt>{t("Статус по источнику", "Source workflow status")}</dt><dd>{"source_pr_state" in openReport && openReport.source_pr_state ? `${openReport.source_pr_state} · ` : ""}{openReport.status?.replaceAll("**", "") ?? "UNKNOWN"}</dd></div>
+            <div><dt>{t("Срез по источнику", "Source cutoff")}</dt><dd>{cutoff ?? "UNKNOWN"}</dd></div>
+            <div><dt>{t("Торговая сессия Нью-Йорка", "New York trading session")}</dt><dd>{session ?? (cutoff && /session|regular (?:close|hours)/i.test(cutoff) ? cutoff : "UNKNOWN")}</dd></div>
+          </dl>}
           <div className="research-actions">
             <a href={targetLink(commit!, openPath)} target="_blank" rel="noreferrer">GitHub <ArrowUpRight size={14}/></a>
-            <button onClick={() => download(openPath.split("/").at(-1)!, openBinary ? decodeBase64(data.files[openPath]) : data.files[openPath],
+            <button disabled={openText === undefined} onClick={() => download(openPath.split("/").at(-1)!, openBinary ? decodeBase64(data.files[openPath]) : data.files[openPath],
               openBinary ? "application/octet-stream" : "text/plain;charset=utf-8")}>{t("Скачать файл", "Download file")}</button>
             <button onClick={() => setOpenPath("")}>{t("Закрыть файл", "Close file")}</button>
           </div>
+          {openArtifactEvent && <button onClick={() => setEventId(openArtifactEvent.id)}>{openArtifactEvent.id}</button>}
           {savedOrigin && <p className="research-path">
             <a href={`https://github.com/${savedOrigin.source_repository}/blob/${savedOrigin.source_commit}/${savedOrigin.source_path.split("/").map(encodeURIComponent).join("/")}`}
               target="_blank" rel="noreferrer">{t("Исходный материал", "Original material")}</a>
@@ -387,7 +466,9 @@ export default function ResearchViewer() {
           {attachments.length > 0 && <details className="research-attachments"><summary>{t("Связанные файлы", "Related files")} ({attachments.length})</summary>
             <ul>{attachments.map(path => <li key={path}><button onClick={() => setOpenPath(path)}>{path.split("/").at(-1)}</button></li>)}</ul>
           </details>}
-          {!openBinary && <pre className="research-text">{data.files[openPath]}</pre>}
+          {openText === undefined ? <p role="alert">{unavailable}</p>
+            : openPath.endsWith(".md") && !openBinary ? <ResearchDocument pack={data} path={openPath} open={setOpenPath} unavailable={unavailable} text={openText} />
+              : !openBinary && <pre className="research-text">{openText}</pre>}
         </section>}
       </>}
     </main>
