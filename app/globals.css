@@ -93,3 +93,23 @@
 }
 .challenger-form p { margin-block: 0; }
 .challenger-form input { width: min(100%, 22rem); font-family: ui-monospace, monospace; }
+
+.research-markdown { margin-block-start: 1.25rem; font-size: 1rem; line-height: 1.7; overflow-wrap: anywhere; }
+.research-markdown h1, .research-markdown h2, .research-markdown h3 { margin-block: 1.25em .5em; font-weight: 650; }
+.research-markdown h1 { font-size: 1.55rem; }
+.research-markdown ul, .research-markdown ol { padding-inline-start: 1.6em; }
+.research-markdown ul { list-style: disc; }
+.research-markdown ol { list-style: decimal; }
+.research-markdown p, .research-markdown ul, .research-markdown ol, .research-markdown pre,
+.research-markdown blockquote, .research-table-scroll { margin-block: .8em; }
+.research-markdown blockquote { border-inline-start: 3px solid var(--reader-accent); padding-inline-start: 1em; }
+.research-markdown pre, .research-table-scroll { max-inline-size: 100%; overflow: auto; }
+.research-markdown th, .research-markdown td { padding: .5rem .75rem; border: 1px solid var(--reader-border); }
+.research-markdown th { text-align: start; }
+.research-main .research-markdown .research-inline-link { display: inline; border: 0; padding: 0; color: var(--reader-accent); background: none; text-decoration: underline; font: inherit; }
+.research-markdown a { display: inline; text-decoration: underline; }
+.research-markdown table { font-size: .9rem; }
+.research-markdown th { color: var(--reader-text); background: var(--reader-surface); font-size: inherit; white-space: normal; }
+.research-markdown td, .research-markdown td > a { font-size: inherit; }
+.research-markdown code { color: var(--reader-secondary); font-size: .9em; }
+.research-markdown pre { color: var(--reader-text); background: var(--reader-surface); }
