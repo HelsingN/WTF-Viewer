@@ -1,0 +1,102 @@
+{
+  "M1": {
+    "max": 30,
+    "observation_date": "2026-11-23",
+    "policy": "RESTRICTIVE_HOLD",
+    "score": 15,
+    "ten_year_pct": 4.92,
+    "three_month_change_bp": 22
+  },
+  "M2": {
+    "cpi_mom_pct": 0.4,
+    "max": 20,
+    "prior_mom_pct": 0.6,
+    "score_interval": [
+      1,
+      17
+    ],
+    "yoy_status": "UNKNOWN_BLS_MISSING_COMPARABLE_INPUT"
+  },
+  "M3": {
+    "max": 20,
+    "mean_distance": "UNKNOWN_SAME_VARIANT",
+    "score_interval": [
+      0,
+      20
+    ],
+    "variant": "FTSE/CoreCommodity CRB Total Return",
+    "yoy_pct": "UNKNOWN_SAME_VARIANT"
+  },
+  "M4": {
+    "broad_ig_oas_bp": 97,
+    "max": 30,
+    "observation_date": "2026-11-23",
+    "score_interval": [
+      2,
+      7
+    ],
+    "sector_premium": "UNKNOWN_NOT_SCORED",
+    "three_month_widening_bp": 16
+  },
+  "captured_at": "2026-11-25T08:55:00+02:00",
+  "cutoff": "2026-11-25T08:46:00+02:00",
+  "evidence_class": "MIXED_PRIMARY_AND_INDEPENDENT",
+  "overrides": {
+    "EASING_FAILURE_FLAG": "UNKNOWN",
+    "FUNDING_BREAK_FLAG": "NO",
+    "STAGFLATION_TRAP_FLAG": "UNKNOWN"
+  },
+  "report_date": "2026-11-25",
+  "schema": "ai-capex.macro-pain-observation.v1",
+  "score_interval": [
+    18,
+    59
+  ],
+  "sources": [
+    {
+      "class": "PRIMARY_FACT",
+      "observation_date": "2026-11-23",
+      "publication_by": "2026-11-24T17:00:00Z",
+      "url": "https://fred.stlouisfed.org/series/DGS10"
+    },
+    {
+      "class": "PRIMARY_FACT",
+      "observation_date": "2026-10",
+      "publication_by": "2026-11-10T13:30:00Z",
+      "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+    },
+    {
+      "class": "INDEPENDENT_CONFIRMATION",
+      "observation_date": "2026-11-23",
+      "publication_by": "2026-11-24T17:00:00Z",
+      "url": "https://fred.stlouisfed.org/series/BAMLC0A0CM"
+    }
+  ],
+  "state_interval": [
+    "NORMAL",
+    "BREAK_ZONE"
+  ],
+  "unknowns": [
+    {
+      "field": "M2.yoy",
+      "next_action": "Use next comparable BLS release only",
+      "next_review": "2026-12-02",
+      "owner": "weekly-research",
+      "reason": "Comparable BLS year-ago input unavailable"
+    },
+    {
+      "field": "M3",
+      "next_action": "Retrieve identical variant or retain interval",
+      "next_review": "2026-12-02",
+      "owner": "weekly-research",
+      "reason": "Same total-return CRB history not retrieved; variants cannot be mixed"
+    },
+    {
+      "field": "M4.sector_premium",
+      "next_action": "Retain UNKNOWN until comparable source",
+      "next_review": "2026-12-02",
+      "owner": "weekly-research",
+      "reason": "No stable public AI-sector OAS methodology"
+    }
+  ]
+}

@@ -1,0 +1,444 @@
+{
+  "captured_at": "2026-11-25T08:55:00+02:00",
+  "cutoff": "2026-11-25T08:46:00+02:00",
+  "data_status": "PARTIAL",
+  "event_assessments": {
+    "R3": {
+      "counterevidence": "No new comparable realized compute-cost intensity or unit-yield fact. Vendor/cloud growth remains counterevidence to a generalized ROI collapse.",
+      "latest_source_public_by_at": "2026-11-24T23:59:59-05:00",
+      "reviewed_at": "2026-11-25T08:46:00+02:00",
+      "source_refs": [
+        "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-25.md",
+        "data/research/events/challenger_v2_event_registry.json"
+      ],
+      "status": "ASSESSED_NO_QUALIFIED_EVENT"
+    },
+    "R5": {
+      "counterevidence": "CoreWeave reclassified $1.9bn after contracts became cancellable, but the source does not show an executed amendment, actual cancellation or payment shortfall; R5 EARLY_WARNING only.",
+      "latest_source_public_by_at": "2026-11-19T23:59:59-05:00",
+      "reviewed_at": "2026-11-25T08:46:00+02:00",
+      "source_refs": [
+        "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-25.md",
+        "data/research/events/challenger_v2_event_registry.json"
+      ],
+      "status": "ASSESSED_NO_QUALIFIED_EVENT"
+    },
+    "R6": {
+      "counterevidence": "Cerebras recognized $72.4m Q3 OpenAI revenue, cloud revenue grew, no tranche termination was reported and under 5% of committed capacity was forecast terminable in 2026; nevertheless service credits actually began accruing, qualifying a narrow deterioration.",
+      "latest_source_public_by_at": "2026-11-12T22:11:09+00:00",
+      "reviewed_at": "2026-11-25T08:46:00+02:00",
+      "source_refs": [
+        "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-25.md",
+        "data/research/events/challenger_v2_event_registry.json"
+      ],
+      "status": "ASSESSED_WITH_EVENTS"
+    },
+    "R7": {
+      "counterevidence": "No newly verified funded-project economic cancellation, deferment or restart distinct from previously known delivery slippage.",
+      "latest_source_public_by_at": "2026-11-24T23:59:59-05:00",
+      "reviewed_at": "2026-11-25T08:46:00+02:00",
+      "source_refs": [
+        "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-25.md",
+        "data/research/events/challenger_v2_event_registry.json"
+      ],
+      "status": "ASSESSED_NO_QUALIFIED_EVENT"
+    }
+  },
+  "last_completed_us_session": "2026-11-24",
+  "mode": "CONTEMPORANEOUS",
+  "model_version": "CHALLENGER_V2_RESEARCH_APPROVED_2026-11-04",
+  "physical": {
+    "P1": {
+      "latest_source_public_by_at": "2026-11-24T23:59:59-05:00",
+      "note": "WATCH: multi-provider H100 snapshot fell 13.8% to $1.95/GPU-hour while H200/B200 were flat and broader index B200 spot was $4.98; deep spot/reserved discounts persist, but utilization and renewals remain unavailable.",
+      "observed_at": "2026-11-24T16:00:00-05:00",
+      "source_refs": [
+        "https://www.frenzycap.com/gpu-prices",
+        "https://06.ai/trackers/gpu-compute-price-index/"
+      ],
+      "status": "OBSERVED"
+    },
+    "P2": {
+      "latest_source_public_by_at": "2026-11-20T23:59:59+08:00",
+      "note": "WATCH: NAND/eSSD has moved to an earlier 2Q27 oversupply/contract-price-decline forecast and spot weakness, while HBM and server DRAM remain undersupplied and 2027 HBM purchases largely fixed.",
+      "observed_at": "2026-11-20T12:00:00+08:00",
+      "source_refs": [
+        "https://www.trendforce.com/research/category/Semiconductors/NAND%20Flash?type=6"
+      ],
+      "status": "OBSERVED"
+    },
+    "P3": {
+      "latest_source_public_by_at": "2026-11-24T23:59:59-05:00",
+      "note": "ANTI_REVERSAL: NVIDIA and Cisco physical revenue/bookings remain strong; no new semiconductor/networking guidance cut. Market prices weakened but supplier fundamentals have not confirmed a broad order collapse.",
+      "observed_at": "2026-11-24T16:00:00-05:00",
+      "source_refs": [
+        "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Third-Quarter-Fiscal-2027/",
+        "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-reports-first-quarter-earnings.html"
+      ],
+      "status": "ASSESSED"
+    },
+    "P4": {
+      "latest_source_public_by_at": "2026-11-24T16:15:01-05:00",
+      "note": "CONFIRMED_WEAKNESS: SMH 426.75, below MA50 543.58 and MA200 525.56, 36.48% below its 252-session high; weekly SMH -7.25% and SOXX -9.08%; VIX term structure remains backwardated.",
+      "observed_at": "2026-11-24T16:00:00-05:00",
+      "source_refs": [
+        "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-25.md",
+        "https://www.cboe.com/markets/us/futures/market-statistics/settlement/futures/daily"
+      ],
+      "status": "OBSERVED"
+    }
+  },
+  "published_result": {
+    "calibration": "UNCALIBRATED",
+    "category": null,
+    "core_coverage_pct": "92.73",
+    "core_factors": {
+      "R1": {
+        "coverage_ok_70pct": true,
+        "coverage_ok_for_research": true,
+        "coverage_pct": "100.00",
+        "exact_level": "1.00",
+        "level_bounds": [
+          "1.00",
+          "1.00"
+        ],
+        "missing_or_stale": {},
+        "strata_coverage_pct": {}
+      },
+      "R2": {
+        "coverage_ok_70pct": true,
+        "coverage_ok_for_research": true,
+        "coverage_pct": "100.00",
+        "exact_level": "1.00",
+        "level_bounds": [
+          "1.00",
+          "1.00"
+        ],
+        "missing_or_stale": {},
+        "strata_coverage_pct": {}
+      },
+      "R4": {
+        "coverage_ok_70pct": true,
+        "coverage_ok_for_research": true,
+        "coverage_pct": "80.00",
+        "exact_level": null,
+        "level_bounds": [
+          "0.80",
+          "1.20"
+        ],
+        "missing_or_stale": {
+          "GOOGL": "UNKNOWN",
+          "MSFT": "UNKNOWN"
+        },
+        "strata_coverage_pct": {
+          "large_platform": "60.00",
+          "project_neocloud": "100.00"
+        }
+      }
+    },
+    "core_interval": [
+      "46.36",
+      "53.64"
+    ],
+    "event_adjustments": {
+      "R3": "0.00",
+      "R5": "0.00",
+      "R6": "2.00",
+      "R7": "0.00"
+    },
+    "event_total_adjustment": "2.00",
+    "final_exact_score": null,
+    "final_interval": [
+      "48.36",
+      "55.64"
+    ],
+    "status": "BOUNDED_RESEARCH_WITH_UNCERTAINTY",
+    "trading_signal": false
+  },
+  "report": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-25.md",
+  "report_date": "2026-11-25",
+  "review_status": "REQUIRES_HUMAN_REVIEW",
+  "schema": "ai-capex.weekly-challenger-v2.v1",
+  "snapshot": {
+    "as_of": "2026-11-25T08:46:00+02:00",
+    "cohort_frozen_at": "2026-11-03T22:28:54+00:00",
+    "cohort_version": "CHALLENGER_V2_RESEARCH_APPROVED_2026-11-04",
+    "core": {
+      "R1": {
+        "observations": {
+          "AMZN": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R1-AMZN-2026Q3-source-panel",
+            "counterevidence": "AWS +39.3% YoY and ~38.7% operating margin; other company businesses included",
+            "known_public_by_at": "2026-10-30T12:00:00-04:00",
+            "level": 1,
+            "measurement": "{\"capex_growth_pct\": \"120.142\", \"capex_to_revenue_intensity_change_pct\": \"96.405\", \"decision_eligible_without_independent_corroboration\": true, \"growth_gap_pp\": \"108.057\", \"monetization_growth_pct\": \"12.086\", \"period_basis\": \"YOY_QUARTER\", \"qualification\": \"MATCHED_ENTERPRISE_SCOPE_WATCH_MAX; this is NOT marginal AI-only ROI\", \"risk_level_candidate\": 1, \"scope_relation\": \"MATCHED_SCOPE\"}",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "GOOGL": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R1-GOOGL-2026Q3-source-panel",
+            "counterevidence": "Google Cloud segment +103% YoY and ~$11.1bn operating income",
+            "known_public_by_at": "2026-10-29T12:00:00-04:00",
+            "level": 1,
+            "measurement": "{\"capex_growth_pct\": \"114.447\", \"capex_to_revenue_intensity_change_pct\": \"71.557\", \"decision_eligible_without_independent_corroboration\": true, \"growth_gap_pp\": \"89.447\", \"monetization_growth_pct\": \"25.000\", \"period_basis\": \"YOY_QUARTER\", \"qualification\": \"MATCHED_ENTERPRISE_SCOPE_WATCH_MAX; this is NOT marginal AI-only ROI\", \"risk_level_candidate\": 1, \"scope_relation\": \"MATCHED_SCOPE\"}",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "META": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R1-META-2026Q3-source-panel",
+            "counterevidence": "Advertiser pricing and revenue rise; FCF pressure separately counted in R2, not independent second cash shock",
+            "known_public_by_at": "2026-10-22T12:00:00-04:00",
+            "level": 1,
+            "measurement": "{\"capex_growth_pct\": \"80.264\", \"capex_to_revenue_intensity_change_pct\": \"42.987\", \"decision_eligible_without_independent_corroboration\": true, \"growth_gap_pp\": \"54.194\", \"monetization_growth_pct\": \"26.070\", \"period_basis\": \"YOY_QUARTER\", \"qualification\": \"MATCHED_ENTERPRISE_SCOPE_WATCH_MAX; this is NOT marginal AI-only ROI\", \"risk_level_candidate\": 1, \"scope_relation\": \"MATCHED_SCOPE\"}",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "MSFT": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R1-MSFT-2026Q3-source-panel",
+            "counterevidence": "Azure +48% YoY, cloud +30%, cash PPE proxy remains positive; not AI-only ROI",
+            "known_public_by_at": "2026-10-29T12:00:00-04:00",
+            "level": 1,
+            "measurement": "{\"capex_growth_pct\": \"102.985\", \"capex_to_revenue_intensity_change_pct\": \"70.857\", \"decision_eligible_without_independent_corroboration\": true, \"growth_gap_pp\": \"84.181\", \"monetization_growth_pct\": \"18.804\", \"period_basis\": \"YOY_QUARTER\", \"qualification\": \"MATCHED_ENTERPRISE_SCOPE_WATCH_MAX; this is NOT marginal AI-only ROI\", \"risk_level_candidate\": 1, \"scope_relation\": \"MATCHED_SCOPE\"}",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "ORCL": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R1-ORCL-2026Q3-source-panel",
+            "counterevidence": "Oracle cloud infrastructure +121% YoY; new 850MW reported delivered; customer prepayments include a financing component",
+            "known_public_by_at": "2026-09-14T12:00:00-04:00",
+            "level": 1,
+            "measurement": "{\"capex_growth_pct\": \"235.203\", \"capex_to_revenue_intensity_change_pct\": \"158.633\", \"decision_eligible_without_independent_corroboration\": true, \"growth_gap_pp\": \"205.597\", \"monetization_growth_pct\": \"29.606\", \"period_basis\": \"YOY_QUARTER\", \"qualification\": \"MATCHED_ENTERPRISE_SCOPE_WATCH_MAX; this is NOT marginal AI-only ROI\", \"risk_level_candidate\": 1, \"scope_relation\": \"MATCHED_SCOPE\"}",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          }
+        },
+        "roster": {
+          "AMZN": "0.20",
+          "GOOGL": "0.20",
+          "META": "0.20",
+          "MSFT": "0.20",
+          "ORCL": "0.20"
+        }
+      },
+      "R2": {
+        "observations": {
+          "AMZN": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R2-AMZN-2026Q3-source-panel",
+            "counterevidence": "Positive cloud demand and credit access; source scope caveats in reviewed register",
+            "known_public_by_at": "2026-10-30T12:00:00-04:00",
+            "level": 1,
+            "measurement": "{\"accounting_basis\": \"NET_PPE_PROXY\", \"delta_fcf\": \"-34.753\", \"earlier_fcf\": \"1.297\", \"earlier_fcf_to_ocf_pct\": \"3.651\", \"earlier_period\": \"CY2025Q3\", \"fcf_to_ocf_change_pp\": \"-82.516\", \"later_fcf\": \"-33.456\", \"later_period\": \"CY2026Q3\", \"latest_fcf_to_ocf_pct\": \"-78.865\", \"period_family\": \"QUARTER\", \"qualification\": \"PROXY_WATCH_MAX; unknown lease/other flows forbid automatic 0 or 2\", \"risk_level_candidate\": 1, \"status\": \"CANDIDATE_REQUIRES_SOURCE_AND_REVIEW\"}",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "GOOGL": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R2-GOOGL-2026Q3-source-panel",
+            "counterevidence": "Positive cloud demand and credit access; source scope caveats in reviewed register",
+            "known_public_by_at": "2026-10-29T12:00:00-04:00",
+            "level": 1,
+            "measurement": "{\"accounting_basis\": \"GROSS_PPE_PROXY\", \"delta_fcf\": \"-3.260\", \"earlier_fcf\": \"-5.800\", \"earlier_fcf_to_ocf_pct\": \"-14.834\", \"earlier_period\": \"CY2026Q2\", \"fcf_to_ocf_change_pp\": \"-6.585\", \"later_fcf\": \"-9.060\", \"later_period\": \"CY2026Q3\", \"latest_fcf_to_ocf_pct\": \"-21.418\", \"period_family\": \"QUARTER\", \"qualification\": \"PROXY_WATCH_MAX; unknown lease/other flows forbid automatic 0 or 2\", \"risk_level_candidate\": 1, \"status\": \"CANDIDATE_REQUIRES_SOURCE_AND_REVIEW\"}",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000084/goog-20260930.htm",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "META": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R2-META-2026Q3-source-panel",
+            "counterevidence": "Positive cloud demand and credit access; source scope caveats in reviewed register",
+            "known_public_by_at": "2026-10-22T12:00:00-04:00",
+            "level": 1,
+            "measurement": "{\"accounting_basis\": \"LEASE_INCLUSIVE_FCF\", \"delta_fcf\": \"-2.904\", \"earlier_fcf\": \"0.784\", \"earlier_fcf_to_ocf_pct\": \"2.461\", \"earlier_period\": \"CY2026Q2\", \"fcf_to_ocf_change_pp\": \"-8.927\", \"later_fcf\": \"-2.120\", \"later_period\": \"CY2026Q3\", \"latest_fcf_to_ocf_pct\": \"-6.466\", \"period_family\": \"QUARTER\", \"qualification\": \"Negative FCF or at least 10pp deterioration in FCF-to-OCF\", \"risk_level_candidate\": 1, \"status\": \"CANDIDATE_REQUIRES_SOURCE_AND_REVIEW\"}",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066700/meta-09302026xexhibit991.htm",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "MSFT": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R2-MSFT-2026Q3-source-panel",
+            "counterevidence": "Positive cloud demand and credit access; source scope caveats in reviewed register",
+            "known_public_by_at": "2026-10-29T12:00:00-04:00",
+            "level": 1,
+            "measurement": "{\"accounting_basis\": \"GROSS_PPE_PROXY\", \"delta_fcf\": \"-7.030\", \"earlier_fcf\": \"25.663\", \"earlier_fcf_to_ocf_pct\": \"56.957\", \"earlier_period\": \"FY26Q1\", \"fcf_to_ocf_change_pp\": \"-24.831\", \"later_fcf\": \"18.633\", \"later_period\": \"FY27Q1\", \"latest_fcf_to_ocf_pct\": \"32.126\", \"period_family\": \"QUARTER\", \"qualification\": \"PROXY_WATCH_MAX; unknown lease/other flows forbid automatic 0 or 2\", \"risk_level_candidate\": 1, \"status\": \"CANDIDATE_REQUIRES_SOURCE_AND_REVIEW\"}",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://www.microsoft.com/en-us/investor/earnings/fy-2027-q1/press-release-webcast",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "ORCL": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R2-ORCL-2026Q3-source-panel",
+            "counterevidence": "OCF contains 11.363 significant-financing-component customer prepayments; do not pretend it is recurring cash yield.",
+            "known_public_by_at": "2026-09-14T12:00:00-04:00",
+            "level": 1,
+            "measurement": "{\"accounting_basis\": \"GROSS_PPE_PROXY\", \"delta_fcf\": \"-5.034\", \"earlier_fcf\": \"-0.362\", \"earlier_fcf_to_ocf_pct\": \"-4.447\", \"earlier_period\": \"FY26Q1\", \"fcf_to_ocf_change_pp\": \"-18.909\", \"later_fcf\": \"-5.396\", \"later_period\": \"FY27Q1\", \"latest_fcf_to_ocf_pct\": \"-23.356\", \"period_family\": \"QUARTER\", \"qualification\": \"PROXY_WATCH_MAX; unknown lease/other flows forbid automatic 0 or 2\", \"risk_level_candidate\": 1, \"status\": \"CANDIDATE_REQUIRES_SOURCE_AND_REVIEW\"}",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831.htm",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          }
+        },
+        "roster": {
+          "AMZN": "0.20",
+          "GOOGL": "0.20",
+          "META": "0.20",
+          "MSFT": "0.20",
+          "ORCL": "0.20"
+        }
+      },
+      "R4": {
+        "observations": {
+          "AMZN": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R4-AMZN-2026Q3-source-panel",
+            "counterevidence": "$20bn renewed credit lines replace old $15bn+$5bn commitments, NOT incremental $20bn. Unsecured corporate liquidity/strong AWS growth and record operating margin oppose a financing freeze. 80bn is conditional future capacity, not drawn and not stress by itself.\n",
+            "known_public_by_at": "2026-10-30T12:00:00-04:00",
+            "level": 1,
+            "measurement": "\"10-Q: $17.5bn new June unsecured delayed-draw term loan ACTUALLY DRAWN September 2026 (SOFR + 0.625%-0.875%, Sep2029 maturity). Supplier financing for technology infrastructure purchase orders, optional up-to-$80bn secured loan facility drawable Q1 2027-Q3 2028; ZERO assumption of current $80bn funding. Long-term debt rises $65.648bn Dec2025 to $173.125bn Sep2026; use actual balance levels not $107.477bn as a claim of net new AI-only cash.\\n\"",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "CRWV": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R4-CRWV-2026Q3-coreweave-q3-results",
+            "counterevidence": "Revenue grew by more than $1bn sequentially, adjusted EBITDA was $2.256bn, backlog $132.5bn and funding access remains open; this is dependence, not a funding break.",
+            "known_public_by_at": "2026-11-10T23:59:59Z",
+            "level": 1,
+            "measurement": "Q3 revenue $3.661bn, net interest expense $846m, $4.2bn convertible notes, $2.6bn DDTL at SOFR+550bp for short-duration contracts, and approximately $9bn expected customer prepayments/deposits; level remains WATCH.",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://investors.coreweave.com/news/news-details/2026/CoreWeave-Reports-Strong-Third-Quarter-2026-Results/default.aspx",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "IREN": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R4-IREN-2026Q3-source-panel",
+            "counterevidence": "Borrower is IE US Hardware 3 LLC, SPV consolidated by IREN, limited hedge/remarketing guarantees (no general full-debt recourse). Financing successful, customer contract with MSFT; no proven financial distress.",
+            "known_public_by_at": "2026-08-28T12:00:00-04:00",
+            "level": 1,
+            "measurement": "\"MATERIAL_INCREMENTAL_FINANCING_DEPENDENCE\"",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/0001878848-26-000052-index.htm",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "META": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R4-META-2026Q3-source-panel",
+            "counterevidence": "Moody's Aa3 and continued ability to place debt, significant advertising growth, and investor participation contradict credit closure. New preliminary SEC prospectus initially had blank coupons; unrelated rating outlook cannot prove default or matched repricing.\n",
+            "known_public_by_at": "2026-11-03T18:13:00-05:00",
+            "level": 1,
+            "measurement": "\"3-Nov US $15bn new five-part notes OFFERING (closing proceeds unverified), after $25bn April notes and $30bn 2025 notes. S&P revised outlook to negative Oct30 due to substantial AI CapEx and projected future FOCF deficits/debt reliance; NO rating downgrade. Approx $1.869bn extra mandatory convert preferred proceeds Nov2 are separate from proposed USD and EUR notes, not double-counted.\\n\"",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "INDEPENDENT_CONFIRMATION",
+            "source_url": "https://www.reuters.com/technology/meta-raises-15-billion-in-five-part-us-bond-sale-2026-11-03/",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          },
+          "ORCL": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "R4-ORCL-2026Q3-source-panel",
+            "counterevidence": "Issuer successfully priced both offerings, OCI revenue growth, viable investment-grade ratings and customer demand; no actual refinancing default or same-security rollover stress. Project Jupiter is Blue Owl/STACK SPV not proven Oracle parent; do not transfer its credit risk to ORCL R4.\n",
+            "known_public_by_at": "2026-11-03T12:00:00-05:00",
+            "level": 1,
+            "measurement": "\"Feb2026 issuer funding plan explicitly targets $45-50bn gross cash during 2026 to expand OCI capacity for contracted customers. On Nov2 issuer priced concurrent $10bn notes and ~$10bn common equity. Notes coupons 7.000%-8.650% with 2029-2046 maturities. EXPECTED settlement Nov4; not counted as received cash at as_of. This $20bn is within company's annual funding plan, NOT added on top of $45-50bn. FY27Q1 issuer cash-PPE > OCF, and $11.363bn of OCF was financing-component customer prepayment.\\n\"",
+            "rationale": "Source reopened and PIT rechecked 2026-11-25; carried matched measurement because no new issuer quarter exists; not relabelled as fresh disclosure.",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Pricing-of-20-Billion-of-Common-Stock-and-Senior-Notes/default.aspx",
+            "valid_until": "2026-12-01T23:59:59-05:00"
+          }
+        },
+        "roster": {
+          "AMZN": "0.10",
+          "CRWV": "0.25",
+          "GOOGL": "0.10",
+          "IREN": "0.25",
+          "META": "0.10",
+          "MSFT": "0.10",
+          "ORCL": "0.10"
+        }
+      }
+    },
+    "events": [
+      {
+        "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+        "causal_root_id": "CEREBRAS_OPENAI_CAPACITY_SHORTFALL_SERVICE_CREDITS_2026Q4",
+        "confidence": "MEDIUM",
+        "counterevidence": "Cerebras recognized $72.4m Q3 revenue under the OpenAI arrangement; cloud/services revenue and adjusted cloud margins grew, OpenAI has not terminated a tranche, and management says less than 5% of committed capacity was terminable in 2026. Some delays may be excused.",
+        "effect_id": "OPENAI_SERVICE_CREDITS_ACCRUING_20261001",
+        "factor": "R6",
+        "id": "EVT-20261112-20386D220F23",
+        "impact": "0.5",
+        "independent_effect": true,
+        "kind": "STATE",
+        "known_public_by_at": "2026-11-12T22:11:09Z",
+        "observable_outcome": {
+          "comparison_basis": "Contracted milestone quantity and service-fee terms disclosed in Cerebras Q3 2026 Form 10-Q",
+          "direction": "DETERIORATION",
+          "impact_basis": "SINGLE_VERIFIED_CHANGE",
+          "independent_effect_reason": "The credit offsets customer service fees and is separate from the fixed core financing/monetization observations and from contracted-capacity announcements.",
+          "kind": "PAID_CAPACITY_INTERRUPTION",
+          "observed_change": "Capacity delivered was below the MRA quantity and, without adjustment for excused delays, service credits began accruing from 2026-10-01 against subsequent monthly service fees.",
+          "scope": "Cerebras/OpenAI MRA committed inference capacity tranches",
+          "uncertainties": "The filing does not quantify credits, some delay may be excused, and the shortfall does not establish GPU utilization, project IRR, or cancellation; less than 5% of total committed capacity was forecast terminable in 2026."
+        },
+        "publication_proof_url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073494/0001628280-26-073494-index.htm",
+        "qualification_policy": "OBSERVABLE_EVENT_QUALIFICATION_V2_1",
+        "rationale": "The contractual service-credit accrual is a realized paid-capacity interruption distinct from R1/R2/R4 and from the earlier headline review of contracted MW and revenue growth.",
+        "review_by": "2027-02-23T06:46:00Z",
+        "source_class": "PRIMARY_FACT",
+        "source_url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073494/cbrs-20260930.htm"
+      }
+    ],
+    "schema": "ai-capex.challenger-observable.v2-draft"
+  },
+  "source_refs": [
+    "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-25.md",
+    "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-18.md",
+    "data/research/events/challenger_v2_event_registry.json"
+  ],
+  "trading_authority": "NONE",
+  "unresolved": {
+    "R4/GOOGL": {
+      "next_action": "Check next filing/material financing event only",
+      "next_review": "2026-12-02",
+      "note": "No matched financing event; UNKNOWN is not zero.",
+      "owner": "weekly-research",
+      "reason": "No eligible incremental financing-dependence observation in fixed R4 panel",
+      "sources_checked": [
+        "https://abc.xyz/investor/"
+      ]
+    },
+    "R4/MSFT": {
+      "next_action": "Check next filing/material financing event only",
+      "next_review": "2026-12-02",
+      "note": "No matched financing event; UNKNOWN is not zero.",
+      "owner": "weekly-research",
+      "reason": "No eligible incremental financing-dependence observation in fixed R4 panel",
+      "sources_checked": [
+        "https://www.microsoft.com/en-us/Investor"
+      ]
+    }
+  }
+}

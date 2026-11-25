@@ -403,6 +403,26 @@
       "source_pr_state": "open",
       "cutoff_text_from_source": "**Economic cutoff:** 2026-11-18 08:28:44 Israel / 06:28:44 UTC",
       "status_text_from_source": "**Completeness:** **PARTIAL**. R4/MSFT and R4/GOOGL remain UNKNOWN; GPU utilization/renewals, same-variant CRB history, AI-sector OAS, securities-lending and full prime-broker panels are unavailable. The 17-Nov NVIDIA HIGH event remains `REGISTRATION_PENDING` in PR #229, which blocks COMPLETE. No 18-Nov US session is admitted."
+    },
+    {
+      "kind": "weekly_report",
+      "date": "2026-11-25",
+      "title": "AI CapEx Weekly Watch — 2026-11-25",
+      "path": "research/reports/weekly/AI_CAPEX_WEEKLY_WATCH_2026-11-25.md",
+      "source_path_id": "Docs/research/AI_CAPEX_WEEKLY_WATCH_2026-11-25.md",
+      "source_commit": null,
+      "origin": "MAIN",
+      "source_pr": null,
+      "source_pr_state": null,
+      "cutoff_text_from_source": "**Economic cutoff:** 2026-11-25 08:46 Israel / 06:46 UTC; last completed US regular session 2026-11-24.",
+      "status_text_from_source": "**Completeness:** **PARTIAL** — R4/MSFT and R4/GOOGL remain UNKNOWN; direct comparable GPU utilization/renewals, same-variant CRB history, AI-sector OAS, securities-lending and full prime-broker panels remain unavailable. Challenger v2 final interval [48.36,55.64], LOW_COVERAGE=false, category=null, calibration=UNCALIBRATED, trading_signal=false.",
+      "attachments": [
+        "research/reports/attachments/data/research/weekly/weekly_challenger_v2_2026-11-25_r1.json",
+        "research/reports/attachments/data/research/weekly/weekly_macro_pain_2026-11-25_r1.json",
+        "research/reports/attachments/data/research/weekly/weekly_institutional_2026-11-25_r1.json",
+        "research/reports/attachments/data/research/weekly/weekly_coverage_2026-11-25_r1.json",
+        "research/challenger/calculations/EVT-20261112-20386D220F23_20261125T064600Z_6ea2f906.json"
+      ]
     }
   ],
   "archive_notes": [
