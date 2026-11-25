@@ -42,6 +42,18 @@ with tempfile.TemporaryDirectory() as tmp:
         relative = Path("Docs/research") / source.name
         if not (stage / relative).exists():
             copy(source, relative)
+    # Apply explicit retrospective supplements only to temporary validation view.
+    for supplement in sorted((root / "research/challenger/events/supplements").glob("*.json")):
+        entry = json.loads(supplement.read_text())
+        assert entry["schema"] == "wtf-viewer.daily-ledger-supplement.v1"
+        report = stage / "Docs/research" / Path(entry["original_report"]).name
+        lines = report.read_text().splitlines()
+        start = next(i for i, line in enumerate(lines) if line.startswith("## ") and "event ledger" in line.lower())
+        end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith("## ")), len(lines))
+        last = max(i for i in range(start + 1, end) if lines[i].startswith("|"))
+        assert entry["row"] not in lines
+        lines.insert(last + 1, entry["row"])
+        report.write_text("\n".join(lines) + "\n")
     env = dict(os.environ, PYTHONPATH=str(stage / "src"))
     weekly = stage / "data/research/weekly"
     assert list(weekly.glob("weekly_challenger_v2_*_r*.json")), "No active weekly captures"
