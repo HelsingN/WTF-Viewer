@@ -217,11 +217,12 @@
         "| CRITICAL | Nebius — Q3 2026 results and third-party capacity-delay guidance; CONTEXT_ONLY |",
         "| HIGH | Applied Materials — FY2026 Q4 results after close; CONTEXT_ONLY |",
         "| HIGH | Cerebras — Q3 2026 results and contracted capacity; EARLY_WARNING |",
-        "| HIGH | Cisco — FY2027 Q1 earnings and hyperscaler AI revenue outlook; CONTEXT_ONLY |"
+        "| HIGH | Cisco — FY2027 Q1 earnings and hyperscaler AI revenue outlook; CONTEXT_ONLY |",
+        "| HIGH | Cerebras — separately registered service-credit accrual; EVT-20261112-20386D220F23; retrospective QUALIFIED R6, not known at original cutoff |"
       ],
       "review_state": "EARLY_WARNING_FOLLOWUP_REQUIRED",
       "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-12.md",
-      "source_report_status": "RECONCILIATION_PENDING"
+      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
     },
     {
       "date": "2026-11-13",
