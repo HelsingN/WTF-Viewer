@@ -204,13 +204,14 @@
     {
       "date": "2026-11-12",
       "event_ids": [
+        "EVT-20261112-20386D220F23",
         "EVT-20261112-596801136B58",
         "EVT-20261112-8078B5459010",
         "EVT-20261112-9753CB400B21",
         "EVT-20261112-ABB2390AE170",
         "EVT-20261112-EE567E3A09CE"
       ],
-      "high_critical_count": 5,
+      "high_critical_count": 6,
       "reported_priority_rows": [
         "| CRITICAL | NVIDIA — leadership transition; original issuer timestamp not verified; CONTEXT_ONLY |",
         "| CRITICAL | Nebius — Q3 2026 results and third-party capacity-delay guidance; CONTEXT_ONLY |",
@@ -220,7 +221,7 @@
       ],
       "review_state": "EARLY_WARNING_FOLLOWUP_REQUIRED",
       "source_report": "Docs/research/AI_CAPEX_DAILY_CLOSE_2026-11-12.md",
-      "source_report_status": "RECONCILED_TO_DAILY_LEDGER"
+      "source_report_status": "RECONCILIATION_PENDING"
     },
     {
       "date": "2026-11-13",

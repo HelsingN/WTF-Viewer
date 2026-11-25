@@ -1,0 +1,85 @@
+{
+  "captured_at": "2026-11-25T08:55:00+02:00",
+  "cftc": {
+    "category": "LEVERAGED_FUNDS",
+    "nasdaq_20974+": {
+      "four_week_net": -5367,
+      "long": 51699,
+      "net": -12611,
+      "short": 64310,
+      "spreading": 51855,
+      "thirteen_week_net": 50788,
+      "wow_net": -25324
+    },
+    "positions_as_of": "2026-11-17",
+    "published": "2026-11-20",
+    "report": "TFF_FUTURES_OPTIONS_COMBINED_CONSOLIDATED",
+    "sp_13874+": {
+      "four_week_net": 138043,
+      "long": 207111,
+      "net": -210631,
+      "short": 417742,
+      "spreading": 846168,
+      "thirteen_week_net": 56878,
+      "wow_net": 65516
+    }
+  },
+  "confidence": "MEDIUM",
+  "cutoff": "2026-11-25T08:46:00+02:00",
+  "forced_deleveraging": {
+    "confidence": "MEDIUM",
+    "state": "NO_DIRECT_MARGIN_CALL_OR_HAIRCUT_EVIDENCE"
+  },
+  "h_state": "H3_ACTIVE_DERISK",
+  "lending_security_shorts": "UNKNOWN_NO_COMPARABLE_PUBLIC_AI_BASKET",
+  "price_positioning_divergence": "YES_NASDAQ_LEVERAGED_NET_FLIPPED_SHORT_WHILE_SUPPLIER_REVENUE_STRONG",
+  "prime_broker": {
+    "limitation": "No current public same-method panel",
+    "state": "UNKNOWN"
+  },
+  "put_call_2026-11-19": {
+    "equity": 0.62,
+    "index": 1.2,
+    "status": "LATEST_RETRIEVED_OFFICIAL_LAGGED",
+    "total": 1.01
+  },
+  "report_date": "2026-11-25",
+  "schema": "ai-capex.institutional-derisking-observation.v1",
+  "skew_2026-11-23": 140.37,
+  "sources": [
+    "https://www.cftc.gov/dea/options/financial_lof.htm",
+    "https://www.cboe.com/markets/us/options/market-statistics/daily?dt=2026-11-19",
+    "https://www.cboe.com/markets/us/futures/market-statistics/settlement/futures/daily"
+  ],
+  "unknowns": [
+    {
+      "field": "prime_broker",
+      "next_action": "Wait for attributable comparable release",
+      "next_review": "2026-12-02",
+      "owner": "weekly-research",
+      "reason": "Subscription/private and no stable public current methodology"
+    },
+    {
+      "field": "lending_security_shorts",
+      "next_action": "Check exchange/provider release",
+      "next_review": "2026-12-02",
+      "owner": "weekly-research",
+      "reason": "No comparable public AI basket"
+    },
+    {
+      "field": "put_call_2026-11-24",
+      "next_action": "Backfill only in a new dated supplement if material",
+      "next_review": "2026-12-02",
+      "owner": "weekly-research",
+      "reason": "Official dated page was not retrievable at cutoff; latest accepted is 19-Nov"
+    }
+  ],
+  "vix_2026-11-24": 26.36,
+  "vix_futures_2026-11-24": {
+    "DEC16": 23.98,
+    "JAN20": 23.64,
+    "later_contracts": "UNKNOWN_EXACT_FULL_CURVE",
+    "shape": "BACKWARDATION"
+  },
+  "weekly_delta": "WORSENING_PRICE_STRESS_WITH_MIXED_POSITIONING"
+}

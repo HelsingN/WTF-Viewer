@@ -1,0 +1,77 @@
+{
+  "blocks": {
+    "challenger_v2": {
+      "freshness": "2026-11-25T08:46:00+02:00",
+      "status": "PARTIAL",
+      "unknowns": [
+        "R4/MSFT",
+        "R4/GOOGL"
+      ]
+    },
+    "champion": {
+      "freshness": "market through 24-Nov",
+      "status": "PARTIAL",
+      "unknowns": [
+        "Combined Score",
+        "canonical utilization/renewals",
+        "full Asia panel"
+      ]
+    },
+    "event_registry": {
+      "freshness": "review 25-Nov",
+      "status": "PARTIAL",
+      "unknowns": [
+        "12-Nov daily ledger lacks the missed backfill row; reconciliation pending"
+      ]
+    },
+    "gpu_compute": {
+      "freshness": "24-Nov prices",
+      "status": "PARTIAL",
+      "unknowns": [
+        "utilization",
+        "renewals",
+        "contract duration"
+      ]
+    },
+    "hyperscaler_cash_capex": {
+      "freshness": "latest quarters rechecked 25-Nov",
+      "status": "CARRIED_RECHECKED",
+      "unknowns": []
+    },
+    "institutional": {
+      "freshness": "CFTC 17-Nov; market 24-Nov",
+      "status": "PARTIAL",
+      "unknowns": [
+        "prime broker",
+        "lending",
+        "24-Nov put/call"
+      ]
+    },
+    "macro_pain": {
+      "freshness": "23-Nov",
+      "status": "PARTIAL",
+      "unknowns": [
+        "CPI YoY",
+        "CRB same variant",
+        "AI-sector OAS"
+      ]
+    },
+    "memory_semis_networking": {
+      "freshness": "20-Nov memory; 24-Nov market",
+      "status": "PARTIAL",
+      "unknowns": [
+        "HBM sell-through",
+        "double ordering"
+      ]
+    }
+  },
+  "captured_at": "2026-11-25T08:55:00+02:00",
+  "change_vs_previous": "First qualified realized R6 deterioration from Cerebras service credits; NAND oversupply mechanics broaden; semiconductor equities weaken sharply while vendor fundamentals remain strong; macro term yield eases.",
+  "cutoff": "2026-11-25T08:46:00+02:00",
+  "data_status": "PARTIAL",
+  "legacy_v1_validator_applicable": false,
+  "report_date": "2026-11-25",
+  "schema": "ai-capex.weekly-coverage-manifest.v1",
+  "unresolved_count": 15,
+  "validator": "python scripts/research/validate_weekly_challenger_v2.py --latest"
+}

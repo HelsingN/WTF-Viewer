@@ -1418,6 +1418,69 @@
       ],
       "title": "October 2026 Producer Price Index (PPI) release: +0.3% MoM, +6.5% YoY",
       "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY"
+    },
+    {
+      "entity": "Cerebras Systems / OpenAI",
+      "event_date": "2026-11-12",
+      "event_key": "CEREBRAS-OPENAI-MRA-SERVICE-CREDITS-ACCRUING-20261001-DISCLOSED-20261112",
+      "id": "EVT-20261112-20386D220F23",
+      "known_public_by_at": "2026-11-12T22:11:09Z",
+      "priority": "HIGH",
+      "registered_at": "2026-11-25T06:44:00Z",
+      "registration_mode": "BACKFILL_MISSED_PRIMARY_DISCLOSURE",
+      "reviews": [
+        {
+          "decision": "PENDING_REVIEW",
+          "factor": null,
+          "reason": "Needs source/causal-outcome assessment",
+          "reviewed_at": "2026-11-25T06:44:00Z",
+          "reviewer": "event-registry"
+        },
+        {
+          "decision": "QUALIFIED",
+          "factor": "R6",
+          "public_by_verified_at": "2026-11-12T22:11:09Z",
+          "publication_proof_url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073494/0001628280-26-073494-index.htm",
+          "reason": "Dated v2.1 reassessment at the 2026-11-25 cutoff after finding a material primary 10-Q fact omitted from the earlier earnings-release review: the OpenAI capacity shortfall was already realized and, without adjustment for excused delays, service credits began accruing on 2026-10-01. This is a narrow paid interruption / reduced service-fee outcome, not proof of total project failure or broad GPU underutilization.",
+          "reviewed_at": "2026-11-25T06:46:00Z",
+          "reviewer": "weekly-watch-v2.1-bounded-primary-review; owner-PR-approval-pending",
+          "scored_event": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "CEREBRAS_OPENAI_CAPACITY_SHORTFALL_SERVICE_CREDITS_2026Q4",
+            "confidence": "MEDIUM",
+            "counterevidence": "Cerebras recognized $72.4m Q3 revenue under the OpenAI arrangement; cloud/services revenue and adjusted cloud margins grew, OpenAI has not terminated a tranche, and management says less than 5% of committed capacity was terminable in 2026. Some delays may be excused.",
+            "effect_id": "OPENAI_SERVICE_CREDITS_ACCRUING_20261001",
+            "factor": "R6",
+            "id": "EVT-20261112-20386D220F23",
+            "impact": "0.5",
+            "independent_effect": true,
+            "kind": "STATE",
+            "known_public_by_at": "2026-11-12T22:11:09Z",
+            "observable_outcome": {
+              "comparison_basis": "Contracted milestone quantity and service-fee terms disclosed in Cerebras Q3 2026 Form 10-Q",
+              "direction": "DETERIORATION",
+              "impact_basis": "SINGLE_VERIFIED_CHANGE",
+              "independent_effect_reason": "The credit offsets customer service fees and is separate from the fixed core financing/monetization observations and from contracted-capacity announcements.",
+              "kind": "PAID_CAPACITY_INTERRUPTION",
+              "observed_change": "Capacity delivered was below the MRA quantity and, without adjustment for excused delays, service credits began accruing from 2026-10-01 against subsequent monthly service fees.",
+              "scope": "Cerebras/OpenAI MRA committed inference capacity tranches",
+              "uncertainties": "The filing does not quantify credits, some delay may be excused, and the shortfall does not establish GPU utilization, project IRR, or cancellation; less than 5% of total committed capacity was forecast terminable in 2026."
+            },
+            "publication_proof_url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073494/0001628280-26-073494-index.htm",
+            "qualification_policy": "OBSERVABLE_EVENT_QUALIFICATION_V2_1",
+            "rationale": "The contractual service-credit accrual is a realized paid-capacity interruption distinct from R1/R2/R4 and from the earlier headline review of contracted MW and revenue growth.",
+            "review_by": "2027-02-23T06:46:00Z",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073494/cbrs-20260930.htm"
+          }
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073494/cbrs-20260930.htm",
+        "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073494/0001628280-26-073494-index.htm"
+      ],
+      "title": "OpenAI MRA capacity shortfall caused service credits to accrue from 1-Oct-2026"
     }
   ],
   "schema": "ai-capex.challenger-v2.event-registry.v1"
