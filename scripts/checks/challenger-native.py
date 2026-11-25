@@ -30,12 +30,22 @@ with tempfile.TemporaryDirectory() as tmp:
     for source in (root / "research/challenger/events").rglob("*"):
         if source.is_file():
             copy(source, Path("data/research/events") / source.relative_to(root / "research/challenger/events"))
+    # Proposed reports may be cited as evidence, but are not accepted captures.
+    # Resolve them only during individual manifest validation, not report discovery.
+    proposed = root / "research/proposed"
+    for source in proposed.glob("*/Docs/research/*.md"):
+        relative = Path("Docs/research") / source.name
+        if not (stage / relative).exists():
+            copy(source, relative)
     env = dict(os.environ, PYTHONPATH=str(stage / "src"))
     weekly = stage / "data/research/weekly"
     assert list(weekly.glob("weekly_challenger_v2_*_r*.json")), "No active weekly captures"
     assert (stage / "data/research/events/challenger_v2_event_registry.json").is_file(), "Missing registry"
+    # Validate each active manifest; proposed evidence is not a published report.
+    for capture in sorted(weekly.glob("weekly_challenger_v2_*_r*.json")):
+        subprocess.run([sys.executable, str(stage / "scripts/research/validate_weekly_challenger_v2.py"), "--manifest", str(capture)], cwd=stage, env=env, check=True)
     for script, args in [
-        ("validate_weekly_challenger_v2.py", ["--latest"]),
+        
         ("challenger_v2_event_register.py", ["--check"]),
     ]:
         subprocess.run([sys.executable, str(stage / "scripts/research" / script), *args], cwd=stage, env=env, check=True)
