@@ -1,0 +1,9 @@
+{
+  "schema": "wtf-viewer.daily-ledger-supplement.v1",
+  "date": "2026-11-12",
+  "recorded_at": "2026-11-25",
+  "event_id": "EVT-20261112-20386D220F23",
+  "row": "| HIGH | Cerebras — separately registered service-credit accrual; EVT-20261112-20386D220F23; retrospective QUALIFIED R6, not known at original cutoff |",
+  "original_report": "research/reports/daily/AI_CAPEX_DAILY_CLOSE_2026-11-12.md",
+  "note": "Retrospective reconciliation only; original cutoff and narrative unchanged."
+}
