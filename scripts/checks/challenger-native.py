@@ -30,6 +30,11 @@ with tempfile.TemporaryDirectory() as tmp:
     for source in (root / "research/challenger/events").rglob("*"):
         if source.is_file():
             copy(source, Path("data/research/events") / source.relative_to(root / "research/challenger/events"))
+    # Every active weekly report after cutover must have an active capture.
+    for report in (root / "research/reports/weekly").glob("AI_CAPEX_WEEKLY_WATCH_*.md"):
+        day = report.stem[-10:]
+        if day >= "2026-11-04":
+            assert list((stage / "data/research/weekly").glob(f"weekly_challenger_v2_{day}_r*.json")), f"Missing capture: {day}"
     # Proposed reports may be cited as evidence, but are not accepted captures.
     # Resolve them only during individual manifest validation, not report discovery.
     proposed = root / "research/proposed"
@@ -41,11 +46,14 @@ with tempfile.TemporaryDirectory() as tmp:
     weekly = stage / "data/research/weekly"
     assert list(weekly.glob("weekly_challenger_v2_*_r*.json")), "No active weekly captures"
     assert (stage / "data/research/events/challenger_v2_event_registry.json").is_file(), "Missing registry"
+    base_registry = stage / "base-registry.json"
+    base = os.environ.get("BASE_SHA") or subprocess.check_output(["git", "rev-parse", "HEAD^"], cwd=root, text=True).strip()
+    base_registry.write_bytes(subprocess.check_output(["git", "show", base + ":research/challenger/events/challenger_v2_event_registry.json"], cwd=root))
     # Validate each active manifest; proposed evidence is not a published report.
     for capture in sorted(weekly.glob("weekly_challenger_v2_*_r*.json")):
         subprocess.run([sys.executable, str(stage / "scripts/research/validate_weekly_challenger_v2.py"), "--manifest", str(capture)], cwd=stage, env=env, check=True)
     for script, args in [
         
-        ("challenger_v2_event_register.py", ["--check"]),
+        ("challenger_v2_event_register.py", ["--check", "--base-registry", str(base_registry)]),
     ]:
         subprocess.run([sys.executable, str(stage / "scripts/research" / script), *args], cwd=stage, env=env, check=True)
