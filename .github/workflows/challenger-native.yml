@@ -5,6 +5,11 @@ on:
   push:
     branches: [develop, main]
   workflow_dispatch:
+    inputs:
+      base_sha:
+        description: Full SHA of the registry baseline commit
+        required: true
+        type: string
 permissions:
   contents: read
 jobs:
@@ -21,4 +26,13 @@ jobs:
       - run: python -m pip install pydantic==2.13.4 pydantic-settings==2.15.0 PyYAML
       - run: python scripts/checks/challenger-native.py
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before || inputs.base_sha }}
+          RECALC_AUDIT_DIR: ${{ runner.temp }}/challenger-v2-event-recalculations
+      - name: Retain QUALIFIED event recalculations for audit
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: challenger-v2-event-recalculations
+          path: ${{ runner.temp }}/challenger-v2-event-recalculations/*.json
+          if-no-files-found: ignore
+          retention-days: 30
