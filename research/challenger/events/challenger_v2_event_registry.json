@@ -1,6 +1,91 @@
 {
   "events": [
     {
+      "backfill": true,
+      "detected_on": "2026-11-28",
+      "entity": "Core Scientific / CoreWeave HDC portfolio",
+      "event_date": "2026-09-30",
+      "event_date_precision": "QUARTER_END_SNAPSHOT_NOT_COMMISSIONING_DAY",
+      "event_key": "CORE-SCIENTIFIC-COREWEAVE-BILLABLE-CAPACITY-Q3-2026",
+      "id": "EVT-20260930-BEBDA0A0773C",
+      "known_public_by_at": "2026-11-05T12:04:47Z",
+      "priority": "HIGH",
+      "provenance": {
+        "discovery": "Retrospective press comparison dated 2026-11-28; original SEC/issuer disclosure 2026-11-05",
+        "monitoring_overlap_start": "2026-11-28T06:00:00Z",
+        "original_occurrence": "Q3 2026 delivery; snapshot 2026-09-30; precise commissioning dates unknown",
+        "previous_completed_cutoff": "2026-11-28T06:32:48Z"
+      },
+      "publication_proof_url": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000028/0001839341-26-000028-index.htm",
+      "registered_at": "2026-11-28T07:38:59Z",
+      "reviews": [
+        {
+          "decision": "PENDING_REVIEW",
+          "factor": null,
+          "reason": "Needs source/causal-outcome assessment",
+          "reviewed_at": "2026-11-28T07:38:59Z",
+          "reviewer": "event-registry"
+        },
+        {
+          "backfill": true,
+          "counterevidence": "Revenue includes $57.556m power pass-through versus $35.073m in Q2, so gross colocation revenue is not net cash yield. One concentrated customer (CoreWeave), construction/financing exposure, unverified tenant GPU utilization and project FCF/IRR remain. 485 MW is a September 30 snapshot, not newly commissioned November capacity.",
+          "decision": "QUALIFIED",
+          "evidence_refs": [
+            "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q32026corescientificinc-ea.htm",
+            "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
+            "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000028/0001839341-26-000028-index.htm"
+          ],
+          "factor": "R6",
+          "public_by_verified_at": "2026-11-05T12:04:47Z",
+          "publication_proof_url": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000028/0001839341-26-000028-index.htm",
+          "reason": "Billing capacity increased 395 to 485 MW (+90 MW, +22.8%) between Q2 and Q3 2026; same-basis colocation license fees increased $98.812m to $157.265m (+59.2%). This is realized billable AI hosting, not proposed MW or forecast GPU utilization.",
+          "reopen_only_on": [
+            "New primary billable-capacity or rent disclosure",
+            "Verified restatement or source/PIT error",
+            "Proven overlap with an independently scored CoreWeave outcome"
+          ],
+          "review_by_basis": "Conservative one-month source review window from Nov-5 disclosure; no extension solely due to Nov-28 rediscovery. After Dec-5 contribution expires unless genuinely new primary evidence; no inference of recovery/reversal from expiry.",
+          "reviewed_at": "2026-11-28T07:39:27Z",
+          "reviewer": "Codex bounded primary-source research review",
+          "scored_event": {
+            "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+            "causal_root_id": "CORE_SCIENTIFIC_COREWEAVE_BILLABLE_CAPACITY_2026Q3",
+            "confidence": "MEDIUM",
+            "counterevidence": "Revenue includes $57.556m power pass-through versus $35.073m in Q2, so gross colocation revenue is not net cash yield. One concentrated customer (CoreWeave), construction/financing exposure, unverified tenant GPU utilization and project FCF/IRR remain. 485 MW is a September 30 snapshot, not newly commissioned November capacity.",
+            "effect_id": "CORZ_BILLED_IT_CAPACITY_395_TO_485MW",
+            "factor": "R6",
+            "id": "EVT-20260930-BEBDA0A0773C",
+            "impact": "-0.5",
+            "independent_effect": true,
+            "kind": "STATE",
+            "known_public_by_at": "2026-11-05T12:04:47Z",
+            "observable_outcome": {
+              "comparison_basis": "Issuer Nov-5 SEC 8-K earnings tables explicitly compare Q3 and Q2 2026; same billable-MW definition and license-fee line",
+              "direction": "IMPROVEMENT",
+              "impact_basis": "SINGLE_VERIFIED_CHANGE",
+              "independent_effect_reason": "Actual customer-billed hosting capacity is distinct from CoreWeave financing dependence in R4 and platform R1/R2. Core Scientific is outside the core cohort. No second R3 or R5 credit; the same 90 MW must not later be counted again in a CoreWeave aggregate. Existing CoreWeave Q3 capacity headline is EARLY_WARNING, not a signed adjustment. Galaxy Helios is a different lessor/project; Cerebras/OpenAI credits a different customer and effect.",
+              "kind": "REVENUE_GENERATING_CAPACITY",
+              "observed_change": "485 MW billable at 2026-09-30 versus 395 MW at 2026-06-30; license fees $157.265m versus $98.812m, excluding power pass-through",
+              "scope": "Core Scientific high-density colocation portfolio leased to CoreWeave; Q3 quarter-end billed capacity",
+              "uncertainties": "Revenue includes $57.556m power pass-through versus $35.073m in Q2, so gross colocation revenue is not net cash yield. One concentrated customer (CoreWeave), construction/financing exposure, unverified tenant GPU utilization and project FCF/IRR remain. 485 MW is a September 30 snapshot, not newly commissioned November capacity."
+            },
+            "publication_proof_url": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000028/0001839341-26-000028-index.htm",
+            "qualification_policy": "OBSERVABLE_EVENT_QUALIFICATION_V2_1",
+            "rationale": "Billing capacity increased 395 to 485 MW (+90 MW, +22.8%) between Q2 and Q3 2026; same-basis colocation license fees increased $98.812m to $157.265m (+59.2%). This is realized billable AI hosting, not proposed MW or forecast GPU utilization.",
+            "review_by": "2026-12-05T12:04:47Z",
+            "source_class": "PRIMARY_FACT",
+            "source_url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q32026corescientificinc-ea.htm"
+          }
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q32026corescientificinc-ea.htm",
+        "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm"
+      ],
+      "title": "BACKFILL: 485 MW billable at Q3 end versus 395 MW at Q2 end"
+    },
+    {
       "entity": "Galaxy Digital / CoreWeave",
       "event_date": "2026-10-27",
       "event_key": "GALAXY-HELIO-I-133MW",
@@ -932,492 +1017,283 @@
       "title": "Arm fiscal 2027 Q2 issuer results published Nov 4 after close"
     },
     {
+      "entity": "US Bureau of Labor Statistics",
+      "event_date": "2026-11-05",
       "event_key": "BLS-PRODUCTIVITY-COSTS-2026Q3-PRELIM-20261105",
       "id": "EVT-20261105-8FE101712C8E",
-      "entity": "US Bureau of Labor Statistics",
-      "title": "2026 Q3 preliminary nonfarm productivity +3.6%, unit labor costs -0.7%",
+      "known_public_by_at": "2026-11-05T21:35:00Z",
       "priority": "HIGH",
+      "registered_at": "2026-11-05T21:38:00Z",
+      "registration_mode": "POST_CLOSE_REGISTRATION_NOT_LIVE_FIRST_ALERT",
+      "reviews": [
+        {
+          "decision": "MACRO_ONLY",
+          "factor": "MACRO",
+          "reason": "Primary BLS release at scheduled 08:30 EST; productivity +3.6% SAAR, labor unit costs -0.7%; macro labor/price efficiency is not realized AI-project compute cost or qualified R3, and does not independently update frozen R1/R2/R4; consensus Reuters +2.8% productivity and +0.6% costs; no double-counted R3/R5/R6/R7/P1-P4.",
+          "reviewed_at": "2026-11-05T21:38:00Z",
+          "reviewer": "daily-close-2026-11-05-primary-audit"
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
       "source_refs": [
         "https://www.bls.gov/news.release/archives/prod2_11052026.htm"
       ],
-      "reviews": [
-        {
-          "reviewed_at": "2026-11-05T21:38:00Z",
-          "reviewer": "daily-close-2026-11-05-primary-audit",
-          "decision": "MACRO_ONLY",
-          "factor": "MACRO",
-          "reason": "Primary BLS release at scheduled 08:30 EST; productivity +3.6% SAAR, labor unit costs -0.7%; macro labor/price efficiency is not realized AI-project compute cost or qualified R3, and does not independently update frozen R1/R2/R4; consensus Reuters +2.8% productivity and +0.6% costs; no double-counted R3/R5/R6/R7/P1-P4."
-        }
-      ],
-      "event_date": "2026-11-05",
-      "known_public_by_at": "2026-11-05T21:35:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
-      "registered_at": "2026-11-05T21:38:00Z",
-      "registration_mode": "POST_CLOSE_REGISTRATION_NOT_LIVE_FIRST_ALERT"
+      "title": "2026 Q3 preliminary nonfarm productivity +3.6%, unit labor costs -0.7%"
     },
     {
+      "entity": "US listed semiconductor sector / Nasdaq",
+      "event_date": "2026-11-05",
       "event_key": "US-SEMICONDUCTOR-SELL-OFF-20261105",
       "id": "EVT-20261105-D4225EF30E14",
-      "entity": "US listed semiconductor sector / Nasdaq",
-      "title": "Nov 5 AI semiconductor equity drawdown: SOX -12%, Nasdaq -5.52%",
+      "known_public_by_at": "2026-11-05T21:35:00Z",
       "priority": "CRITICAL",
+      "registered_at": "2026-11-05T21:38:00Z",
+      "registration_mode": "POST_CLOSE_REGISTRATION_NOT_LIVE_FIRST_ALERT",
+      "reviews": [
+        {
+          "decision": "CONTEXT_ONLY",
+          "factor": "CONTEXT",
+          "reason": "A documented Nov 5 market repricing/technical and positioning observation, not a new independent issuer cash-flow, realized GPU cost, paid MW interruption or funded-site cancellation; do not qualify R3/R5/R6/R7 or re-register Nov 4 election/Arm/Qualcomm earnings. SOX and Nasdaq changes sourced to Reuters after close; exact provider close and ETF quotes remain unverified. P1-P4 separate and UNKNOWN.",
+          "reviewed_at": "2026-11-05T21:38:00Z",
+          "reviewer": "daily-close-2026-11-05-primary-audit"
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
       "source_refs": [
         "https://www.reuters.com/business/sp-500-futures-steady-after-midterm-rally-nasdaq-lags-chip-weakness-2026-11-05/"
       ],
-      "reviews": [
-        {
-          "reviewed_at": "2026-11-05T21:38:00Z",
-          "reviewer": "daily-close-2026-11-05-primary-audit",
-          "decision": "CONTEXT_ONLY",
-          "factor": "CONTEXT",
-          "reason": "A documented Nov 5 market repricing/technical and positioning observation, not a new independent issuer cash-flow, realized GPU cost, paid MW interruption or funded-site cancellation; do not qualify R3/R5/R6/R7 or re-register Nov 4 election/Arm/Qualcomm earnings. SOX and Nasdaq changes sourced to Reuters after close; exact provider close and ETF quotes remain unverified. P1-P4 separate and UNKNOWN."
-        }
-      ],
-      "event_date": "2026-11-05",
-      "known_public_by_at": "2026-11-05T21:35:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
-      "registered_at": "2026-11-05T21:38:00Z",
-      "registration_mode": "POST_CLOSE_REGISTRATION_NOT_LIVE_FIRST_ALERT"
+      "title": "Nov 5 AI semiconductor equity drawdown: SOX -12%, Nasdaq -5.52%"
     },
     {
+      "entity": "TeraWulf Inc.",
+      "event_date": "2026-11-06",
       "event_key": "TERAWULF-Q3-2026-EARNINGS",
       "id": "EVT-20261106-4821AD973FCB",
-      "entity": "TeraWulf Inc.",
-      "title": "Q3 2026: $63m HPC leasing revenue and 102MW revenue-generating Lake Mariner capacity",
-      "priority": "HIGH",
-      "event_date": "2026-11-06",
-      "source_refs": [
-        "https://investors.terawulf.com/news-events/press-releases/detail/149/terawulf-reports-third-quarter-2026-results"
-      ],
       "known_public_by_at": "2026-11-06T21:25:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "priority": "HIGH",
       "registered_at": "2026-11-06T21:26:00Z",
       "registration_mode": "SAME_DAY_POST_CLOSE_CONSERVATIVE_BOUND",
       "reviews": [
         {
-          "decision": "EARLY_WARNING",
-          "factor": "R6",
-          "direction": "IMPROVEMENT",
           "confidence": "MEDIUM",
-          "reviewed_at": "2026-11-06T21:27:00Z",
-          "reviewer": "daily-close-v2.1-source-review",
-          "reason": "Primary Q3 release documents $63m paid HPC lease revenue, 102MW critical IT capacity online by Sep 30, 2026. Observable revenue-generating R6 candidate, but no verified comparable new MW relative to prior report; Nov 4 Google credit backstop and Anthropic lease are prior-day developments, not new Nov 6 paid capacity.",
           "counterevidence": "Additional 336MW is under construction, not paid live capacity; $19bn Anthropic lease is forward contract, project financing is anticipated; adjusted EBITDA negative $12.8m, large noncash warrant-driven GAAP profit. No causal independence or dated prior-period R6 baseline established for scoring.",
+          "decision": "EARLY_WARNING",
+          "direction": "IMPROVEMENT",
           "evidence_refs": [
             "https://investors.terawulf.com/news-events/press-releases/detail/149/terawulf-reports-third-quarter-2026-results"
           ],
+          "factor": "R6",
+          "next_review_at": "2026-11-13T21:30:00Z",
           "qualification_triggers": [
             "Independent prior comparable 102MW online/billable capacity baseline and distinct new economic change",
             "Primary contract or revenue evidence demonstrating newly commissioned billable MW not already counted in core or prior events"
           ],
-          "next_review_at": "2026-11-13T21:30:00Z",
-          "reassessment_policy": "NEW_MATERIAL_FACT_OR_VERIFIABLE_ERROR_ONLY"
+          "reason": "Primary Q3 release documents $63m paid HPC lease revenue, 102MW critical IT capacity online by Sep 30, 2026. Observable revenue-generating R6 candidate, but no verified comparable new MW relative to prior report; Nov 4 Google credit backstop and Anthropic lease are prior-day developments, not new Nov 6 paid capacity.",
+          "reassessment_policy": "NEW_MATERIAL_FACT_OR_VERIFIABLE_ERROR_ONLY",
+          "reviewed_at": "2026-11-06T21:27:00Z",
+          "reviewer": "daily-close-v2.1-source-review"
         }
-      ]
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://investors.terawulf.com/news-events/press-releases/detail/149/terawulf-reports-third-quarter-2026-results"
+      ],
+      "title": "Q3 2026: $63m HPC leasing revenue and 102MW revenue-generating Lake Mariner capacity"
     },
     {
+      "entity": "U.S. Bureau of Labor Statistics",
+      "event_date": "2026-11-06",
       "event_key": "BLS-EMPLOYMENT-SITUATION-OCT2026",
       "id": "EVT-20261106-E44CA00A9292",
-      "entity": "U.S. Bureau of Labor Statistics",
-      "title": "October 2026 Employment Situation: +165k payrolls, 4.1% unemployment",
-      "priority": "CRITICAL",
-      "event_date": "2026-11-06",
-      "source_refs": [
-        "https://www.bls.gov/ces/news.htm",
-        "https://www.bls.gov/news.release/empsit.nr0.htm"
-      ],
       "known_public_by_at": "2026-11-06T21:25:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "priority": "CRITICAL",
       "registered_at": "2026-11-06T21:26:00Z",
       "registration_mode": "SAME_DAY_POST_CLOSE_CONSERVATIVE_BOUND",
       "reviews": [
         {
+          "counterevidence": "Broad U-6 underemployment 7.9%, job-market slack persists; rate-hike probability estimates differ by vendor.",
           "decision": "MACRO_ONLY",
           "factor": "MACRO",
-          "reviewed_at": "2026-11-06T21:27:00Z",
-          "reviewer": "daily-close-v2.1-source-review",
           "reason": "BLS October NFP +165k versus Reuters consensus +65k, unemployment 4.1% versus 4.2% forecast; changes macro discount-rate and labor assumptions, not independent realized AI-project economics. Scheduled 08:30 EST release does not prove exact first publication minute.",
-          "counterevidence": "Broad U-6 underemployment 7.9%, job-market slack persists; rate-hike probability estimates differ by vendor."
+          "reviewed_at": "2026-11-06T21:27:00Z",
+          "reviewer": "daily-close-v2.1-source-review"
         }
-      ]
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://www.bls.gov/ces/news.htm",
+        "https://www.bls.gov/news.release/empsit.nr0.htm"
+      ],
+      "title": "October 2026 Employment Situation: +165k payrolls, 4.1% unemployment"
     },
     {
+      "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY_FROM_LATE_DISCOVERY; original release minute not independently verified; 2026-11-10T22:52:43Z is collection observation, not first_public_at",
+      "entity": "CoreWeave Inc.",
+      "event_date": "2026-11-10",
       "event_key": "COREWEAVE-Q3-2026-EARNINGS",
       "id": "EVT-20261110-5B07CE307DC3",
-      "entity": "CoreWeave Inc.",
-      "title": "Q3 2026 results: $3.661bn revenue, 200MW+ additional active power, financing costs",
-      "priority": "CRITICAL",
-      "event_date": "2026-11-10",
-      "source_refs": [
-        "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm",
-        "https://investors.coreweave.com/files/content_files/CoreWeave-3Q-2026-Infographic.pdf"
-      ],
       "known_public_by_at": "2026-11-10T22:52:43Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "priority": "CRITICAL",
       "registered_at": "2026-11-10T22:52:43Z",
       "registration_mode": "SAME_DAY_LATE_DISCOVERY_NOT_LIVE_FIRST_ALERT",
       "reviews": [
         {
-          "decision": "EARLY_WARNING",
-          "factor": "R6",
-          "direction": "IMPROVEMENT",
           "confidence": "MEDIUM",
-          "reviewed_at": "2026-11-10T22:52:43Z",
-          "reviewer": "event-alert-v2.1-source-review",
-          "reason": "Primary SEC Exhibit 99.1 reports >200MW incremental active power to >1.7GW and revenue $3.661bn, with growing contracted backlog $132.5bn. Active power is not itself independently demonstrated newly billable MW; paid-capacity increment and causal independence from the company's core monetization panel remain unverified. R5 credit and $9bn expected customer deposits are separate financing context, not observed cash receipts. Thus no signed R6/R5 outcome or recalculation. The known_public_by_at bound is the late collection/discovery timestamp, not the original first-public minute.",
           "counterevidence": "GAAP net loss $709m, interest expense $846m and adjusted operating margin fell from 16% to 10%; financing risk persists despite growth. Conversely capacity and revenue are expanding, arguing against a broad demand collapse.",
+          "decision": "EARLY_WARNING",
+          "direction": "IMPROVEMENT",
           "evidence_refs": [
             "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm"
           ],
+          "factor": "R6",
+          "next_review_at": "2026-11-17T22:52:43Z",
           "qualification_triggers": [
             "Primary comparable newly billable capacity and incremental paid service evidence versus Q2 baseline",
             "Independent causal assessment of paid capacity distinct from R1/R2/R4 and prior signed events"
           ],
-          "next_review_at": "2026-11-17T22:52:43Z",
-          "reassessment_policy": "NEW_MATERIAL_FACT_OR_VERIFIABLE_ERROR_ONLY; next_review_at is a stale-warning visibility marker, not a scheduled re-investigation or automatic reassessment"
+          "reason": "Primary SEC Exhibit 99.1 reports >200MW incremental active power to >1.7GW and revenue $3.661bn, with growing contracted backlog $132.5bn. Active power is not itself independently demonstrated newly billable MW; paid-capacity increment and causal independence from the company's core monetization panel remain unverified. R5 credit and $9bn expected customer deposits are separate financing context, not observed cash receipts. Thus no signed R6/R5 outcome or recalculation. The known_public_by_at bound is the late collection/discovery timestamp, not the original first-public minute.",
+          "reassessment_policy": "NEW_MATERIAL_FACT_OR_VERIFIABLE_ERROR_ONLY; next_review_at is a stale-warning visibility marker, not a scheduled re-investigation or automatic reassessment",
+          "reviewed_at": "2026-11-10T22:52:43Z",
+          "reviewer": "event-alert-v2.1-source-review"
         }
       ],
-      "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY_FROM_LATE_DISCOVERY; original release minute not independently verified; 2026-11-10T22:52:43Z is collection observation, not first_public_at"
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/coreweave3q26earningspress.htm",
+        "https://investors.coreweave.com/files/content_files/CoreWeave-3Q-2026-Infographic.pdf"
+      ],
+      "title": "Q3 2026 results: $3.661bn revenue, 200MW+ additional active power, financing costs"
     },
     {
+      "entity": "SoftBank Group Corp.",
+      "event_date": "2026-11-10",
       "event_key": "SOFTBANK-GROUP-FY2026-Q2-EARNINGS-20261110",
       "id": "EVT-20261110-8A35ECE41917",
-      "entity": "SoftBank Group Corp.",
-      "title": "SoftBank FY2026 Q2 earnings publication; AI infrastructure economics subject to source verification",
-      "priority": "CRITICAL",
-      "event_date": "2026-11-10",
-      "source_refs": [
-        "https://group.softbank/en/event/earnings_2026q2"
-      ],
       "known_public_by_at": "2026-11-10T19:05:20Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "priority": "CRITICAL",
       "registered_at": "2026-11-10T19:05:20Z",
       "registration_mode": "SAME_DAY_POST_RELEASE_CONSERVATIVE_BOUND",
       "reviews": [
         {
-          "decision": "EARLY_WARNING",
-          "factor": "R7",
-          "direction": "DETERIORATION",
           "confidence": "LOW",
-          "reviewed_at": "2026-11-10T19:05:20Z",
-          "reviewer": "event-alert-source-review",
-          "reason": "Issuer confirms Q2 FY2026 earnings publication on Nov 10. Previously alerted reported impairment and AI infrastructure project changes require direct line-item verification against issuer financial statement before treating them as realized funded-project cancellation/restructuring. No independent qualified R7 outcome established.",
           "counterevidence": "The issuer's earnings landing page does not by itself establish a funded AI project cancellation or quantify an independently realized project loss; financing and continuing projects may offset any impairment.",
+          "decision": "EARLY_WARNING",
+          "direction": "DETERIORATION",
           "evidence_refs": [
             "https://group.softbank/en/event/earnings_2026q2"
           ],
+          "factor": "R7",
+          "next_review_at": "2026-11-17T19:05:20Z",
           "qualification_triggers": [
             "Verify exact impairment and affected funded project in primary financial statement, with comparable economic baseline",
             "Document actual funded-project defer/cancel/restructure and causal independence from existing factors"
           ],
-          "next_review_at": "2026-11-17T19:05:20Z",
-          "reassessment_policy": "NEW_MATERIAL_FACT_OR_VERIFIABLE_ERROR_ONLY"
+          "reason": "Issuer confirms Q2 FY2026 earnings publication on Nov 10. Previously alerted reported impairment and AI infrastructure project changes require direct line-item verification against issuer financial statement before treating them as realized funded-project cancellation/restructuring. No independent qualified R7 outcome established.",
+          "reassessment_policy": "NEW_MATERIAL_FACT_OR_VERIFIABLE_ERROR_ONLY",
+          "reviewed_at": "2026-11-10T19:05:20Z",
+          "reviewer": "event-alert-source-review"
         }
-      ]
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://group.softbank/en/event/earnings_2026q2"
+      ],
+      "title": "SoftBank FY2026 Q2 earnings publication; AI infrastructure economics subject to source verification"
     },
     {
+      "entity": "U.S. Bureau of Labor Statistics",
+      "event_date": "2026-11-10",
       "event_key": "BLS-CPI-OCT2026",
       "id": "EVT-20261110-D3B018231628",
-      "entity": "U.S. Bureau of Labor Statistics",
-      "title": "October 2026 CPI: headline +0.4% m/m, core +0.3% m/m",
-      "priority": "HIGH",
-      "event_date": "2026-11-10",
-      "source_refs": [
-        "https://www.bls.gov/news.release/CPI.htm"
-      ],
       "known_public_by_at": "2026-11-10T19:05:20Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "priority": "HIGH",
       "registered_at": "2026-11-10T19:05:20Z",
       "registration_mode": "SAME_DAY_POST_RELEASE_CONSERVATIVE_BOUND",
       "reviews": [
         {
+          "counterevidence": "Headline monthly CPI slowed from September +0.6%; market response and pre-release consensus require independently timestamped verification.",
           "decision": "MACRO_ONLY",
           "factor": "MACRO",
-          "reviewed_at": "2026-11-10T19:05:20Z",
-          "reviewer": "event-alert-source-review",
           "reason": "BLS October CPI +0.4% m/m and core +0.3% m/m, released on Nov 10. Official 08:30 EST embargo is not independently verified first-public timestamp. Inflation/discount-rate channel may affect F3/F4 but not observed independent R3/R5/R6/R7 AI project economics.",
-          "counterevidence": "Headline monthly CPI slowed from September +0.6%; market response and pre-release consensus require independently timestamped verification."
+          "reviewed_at": "2026-11-10T19:05:20Z",
+          "reviewer": "event-alert-source-review"
         }
-      ]
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://www.bls.gov/news.release/CPI.htm"
+      ],
+      "title": "October 2026 CPI: headline +0.4% m/m, core +0.3% m/m"
     },
     {
+      "availability_basis": "ABC News original publication 2026-11-12 08:14 Adelaide ACDT = 2026-11-11 21:44 UTC; Quantum DC issuer project page dated 2026-11-12, exact first publication minute not established. NY report date 2026-11-11; source became available 16:44 EST, after Nov 11 Daily Close cutoff 16:27 EST. Event key retains local Australian source date 20261112.",
+      "entity": "Quantum DC",
+      "event_date": "2026-11-11",
       "event_key": "QUANTUMDC-TUNGKILLO-PLANNING-PAUSE-20261112",
       "id": "EVT-20261111-BFF3973B9E78",
-      "entity": "Quantum DC",
-      "title": "Tungkillo 1,200 MW proposed AI data-centre planning approval programme paused until at least 2027",
-      "priority": "HIGH",
-      "event_date": "2026-11-11",
-      "source_refs": [
-        "https://quantumdc.com.au/tungkillo",
-        "https://www.abc.net.au/news/2026-11-12/quantum-dc-pauses-tungkillo-ai-data-centre/107376052"
-      ],
       "known_public_by_at": "2026-11-11T21:44:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
-      "availability_basis": "ABC News original publication 2026-11-12 08:14 Adelaide ACDT = 2026-11-11 21:44 UTC; Quantum DC issuer project page dated 2026-11-12, exact first publication minute not established. NY report date 2026-11-11; source became available 16:44 EST, after Nov 11 Daily Close cutoff 16:27 EST. Event key retains local Australian source date 20261112.",
+      "priority": "HIGH",
       "registered_at": "2026-11-12T10:11:14Z",
       "registration_mode": "NEXT_DAY_SOURCE_BACKFILL_NY_DATE",
       "reviews": [
         {
-          "decision": "NOT_QUALIFIED_CLOSED",
-          "factor": "R7",
-          "reviewed_at": "2026-11-12T10:11:14Z",
-          "reviewer": "hourly-event-alert-v2.1-source-review",
-          "reason": "Issuer confirms pause of 1.2 GW planning approval programme, no Crown Sponsorship or development application in 2026. The 1.2 GW is a proposed maximum, not funded, delivered, contracted or billable capacity. No verified executed cancellation, funded-project economic defer or cash impact: fails R7 observable outcome; does not qualify R5/R6/R3. Physical pipeline risk/context only, no Challenger signed delta.",
-          "counterevidence": "Quantum DC says it is continuing engagement and independent specialist reviews, and has not ruled out progressing the project; no application lodged or approved. Reopen only with documented funded-project commitment and executed economic defer/cancel, signed payment changes or billable capacity change.",
-          "reopen_policy": "MATERIAL_NEW_EVIDENCE_ONLY",
           "assessment_status": "FINAL_FOR_CUTOFF",
+          "counterevidence": "Quantum DC says it is continuing engagement and independent specialist reviews, and has not ruled out progressing the project; no application lodged or approved. Reopen only with documented funded-project commitment and executed economic defer/cancel, signed payment changes or billable capacity change.",
+          "decision": "NOT_QUALIFIED_CLOSED",
+          "evidence_refs": [
+            "https://quantumdc.com.au/tungkillo",
+            "https://www.abc.net.au/news/2026-11-12/quantum-dc-pauses-tungkillo-ai-data-centre/107376052"
+          ],
+          "factor": "R7",
+          "reason": "Issuer confirms pause of 1.2 GW planning approval programme, no Crown Sponsorship or development application in 2026. The 1.2 GW is a proposed maximum, not funded, delivered, contracted or billable capacity. No verified executed cancellation, funded-project economic defer or cash impact: fails R7 observable outcome; does not qualify R5/R6/R3. Physical pipeline risk/context only, no Challenger signed delta.",
           "related_tracks": [
             "P1-P4_PHYSICAL_PIPELINE_CONTEXT",
             "F4_PHYSICAL",
             "F3_FINANCIAL_CONDITIONAL"
           ],
-          "signed_event": null,
-          "evidence_refs": [
-            "https://quantumdc.com.au/tungkillo",
-            "https://www.abc.net.au/news/2026-11-12/quantum-dc-pauses-tungkillo-ai-data-centre/107376052"
-          ],
           "reopen_only_on": [
             "New primary documentation of an executed funded-project cancellation or material contractual payment change",
             "Verified paid AI compute capacity or financial obligation affected by the pause",
             "Documented source/PIT error requiring a corrected chronological record"
-          ]
+          ],
+          "reopen_policy": "MATERIAL_NEW_EVIDENCE_ONLY",
+          "reviewed_at": "2026-11-12T10:11:14Z",
+          "reviewer": "hourly-event-alert-v2.1-source-review",
+          "signed_event": null
         }
-      ]
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://quantumdc.com.au/tungkillo",
+        "https://www.abc.net.au/news/2026-11-12/quantum-dc-pauses-tungkillo-ai-data-centre/107376052"
+      ],
+      "title": "Tungkillo 1,200 MW proposed AI data-centre planning approval programme paused until at least 2027"
     },
     {
+      "entity": "Talen Energy",
+      "event_date": "2026-11-11",
       "event_key": "TALEN-GUERNSEY-PJM-750MW-SEVEN-YEAR-CAPACITY-20261111",
       "id": "EVT-20261111-D4570B4103FA",
-      "entity": "Talen Energy",
-      "title": "Seven-year forward sale of 750 MW Guernsey PJM generation capacity, delivery 2029/30–2035/36",
-      "priority": "HIGH",
-      "event_date": "2026-11-11",
-      "source_refs": [
-        "https://ir.talenenergy.com/news-releases/news-release-details/talen-signs-750-mw-long-term-capacity-agreement",
-        "https://www.globenewswire.com/news-release/2026/11/11/3400549/0/en/talen-signs-750-mw-long-term-capacity-agreement.html"
-      ],
       "known_public_by_at": "2026-11-11T11:30:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "priority": "HIGH",
       "registered_at": "2026-11-14T16:05:21Z",
       "registration_mode": "BACKFILL",
       "reviews": [
         {
+          "counterevidence": "Delivery begins in 2029/30; buyer unnamed, and the release does not establish AI compute customer or current billable AI MW.",
           "decision": "CONTEXT_ONLY",
           "factor": "CONTEXT",
-          "reviewed_at": "2026-11-14T16:05:21Z",
-          "reviewer": "retrospective-event-reconciliation",
           "reason": "Seven-year contracted forward PJM power-generation capacity is material electricity-market context but no verified AI-specific payment obligation, current paid AI compute delivery or funded-project reversal. Retrospective registration, not a contemporaneous Nov 11 signal.",
-          "counterevidence": "Delivery begins in 2029/30; buyer unnamed, and the release does not establish AI compute customer or current billable AI MW."
+          "reviewed_at": "2026-11-14T16:05:21Z",
+          "reviewer": "retrospective-event-reconciliation"
         }
-      ]
-    },
-    {
-      "event_key": "CISCO_FY2027_Q1_EARNINGS_2026_11_12",
-      "id": "EVT-20261112-596801136B58",
-      "entity": "Cisco Systems, Inc.",
-      "title": "Fiscal 2027 Q1 results: $18.5bn revenue and FY27 hyperscaler AI infrastructure revenue guidance raised to $9bn",
-      "priority": "HIGH",
-      "event_date": "2026-11-12",
-      "source_refs": [
-        "https://www.prnewswire.com/news-releases/cisco-reports-first-quarter-earnings-302938394.html",
-        "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-reports-first-quarter-earnings.html"
       ],
-      "known_public_by_at": "2026-11-12T21:05:00Z",
       "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
-      "registered_at": "2026-11-12T23:06:19Z",
-      "registration_mode": "NEXT_HOURLY_CHECK_BACKFILL",
-      "reviews": [
-        {
-          "decision": "CONTEXT_ONLY",
-          "factor": "CONTEXT",
-          "reviewed_at": "2026-11-12T23:06:19Z",
-          "reviewer": "event-alert-source-review",
-          "reason": "Issuer Q1 FY27 revenue $18.5bn +24% YoY, non-GAAP EPS $1.40, operating cash flow $4.4bn. Hyperscaler AI infrastructure revenue FY27 guidance increased from $7.5bn to $9bn; this is a future supplier revenue outlook, not realized end-customer AI project ROI, paid MW, enforceable amended payments or funded project cancellation. R1/R2/R4 frozen issuer cohort unchanged; R3/R5/R6/R7 not QUALIFIED. F1/F4 favorable AI networking demand context, F2/F3/F5 no independently measured incremental effect; P1–P4 no independently verified physical paid capacity.",
-          "counterevidence": "Non-GAAP gross margin 65.6% vs 68.1% year ago, partly due to hardware cost pressures; hyperscaler AI FY27 $9bn is guidance, not realized cash receipts or customers' economic returns. Reuters describes shares flat in extended trading, while other early observations differ. No validated timestamped matched quote pair.",
-          "evidence_refs": [
-            "https://www.prnewswire.com/news-releases/cisco-reports-first-quarter-earnings-302938394.html",
-            "https://www.reuters.com/business/media-telecom/cisco-raises-annual-revenue-forecast-strong-ai-networking-demand-2026-11-12/"
-          ],
-          "reopen_policy": "MATERIAL_NEW_PRIMARY_AI_PROJECT_ECONOMIC_OUTCOME_ONLY"
-        }
-      ]
-    },
-    {
-      "event_key": "CEREBRAS-Q3-2026-EARNINGS-20261112",
-      "id": "EVT-20261112-8078B5459010",
-      "entity": "Cerebras Systems",
-      "title": "Q3 2026 $230.9m core revenue, +272% core cloud growth and 700MW contracted capacity",
-      "priority": "CRITICAL",
-      "event_date": "2026-11-12",
       "source_refs": [
-        "https://investors.cerebras.ai/news-releases/news-release-details/cerebras-systems-delivers-record-revenue-third-quarter-2026",
-        "https://www.stocktitan.net/news/CBRS/cerebras-systems-delivers-record-revenue-in-third-quarter-2026-fd6b2a0s6dj0.html"
+        "https://ir.talenenergy.com/news-releases/news-release-details/talen-signs-750-mw-long-term-capacity-agreement",
+        "https://www.globenewswire.com/news-release/2026/11/11/3400549/0/en/talen-signs-750-mw-long-term-capacity-agreement.html"
       ],
-      "known_public_by_at": "2026-11-12T21:05:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
-      "registered_at": "2026-11-12T22:32:21Z",
-      "registration_mode": "SAME_DAY_POST_RELEASE_CONSERVATIVE_BOUND",
-      "reviews": [
-        {
-          "decision": "EARLY_WARNING",
-          "factor": "R6",
-          "direction": "IMPROVEMENT",
-          "confidence": "LOW",
-          "reviewed_at": "2026-11-12T22:32:21Z",
-          "reviewer": "hourly-event-alert-v2.1",
-          "reason": "Original issuer reports $141.9m GAAP cloud/services revenue (+265% YoY), $230.9m core revenue, $144.9m core cloud revenue (+272%) and 700 gross MW contracted for delivery by end 2027. Actual revenue growth is positive demand evidence, but 700MW is contracted, NOT verified paid delivered MW. No matched like-for-like paid capacity or realized project unit economics R3/R6 established; R5/R7 none. Frozen R1/R2/R4 unchanged; P1-P4 contracted pipeline only.",
-          "counterevidence": "GAAP operating loss $224.1m, GAAP margin negative; core metric adds back customer-warrant amortization, and OpenAI concentration remains a risk. Revenue growth is real but does not demonstrate new paid MW.",
-          "evidence_refs": [
-            "https://investors.cerebras.ai/news-releases/news-release-details/cerebras-systems-delivers-record-revenue-third-quarter-2026"
-          ],
-          "qualification_triggers": [
-            "Original issuer proof of comparable revenue-generating delivered/paid MW (not contracted pipeline) at two PIT dates",
-            "Distinct realized compute unit economics with comparable denominator, excluding customer warrant accounting"
-          ],
-          "next_review_at": "2026-11-17T22:32:21Z",
-          "reassessment_policy": "NEW_MATERIAL_FACT_OR_VERIFIABLE_ERROR_ONLY"
-        }
-      ]
-    },
-    {
-      "event_key": "NEBIUS-GROUP-Q3-2026-EARNINGS-20261112",
-      "id": "EVT-20261112-9753CB400B21",
-      "entity": "Nebius Group N.V.",
-      "title": "Nebius Q3 2026 earnings: $980.8m revenue, $7.30bn quarterly equipment purchases, 2026 revenue guidance reduced due to third-party capacity delays",
-      "priority": "CRITICAL",
-      "event_date": "2026-11-12",
-      "source_refs": [
-        "https://assets.nebius.com/assets/508584f1-b73d-484f-b64f-f96a5bc3b515/Nebius%20Q3%202026%20Financial%20Results%20Press%20Release.pdf",
-        "https://nebius.com/newsroom/nebius-reports-third-quarter-2026-financial-results"
-      ],
-      "known_public_by_at": "2026-11-12T14:22:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
-      "availability_basis": "SEC Form 6-K reported accepted 09:22 EST (14:22 UTC) Nov 12, conservative upper bound, not first publication; original issuer release Business Wire reported 07:11 EST, not independently certified as first-public",
-      "registered_at": "2026-11-12T19:38:00Z",
-      "registration_mode": "SAME_DAY_POST_RELEASE_CONSERVATIVE_BOUND",
-      "reviews": [
-        {
-          "decision": "CONTEXT_ONLY",
-          "factor": "CONTEXT",
-          "reviewed_at": "2026-11-12T19:38:00Z",
-          "reviewer": "event-alert-v2.1-source-audit",
-          "reason": "Primary Q3 report in SEC 6-K: $980.8m revenue (+571% YoY), $465.8m adjusted EBITDA, GAAP net loss $37.5m, Q3 operating cash use $273m and PPE/intangible purchases $7.3004bn. 2026 revenue outlook lowered to $3.0–3.2bn due to third-party capacity delivery delays to H1 2027; customer contracts reportedly remain in force. No identified independently funded project economic defer/cancel or executed contract amendment for R7/R5, no incremental paid delivered MW for R6, and no matched unit compute cost for R3. NBIS is not part of frozen R1/R2/R4 issuer roster; no Challenger score change. Potential F1 demand strength, F3 financing pressure, F4 physical delivery timing, F5 repricing, P1–P4 contextual not measured.",
-          "counterevidence": "Revenue +571% YoY, adjusted EBITDA positive, company says delayed capacity remains contracted and customer demand strong. Conversely operating cash burn and very large capex purchases raise funding intensity; no project-level ROI measured.",
-          "evidence_refs": [
-            "https://assets.nebius.com/assets/508584f1-b73d-484f-b64f-f96a5bc3b515/Nebius%20Q3%202026%20Financial%20Results%20Press%20Release.pdf",
-            "https://www.reuters.com/technology/nebius-beats-quarterly-revenue-estimates-strong-ai-demand-2026-11-12/"
-          ],
-          "reopen_policy": "MATERIAL_NEW_PRIMARY_EVIDENCE_ONLY: identifiable funded-project economic change, enforceable contract amendment, distinct paid MW change or matched compute unit cost; no scheduled automatic reassessment"
-        }
-      ]
-    },
-    {
-      "event_key": "APPLIED-MATERIALS-FY2026-Q4-EARNINGS-20261112",
-      "id": "EVT-20261112-ABB2390AE170",
-      "entity": "Applied Materials",
-      "title": "FY2026 Q4 record $10.41bn revenue and $11.1bn next-quarter outlook",
-      "priority": "CRITICAL",
-      "event_date": "2026-11-12",
-      "source_refs": [
-        "https://www.stocktitan.net/news/AMAT/applied-materials-announces-fourth-quarter-and-fiscal-year-2026-7z5nei8eafpd.html",
-        "https://ir.appliedmaterials.com/static-files/14fd85ae-ff29-4756-879c-c899da301ae6"
-      ],
-      "known_public_by_at": "2026-11-12T21:01:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
-      "registered_at": "2026-11-12T22:32:21Z",
-      "registration_mode": "SAME_DAY_POST_RELEASE_CONSERVATIVE_BOUND",
-      "reviews": [
-        {
-          "decision": "CONTEXT_ONLY",
-          "factor": "CONTEXT",
-          "reviewed_at": "2026-11-12T22:32:21Z",
-          "reviewer": "hourly-event-alert-v2.1",
-          "reason": "Issuer-distributed GlobeNewswire Q4 results via dated 16:01 EST syndication: $10.41bn sales (+53% YoY), $4.16 non-GAAP EPS, guidance $11.1bn. Positive equipment-demand signal, not independent observed project R3/R5/R6/R7 economics; no frozen R1/R2/R4 cohort revision. P1-P4 no separately measured delivered paid AI capacity.",
-          "counterevidence": "Strong AI wafer fab orders and $2.6bn quarterly free cash flow argue against immediate supplier collapse, but forecasts and fab pipeline are not customer realized AI ROI. Same-session shares weak; cannot attribute all market movement to earnings.",
-          "evidence_refs": [
-            "https://www.stocktitan.net/news/AMAT/applied-materials-announces-fourth-quarter-and-fiscal-year-2026-7z5nei8eafpd.html",
-            "https://ir.appliedmaterials.com/static-files/14fd85ae-ff29-4756-879c-c899da301ae6"
-          ],
-          "assessment_status": "FINAL_FOR_CUTOFF",
-          "reopen_policy": "MATERIAL_NEW_PRIMARY_PROJECT_ECONOMIC_EVIDENCE_ONLY"
-        }
-      ]
-    },
-    {
-      "event_key": "NVIDIA_CEO_TRANSITION_HUANG_RESIGNATION_20261112",
-      "id": "EVT-20261112-EE567E3A09CE",
-      "entity": "NVIDIA Corporation",
-      "title": "Jensen Huang resigns as CEO and board director; Colette Kress becomes interim CEO",
-      "priority": "CRITICAL",
-      "event_date": "2026-11-12",
-      "source_refs": [
-        "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
-        "https://www.stocktitan.net/articles/jensen-huang-resigns-nvidia-ceo-2026"
-      ],
-      "known_public_by_at": "2026-11-12T14:11:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
-      "registered_at": "2026-11-12T14:53:49Z",
-      "registration_mode": "SAME_DAY_POST_RELEASE_CONSERVATIVE_BOUND",
-      "reviews": [
-        {
-          "decision": "CONTEXT_ONLY",
-          "factor": "CONTEXT",
-          "reviewed_at": "2026-11-12T14:53:49Z",
-          "reviewer": "hourly-event-alert-v2.1",
-          "reason": "Official NVIDIA board announcement confirms CEO/board departure and interim leadership. Material governance/execution risk, but no independently observed realized AI project economics for R3/R5/R6/R7; R1/R2/R4 fixed issuer observations are not updated by personnel change; P1-P4 have no independently measured physical capacity impact. F2/F4/F5 qualitative governance/technical/export-policy risk only. No QUALIFIED signed delta.",
-          "counterevidence": "NVIDIA states operations, customer commitments and product roadmap expected to continue uninterrupted; Q3 results remain scheduled Nov 17. No confirmed cancellations, revenue-generating MW loss, executed contract impairment or customer nonpayment. Reuters reports price decline but preexisting controversy and other factors prevent causal attribution."
-        }
-      ]
-    },
-    {
-      "event_key": "FED-FINANCIAL-STABILITY-AI-FINANCING-20261113",
-      "id": "EVT-20261113-08259782CC5E",
-      "entity": "Federal Reserve Board",
-      "title": "November 2026 Financial Stability Report identifies AI data-center financing and leverage vulnerabilities",
-      "priority": "HIGH",
-      "event_date": "2026-11-13",
-      "source_refs": [
-        "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
-      ],
-      "known_public_by_at": "2026-11-14T02:10:00Z",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
-      "availability_basis": "Original Federal Reserve November 2026 Financial Stability Report; documented retrieval by 2026-11-14 02:10 UTC (Nov 13 21:10 EST), after original Daily Close cutoff 16:34 EST. Exact first publication time unknown. Source reflects information generally available by Oct 28.",
-      "registered_at": "2026-11-14T16:24:02Z",
-      "registration_mode": "RETROSPECTIVE_SOURCE_RECONCILIATION_NO_BACKDATE",
-      "reviews": [
-        {
-          "decision": "MACRO_ONLY",
-          "factor": "MACRO",
-          "reviewed_at": "2026-11-14T16:24:02Z",
-          "reviewer": "research-reconciliation-v2.1",
-          "reason": "Fed November 2026 Financial Stability Report documents elevated AI-related financing and data-center leverage risks and market-contact concerns. These are aggregate financial stability vulnerabilities, not independent realized AI-project cash outcomes for R3/R5/R6/R7; no signed delta. Compare separately within macro cohort and jointly only with inflation/rate/credit overlap removed.",
-          "counterevidence": "The Fed describes the banking system as sound and resilient and overall business borrowing and funding vulnerabilities as moderate. Survey concerns are opinions, not measured crisis probability. Source data generally through Oct 28; no observed executed AI-project cancellation or paid capacity disruption."
-        }
-      ]
-    },
-    {
-      "entity": "U.S. Bureau of Labor Statistics",
-      "event_date": "2026-11-13",
-      "event_key": "BLS-PPI-OCT2026",
-      "id": "EVT-20261113-1D70E4821EC3",
-      "known_public_by_at": "2026-11-13T14:54:56Z",
-      "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
-      "priority": "HIGH",
-      "registered_at": "2026-11-13T14:55:25Z",
-      "source_refs": [
-        "https://www.bls.gov/news.release/ppi.nr0.htm"
-      ],
-      "reviews": [
-        {
-          "decision": "MACRO_ONLY",
-          "factor": "MACRO",
-          "reason": "October PPI +0.3% m/m vs +0.4% consensus, +6.5% y/y; macro funding/rate transmission only; no realized independent R3/R5/R6/R7 AI-project outcome; overlap with CPI/Fed must not be added as separate signed event. R1/R2/R4 frozen cohort unchanged; P1-P4 no direct observation.",
-          "reviewed_at": "2026-11-13T14:55:25Z",
-          "reviewer": "event-alerts",
-          "counterevidence": "Monthly PPI undershot consensus and Treasury yields eased; elevated annual inflation is not itself an AI project cash loss."
-        }
-      ],
-      "title": "October 2026 Producer Price Index (PPI) release: +0.3% MoM, +6.5% YoY",
-      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY"
+      "title": "Seven-year forward sale of 750 MW Guernsey PJM generation capacity, delivery 2029/30–2035/36"
     },
     {
       "entity": "Cerebras Systems / OpenAI",
@@ -1481,6 +1357,215 @@
         "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073494/0001628280-26-073494-index.htm"
       ],
       "title": "OpenAI MRA capacity shortfall caused service credits to accrue from 1-Oct-2026"
+    },
+    {
+      "entity": "Cisco Systems, Inc.",
+      "event_date": "2026-11-12",
+      "event_key": "CISCO_FY2027_Q1_EARNINGS_2026_11_12",
+      "id": "EVT-20261112-596801136B58",
+      "known_public_by_at": "2026-11-12T21:05:00Z",
+      "priority": "HIGH",
+      "registered_at": "2026-11-12T23:06:19Z",
+      "registration_mode": "NEXT_HOURLY_CHECK_BACKFILL",
+      "reviews": [
+        {
+          "counterevidence": "Non-GAAP gross margin 65.6% vs 68.1% year ago, partly due to hardware cost pressures; hyperscaler AI FY27 $9bn is guidance, not realized cash receipts or customers' economic returns. Reuters describes shares flat in extended trading, while other early observations differ. No validated timestamped matched quote pair.",
+          "decision": "CONTEXT_ONLY",
+          "evidence_refs": [
+            "https://www.prnewswire.com/news-releases/cisco-reports-first-quarter-earnings-302938394.html",
+            "https://www.reuters.com/business/media-telecom/cisco-raises-annual-revenue-forecast-strong-ai-networking-demand-2026-11-12/"
+          ],
+          "factor": "CONTEXT",
+          "reason": "Issuer Q1 FY27 revenue $18.5bn +24% YoY, non-GAAP EPS $1.40, operating cash flow $4.4bn. Hyperscaler AI infrastructure revenue FY27 guidance increased from $7.5bn to $9bn; this is a future supplier revenue outlook, not realized end-customer AI project ROI, paid MW, enforceable amended payments or funded project cancellation. R1/R2/R4 frozen issuer cohort unchanged; R3/R5/R6/R7 not QUALIFIED. F1/F4 favorable AI networking demand context, F2/F3/F5 no independently measured incremental effect; P1–P4 no independently verified physical paid capacity.",
+          "reopen_policy": "MATERIAL_NEW_PRIMARY_AI_PROJECT_ECONOMIC_OUTCOME_ONLY",
+          "reviewed_at": "2026-11-12T23:06:19Z",
+          "reviewer": "event-alert-source-review"
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://www.prnewswire.com/news-releases/cisco-reports-first-quarter-earnings-302938394.html",
+        "https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-reports-first-quarter-earnings.html"
+      ],
+      "title": "Fiscal 2027 Q1 results: $18.5bn revenue and FY27 hyperscaler AI infrastructure revenue guidance raised to $9bn"
+    },
+    {
+      "entity": "Cerebras Systems",
+      "event_date": "2026-11-12",
+      "event_key": "CEREBRAS-Q3-2026-EARNINGS-20261112",
+      "id": "EVT-20261112-8078B5459010",
+      "known_public_by_at": "2026-11-12T21:05:00Z",
+      "priority": "CRITICAL",
+      "registered_at": "2026-11-12T22:32:21Z",
+      "registration_mode": "SAME_DAY_POST_RELEASE_CONSERVATIVE_BOUND",
+      "reviews": [
+        {
+          "confidence": "LOW",
+          "counterevidence": "GAAP operating loss $224.1m, GAAP margin negative; core metric adds back customer-warrant amortization, and OpenAI concentration remains a risk. Revenue growth is real but does not demonstrate new paid MW.",
+          "decision": "EARLY_WARNING",
+          "direction": "IMPROVEMENT",
+          "evidence_refs": [
+            "https://investors.cerebras.ai/news-releases/news-release-details/cerebras-systems-delivers-record-revenue-third-quarter-2026"
+          ],
+          "factor": "R6",
+          "next_review_at": "2026-11-17T22:32:21Z",
+          "qualification_triggers": [
+            "Original issuer proof of comparable revenue-generating delivered/paid MW (not contracted pipeline) at two PIT dates",
+            "Distinct realized compute unit economics with comparable denominator, excluding customer warrant accounting"
+          ],
+          "reason": "Original issuer reports $141.9m GAAP cloud/services revenue (+265% YoY), $230.9m core revenue, $144.9m core cloud revenue (+272%) and 700 gross MW contracted for delivery by end 2027. Actual revenue growth is positive demand evidence, but 700MW is contracted, NOT verified paid delivered MW. No matched like-for-like paid capacity or realized project unit economics R3/R6 established; R5/R7 none. Frozen R1/R2/R4 unchanged; P1-P4 contracted pipeline only.",
+          "reassessment_policy": "NEW_MATERIAL_FACT_OR_VERIFIABLE_ERROR_ONLY",
+          "reviewed_at": "2026-11-12T22:32:21Z",
+          "reviewer": "hourly-event-alert-v2.1"
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://investors.cerebras.ai/news-releases/news-release-details/cerebras-systems-delivers-record-revenue-third-quarter-2026",
+        "https://www.stocktitan.net/news/CBRS/cerebras-systems-delivers-record-revenue-in-third-quarter-2026-fd6b2a0s6dj0.html"
+      ],
+      "title": "Q3 2026 $230.9m core revenue, +272% core cloud growth and 700MW contracted capacity"
+    },
+    {
+      "availability_basis": "SEC Form 6-K reported accepted 09:22 EST (14:22 UTC) Nov 12, conservative upper bound, not first publication; original issuer release Business Wire reported 07:11 EST, not independently certified as first-public",
+      "entity": "Nebius Group N.V.",
+      "event_date": "2026-11-12",
+      "event_key": "NEBIUS-GROUP-Q3-2026-EARNINGS-20261112",
+      "id": "EVT-20261112-9753CB400B21",
+      "known_public_by_at": "2026-11-12T14:22:00Z",
+      "priority": "CRITICAL",
+      "registered_at": "2026-11-12T19:38:00Z",
+      "registration_mode": "SAME_DAY_POST_RELEASE_CONSERVATIVE_BOUND",
+      "reviews": [
+        {
+          "counterevidence": "Revenue +571% YoY, adjusted EBITDA positive, company says delayed capacity remains contracted and customer demand strong. Conversely operating cash burn and very large capex purchases raise funding intensity; no project-level ROI measured.",
+          "decision": "CONTEXT_ONLY",
+          "evidence_refs": [
+            "https://assets.nebius.com/assets/508584f1-b73d-484f-b64f-f96a5bc3b515/Nebius%20Q3%202026%20Financial%20Results%20Press%20Release.pdf",
+            "https://www.reuters.com/technology/nebius-beats-quarterly-revenue-estimates-strong-ai-demand-2026-11-12/"
+          ],
+          "factor": "CONTEXT",
+          "reason": "Primary Q3 report in SEC 6-K: $980.8m revenue (+571% YoY), $465.8m adjusted EBITDA, GAAP net loss $37.5m, Q3 operating cash use $273m and PPE/intangible purchases $7.3004bn. 2026 revenue outlook lowered to $3.0–3.2bn due to third-party capacity delivery delays to H1 2027; customer contracts reportedly remain in force. No identified independently funded project economic defer/cancel or executed contract amendment for R7/R5, no incremental paid delivered MW for R6, and no matched unit compute cost for R3. NBIS is not part of frozen R1/R2/R4 issuer roster; no Challenger score change. Potential F1 demand strength, F3 financing pressure, F4 physical delivery timing, F5 repricing, P1–P4 contextual not measured.",
+          "reopen_policy": "MATERIAL_NEW_PRIMARY_EVIDENCE_ONLY: identifiable funded-project economic change, enforceable contract amendment, distinct paid MW change or matched compute unit cost; no scheduled automatic reassessment",
+          "reviewed_at": "2026-11-12T19:38:00Z",
+          "reviewer": "event-alert-v2.1-source-audit"
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://assets.nebius.com/assets/508584f1-b73d-484f-b64f-f96a5bc3b515/Nebius%20Q3%202026%20Financial%20Results%20Press%20Release.pdf",
+        "https://nebius.com/newsroom/nebius-reports-third-quarter-2026-financial-results"
+      ],
+      "title": "Nebius Q3 2026 earnings: $980.8m revenue, $7.30bn quarterly equipment purchases, 2026 revenue guidance reduced due to third-party capacity delays"
+    },
+    {
+      "entity": "Applied Materials",
+      "event_date": "2026-11-12",
+      "event_key": "APPLIED-MATERIALS-FY2026-Q4-EARNINGS-20261112",
+      "id": "EVT-20261112-ABB2390AE170",
+      "known_public_by_at": "2026-11-12T21:01:00Z",
+      "priority": "CRITICAL",
+      "registered_at": "2026-11-12T22:32:21Z",
+      "registration_mode": "SAME_DAY_POST_RELEASE_CONSERVATIVE_BOUND",
+      "reviews": [
+        {
+          "assessment_status": "FINAL_FOR_CUTOFF",
+          "counterevidence": "Strong AI wafer fab orders and $2.6bn quarterly free cash flow argue against immediate supplier collapse, but forecasts and fab pipeline are not customer realized AI ROI. Same-session shares weak; cannot attribute all market movement to earnings.",
+          "decision": "CONTEXT_ONLY",
+          "evidence_refs": [
+            "https://www.stocktitan.net/news/AMAT/applied-materials-announces-fourth-quarter-and-fiscal-year-2026-7z5nei8eafpd.html",
+            "https://ir.appliedmaterials.com/static-files/14fd85ae-ff29-4756-879c-c899da301ae6"
+          ],
+          "factor": "CONTEXT",
+          "reason": "Issuer-distributed GlobeNewswire Q4 results via dated 16:01 EST syndication: $10.41bn sales (+53% YoY), $4.16 non-GAAP EPS, guidance $11.1bn. Positive equipment-demand signal, not independent observed project R3/R5/R6/R7 economics; no frozen R1/R2/R4 cohort revision. P1-P4 no separately measured delivered paid AI capacity.",
+          "reopen_policy": "MATERIAL_NEW_PRIMARY_PROJECT_ECONOMIC_EVIDENCE_ONLY",
+          "reviewed_at": "2026-11-12T22:32:21Z",
+          "reviewer": "hourly-event-alert-v2.1"
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://www.stocktitan.net/news/AMAT/applied-materials-announces-fourth-quarter-and-fiscal-year-2026-7z5nei8eafpd.html",
+        "https://ir.appliedmaterials.com/static-files/14fd85ae-ff29-4756-879c-c899da301ae6"
+      ],
+      "title": "FY2026 Q4 record $10.41bn revenue and $11.1bn next-quarter outlook"
+    },
+    {
+      "entity": "NVIDIA Corporation",
+      "event_date": "2026-11-12",
+      "event_key": "NVIDIA_CEO_TRANSITION_HUANG_RESIGNATION_20261112",
+      "id": "EVT-20261112-EE567E3A09CE",
+      "known_public_by_at": "2026-11-12T14:11:00Z",
+      "priority": "CRITICAL",
+      "registered_at": "2026-11-12T14:53:49Z",
+      "registration_mode": "SAME_DAY_POST_RELEASE_CONSERVATIVE_BOUND",
+      "reviews": [
+        {
+          "counterevidence": "NVIDIA states operations, customer commitments and product roadmap expected to continue uninterrupted; Q3 results remain scheduled Nov 17. No confirmed cancellations, revenue-generating MW loss, executed contract impairment or customer nonpayment. Reuters reports price decline but preexisting controversy and other factors prevent causal attribution.",
+          "decision": "CONTEXT_ONLY",
+          "factor": "CONTEXT",
+          "reason": "Official NVIDIA board announcement confirms CEO/board departure and interim leadership. Material governance/execution risk, but no independently observed realized AI project economics for R3/R5/R6/R7; R1/R2/R4 fixed issuer observations are not updated by personnel change; P1-P4 have no independently measured physical capacity impact. F2/F4/F5 qualitative governance/technical/export-policy risk only. No QUALIFIED signed delta.",
+          "reviewed_at": "2026-11-12T14:53:49Z",
+          "reviewer": "hourly-event-alert-v2.1"
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+        "https://www.stocktitan.net/articles/jensen-huang-resigns-nvidia-ceo-2026"
+      ],
+      "title": "Jensen Huang resigns as CEO and board director; Colette Kress becomes interim CEO"
+    },
+    {
+      "availability_basis": "Original Federal Reserve November 2026 Financial Stability Report; documented retrieval by 2026-11-14 02:10 UTC (Nov 13 21:10 EST), after original Daily Close cutoff 16:34 EST. Exact first publication time unknown. Source reflects information generally available by Oct 28.",
+      "entity": "Federal Reserve Board",
+      "event_date": "2026-11-13",
+      "event_key": "FED-FINANCIAL-STABILITY-AI-FINANCING-20261113",
+      "id": "EVT-20261113-08259782CC5E",
+      "known_public_by_at": "2026-11-14T02:10:00Z",
+      "priority": "HIGH",
+      "registered_at": "2026-11-14T16:24:02Z",
+      "registration_mode": "RETROSPECTIVE_SOURCE_RECONCILIATION_NO_BACKDATE",
+      "reviews": [
+        {
+          "counterevidence": "The Fed describes the banking system as sound and resilient and overall business borrowing and funding vulnerabilities as moderate. Survey concerns are opinions, not measured crisis probability. Source data generally through Oct 28; no observed executed AI-project cancellation or paid capacity disruption.",
+          "decision": "MACRO_ONLY",
+          "factor": "MACRO",
+          "reason": "Fed November 2026 Financial Stability Report documents elevated AI-related financing and data-center leverage risks and market-contact concerns. These are aggregate financial stability vulnerabilities, not independent realized AI-project cash outcomes for R3/R5/R6/R7; no signed delta. Compare separately within macro cohort and jointly only with inflation/rate/credit overlap removed.",
+          "reviewed_at": "2026-11-14T16:24:02Z",
+          "reviewer": "research-reconciliation-v2.1"
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://www.federalreserve.gov/publications/files/financial-stability-report-20261113.pdf"
+      ],
+      "title": "November 2026 Financial Stability Report identifies AI data-center financing and leverage vulnerabilities"
+    },
+    {
+      "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "entity": "U.S. Bureau of Labor Statistics",
+      "event_date": "2026-11-13",
+      "event_key": "BLS-PPI-OCT2026",
+      "id": "EVT-20261113-1D70E4821EC3",
+      "known_public_by_at": "2026-11-13T14:54:56Z",
+      "priority": "HIGH",
+      "registered_at": "2026-11-13T14:55:25Z",
+      "reviews": [
+        {
+          "counterevidence": "Monthly PPI undershot consensus and Treasury yields eased; elevated annual inflation is not itself an AI project cash loss.",
+          "decision": "MACRO_ONLY",
+          "factor": "MACRO",
+          "reason": "October PPI +0.3% m/m vs +0.4% consensus, +6.5% y/y; macro funding/rate transmission only; no realized independent R3/R5/R6/R7 AI-project outcome; overlap with CPI/Fed must not be added as separate signed event. R1/R2/R4 frozen cohort unchanged; P1-P4 no direct observation.",
+          "reviewed_at": "2026-11-13T14:55:25Z",
+          "reviewer": "event-alerts"
+        }
+      ],
+      "source_precision": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+      "source_refs": [
+        "https://www.bls.gov/news.release/ppi.nr0.htm"
+      ],
+      "title": "October 2026 Producer Price Index (PPI) release: +0.3% MoM, +6.5% YoY"
     }
   ],
   "schema": "ai-capex.challenger-v2.event-registry.v1"
