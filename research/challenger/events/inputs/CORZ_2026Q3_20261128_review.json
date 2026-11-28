@@ -1,0 +1,52 @@
+{
+  "id": "EVT-20260930-BEBDA0A0773C",
+  "decision": "QUALIFIED",
+  "factor": "R6",
+  "reason": "Billing capacity increased 395 to 485 MW (+90 MW, +22.8%) between Q2 and Q3 2026; same-basis colocation license fees increased $98.812m to $157.265m (+59.2%). This is realized billable AI hosting, not proposed MW or forecast GPU utilization.",
+  "reviewer": "Codex bounded primary-source research review",
+  "reviewed_at": "2026-11-28T07:39:27Z",
+  "public_by_verified_at": "2026-11-05T12:04:47Z",
+  "publication_proof_url": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000028/0001839341-26-000028-index.htm",
+  "backfill": true,
+  "counterevidence": "Revenue includes $57.556m power pass-through versus $35.073m in Q2, so gross colocation revenue is not net cash yield. One concentrated customer (CoreWeave), construction/financing exposure, unverified tenant GPU utilization and project FCF/IRR remain. 485 MW is a September 30 snapshot, not newly commissioned November capacity.",
+  "evidence_refs": [
+    "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q32026corescientificinc-ea.htm",
+    "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000030/core-20260930.htm",
+    "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000028/0001839341-26-000028-index.htm"
+  ],
+  "review_by_basis": "Conservative one-month source review window from Nov-5 disclosure; no extension solely due to Nov-28 rediscovery. After Dec-5 contribution expires unless genuinely new primary evidence; no inference of recovery/reversal from expiry.",
+  "reopen_only_on": [
+    "New primary billable-capacity or rent disclosure",
+    "Verified restatement or source/PIT error",
+    "Proven overlap with an independently scored CoreWeave outcome"
+  ],
+  "scored_event": {
+    "id": "EVT-20260930-BEBDA0A0773C",
+    "factor": "R6",
+    "causal_root_id": "CORE_SCIENTIFIC_COREWEAVE_BILLABLE_CAPACITY_2026Q3",
+    "effect_id": "CORZ_BILLED_IT_CAPACITY_395_TO_485MW",
+    "source_class": "PRIMARY_FACT",
+    "confidence": "MEDIUM",
+    "source_url": "https://investors.corescientific.com/sec-filings/all-sec-filings/content/0001839341-26-000028/q32026corescientificinc-ea.htm",
+    "known_public_by_at": "2026-11-05T12:04:47Z",
+    "availability_basis": "CONSERVATIVE_KNOWN_PUBLIC_BY",
+    "publication_proof_url": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000028/0001839341-26-000028-index.htm",
+    "impact": "-0.5",
+    "kind": "STATE",
+    "review_by": "2026-12-05T12:04:47Z",
+    "independent_effect": true,
+    "qualification_policy": "OBSERVABLE_EVENT_QUALIFICATION_V2_1",
+    "rationale": "Billing capacity increased 395 to 485 MW (+90 MW, +22.8%) between Q2 and Q3 2026; same-basis colocation license fees increased $98.812m to $157.265m (+59.2%). This is realized billable AI hosting, not proposed MW or forecast GPU utilization.",
+    "counterevidence": "Revenue includes $57.556m power pass-through versus $35.073m in Q2, so gross colocation revenue is not net cash yield. One concentrated customer (CoreWeave), construction/financing exposure, unverified tenant GPU utilization and project FCF/IRR remain. 485 MW is a September 30 snapshot, not newly commissioned November capacity.",
+    "observable_outcome": {
+      "kind": "REVENUE_GENERATING_CAPACITY",
+      "scope": "Core Scientific high-density colocation portfolio leased to CoreWeave; Q3 quarter-end billed capacity",
+      "observed_change": "485 MW billable at 2026-09-30 versus 395 MW at 2026-06-30; license fees $157.265m versus $98.812m, excluding power pass-through",
+      "comparison_basis": "Issuer Nov-5 SEC 8-K earnings tables explicitly compare Q3 and Q2 2026; same billable-MW definition and license-fee line",
+      "independent_effect_reason": "Actual customer-billed hosting capacity is distinct from CoreWeave financing dependence in R4 and platform R1/R2. Core Scientific is outside the core cohort. No second R3 or R5 credit; the same 90 MW must not later be counted again in a CoreWeave aggregate. Existing CoreWeave Q3 capacity headline is EARLY_WARNING, not a signed adjustment. Galaxy Helios is a different lessor/project; Cerebras/OpenAI credits a different customer and effect.",
+      "uncertainties": "Revenue includes $57.556m power pass-through versus $35.073m in Q2, so gross colocation revenue is not net cash yield. One concentrated customer (CoreWeave), construction/financing exposure, unverified tenant GPU utilization and project FCF/IRR remain. 485 MW is a September 30 snapshot, not newly commissioned November capacity.",
+      "impact_basis": "SINGLE_VERIFIED_CHANGE",
+      "direction": "IMPROVEMENT"
+    }
+  }
+}

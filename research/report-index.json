@@ -423,6 +423,22 @@
         "research/reports/attachments/data/research/weekly/weekly_coverage_2026-11-25_r1.json",
         "research/challenger/calculations/EVT-20261112-20386D220F23_20261125T064600Z_6ea2f906.json"
       ]
+    },
+    {
+      "kind": "daily_report",
+      "date": "2026-11-28",
+      "title": "Challenger 2.1 BACKFILL — Core Scientific billable capacity",
+      "path": "research/reports/daily/CHALLENGER_EVENT_ALERT_2026-11-28_073927Z.md",
+      "source_path_id": "research/reports/daily/CHALLENGER_EVENT_ALERT_2026-11-28_073927Z.md",
+      "source_commit": null,
+      "origin": "MAIN",
+      "source_pr": null,
+      "source_pr_state": null,
+      "cutoff_text_from_source": "2026-11-28T07:39:27Z",
+      "status_text_from_source": "BACKFILL; QUALIFIED R6 IMPROVEMENT; LOW_COVERAGE_BOUND_ONLY [0,100]; exact score null; UNCALIBRATED; NO_TRADE; pending PR review.",
+      "attachments": [
+        "research/challenger/calculations/EVT-20260930-BEBDA0A0773C_20261128T073927Z_adcc793a.json"
+      ]
     }
   ],
   "archive_notes": [
